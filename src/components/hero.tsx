@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
@@ -102,9 +103,14 @@ export function Hero() {
               />
             </div>
 
-            <Link href="#book" className="hero-cta">
+            <Button
+              render={<Link href="#book" />}
+              variant="outline"
+              className="w-full h-auto py-[14px] px-[16px] text-[14px] tracking-[0.02em] rounded-none mt-[18px] justify-center bg-[var(--ink)] text-[var(--snow)] border-[var(--ink)] hover:bg-[var(--brand)] hover:border-[var(--brand)] hover:text-[var(--brand-fg)]"
+              style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
+            >
               Book a free consult →
-            </Link>
+            </Button>
           </aside>
         </div>
 

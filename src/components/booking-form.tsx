@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -141,24 +142,15 @@ export function BookingForm() {
                 </em>{" "}
                 with a couple of times to talk.
               </div>
-              <button
+              <Button
                 type="button"
+                variant="outline"
                 onClick={() => setSent(false)}
-                className="self-start transition-colors"
-                style={{
-                  padding: "14px 22px",
-                  fontSize: 14,
-                  letterSpacing: "0.02em",
-                  cursor: "pointer",
-                  background: "transparent",
-                  color: "var(--ink)",
-                  border: "1px solid var(--rule)",
-                  borderRadius: 0,
-                  fontFamily: "var(--font-body), system-ui, sans-serif",
-                }}
+                className="self-start h-auto px-[22px] py-[14px] text-[14px] tracking-[0.02em] rounded-none border-[var(--rule)] text-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--snow)] hover:border-[var(--ink)]"
+                style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
               >
                 Send another →
-              </button>
+              </Button>
             </div>
           ) : (
             <form className="flex flex-col gap-[18px]" onSubmit={onSubmit}>
@@ -182,7 +174,7 @@ export function BookingForm() {
                     onChange={set("business")}
                     placeholder="Cooper & Co."
                     style={FIELD_STYLE}
-                    className="rounded-none border-0 border-b focus-visible:ring-0 px-0"
+                    className="rounded-none border-0 border-b focus-visible:ring-0 focus-visible:border-b-[var(--ink)] px-0"
                   />
                 </div>
               </div>
@@ -198,7 +190,7 @@ export function BookingForm() {
                     onChange={set("email")}
                     placeholder="jane@cooper.co"
                     style={FIELD_STYLE}
-                    className="rounded-none border-0 border-b focus-visible:ring-0 px-0"
+                    className="rounded-none border-0 border-b focus-visible:ring-0 focus-visible:border-b-[var(--ink)] px-0"
                   />
                 </div>
                 <div className="flex flex-col gap-[6px]">
@@ -208,7 +200,7 @@ export function BookingForm() {
                     onChange={set("phone")}
                     placeholder="(503) 555-0142"
                     style={FIELD_STYLE}
-                    className="rounded-none border-0 border-b focus-visible:ring-0 px-0"
+                    className="rounded-none border-0 border-b focus-visible:ring-0 focus-visible:border-b-[var(--ink)] px-0"
                   />
                 </div>
               </div>
@@ -222,7 +214,7 @@ export function BookingForm() {
                     onValueChange={(v) => setForm((p) => ({ ...p, location: v ?? p.location }))}
                   >
                     <SelectTrigger
-                      className="rounded-none border-0 border-b px-0 focus:ring-0 h-auto py-[10px]"
+                      className="rounded-none border-0 border-b px-0 focus:ring-0 focus:border-b-[var(--ink)] h-auto py-[10px]"
                       style={{
                         fontFamily: "var(--font-body), system-ui, sans-serif",
                         fontSize: 16,
@@ -252,7 +244,7 @@ export function BookingForm() {
                     onChange={set("date")}
                     placeholder="Late June, weekdays"
                     style={FIELD_STYLE}
-                    className="rounded-none border-0 border-b focus-visible:ring-0 px-0"
+                    className="rounded-none border-0 border-b focus-visible:ring-0 focus-visible:border-b-[var(--ink)] px-0"
                   />
                 </div>
               </div>
@@ -276,13 +268,13 @@ export function BookingForm() {
                 />
               </div>
 
-              <button
+              <Button
                 type="submit"
-                className="submit-btn"
+                className="self-start h-auto px-[22px] py-[14px] text-[14px] tracking-[0.02em] rounded-none mt-2 hover:bg-[var(--brand)] hover:border-[var(--brand)]"
                 style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
               >
                 Send it →
-              </button>
+              </Button>
             </form>
           )}
         </div>

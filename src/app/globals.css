@@ -238,46 +238,6 @@
 }
 .nav-link:hover { color: var(--ink); }
 
-.nav-cta {
-  background: var(--ink);
-  color: var(--snow);
-  border: 1px solid var(--ink);
-  transition: background 0.15s, border-color 0.15s, color 0.15s;
-}
-.nav-cta:hover {
-  background: var(--brand);
-  border-color: var(--brand);
-  color: var(--brand-fg);
-}
-
-.hero-cta {
-  display: block;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  background: var(--ink);
-  color: var(--snow);
-  padding: 14px 16px;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  margin-top: 18px;
-  transition: background 0.15s;
-}
-.hero-cta:hover { background: var(--brand); }
-
-.submit-btn {
-  background: var(--ink);
-  color: var(--snow);
-  border: none;
-  padding: 14px 22px;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  transition: background 0.15s;
-  align-self: flex-start;
-  margin-top: 8px;
-}
-.submit-btn:hover { background: var(--brand); }
 
 /* FAQ accordion override */
 .faq-trigger {
@@ -292,3 +252,22 @@
 .faq-trigger:hover { text-decoration: none !important; }
 /* Hide the default shadcn accordion chevron icons */
 .faq-trigger [data-slot="accordion-trigger-icon"] { display: none !important; }
+
+/* Form focus indicators — underline inputs darken on focus */
+#book input:focus-visible,
+#book [role="combobox"]:focus-visible {
+  outline: none;
+  border-bottom-color: var(--ink) !important;
+}
+#book textarea:focus-visible {
+  outline: none;
+  border-color: var(--ink) !important;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

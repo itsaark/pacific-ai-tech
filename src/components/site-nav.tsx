@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export function SiteNav() {
   return (
-    <nav
+    <header
       className="sticky top-0 z-30 border-b"
       style={{
         background: "color-mix(in oklab, var(--snow) 88%, transparent)",
@@ -52,21 +53,16 @@ export function SiteNav() {
           </nav>
 
           {/* CTA */}
-          <Link
-            href="#book"
-            className="nav-cta rounded-full inline-block"
-            style={{
-              fontSize: 13,
-              letterSpacing: "0.01em",
-              padding: "10px 16px",
-              fontFamily: "var(--font-body), system-ui, sans-serif",
-              textDecoration: "none",
-            }}
+          <Button
+            render={<Link href="#book" />}
+            variant="outline"
+            className="rounded-full h-auto py-[10px] px-[16px] text-[13px] tracking-[0.01em] bg-[var(--ink)] text-[var(--snow)] border-[var(--ink)] hover:bg-[var(--brand)] hover:border-[var(--brand)] hover:text-[var(--brand-fg)]"
+            style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
           >
             Book a free consult →
-          </Link>
+          </Button>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }

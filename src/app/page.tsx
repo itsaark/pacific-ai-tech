@@ -10,6 +10,7 @@ import { SiteFooter } from "@/components/site-footer";
 export default function Home() {
   return (
     <>
+      <a id="top" aria-hidden="true" style={{ position: "absolute", top: 0 }} />
       <SiteNav />
       <main>
         <Hero />

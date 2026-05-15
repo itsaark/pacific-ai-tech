@@ -33,8 +33,22 @@ export function SiteFooter() {
 
           <div>Greater Portland · Salem · Vancouver, WA · Olympia</div>
 
-          <div>
-            hello@pacificai.tech&nbsp;·&nbsp;(503) 555-0142
+          <div className="flex gap-[6px]">
+            <a
+              href="mailto:hello@pacificai.tech"
+              style={{ color: "inherit", textDecoration: "none" }}
+              className="hover:text-[var(--ink)] transition-colors"
+            >
+              hello@pacificai.tech
+            </a>
+            &nbsp;·&nbsp;
+            <a
+              href="tel:+15035550142"
+              style={{ color: "inherit", textDecoration: "none" }}
+              className="hover:text-[var(--ink)] transition-colors"
+            >
+              (503) 555-0142
+            </a>
           </div>
 
           <div

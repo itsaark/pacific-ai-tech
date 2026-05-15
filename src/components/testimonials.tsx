@@ -52,7 +52,7 @@ export function Testimonials() {
                 style={{
                   fontFamily: "var(--font-display-custom), Georgia, serif",
                   fontSize: "clamp(22px, 2.1vw, 28px)",
-                  lineHeight: 1.2,
+                  lineHeight: 1.35,
                 }}
               >
                 <span
@@ -80,19 +80,6 @@ export function Testimonials() {
                 <strong style={{ color: "var(--ink)", fontWeight: 500 }}>{t.name}</strong>{" "}
                 · {t.role}
               </div>
-              <span
-                className="inline-block mt-4 border border-dashed px-2 py-1"
-                style={{
-                  fontFamily: "var(--font-mono-custom), ui-monospace, monospace",
-                  fontSize: 10,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  color: "var(--muted-text)",
-                  borderColor: "var(--rule)",
-                }}
-              >
-                Placeholder copy
-              </span>
             </div>
           ))}
         </div>
