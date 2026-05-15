@@ -67,7 +67,7 @@ export function Hero() {
             className="relative border p-7"
             style={{
               borderColor: "var(--rule)",
-              background: "color-mix(in oklab, var(--paper) 70%, var(--tint))",
+              background: "color-mix(in oklab, var(--snow) 70%, var(--tint))",
             }}
           >
             {/* Ribbon */}

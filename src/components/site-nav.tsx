@@ -5,7 +5,7 @@ export function SiteNav() {
     <nav
       className="sticky top-0 z-30 border-b"
       style={{
-        background: "color-mix(in oklab, var(--paper) 88%, transparent)",
+        background: "color-mix(in oklab, var(--snow) 88%, transparent)",
         backdropFilter: "saturate(140%) blur(8px)",
         WebkitBackdropFilter: "saturate(140%) blur(8px)",
         borderColor: "var(--rule-soft)",

@@ -129,7 +129,7 @@ export function BookingForm() {
                 className="p-[18px]"
                 style={{
                   border: "1px solid var(--brand)",
-                  background: "color-mix(in oklab, var(--brand) 10%, var(--paper))",
+                  background: "color-mix(in oklab, var(--brand) 10%, var(--snow))",
                   fontFamily: "var(--font-display-custom), Georgia, serif",
                   fontSize: 22,
                 }}

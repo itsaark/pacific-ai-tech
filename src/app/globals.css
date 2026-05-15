@@ -42,44 +42,44 @@
 
 :root {
   /* ── Design tokens ── */
-  --paper: #F4EFE6;
-  --ink: #181613;
-  --ink-soft: #3a342d;
-  --muted-text: #7a7268;
-  --rule: rgba(24, 22, 19, 0.18);
-  --rule-soft: rgba(24, 22, 19, 0.10);
+  --snow: #F9FAFB;
+  --ink: #111827;
+  --ink-soft: #374151;
+  --muted-text: #6B7280;
+  --rule: rgba(17, 24, 39, 0.15);
+  --rule-soft: rgba(17, 24, 39, 0.08);
   --brand: #284736;
-  --brand-fg: #F4EFE6;
-  --tint: #e9e2d4;
+  --brand-fg: #F9FAFB;
+  --tint: #F3F4F6;
 
-  /* ── shadcn overrides → Paper palette ── */
-  --background: #F4EFE6;
-  --foreground: #181613;
-  --card: #F4EFE6;
-  --card-foreground: #181613;
-  --popover: #F4EFE6;
-  --popover-foreground: #181613;
-  --primary: #181613;
-  --primary-foreground: #F4EFE6;
-  --secondary: #e9e2d4;
-  --secondary-foreground: #181613;
-  --muted: #e9e2d4;
-  --muted-foreground: #7a7268;
-  --accent: #e9e2d4;
-  --accent-foreground: #181613;
+  /* ── shadcn overrides → Snow palette ── */
+  --background: #F9FAFB;
+  --foreground: #111827;
+  --card: #F9FAFB;
+  --card-foreground: #111827;
+  --popover: #F9FAFB;
+  --popover-foreground: #111827;
+  --primary: #111827;
+  --primary-foreground: #F9FAFB;
+  --secondary: #F3F4F6;
+  --secondary-foreground: #111827;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+  --accent: #F3F4F6;
+  --accent-foreground: #111827;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: rgba(24, 22, 19, 0.18);
-  --input: rgba(24, 22, 19, 0.18);
-  --ring: rgba(24, 22, 19, 0.3);
+  --border: rgba(17, 24, 39, 0.15);
+  --input: rgba(17, 24, 39, 0.15);
+  --ring: rgba(17, 24, 39, 0.25);
   --radius: 0rem;
-  --sidebar: #F4EFE6;
-  --sidebar-foreground: #181613;
-  --sidebar-primary: #181613;
-  --sidebar-primary-foreground: #F4EFE6;
-  --sidebar-accent: #e9e2d4;
-  --sidebar-accent-foreground: #181613;
-  --sidebar-border: rgba(24, 22, 19, 0.18);
-  --sidebar-ring: rgba(24, 22, 19, 0.3);
+  --sidebar: #F9FAFB;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #111827;
+  --sidebar-primary-foreground: #F9FAFB;
+  --sidebar-accent: #F3F4F6;
+  --sidebar-accent-foreground: #111827;
+  --sidebar-border: rgba(17, 24, 39, 0.15);
+  --sidebar-ring: rgba(17, 24, 39, 0.25);
 }
 
 @layer base {
@@ -103,7 +103,7 @@
   }
   p { margin: 0 0 1em; }
   a { color: inherit; }
-  ::selection { background: var(--ink); color: var(--paper); }
+  ::selection { background: var(--ink); color: var(--snow); }
 }
 
 /* Typography scale */
@@ -240,7 +240,7 @@
 
 .nav-cta {
   background: var(--ink);
-  color: var(--paper);
+  color: var(--snow);
   border: 1px solid var(--ink);
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
@@ -256,7 +256,7 @@
   text-align: center;
   text-decoration: none;
   background: var(--ink);
-  color: var(--paper);
+  color: var(--snow);
   padding: 14px 16px;
   font-size: 14px;
   letter-spacing: 0.02em;
@@ -267,7 +267,7 @@
 
 .submit-btn {
   background: var(--ink);
-  color: var(--paper);
+  color: var(--snow);
   border: none;
   padding: 14px 22px;
   font-size: 14px;
