@@ -23,7 +23,7 @@ export function Testimonials() {
         <div className="section-header">
           <div className="eyebrow">
             <span className="dot" />
-            § 03 / Voices
+            Voices
           </div>
           <div>
             <h2

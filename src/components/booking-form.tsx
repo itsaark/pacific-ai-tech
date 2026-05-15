@@ -75,7 +75,7 @@ export function BookingForm() {
           <div>
             <div className="eyebrow">
               <span className="dot" />
-              § 05 / Book a consult
+              Book a consult
             </div>
             <h2
               className="text-section mt-[18px]"

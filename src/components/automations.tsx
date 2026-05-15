@@ -20,7 +20,7 @@ export function Automations() {
         <div className="section-header">
           <div className="eyebrow">
             <span className="dot" />
-            § 02 / The ten
+            The ten
           </div>
           <div>
             <h2

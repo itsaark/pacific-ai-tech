@@ -54,7 +54,7 @@ export function Hero() {
             >
               {["One flat fee", "Ten automations", "Your tools, your data", "Built in a single day"].map(
                 (item) => (
-                  <span key={item} className="before:content-['§'] before:mr-2 before:opacity-55">
+                  <span key={item} className="before:content-['·'] before:mr-2 before:opacity-55">
                     {item}
                   </span>
                 )
@@ -117,9 +117,9 @@ export function Hero() {
         {/* 3-step bullet strip */}
         <div className="hero-bullets">
           {[
-            { n: "§ 01 Consult",   strong: "30-minute call, free.", body: "We map your week and find the ten things that hurt." },
-            { n: "§ 02 Setup day", strong: "One day at your office.", body: "We build, you watch, we hand you the keys." },
-            { n: "§ 03 Aftercare", strong: "Call us when it breaks.", body: "On-demand follow-up at $200/hr — only when you need it." },
+            { n: "01 Consult",   strong: "30-minute call, free.", body: "We map your week and find the ten things that hurt." },
+            { n: "02 Setup day", strong: "One day at your office.", body: "We build, you watch, we hand you the keys." },
+            { n: "03 Aftercare", strong: "Call us when it breaks.", body: "On-demand follow-up at $200/hr — only when you need it." },
           ].map((b) => (
             <div key={b.n} style={{ fontSize: 14 }}>
               <span

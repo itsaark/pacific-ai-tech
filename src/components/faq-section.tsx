@@ -43,7 +43,7 @@ export function FaqSection() {
         <div className="section-header">
           <div className="eyebrow">
             <span className="dot" />
-            § 04 / Questions
+            Questions
           </div>
           <div>
             <h2
