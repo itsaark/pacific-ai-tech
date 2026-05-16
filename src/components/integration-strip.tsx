@@ -22,14 +22,15 @@ const INTEGRATIONS = [
 export function IntegrationStrip() {
   return (
     <div
-      className="py-7 overflow-hidden"
+      className="py-7"
       style={{
         borderTop: "1px solid var(--rule)",
         borderBottom: "1px solid var(--rule)",
       }}
     >
       <div className="wrap">
-        <div className="flex items-center justify-center">
+        {/* Desktop: centered pill */}
+        <div className="hidden sm:flex items-center justify-center">
           <div
             className="inline-flex items-center gap-5 border px-5 py-3"
             style={{
@@ -37,57 +38,76 @@ export function IntegrationStrip() {
               background: "color-mix(in oklab, var(--snow) 70%, var(--tint))",
             }}
           >
-            <span
-              className="whitespace-nowrap"
-              style={{
-                fontFamily: "var(--font-mono-custom), ui-monospace, monospace",
-                fontSize: 11,
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "var(--muted-text)",
-              }}
-            >
-              Connects to
-            </span>
+            <Label />
+            <IconRow />
+          </div>
+        </div>
 
-            <div className="flex items-center" aria-label="Supported integrations">
-              {INTEGRATIONS.map((integration, i) => (
-                <div
-                  key={integration.name}
-                  title={integration.name}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border transition-transform duration-200 hover:-translate-y-0.5"
-                  style={{
-                    background: `#${integration.hex}`,
-                    borderColor: `color-mix(in oklab, #${integration.hex} 80%, white)`,
-                    marginLeft: i > 0 ? -10 : 0,
-                    boxShadow: "0 2px 8px -2px rgba(0,0,0,0.15)",
-                  }}
-                >
-                  <svg viewBox="0 0 24 24" className="h-5 w-5" fill="white" aria-hidden="true">
-                    <path d={integration.path} />
-                  </svg>
-                  <span className="sr-only">{integration.name}</span>
-                </div>
-              ))}
-
-              <span
-                className="inline-flex h-11 items-center border px-3 rounded-full"
-                style={{
-                  marginLeft: -10,
-                  fontFamily: "var(--font-mono-custom), ui-monospace, monospace",
-                  fontSize: 12,
-                  letterSpacing: "0.06em",
-                  color: "var(--ink-soft)",
-                  background: "var(--snow)",
-                  borderColor: "var(--rule)",
-                }}
-              >
-                +more
-              </span>
-            </div>
+        {/* Mobile: label + scrollable icons */}
+        <div className="flex sm:hidden flex-col gap-3">
+          <Label />
+          <div className="overflow-x-auto -mx-[clamp(20px,4vw,56px)] px-[clamp(20px,4vw,56px)]">
+            <IconRow />
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function Label() {
+  return (
+    <span
+      className="whitespace-nowrap"
+      style={{
+        fontFamily: "var(--font-mono-custom), ui-monospace, monospace",
+        fontSize: 11,
+        letterSpacing: "0.14em",
+        textTransform: "uppercase",
+        color: "var(--muted-text)",
+      }}
+    >
+      Connects to
+    </span>
+  );
+}
+
+function IconRow() {
+  return (
+    <div className="flex items-center" aria-label="Supported integrations">
+      {INTEGRATIONS.map((integration, i) => (
+        <div
+          key={integration.name}
+          title={integration.name}
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-transform duration-200 hover:-translate-y-0.5"
+          style={{
+            background: `#${integration.hex}`,
+            borderColor: `color-mix(in oklab, #${integration.hex} 80%, white)`,
+            marginLeft: i > 0 ? -10 : 0,
+            boxShadow: "0 2px 8px -2px rgba(0,0,0,0.15)",
+          }}
+        >
+          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="white" aria-hidden="true">
+            <path d={integration.path} />
+          </svg>
+          <span className="sr-only">{integration.name}</span>
+        </div>
+      ))}
+
+      <span
+        className="inline-flex h-11 shrink-0 items-center border px-3 rounded-full"
+        style={{
+          marginLeft: -10,
+          fontFamily: "var(--font-mono-custom), ui-monospace, monospace",
+          fontSize: 12,
+          letterSpacing: "0.06em",
+          color: "var(--ink-soft)",
+          background: "var(--snow)",
+          borderColor: "var(--rule)",
+        }}
+      >
+        +more
+      </span>
     </div>
   );
 }
