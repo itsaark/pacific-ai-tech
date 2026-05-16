@@ -49,7 +49,7 @@ const AUTOMATIONS = [
   {
     brand: BRANDS.hubspot,
     name: "Lead pipeline",
-    desc: "Form fills enriched, scored, and pinged to your phone when they look real.",
+    desc: "New leads checked, ranked, and sent to your phone when they look real.",
   },
   {
     brand: BRANDS.gcal,
@@ -113,7 +113,7 @@ export function Automations() {
             <h2 className="text-section">
               What ten automations
               <br />
-              <em>actually looks like.</em>
+              <em>actually look like.</em>
             </h2>
           </div>
         </div>
@@ -191,7 +191,7 @@ export function Automations() {
                 }}
               >
                 Every industry is different. Real estate, logistics, construction, salons — tell us
-                how you work and we&apos;ll build out your full stack.
+                how you work and we&apos;ll set up your whole system.
               </p>
             </div>
           </Card>
@@ -213,7 +213,7 @@ export function Automations() {
           >
             Built with
           </span>
-          {["Claude", "OpenAI", "Hermes agent"].map((tool) => (
+          {["Claude", "OpenAI", "Open-source AI"].map((tool) => (
             <Badge
               key={tool}
               variant="outline"

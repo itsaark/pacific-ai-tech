@@ -7,7 +7,7 @@ export function Hero() {
       <div className="wrap">
         <div className="eyebrow">
           <span className="dot" />
-          Forward-deployed AI · Greater Portland → Olympia
+          In-person AI setup · Greater Portland → Olympia
         </div>
 
         <div className="hero-grid">
@@ -39,7 +39,7 @@ export function Hero() {
             >
               In-person setup days for solo founders and small business owners
               who&apos;d rather pay once and have it done than read another
-              newsletter about agents.
+              newsletter about AI.
             </p>
 
             <div
@@ -96,7 +96,7 @@ export function Hero() {
               />
               <PriceRow
                 label="Follow-up"
-                copy="On-demand visits when something needs a tweak or a teach-back."
+                copy="On-demand visits when something needs a tweak or a walkthrough."
                 price="$200"
                 unit="/ hour"
                 last

@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     q: "What if I don't know which AI tool to pick?",
-    a: "We start the day with a short conversation about your data, your privacy comfort, and what you already pay for. Then we pick — usually some combination of Claude Code, Hermes agent, or ChatGPT — and we explain why.",
+    a: "We start the day with a short conversation about your data, your privacy comfort, and what you already pay for. Then we pick — usually some combination of Claude, ChatGPT, or open-source tools — and we explain why.",
   },
   {
     q: "Do you actually come to my office?",
