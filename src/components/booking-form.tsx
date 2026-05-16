@@ -15,11 +15,8 @@ import {
 
 type FormState = {
   name: string;
-  business: string;
   email: string;
-  phone: string;
   location: string;
-  date: string;
   focus: string;
 };
 
@@ -51,11 +48,8 @@ export function BookingForm() {
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState<FormState>({
     name: "",
-    business: "",
     email: "",
-    phone: "",
     location: "Portland",
-    date: "",
     focus: "",
   });
 
@@ -94,30 +88,6 @@ export function BookingForm() {
               Tell us a little about the business. We&apos;ll write back the same
               day with a couple of times that work.
             </p>
-
-            {/* Meta grid */}
-            <div
-              className="grid grid-cols-2 gap-x-7 gap-y-[18px] mt-6"
-            >
-              {[
-                { k: "Service area", v: "Olympia → Portland" },
-                { k: "Setup day",    v: "$2,800 flat" },
-                { k: "Follow-up",    v: "$200 / hour" },
-                { k: "Response",     v: "Same business day" },
-              ].map(({ k, v }) => (
-                <div key={k}>
-                  <div style={LABEL_STYLE}>{k}</div>
-                  <div
-                    style={{
-                      fontFamily: "var(--font-display-custom), Georgia, serif",
-                      fontSize: 22,
-                    }}
-                  >
-                    {v}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Right: form */}
@@ -151,7 +121,7 @@ export function BookingForm() {
             </div>
           ) : (
             <form className="flex flex-col gap-[18px]" onSubmit={onSubmit}>
-              {/* Name + Business */}
+              {/* Name + Email */}
               <div className="field-row">
                 <div className="flex flex-col gap-[6px]">
                   <Label htmlFor="book-name" style={LABEL_STYLE}>Your name</Label>
@@ -166,21 +136,6 @@ export function BookingForm() {
                   />
                 </div>
                 <div className="flex flex-col gap-[6px]">
-                  <Label htmlFor="book-business" style={LABEL_STYLE}>Business</Label>
-                  <Input
-                    id="book-business"
-                    value={form.business}
-                    onChange={set("business")}
-                    placeholder="Cooper & Co."
-                    style={FIELD_STYLE}
-                    className="rounded-none border-0 border-b focus-visible:ring-0 focus-visible:border-b-[var(--ink)] px-0"
-                  />
-                </div>
-              </div>
-
-              {/* Email + Phone */}
-              <div className="field-row">
-                <div className="flex flex-col gap-[6px]">
                   <Label htmlFor="book-email" style={LABEL_STYLE}>Email</Label>
                   <Input
                     id="book-email"
@@ -193,62 +148,38 @@ export function BookingForm() {
                     className="rounded-none border-0 border-b focus-visible:ring-0 focus-visible:border-b-[var(--ink)] px-0"
                   />
                 </div>
-                <div className="flex flex-col gap-[6px]">
-                  <Label htmlFor="book-phone" style={LABEL_STYLE}>Phone (optional)</Label>
-                  <Input
-                    id="book-phone"
-                    value={form.phone}
-                    onChange={set("phone")}
-                    placeholder="(503) 555-0142"
-                    style={FIELD_STYLE}
-                    className="rounded-none border-0 border-b focus-visible:ring-0 focus-visible:border-b-[var(--ink)] px-0"
-                  />
-                </div>
               </div>
 
-              {/* Location + Date */}
-              <div className="field-row">
-                <div className="flex flex-col gap-[6px]">
-                  <Label htmlFor="book-location" style={LABEL_STYLE}>Closest city</Label>
-                  <Select
-                    value={form.location}
-                    onValueChange={(v) => setForm((p) => ({ ...p, location: v ?? p.location }))}
+              {/* Location */}
+              <div className="flex flex-col gap-[6px]">
+                <Label htmlFor="book-location" style={LABEL_STYLE}>Closest city</Label>
+                <Select
+                  value={form.location}
+                  onValueChange={(v) => setForm((p) => ({ ...p, location: v ?? p.location }))}
+                >
+                  <SelectTrigger
+                    className="rounded-none border-0 border-b px-0 focus:ring-0 focus:border-b-[var(--ink)] h-auto py-[10px]"
+                    style={{
+                      fontFamily: "var(--font-body), system-ui, sans-serif",
+                      fontSize: 16,
+                      color: "var(--ink)",
+                      background: "transparent",
+                      borderBottom: "1px solid var(--rule)",
+                      boxShadow: "none",
+                    }}
                   >
-                    <SelectTrigger
-                      className="rounded-none border-0 border-b px-0 focus:ring-0 focus:border-b-[var(--ink)] h-auto py-[10px]"
-                      style={{
-                        fontFamily: "var(--font-body), system-ui, sans-serif",
-                        fontSize: 16,
-                        color: "var(--ink)",
-                        background: "transparent",
-                        borderBottom: "1px solid var(--rule)",
-                        boxShadow: "none",
-                      }}
-                    >
-                      <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {["Portland", "Beaverton / Hillsboro", "Vancouver, WA", "Salem", "Olympia", "Other (tell us)"].map(
-                        (city) => (
-                          <SelectItem key={city} value={city}>
-                            {city}
-                          </SelectItem>
-                        )
-                      )}
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="flex flex-col gap-[6px]">
-                  <Label htmlFor="book-date" style={LABEL_STYLE}>Preferred setup-day window</Label>
-                  <Input
-                    id="book-date"
-                    value={form.date}
-                    onChange={set("date")}
-                    placeholder="Late June, weekdays"
-                    style={FIELD_STYLE}
-                    className="rounded-none border-0 border-b focus-visible:ring-0 focus-visible:border-b-[var(--ink)] px-0"
-                  />
-                </div>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {["Portland", "Beaverton / Hillsboro", "Vancouver, WA", "Salem", "Olympia", "Other (tell us)"].map(
+                      (city) => (
+                        <SelectItem key={city} value={city}>
+                          {city}
+                        </SelectItem>
+                      )
+                    )}
+                  </SelectContent>
+                </Select>
               </div>
 
               {/* Focus textarea */}

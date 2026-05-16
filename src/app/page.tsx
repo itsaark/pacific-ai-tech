@@ -1,6 +1,5 @@
 import { SiteNav } from "@/components/site-nav";
 import { Hero } from "@/components/hero";
-import { MapBand } from "@/components/map-band";
 import { Automations } from "@/components/automations";
 import { Testimonials } from "@/components/testimonials";
 import { FaqSection } from "@/components/faq-section";
@@ -14,7 +13,6 @@ export default function Home() {
       <SiteNav />
       <main>
         <Hero />
-        <MapBand />
         <Automations />
         <Testimonials />
         <FaqSection />
