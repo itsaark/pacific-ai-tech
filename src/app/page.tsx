@@ -1,5 +1,6 @@
 import { SiteNav } from "@/components/site-nav";
 import { Hero } from "@/components/hero";
+import { IntegrationStrip } from "@/components/integration-strip";
 import { Automations } from "@/components/automations";
 import { Testimonials } from "@/components/testimonials";
 import { FaqSection } from "@/components/faq-section";
@@ -13,6 +14,7 @@ export default function Home() {
       <SiteNav />
       <main>
         <Hero />
+        <IntegrationStrip />
         <Automations />
         <Testimonials />
         <FaqSection />
