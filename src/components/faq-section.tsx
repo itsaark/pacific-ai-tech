@@ -46,13 +46,10 @@ export function FaqSection() {
             Questions
           </div>
           <div>
-            <h2
-              className="text-section"
-              style={{ fontFamily: "var(--font-display-custom), Georgia, serif" }}
-            >
+            <h2 className="text-section">
               The things
               <br />
-              <em style={{ fontStyle: "italic" }}>people actually ask.</em>
+              <em>people actually ask.</em>
             </h2>
           </div>
         </div>

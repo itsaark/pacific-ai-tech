@@ -179,30 +179,6 @@
 }
 @media (max-width: 760px) { .hero-bullets { grid-template-columns: 1fr; } }
 
-/* Automations grid */
-.auto-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border-top: 1px solid var(--rule);
-}
-@media (max-width: 760px) { .auto-grid { grid-template-columns: 1fr; } }
-
-.auto-item {
-  padding: 28px 28px 28px 0;
-  border-bottom: 1px solid var(--rule);
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 18px;
-  align-items: start;
-}
-.auto-item:nth-child(odd) {
-  padding-right: 48px;
-  border-right: 1px solid var(--rule);
-}
-@media (max-width: 760px) {
-  .auto-item:nth-child(odd) { border-right: 0; padding-right: 28px; }
-}
-
 /* Testimonials grid */
 .testi-grid {
   display: grid;
@@ -237,6 +213,22 @@
   transition: color 0.15s;
 }
 .nav-link:hover { color: var(--ink); }
+.nav-link:focus-visible {
+  color: var(--ink);
+  outline: 1.5px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* Testimonial item — responsive column dividers */
+.testi-item {
+  border-bottom: 1px solid var(--rule);
+}
+.testi-item:not(:last-child) {
+  border-right: 1px solid var(--rule);
+}
+@media (max-width: 900px) {
+  .testi-item:not(:last-child) { border-right: none; }
+}
 
 
 /* FAQ accordion override */

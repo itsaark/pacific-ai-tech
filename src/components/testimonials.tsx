@@ -26,29 +26,22 @@ export function Testimonials() {
             Voices
           </div>
           <div>
-            <h2
-              className="text-section"
-              style={{ fontFamily: "var(--font-display-custom), Georgia, serif" }}
-            >
+            <h2 className="text-section">
               What people say
               <br />
-              <em style={{ fontStyle: "italic" }}>after the setup day.</em>
+              <em>after the setup day.</em>
             </h2>
           </div>
         </div>
 
         <div className="testi-grid">
-          {TESTIMONIALS.map((t, i) => (
+          {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="p-8"
-              style={{
-                borderRight: i < TESTIMONIALS.length - 1 ? "1px solid var(--rule)" : "none",
-                borderBottom: "1px solid var(--rule)",
-              }}
+              className="testi-item p-8"
             >
-              <div
-                className="mb-6"
+              <blockquote
+                className="mb-6 mt-0 mx-0"
                 style={{
                   fontFamily: "var(--font-display-custom), Georgia, serif",
                   fontSize: "clamp(22px, 2.1vw, 28px)",
@@ -56,6 +49,7 @@ export function Testimonials() {
                 }}
               >
                 <span
+                  aria-hidden="true"
                   style={{
                     fontSize: "1.6em",
                     lineHeight: 0,
@@ -67,7 +61,7 @@ export function Testimonials() {
                   &#8220;
                 </span>
                 {t.q}
-              </div>
+              </blockquote>
               <div
                 style={{
                   fontFamily: "var(--font-mono-custom), ui-monospace, monospace",

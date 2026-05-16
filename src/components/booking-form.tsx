@@ -77,13 +77,10 @@ export function BookingForm() {
               <span className="dot" />
               Book a consult
             </div>
-            <h2
-              className="text-section mt-[18px]"
-              style={{ fontFamily: "var(--font-display-custom), Georgia, serif" }}
-            >
+            <h2 className="text-section mt-[18px]">
               Thirty minutes,
               <br />
-              <em style={{ fontStyle: "italic" }}>on us.</em>
+              <em>on us.</em>
             </h2>
             <p
               className="text-lede mt-6"
@@ -157,8 +154,9 @@ export function BookingForm() {
               {/* Name + Business */}
               <div className="field-row">
                 <div className="flex flex-col gap-[6px]">
-                  <Label style={LABEL_STYLE}>Your name</Label>
+                  <Label htmlFor="book-name" style={LABEL_STYLE}>Your name</Label>
                   <Input
+                    id="book-name"
                     required
                     value={form.name}
                     onChange={set("name")}
@@ -168,8 +166,9 @@ export function BookingForm() {
                   />
                 </div>
                 <div className="flex flex-col gap-[6px]">
-                  <Label style={LABEL_STYLE}>Business</Label>
+                  <Label htmlFor="book-business" style={LABEL_STYLE}>Business</Label>
                   <Input
+                    id="book-business"
                     value={form.business}
                     onChange={set("business")}
                     placeholder="Cooper & Co."
@@ -182,8 +181,9 @@ export function BookingForm() {
               {/* Email + Phone */}
               <div className="field-row">
                 <div className="flex flex-col gap-[6px]">
-                  <Label style={LABEL_STYLE}>Email</Label>
+                  <Label htmlFor="book-email" style={LABEL_STYLE}>Email</Label>
                   <Input
+                    id="book-email"
                     required
                     type="email"
                     value={form.email}
@@ -194,8 +194,9 @@ export function BookingForm() {
                   />
                 </div>
                 <div className="flex flex-col gap-[6px]">
-                  <Label style={LABEL_STYLE}>Phone (optional)</Label>
+                  <Label htmlFor="book-phone" style={LABEL_STYLE}>Phone (optional)</Label>
                   <Input
+                    id="book-phone"
                     value={form.phone}
                     onChange={set("phone")}
                     placeholder="(503) 555-0142"
@@ -208,7 +209,7 @@ export function BookingForm() {
               {/* Location + Date */}
               <div className="field-row">
                 <div className="flex flex-col gap-[6px]">
-                  <Label style={LABEL_STYLE}>Closest city</Label>
+                  <Label htmlFor="book-location" style={LABEL_STYLE}>Closest city</Label>
                   <Select
                     value={form.location}
                     onValueChange={(v) => setForm((p) => ({ ...p, location: v ?? p.location }))}
@@ -238,8 +239,9 @@ export function BookingForm() {
                   </Select>
                 </div>
                 <div className="flex flex-col gap-[6px]">
-                  <Label style={LABEL_STYLE}>Preferred setup-day window</Label>
+                  <Label htmlFor="book-date" style={LABEL_STYLE}>Preferred setup-day window</Label>
                   <Input
+                    id="book-date"
                     value={form.date}
                     onChange={set("date")}
                     placeholder="Late June, weekdays"
@@ -251,8 +253,9 @@ export function BookingForm() {
 
               {/* Focus textarea */}
               <div className="flex flex-col gap-[6px]">
-                <Label style={LABEL_STYLE}>What&apos;s eating your week?</Label>
+                <Label htmlFor="book-focus" style={LABEL_STYLE}>What&apos;s eating your week?</Label>
                 <Textarea
+                  id="book-focus"
                   value={form.focus}
                   onChange={set("focus")}
                   placeholder="Quotes take me three hours each. My inbox is a mess. Bookkeeping is on a sticky note."

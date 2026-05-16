@@ -15,11 +15,11 @@ export function Hero() {
           <div>
             <h1
               className="text-hero"
-              style={{ fontFamily: "var(--font-display-custom), Georgia, serif", marginBottom: "0.2em" }}
+              style={{ marginBottom: "0.2em" }}
             >
               We come over,
               <br />
-              <em style={{ fontStyle: "italic" }}>set up your AI,</em>
+              <em>set up your AI,</em>
               <br />
               and don&apos;t leave
               <br />
@@ -54,7 +54,7 @@ export function Hero() {
             >
               {["One flat fee", "Ten automations", "Your tools, your data", "Built in a single day"].map(
                 (item) => (
-                  <span key={item} className="before:content-['·'] before:mr-2 before:opacity-55">
+                  <span key={item} className="before:content-['·'] before:mr-2 before:opacity-55 first:before:hidden">
                     {item}
                   </span>
                 )

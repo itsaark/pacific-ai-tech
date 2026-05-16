@@ -110,13 +110,10 @@ export function Automations() {
             The ten
           </div>
           <div>
-            <h2
-              className="text-section"
-              style={{ fontFamily: "var(--font-display-custom), Georgia, serif" }}
-            >
+            <h2 className="text-section">
               What ten automations
               <br />
-              <em style={{ fontStyle: "italic" }}>actually looks like.</em>
+              <em>actually looks like.</em>
             </h2>
           </div>
         </div>
@@ -180,7 +177,7 @@ export function Automations() {
                   }}
                 >
                   Need more than ten?{" "}
-                  <em style={{ fontStyle: "italic" }}>We come back for a second day.</em>
+                  <em>We come back for a second day.</em>
                 </div>
               </div>
               <p

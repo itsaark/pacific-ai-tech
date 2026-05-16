@@ -30,7 +30,7 @@ export function SiteNav() {
               }}
             />
             <span>
-              Pacific <em style={{ fontStyle: "italic" }}>AI</em> Tech
+              Pacific <em>AI</em> Tech
             </span>
           </Link>
 
