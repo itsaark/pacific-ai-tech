@@ -1,7 +1,11 @@
+import { ShaderBackdrop } from "@/components/shader-backdrop";
+
 export function ValueProps() {
   return (
-    <section className="site-section" style={{ background: "var(--ink)", color: "var(--snow)" }}>
-      <div className="wrap">
+    <section className="site-section value-props-shader" style={{ background: "var(--ink)", color: "var(--snow)" }}>
+      <ShaderBackdrop className="section-shader-backdrop" />
+      <div className="section-shader-scrim" aria-hidden="true" />
+      <div className="wrap section-shader-content">
         <div className="eyebrow" style={{ color: "rgba(249,250,251,0.5)" }}>
           <span className="dot" style={{ background: "var(--snow)" }} />
           Why now

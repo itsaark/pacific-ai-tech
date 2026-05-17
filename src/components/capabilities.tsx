@@ -134,6 +134,7 @@ export function Capabilities() {
             </div>
             <Button
               render={<Link href="#book" />}
+              nativeButton={false}
               variant="outline"
               className="shrink-0 h-auto py-[12px] px-[18px] text-[13px] tracking-[0.02em] rounded-none border-[var(--rule)] text-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--snow)] hover:border-[var(--ink)]"
               style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}

@@ -52,6 +52,7 @@ export function SiteNav() {
 
           <Button
             render={<Link href="#book" />}
+            nativeButton={false}
             variant="outline"
             className="rounded-full h-auto py-[10px] px-[16px] text-[13px] tracking-[0.01em] bg-[var(--ink)] text-[var(--snow)] border-[var(--ink)] hover:bg-[var(--brand)] hover:border-[var(--brand)] hover:text-[var(--brand-fg)]"
             style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}

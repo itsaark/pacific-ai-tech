@@ -198,6 +198,109 @@
   background: var(--rule);
 }
 
+.gradient-hero-card {
+  min-height: clamp(380px, 44vw, 560px);
+  height: min(560px, calc(100vh - 180px));
+  border: 1px solid rgba(17, 24, 39, 0.16);
+  background: var(--ink);
+  box-shadow: 0 42px 90px -58px rgba(17, 24, 39, 0.86);
+  cursor: crosshair;
+  isolation: isolate;
+}
+.gradient-hero-card__shade {
+  background:
+    linear-gradient(180deg, rgba(17, 24, 39, 0.32), rgba(17, 24, 39, 0.08) 46%, rgba(17, 24, 39, 0.62)),
+    radial-gradient(circle at 78% 14%, rgba(249, 250, 251, 0.32), transparent 30%);
+  pointer-events: none;
+}
+.gradient-hero-card__content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  padding: clamp(24px, 3.4vw, 44px);
+  color: var(--snow);
+}
+.gradient-hero-card__label {
+  font-family: var(--font-mono-custom), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: rgba(249, 250, 251, 0.7);
+  margin: 0 0 16px;
+}
+.gradient-hero-card__headline {
+  max-width: 14ch;
+  font-family: var(--font-display-custom), Georgia, serif;
+  font-size: clamp(32px, 3.2vw, 48px);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--snow);
+  margin: 0;
+}
+.gradient-hero-card__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid rgba(249, 250, 251, 0.24);
+  border-bottom: 1px solid rgba(249, 250, 251, 0.18);
+}
+.gradient-hero-card__stats > div {
+  padding: 0 18px;
+  border-right: 1px solid rgba(249, 250, 251, 0.18);
+}
+.gradient-hero-card__stats > div:first-child {
+  padding-left: 0;
+}
+.gradient-hero-card__stats > div:last-child {
+  border-right: 0;
+  padding-right: 0;
+}
+.gradient-hero-card .stat-number {
+  font-size: clamp(32px, 3.4vw, 56px);
+  white-space: nowrap;
+  color: var(--snow);
+  text-shadow: 0 1px 22px rgba(17, 24, 39, 0.22);
+}
+.gradient-hero-card .stat-label {
+  font-size: 10px;
+  line-height: 1.45;
+  color: rgba(249, 250, 251, 0.72);
+}
+@media (max-width: 900px) {
+  .gradient-hero-card {
+    min-height: clamp(360px, 74vw, 540px);
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+  .gradient-hero-card__headline {
+    max-width: 16ch;
+  }
+}
+@media (max-width: 540px) {
+  .gradient-hero-card {
+    min-height: 420px;
+    aspect-ratio: auto;
+  }
+  .gradient-hero-card__stats {
+    grid-template-columns: 1fr;
+    border-bottom: 0;
+  }
+  .gradient-hero-card__stats > div,
+  .gradient-hero-card__stats > div:first-child,
+  .gradient-hero-card__stats > div:last-child {
+    border-right: 0;
+    border-bottom: 1px solid rgba(249, 250, 251, 0.18);
+    padding: 15px 0;
+  }
+  .gradient-hero-card__stats > div:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
 /* Value proposition grid */
 .value-grid {
   display: grid;
@@ -207,10 +310,43 @@
 }
 .value-card {
   padding: 32px 28px;
-  background: var(--ink);
+  background: rgba(17, 24, 39, 0.34);
+  backdrop-filter: blur(1px);
 }
 @media (max-width: 900px) {
   .value-grid { grid-template-columns: 1fr; }
+}
+
+.value-props-shader {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.section-shader-backdrop,
+.card-shader-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.section-shader-backdrop {
+  opacity: 0.72;
+}
+.section-shader-scrim,
+.card-shader-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.section-shader-scrim {
+  background:
+    linear-gradient(180deg, rgba(17, 24, 39, 0.62), rgba(17, 24, 39, 0.78) 45%, rgba(17, 24, 39, 0.86)),
+    radial-gradient(circle at 80% 12%, rgba(249, 250, 251, 0.12), transparent 32%);
+}
+.section-shader-content {
+  position: relative;
+  z-index: 2;
 }
 
 /* Steps grid */
@@ -239,6 +375,8 @@
   padding: 32px;
 }
 .pricing-card-inner {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -266,6 +404,19 @@
 }
 .pricing-card-dark .pricing-features li::before {
   color: rgba(249, 250, 251, 0.6);
+}
+.shader-pricing-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.shader-pricing-card .card-shader-backdrop {
+  opacity: 0.82;
+}
+.shader-pricing-card .card-shader-scrim {
+  background:
+    linear-gradient(135deg, rgba(17, 24, 39, 0.5), rgba(17, 24, 39, 0.66) 48%, rgba(17, 24, 39, 0.9)),
+    radial-gradient(circle at 18% 16%, rgba(249, 250, 251, 0.1), transparent 28%);
 }
 @media (max-width: 760px) {
   .pricing-grid { grid-template-columns: 1fr; }

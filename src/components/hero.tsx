@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { GradientHeroCard } from "@/components/gradient-hero-card";
 
 export function Hero() {
   return (
@@ -61,6 +62,7 @@ export function Hero() {
             <div className="flex flex-wrap gap-3 mt-8">
               <Button
                 render={<Link href="#book" />}
+                nativeButton={false}
                 variant="outline"
                 className="h-auto py-[14px] px-[22px] text-[15px] tracking-[0.01em] rounded-none bg-[var(--ink)] text-[var(--snow)] border-[var(--ink)] hover:bg-[var(--brand)] hover:border-[var(--brand)] hover:text-[var(--brand-fg)]"
                 style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
@@ -69,6 +71,7 @@ export function Hero() {
               </Button>
               <Button
                 render={<Link href="#pricing" />}
+                nativeButton={false}
                 variant="outline"
                 className="h-auto py-[14px] px-[22px] text-[15px] tracking-[0.01em] rounded-none border-[var(--rule)] text-[var(--ink)] hover:bg-[var(--tint)]"
                 style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
@@ -78,22 +81,7 @@ export function Hero() {
             </div>
           </div>
 
-          <aside className="hero-stat-block">
-            <div className="stat-item">
-              <div className="stat-number">10–20</div>
-              <div className="stat-label">hours saved per week</div>
-            </div>
-            <div className="stat-divider" />
-            <div className="stat-item">
-              <div className="stat-number">1</div>
-              <div className="stat-label">session to get running</div>
-            </div>
-            <div className="stat-divider" />
-            <div className="stat-item">
-              <div className="stat-number">30</div>
-              <div className="stat-label">days of premium support</div>
-            </div>
-          </aside>
+          <GradientHeroCard />
         </div>
       </div>
     </section>

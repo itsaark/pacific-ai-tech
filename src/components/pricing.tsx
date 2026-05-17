@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { ShaderBackdrop } from "@/components/shader-backdrop";
 
 export function Pricing() {
   return (
@@ -98,6 +99,7 @@ export function Pricing() {
 
                 <Button
                   render={<Link href="#book" />}
+                  nativeButton={false}
                   variant="outline"
                   className="w-full h-auto py-[14px] px-[16px] text-[14px] tracking-[0.02em] rounded-none mt-4 justify-center bg-[var(--ink)] text-[var(--snow)] border-[var(--ink)] hover:bg-[var(--brand)] hover:border-[var(--brand)] hover:text-[var(--brand-fg)]"
                   style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
@@ -110,13 +112,15 @@ export function Pricing() {
 
           {/* On-site plan */}
           <div
-            className="pricing-card pricing-card-dark"
+            className="pricing-card pricing-card-dark shader-pricing-card"
             style={{
               border: "1px solid var(--ink)",
               background: "var(--ink)",
               color: "var(--snow)",
             }}
           >
+            <ShaderBackdrop className="card-shader-backdrop" />
+            <div className="card-shader-scrim" aria-hidden="true" />
             <div className="pricing-card-inner">
               <div>
                 <div
@@ -175,6 +179,7 @@ export function Pricing() {
 
                 <Button
                   render={<Link href="#book" />}
+                  nativeButton={false}
                   variant="outline"
                   className="w-full h-auto py-[14px] px-[16px] text-[14px] tracking-[0.02em] rounded-none mt-4 justify-center bg-[var(--snow)] text-[var(--ink)] border-[var(--snow)] hover:bg-[var(--brand)] hover:border-[var(--brand)] hover:text-[var(--brand-fg)]"
                   style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
