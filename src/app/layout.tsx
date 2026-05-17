@@ -22,9 +22,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pacific AI Tech — Setup days for solo founders & small businesses",
+  title: "Pacific AI Tech — Claude Co-Work Setup for Business Owners",
   description:
-    "In-person AI setup days for solo founders and small business owners in Greater Portland, Salem, Vancouver WA, and Olympia. $2,800 flat for 10 automations.",
+    "We set up Claude co-work on your computer so you can stop reading about AI and start using it. One session, 30 days of premium support, saves you 10–20 hours a week. Remote or on-site.",
 };
 
 export default function RootLayout({

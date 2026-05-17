@@ -7,32 +7,40 @@ import {
 
 const FAQS = [
   {
-    q: "I'm not technical. Will this work for me?",
-    a: "Yes — that's actually who we're built for. We do the building; you do the watching and the steering. By the end of the day you'll know how each automation works well enough to tweak it yourself, or call us.",
+    q: "What exactly is Claude co-work?",
+    a: "Claude co-work is an AI assistant made by Anthropic that runs on your computer and connects to your everyday tools — email, calendar, documents, CRM, and more. It's like having a sharp assistant who reads everything, drafts everything, and never forgets. You talk to it in plain English and it does the work.",
   },
   {
-    q: "What if I don't know which AI tool to pick?",
-    a: "We start the day with a short conversation about your data, your privacy comfort, and what you already pay for. Then we pick — usually some combination of Claude, ChatGPT, or open-source tools — and we explain why.",
+    q: "I'm really not technical. Will this work for me?",
+    a: "That's exactly who we built this for. If you can send an email and have a conversation, you can use Claude co-work. We handle all the technical setup — you just learn how to ask it for what you need. Most clients are fully independent within a week.",
   },
   {
-    q: "Do you actually come to my office?",
-    a: "Yes. We drive the I-5 corridor between Olympia and Portland, including Salem and Vancouver, WA. If you're a bit off the corridor, ask — we usually still come.",
+    q: "How is this different from just signing up for ChatGPT?",
+    a: "ChatGPT is a chatbot. Claude co-work is a connected assistant that's wired into your actual business tools — it can read your emails, check your calendar, draft documents, and take actions. It's the difference between Googling a recipe and having a chef in your kitchen.",
   },
   {
-    q: "What happens after the setup day?",
-    a: "You own everything. When something breaks, when a tool updates, or when you want to add an eleventh automation, book a follow-up hour at $200. Most clients use 1–2 hours a month.",
+    q: "What happens during the setup session?",
+    a: "We install Claude co-work, connect it to your tools, build automations specific to your workflow, and train you to use everything. By the end you'll be using it confidently on your own. The session is typically 3–4 hours.",
   },
   {
-    q: "What if ten automations isn't enough?",
-    a: "Book a second setup day. The flat fee is the flat fee — $2,800 buys another ten, built the same way.",
+    q: "What does the 30-day premium support include?",
+    a: "Direct access to us — text, email, or call. Ask questions, request tweaks, get help when you're stuck, or learn new things to try. There's no limit on messages. Most clients message daily for the first week, then taper off as they build confidence.",
   },
   {
-    q: "Will my data leave my machine?",
-    a: "We default to setups where the model calls happen on your accounts, with your data, under your control. If a cloud step is the right call, we tell you exactly what's leaving and why.",
+    q: "Do I need to buy anything else?",
+    a: "You'll need a Claude subscription ($20/month). We'll help you set that up during the session. Beyond that, everything runs on your existing computer and tools — no special hardware, no enterprise contracts.",
   },
   {
-    q: "Do you sign NDAs?",
-    a: "Happy to. Send yours before the consult and we'll get it back the same day.",
+    q: "Can you do this remotely?",
+    a: "Yes — most clients prefer remote. We share your screen, do the setup, and train you over video call. It works just as well as in-person, and it's $400 less. On-site is available in the Greater Portland to Olympia corridor.",
+  },
+  {
+    q: "What's Hermes?",
+    a: "Hermes is our advanced agent framework for users who are already comfortable with AI and want to push further — custom agents, API integrations, and fully autonomous workflows. It's a separate conversation from the Claude co-work setup. Ask us about it if you're curious.",
+  },
+  {
+    q: "Will my data be safe?",
+    a: "Claude co-work runs on your machine, with your accounts. We don't store your data, we don't have ongoing access to your systems, and we set everything up under your own credentials. You own and control everything.",
   },
 ];
 
@@ -47,9 +55,9 @@ export function FaqSection() {
           </div>
           <div>
             <h2 className="text-section">
-              The things
+              You&apos;re probably
               <br />
-              <em>people actually ask.</em>
+              <em>wondering.</em>
             </h2>
           </div>
         </div>
@@ -65,15 +73,12 @@ export function FaqSection() {
               >
                 <AccordionTrigger className="faq-trigger hover:no-underline py-[22px] px-0">
                   <span className="flex-1 text-left pr-4">{f.q}</span>
-                  {/* Custom +/− indicator */}
                   <span
                     className="shrink-0 w-6 h-6 relative"
                     aria-hidden="true"
                     style={{ color: "var(--brand)" }}
                   >
-                    {/* Horizontal bar */}
                     <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[18px] h-px bg-current" />
-                    {/* Vertical bar — fades on open */}
                     <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-[18px] bg-current transition-all duration-[250ms] group-aria-expanded/accordion-trigger:opacity-0 group-aria-expanded/accordion-trigger:rotate-90" />
                   </span>
                 </AccordionTrigger>

@@ -14,7 +14,6 @@ export function SiteNav() {
     >
       <div className="wrap">
         <div className="flex items-center justify-between h-16">
-          {/* Brand */}
           <Link
             href="#top"
             className="flex items-center gap-[10px] no-underline"
@@ -34,13 +33,12 @@ export function SiteNav() {
             </span>
           </Link>
 
-          {/* Links — hidden on mobile */}
           <nav
             className="hidden md:flex gap-7"
             style={{ fontSize: 14 }}
             aria-label="Site navigation"
           >
-            {["What we do|#what", "Automations|#automations", "Voices|#voices", "FAQ|#faq"].map(
+            {["How it works|#how", "Pricing|#pricing", "Capabilities|#capabilities", "FAQ|#faq"].map(
               (item) => {
                 const [label, href] = item.split("|");
                 return (
@@ -52,14 +50,13 @@ export function SiteNav() {
             )}
           </nav>
 
-          {/* CTA */}
           <Button
             render={<Link href="#book" />}
             variant="outline"
             className="rounded-full h-auto py-[10px] px-[16px] text-[13px] tracking-[0.01em] bg-[var(--ink)] text-[var(--snow)] border-[var(--ink)] hover:bg-[var(--brand)] hover:border-[var(--brand)] hover:text-[var(--brand-fg)]"
             style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
           >
-            Book a free consult →
+            Free consult →
           </Button>
         </div>
       </div>

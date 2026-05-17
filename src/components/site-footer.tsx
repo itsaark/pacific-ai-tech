@@ -10,7 +10,6 @@ export function SiteFooter() {
     >
       <div className="wrap">
         <div className="flex justify-between items-center flex-wrap gap-5">
-          {/* Brand */}
           <div
             className="flex items-center gap-[10px]"
             style={{
@@ -31,7 +30,7 @@ export function SiteFooter() {
             Pacific AI Tech
           </div>
 
-          <div>Greater Portland · Salem · Vancouver, WA · Olympia</div>
+          <div>On-site: Greater Portland → Olympia &nbsp;·&nbsp; Remote: Anywhere</div>
 
           <div className="flex gap-[6px]">
             <a
@@ -40,14 +39,6 @@ export function SiteFooter() {
               className="hover:text-[var(--ink)] transition-colors"
             >
               hello@pacificai.tech
-            </a>
-            &nbsp;·&nbsp;
-            <a
-              href="tel:+15035550142"
-              style={{ color: "inherit", textDecoration: "none" }}
-              className="hover:text-[var(--ink)] transition-colors"
-            >
-              (503) 555-0142
             </a>
           </div>
 

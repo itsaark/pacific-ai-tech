@@ -5,25 +5,22 @@ export function Hero() {
   return (
     <section className="site-section" style={{ paddingTop: "clamp(48px, 7vw, 96px)" }}>
       <div className="wrap">
-        <div className="eyebrow">
-          <span className="dot" />
-          In-person AI setup · Greater Portland → Olympia
-        </div>
-
-        <div className="hero-grid">
-          {/* Left: headline + lede + meta */}
+        <div className="hero-layout">
           <div>
+            <div className="eyebrow">
+              <span className="dot" />
+              Claude co-work setup for business owners
+            </div>
+
             <h1
               className="text-hero"
-              style={{ marginBottom: "0.2em" }}
+              style={{ marginTop: 20, marginBottom: "0.15em" }}
             >
-              We come over,
+              Stop reading
               <br />
-              <em>set up your AI,</em>
+              about AI.
               <br />
-              and don&apos;t leave
-              <br />
-              until it works.
+              <em>Start using it.</em>
             </h1>
 
             <p
@@ -33,13 +30,13 @@ export function Hero() {
                 fontStyle: "italic",
                 color: "var(--ink-soft)",
                 marginTop: 28,
-                maxWidth: "32ch",
+                maxWidth: "38ch",
                 marginBottom: 0,
               }}
             >
-              In-person setup days for solo founders and small business owners
-              who&apos;d rather pay once and have it done than read another
-              newsletter about AI.
+              You know AI could transform your business. You just don&apos;t have
+              time to figure out how. We set up Claude co-work on your computer,
+              build your automations, and train you to use them — in a single session.
             </p>
 
             <div
@@ -52,7 +49,7 @@ export function Hero() {
                 letterSpacing: "0.12em",
               }}
             >
-              {["One flat fee", "Ten automations", "Your tools, your data", "Built in a single day"].map(
+              {["One session", "Runs on your laptop", "30 days of premium support", "Pays for itself in weeks"].map(
                 (item) => (
                   <span key={item} className="before:content-['·'] before:mr-2 before:opacity-55 first:before:hidden">
                     {item}
@@ -60,152 +57,45 @@ export function Hero() {
                 )
               )}
             </div>
+
+            <div className="flex flex-wrap gap-3 mt-8">
+              <Button
+                render={<Link href="#book" />}
+                variant="outline"
+                className="h-auto py-[14px] px-[22px] text-[15px] tracking-[0.01em] rounded-none bg-[var(--ink)] text-[var(--snow)] border-[var(--ink)] hover:bg-[var(--brand)] hover:border-[var(--brand)] hover:text-[var(--brand-fg)]"
+                style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
+              >
+                Book a free consult →
+              </Button>
+              <Button
+                render={<Link href="#pricing" />}
+                variant="outline"
+                className="h-auto py-[14px] px-[22px] text-[15px] tracking-[0.01em] rounded-none border-[var(--rule)] text-[var(--ink)] hover:bg-[var(--tint)]"
+                style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
+              >
+                See pricing
+              </Button>
+            </div>
           </div>
 
-          {/* Right: pricing card */}
-          <aside
-            id="what"
-            className="relative border p-7"
-            style={{
-              borderColor: "var(--rule)",
-              background: "color-mix(in oklab, var(--snow) 70%, var(--tint))",
-            }}
-          >
-            {/* Ribbon */}
-            <div
-              className="absolute top-[-1px] right-[-1px] px-[10px] py-[6px]"
-              style={{
-                background: "var(--brand)",
-                color: "var(--brand-fg)",
-                fontFamily: "var(--font-mono-custom), ui-monospace, monospace",
-                fontSize: 10,
-                letterSpacing: "0.16em",
-                textTransform: "uppercase",
-              }}
-            >
-              Setup day · flat fee
+          <aside className="hero-stat-block">
+            <div className="stat-item">
+              <div className="stat-number">10–20</div>
+              <div className="stat-label">hours saved per week</div>
             </div>
-
-            {/* Price rows */}
-            <div>
-              <PriceRow
-                label="Setup day"
-                copy="10 automations, in person, with the AI of your choice."
-                price="$2,800"
-                unit="flat"
-              />
-              <PriceRow
-                label="Follow-up"
-                copy="On-demand visits when something needs a tweak or a walkthrough."
-                price="$200"
-                unit="/ hour"
-                last
-              />
+            <div className="stat-divider" />
+            <div className="stat-item">
+              <div className="stat-number">1</div>
+              <div className="stat-label">session to get running</div>
             </div>
-
-            <Button
-              render={<Link href="#book" />}
-              variant="outline"
-              className="w-full h-auto py-[14px] px-[16px] text-[14px] tracking-[0.02em] rounded-none mt-[18px] justify-center bg-[var(--ink)] text-[var(--snow)] border-[var(--ink)] hover:bg-[var(--brand)] hover:border-[var(--brand)] hover:text-[var(--brand-fg)]"
-              style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
-            >
-              Book a free consult →
-            </Button>
+            <div className="stat-divider" />
+            <div className="stat-item">
+              <div className="stat-number">30</div>
+              <div className="stat-label">days of premium support</div>
+            </div>
           </aside>
-        </div>
-
-        {/* 3-step bullet strip */}
-        <div className="hero-bullets">
-          {[
-            { n: "01 Consult",   strong: "30-minute call, free.", body: "We map your week and find the ten things that hurt." },
-            { n: "02 Setup day", strong: "One day at your office.", body: "We build, you watch, we hand you the keys." },
-            { n: "03 Aftercare", strong: "Call us when it breaks.", body: "On-demand follow-up at $200/hr — only when you need it." },
-          ].map((b) => (
-            <div key={b.n} style={{ fontSize: 14 }}>
-              <span
-                className="block mb-[6px]"
-                style={{
-                  fontFamily: "var(--font-mono-custom), ui-monospace, monospace",
-                  fontSize: 11,
-                  color: "var(--muted-text)",
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                }}
-              >
-                {b.n}
-              </span>
-              <strong
-                className="block mb-1"
-                style={{
-                  fontFamily: "var(--font-display-custom), Georgia, serif",
-                  fontWeight: 400,
-                  fontSize: 20,
-                }}
-              >
-                {b.strong}
-              </strong>
-              {b.body}
-            </div>
-          ))}
         </div>
       </div>
     </section>
-  );
-}
-
-function PriceRow({
-  label,
-  copy,
-  price,
-  unit,
-  last = false,
-}: {
-  label: string;
-  copy: string;
-  price: string;
-  unit: string;
-  last?: boolean;
-}) {
-  return (
-    <div
-      className="flex justify-between items-baseline py-[18px]"
-      style={{ borderBottom: last ? "none" : "1px solid var(--rule-soft)" }}
-    >
-      <div>
-        <div
-          style={{
-            fontFamily: "var(--font-mono-custom), ui-monospace, monospace",
-            fontSize: 11,
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            color: "var(--muted-text)",
-          }}
-        >
-          {label}
-        </div>
-        <div style={{ fontSize: 14, color: "var(--ink-soft)", marginTop: 6 }}>{copy}</div>
-      </div>
-      <div
-        className="shrink-0 ml-4 whitespace-nowrap"
-        style={{
-          fontFamily: "var(--font-display-custom), Georgia, serif",
-          fontSize: "clamp(40px, 4.6vw, 60px)",
-          lineHeight: 1,
-        }}
-      >
-        {price}
-        <small
-          style={{
-            fontSize: 14,
-            fontFamily: "var(--font-body), system-ui, sans-serif",
-            color: "var(--muted-text)",
-            marginLeft: 6,
-            whiteSpace: "nowrap",
-          }}
-        >
-          {unit}
-        </small>
-      </div>
-    </div>
   );
 }

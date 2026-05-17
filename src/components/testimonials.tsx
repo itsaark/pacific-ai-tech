@@ -1,16 +1,16 @@
 const TESTIMONIALS = [
   {
-    q: "It felt like hiring a calm friend who happens to know every AI tool. By 5 p.m. my inbox was answering itself.",
+    q: "I spent six months reading about AI and built nothing. They showed up, set up Claude co-work, and by the end of the day my follow-ups were writing themselves. I got that six months back in a week.",
     name: "M. Alarcón",
     role: "Tax practice · Salem",
   },
   {
-    q: "I'd read about agents for a year and built nothing. They sat next to me, we shipped ten, and I finally stopped feeling behind.",
+    q: "I was skeptical — I'm not a computer person. But they sat next to me, explained everything in plain English, and now I use Claude every morning before I even open my email. It's like having a second brain.",
     name: "J. Tran",
     role: "Solo design studio · Portland",
   },
   {
-    q: "The follow-up hour is the part I didn't know I needed. We tune one thing a month and the whole shop runs lighter.",
+    q: "The 30-day support is what sold me. I had questions every day for the first two weeks, and they answered every single one. Now I'm adding new automations on my own.",
     name: "K. Reidel",
     role: "HVAC contractor · Vancouver, WA",
   },
@@ -23,13 +23,13 @@ export function Testimonials() {
         <div className="section-header">
           <div className="eyebrow">
             <span className="dot" />
-            Voices
+            From clients
           </div>
           <div>
             <h2 className="text-section">
-              What people say
+              They were where
               <br />
-              <em>after the setup day.</em>
+              <em>you are now.</em>
             </h2>
           </div>
         </div>
@@ -44,8 +44,8 @@ export function Testimonials() {
                 className="mb-6 mt-0 mx-0"
                 style={{
                   fontFamily: "var(--font-display-custom), Georgia, serif",
-                  fontSize: "clamp(22px, 2.1vw, 28px)",
-                  lineHeight: 1.35,
+                  fontSize: "clamp(18px, 1.8vw, 24px)",
+                  lineHeight: 1.4,
                 }}
               >
                 <span

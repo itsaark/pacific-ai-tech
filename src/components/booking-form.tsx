@@ -16,7 +16,7 @@ import {
 type FormState = {
   name: string;
   email: string;
-  location: string;
+  preference: string;
   focus: string;
 };
 
@@ -49,7 +49,7 @@ export function BookingForm() {
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
-    location: "Portland",
+    preference: "Remote",
     focus: "",
   });
 
@@ -69,12 +69,12 @@ export function BookingForm() {
           <div>
             <div className="eyebrow">
               <span className="dot" />
-              Book a consult
+              Get started
             </div>
             <h2 className="text-section mt-[18px]">
-              Thirty minutes,
+              Thirty minutes.
               <br />
-              <em>on us.</em>
+              <em>No cost. No pitch.</em>
             </h2>
             <p
               className="text-lede mt-6"
@@ -85,8 +85,9 @@ export function BookingForm() {
                 marginBottom: 0,
               }}
             >
-              Tell us a little about the business. We&apos;ll write back the same
-              day with a couple of times that work.
+              Tell us about your business. We&apos;ll show you exactly what
+              Claude co-work can automate for you — and you decide if it&apos;s
+              worth your time.
             </p>
           </div>
 
@@ -121,7 +122,6 @@ export function BookingForm() {
             </div>
           ) : (
             <form className="flex flex-col gap-[18px]" onSubmit={onSubmit}>
-              {/* Name + Email */}
               <div className="field-row">
                 <div className="flex flex-col gap-[6px]">
                   <Label htmlFor="book-name" style={LABEL_STYLE}>Your name</Label>
@@ -150,12 +150,12 @@ export function BookingForm() {
                 </div>
               </div>
 
-              {/* Location */}
+              {/* Preference */}
               <div className="flex flex-col gap-[6px]">
-                <Label htmlFor="book-location" style={LABEL_STYLE}>Closest city</Label>
+                <Label htmlFor="book-preference" style={LABEL_STYLE}>Remote or on-site?</Label>
                 <Select
-                  value={form.location}
-                  onValueChange={(v) => setForm((p) => ({ ...p, location: v ?? p.location }))}
+                  value={form.preference}
+                  onValueChange={(v) => setForm((p) => ({ ...p, preference: v ?? p.preference }))}
                 >
                   <SelectTrigger
                     className="rounded-none border-0 border-b px-0 focus:ring-0 focus:border-b-[var(--ink)] h-auto py-[10px]"
@@ -171,10 +171,10 @@ export function BookingForm() {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {["Portland", "Beaverton / Hillsboro", "Vancouver, WA", "Salem", "Olympia", "Other (tell us)"].map(
-                      (city) => (
-                        <SelectItem key={city} value={city}>
-                          {city}
+                    {["Remote (anywhere)", "On-site (Portland → Olympia corridor)", "Not sure yet"].map(
+                      (opt) => (
+                        <SelectItem key={opt} value={opt}>
+                          {opt}
                         </SelectItem>
                       )
                     )}
@@ -184,12 +184,12 @@ export function BookingForm() {
 
               {/* Focus textarea */}
               <div className="flex flex-col gap-[6px]">
-                <Label htmlFor="book-focus" style={LABEL_STYLE}>What&apos;s eating your week?</Label>
+                <Label htmlFor="book-focus" style={LABEL_STYLE}>What takes up most of your time?</Label>
                 <Textarea
                   id="book-focus"
                   value={form.focus}
                   onChange={set("focus")}
-                  placeholder="Quotes take me three hours each. My inbox is a mess. Bookkeeping is on a sticky note."
+                  placeholder="Emails. Following up with leads. Writing proposals. Keeping track of everything."
                   className="rounded-none focus-visible:ring-0 min-h-[80px] resize-y"
                   style={{
                     fontFamily: "var(--font-body), system-ui, sans-serif",
@@ -207,7 +207,7 @@ export function BookingForm() {
                 className="self-start h-auto px-[22px] py-[14px] text-[14px] tracking-[0.02em] rounded-none mt-2 hover:bg-[var(--brand)] hover:border-[var(--brand)]"
                 style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}
               >
-                Send it →
+                Book my free consult →
               </Button>
             </form>
           )}

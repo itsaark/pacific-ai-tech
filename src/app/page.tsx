@@ -1,7 +1,9 @@
 import { SiteNav } from "@/components/site-nav";
 import { Hero } from "@/components/hero";
-import { IntegrationStrip } from "@/components/integration-strip";
-import { Automations } from "@/components/automations";
+import { ValueProps } from "@/components/value-props";
+import { HowItWorks } from "@/components/how-it-works";
+import { Pricing } from "@/components/pricing";
+import { Capabilities } from "@/components/capabilities";
 import { Testimonials } from "@/components/testimonials";
 import { FaqSection } from "@/components/faq-section";
 import { BookingForm } from "@/components/booking-form";
@@ -14,8 +16,10 @@ export default function Home() {
       <SiteNav />
       <main>
         <Hero />
-        <IntegrationStrip />
-        <Automations />
+        <ValueProps />
+        <HowItWorks />
+        <Pricing />
+        <Capabilities />
         <Testimonials />
         <FaqSection />
         <BookingForm />
