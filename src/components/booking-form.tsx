@@ -62,7 +62,7 @@ export function BookingForm() {
   };
 
   return (
-    <section id="book" className="site-section">
+    <section id="book" className="site-section booking-section">
       <div className="wrap">
         <div className="book-grid">
           {/* Left column */}

@@ -202,15 +202,17 @@
   min-height: clamp(380px, 44vw, 560px);
   height: min(560px, calc(100vh - 180px));
   border: 1px solid rgba(17, 24, 39, 0.16);
-  background: var(--ink);
+  background:
+    linear-gradient(180deg, rgba(17, 24, 39, 0.06), rgba(17, 24, 39, 0.24)),
+    url("/ascii-backgrounds/poppy-signal.jpg") center / cover;
   box-shadow: 0 42px 90px -58px rgba(17, 24, 39, 0.86);
-  cursor: crosshair;
   isolation: isolate;
 }
 .gradient-hero-card__shade {
   background:
-    linear-gradient(180deg, rgba(17, 24, 39, 0.32), rgba(17, 24, 39, 0.08) 46%, rgba(17, 24, 39, 0.62)),
-    radial-gradient(circle at 78% 14%, rgba(249, 250, 251, 0.32), transparent 30%);
+    linear-gradient(90deg, rgba(17, 24, 39, 0.92), rgba(17, 24, 39, 0.56) 46%, rgba(17, 24, 39, 0.24)),
+    linear-gradient(180deg, rgba(17, 24, 39, 0.08), rgba(17, 24, 39, 0.68) 76%, rgba(17, 24, 39, 0.9)),
+    radial-gradient(circle at 72% 18%, rgba(245, 158, 11, 0.34), transparent 28%);
   pointer-events: none;
 }
 .gradient-hero-card__content {
@@ -274,6 +276,7 @@
     min-height: clamp(360px, 74vw, 540px);
     height: auto;
     aspect-ratio: 4 / 3;
+    background-position: 54% center;
   }
   .gradient-hero-card__headline {
     max-width: 16ch;
@@ -283,6 +286,12 @@
   .gradient-hero-card {
     min-height: 420px;
     aspect-ratio: auto;
+    background-position: 58% center;
+  }
+  .gradient-hero-card__shade {
+    background:
+      linear-gradient(180deg, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.58) 46%, rgba(17, 24, 39, 0.92)),
+      radial-gradient(circle at 68% 18%, rgba(245, 158, 11, 0.32), transparent 32%);
   }
   .gradient-hero-card__stats {
     grid-template-columns: 1fr;
@@ -317,36 +326,51 @@
   .value-grid { grid-template-columns: 1fr; }
 }
 
-.value-props-shader {
+.visual-section {
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
-.section-shader-backdrop,
-.card-shader-backdrop {
+.visual-section__image,
+.visual-pricing-card__image {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  background-size: cover;
+  background-position: center;
 }
-.section-shader-backdrop {
-  opacity: 0.72;
-}
-.section-shader-scrim,
-.card-shader-scrim {
+.visual-section__scrim,
+.visual-pricing-card__scrim {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
 }
-.section-shader-scrim {
-  background:
-    linear-gradient(180deg, rgba(17, 24, 39, 0.62), rgba(17, 24, 39, 0.78) 45%, rgba(17, 24, 39, 0.86)),
-    radial-gradient(circle at 80% 12%, rgba(249, 250, 251, 0.12), transparent 32%);
+.value-props-visual .visual-section__image {
+  background-image: url("/ascii-backgrounds/forest-meadow.jpg");
+  background-position: center 56%;
+  opacity: 0.88;
 }
-.section-shader-content {
+.value-props-visual .visual-section__scrim {
+  background:
+    linear-gradient(90deg, rgba(17, 24, 39, 0.94), rgba(17, 24, 39, 0.76) 48%, rgba(17, 24, 39, 0.52)),
+    linear-gradient(180deg, rgba(17, 24, 39, 0.68), rgba(17, 24, 39, 0.82) 54%, rgba(17, 24, 39, 0.96)),
+    radial-gradient(circle at 76% 28%, rgba(163, 230, 53, 0.2), transparent 32%);
+}
+.visual-section__content {
   position: relative;
   z-index: 2;
+}
+@media (max-width: 760px) {
+  .value-props-visual .visual-section__image {
+    background-position: 67% center;
+  }
+  .value-props-visual .visual-section__scrim {
+    background:
+      linear-gradient(180deg, rgba(17, 24, 39, 0.82), rgba(17, 24, 39, 0.74) 38%, rgba(17, 24, 39, 0.95)),
+      linear-gradient(90deg, rgba(17, 24, 39, 0.9), rgba(17, 24, 39, 0.5));
+  }
 }
 
 /* Steps grid */
@@ -405,21 +429,38 @@
 .pricing-card-dark .pricing-features li::before {
   color: rgba(249, 250, 251, 0.6);
 }
-.shader-pricing-card {
+.visual-pricing-card {
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
-.shader-pricing-card .card-shader-backdrop {
-  opacity: 0.82;
+.visual-pricing-card__image {
+  background-image: url("/ascii-backgrounds/waterfront-haze.jpg");
+  background-position: 56% center;
+  opacity: 0.84;
 }
-.shader-pricing-card .card-shader-scrim {
+.visual-pricing-card__scrim {
   background:
-    linear-gradient(135deg, rgba(17, 24, 39, 0.5), rgba(17, 24, 39, 0.66) 48%, rgba(17, 24, 39, 0.9)),
-    radial-gradient(circle at 18% 16%, rgba(249, 250, 251, 0.1), transparent 28%);
+    linear-gradient(135deg, rgba(17, 24, 39, 0.94), rgba(17, 24, 39, 0.76) 48%, rgba(17, 24, 39, 0.58)),
+    linear-gradient(180deg, rgba(17, 24, 39, 0.18), rgba(17, 24, 39, 0.86));
 }
 @media (max-width: 760px) {
   .pricing-grid { grid-template-columns: 1fr; }
+  .visual-pricing-card__image {
+    background-position: 52% center;
+  }
+}
+.support-note {
+  background:
+    linear-gradient(90deg, rgba(249, 250, 251, 0.97), rgba(249, 250, 251, 0.92) 54%, rgba(249, 250, 251, 0.68)),
+    url("/ascii-backgrounds/coastal-light.jpg") right center / cover;
+}
+@media (max-width: 760px) {
+  .support-note {
+    background:
+      linear-gradient(180deg, rgba(249, 250, 251, 0.98), rgba(249, 250, 251, 0.88)),
+      url("/ascii-backgrounds/coastal-light.jpg") center bottom / cover;
+  }
 }
 
 /* Capabilities grid */
@@ -450,8 +491,26 @@
   margin-right: 8px;
   color: var(--brand);
 }
+.capability-callout {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(90deg, rgba(249, 250, 251, 0.96), rgba(249, 250, 251, 0.9) 48%, rgba(249, 250, 251, 0.58)),
+    url("/ascii-backgrounds/bridge-bloom.jpg") right center / cover;
+  box-shadow: 0 28px 80px -68px rgba(17, 24, 39, 0.85);
+}
+.capability-callout > * {
+  position: relative;
+  z-index: 1;
+}
 @media (max-width: 900px) {
   .capabilities-grid { grid-template-columns: repeat(2, 1fr); }
+  .capability-callout {
+    background:
+      linear-gradient(180deg, rgba(249, 250, 251, 0.98), rgba(249, 250, 251, 0.88) 58%, rgba(249, 250, 251, 0.7)),
+      url("/ascii-backgrounds/bridge-bloom.jpg") 64% center / cover;
+  }
 }
 @media (max-width: 540px) {
   .capabilities-grid { grid-template-columns: 1fr; }
@@ -466,6 +525,19 @@
 @media (max-width: 900px) { .testi-grid { grid-template-columns: 1fr; } }
 
 /* Booking grid */
+.booking-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(90deg, rgba(249, 250, 251, 0.98), rgba(249, 250, 251, 0.94) 46%, rgba(249, 250, 251, 0.78)),
+    linear-gradient(180deg, rgba(249, 250, 251, 0.96), rgba(249, 250, 251, 0.72)),
+    url("/ascii-backgrounds/city-signal.jpg") right center / cover;
+}
+.booking-section .wrap {
+  position: relative;
+  z-index: 1;
+}
 .book-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -474,7 +546,14 @@
   border-top: 1px solid var(--rule);
   padding-top: clamp(36px, 5vw, 64px);
 }
-@media (max-width: 900px) { .book-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .booking-section {
+    background:
+      linear-gradient(180deg, rgba(249, 250, 251, 0.99), rgba(249, 250, 251, 0.92) 48%, rgba(249, 250, 251, 0.82)),
+      url("/ascii-backgrounds/city-signal.jpg") center bottom / cover;
+  }
+  .book-grid { grid-template-columns: 1fr; }
+}
 
 /* Form field row */
 .field-row {

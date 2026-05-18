@@ -42,7 +42,7 @@ const CAPABILITIES = [
 
 export function Capabilities() {
   return (
-    <section id="capabilities" className="site-section" style={{ background: "var(--tint)" }}>
+    <section id="capabilities" className="site-section capabilities-section" style={{ background: "var(--tint)" }}>
       <div className="wrap">
         <div className="section-header">
           <div className="eyebrow">
@@ -97,10 +97,9 @@ export function Capabilities() {
 
         {/* Hermes agent callout */}
         <div
-          className="mt-12 p-6"
+          className="capability-callout mt-12 p-6"
           style={{
             border: "1px solid var(--rule)",
-            background: "var(--snow)",
           }}
         >
           <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8">

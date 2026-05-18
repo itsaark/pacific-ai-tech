@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ShaderBackdrop } from "@/components/shader-backdrop";
 
 export function Pricing() {
   return (
@@ -112,15 +111,15 @@ export function Pricing() {
 
           {/* On-site plan */}
           <div
-            className="pricing-card pricing-card-dark shader-pricing-card"
+            className="pricing-card pricing-card-dark visual-pricing-card"
             style={{
               border: "1px solid var(--ink)",
-              background: "var(--ink)",
+              backgroundColor: "var(--ink)",
               color: "var(--snow)",
             }}
           >
-            <ShaderBackdrop className="card-shader-backdrop" />
-            <div className="card-shader-scrim" aria-hidden="true" />
+            <div className="visual-pricing-card__image" aria-hidden="true" />
+            <div className="visual-pricing-card__scrim" aria-hidden="true" />
             <div className="pricing-card-inner">
               <div>
                 <div
@@ -193,10 +192,9 @@ export function Pricing() {
 
         {/* After-support note */}
         <div
-          className="mt-10 p-6"
+          className="support-note mt-10 p-6"
           style={{
             border: "1px solid var(--rule)",
-            background: "color-mix(in oklab, var(--brand) 5%, var(--snow))",
           }}
         >
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">

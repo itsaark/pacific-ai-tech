@@ -1,0 +1,50 @@
+[
+  {
+    "file": "poppy-signal.jpg",
+    "source": "/Users/aark/Downloads/ascii-art (5).png",
+    "status": "used",
+    "currentUse": "Hero outcome panel"
+  },
+  {
+    "file": "forest-meadow.jpg",
+    "source": "/Users/aark/Downloads/ascii-art (6).png",
+    "status": "used",
+    "currentUse": "Why now section"
+  },
+  {
+    "file": "waterfront-haze.jpg",
+    "source": "/Users/aark/Downloads/ascii-art (7).png",
+    "status": "used",
+    "currentUse": "On-site pricing card"
+  },
+  {
+    "file": "bridge-bloom.jpg",
+    "source": "/Users/aark/Downloads/ascii-art.png",
+    "status": "used",
+    "currentUse": "Capabilities callout"
+  },
+  {
+    "file": "city-signal.jpg",
+    "source": "/Users/aark/Downloads/ascii-art (3).png",
+    "status": "used",
+    "currentUse": "Booking section"
+  },
+  {
+    "file": "coastal-light.jpg",
+    "source": "/Users/aark/Downloads/ascii-art (2).png",
+    "status": "used",
+    "currentUse": "Support note"
+  },
+  {
+    "file": "rocky-beacon.jpg",
+    "source": "/Users/aark/Downloads/ascii-art (4).png",
+    "status": "reserved",
+    "currentUse": "Future blog or page background"
+  },
+  {
+    "file": "summit-town.jpg",
+    "source": "/Users/aark/Downloads/ascii-art (1).png",
+    "status": "reserved",
+    "currentUse": "Future blog or page background"
+  }
+]
