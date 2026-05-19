@@ -118,7 +118,7 @@ const ticker = [
 ];
 
 const siteUrl = "https://www.pacificai.tech";
-const bookingUrl = "https://calendar.app.google/LcubD3qcRnkpWqew6";
+const bookingUrl = "https://calendar.app.google/4ye2LLZjAwpgNNxNA";
 const contactEmail = "hello@pacificai.tech";
 const serviceDescription =
   "Pacific AI Tech installs Claude Cowork, Hermes Agent, and practical AI automations on client-owned computers for small operators across greater Portland and the Pacific Northwest.";
