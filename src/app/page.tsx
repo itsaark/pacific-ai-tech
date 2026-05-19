@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, ArrowUpRight, CalendarDays } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -181,6 +182,68 @@ function CtaButton({
       {children}
       <ArrowRight data-icon="inline-end" />
     </Button>
+  );
+}
+
+function FounderSection() {
+  return (
+    <div className="pat-wrap pat-founder-shell">
+      <section className="pat-founder" aria-labelledby="founder-title">
+        <div className="pat-founder-main">
+          <a
+            className="pat-founder-photo"
+            href="https://www.linkedin.com/in/aarkkodur/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View Aark on LinkedIn"
+          >
+            <Image
+              src="/pacific-ai-tech/img/founder.jpg"
+              alt="Aark"
+              width={462}
+              height={482}
+              sizes="104px"
+            />
+          </a>
+          <div className="pat-founder-copy">
+            <span className="pat-founder-label">Founder</span>
+            <a
+              className="pat-founder-title"
+              href="https://calendar.app.google/F5a61hXmqz2z4q638"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h2 id="founder-title">Talk to Aark</h2>
+              <ArrowUpRight data-icon="inline-end" />
+            </a>
+            <p>
+              6+ years as a software engineer at Amazon. Now helping Pacific
+              Northwest operators put AI agents to work on their own machines.
+            </p>
+          </div>
+        </div>
+        <div className="pat-founder-actions" aria-label="Founder links">
+          <a
+            href="https://www.linkedin.com/in/aarkkodur/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pat-founder-action"
+          >
+            <span>View LinkedIn</span>
+            <ArrowUpRight data-icon="inline-end" />
+          </a>
+          <a
+            href="https://calendar.app.google/F5a61hXmqz2z4q638"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pat-founder-action primary"
+          >
+            <CalendarDays data-icon="inline-start" />
+            <span>Book a call</span>
+          </a>
+        </div>
+      </section>
+    </div>
   );
 }
 
@@ -480,6 +543,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FounderSection />
 
       <footer className="pat-site-foot">
         <div className="pat-wrap">
