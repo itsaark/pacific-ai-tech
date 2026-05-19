@@ -117,7 +117,133 @@ const ticker = [
   "10 automations / install",
 ];
 
+const siteUrl = "https://www.pacificai.tech";
 const bookingUrl = "https://calendar.app.google/LcubD3qcRnkpWqew6";
+const contactEmail = "hello@pacificai.tech";
+const serviceDescription =
+  "Pacific AI Tech installs Claude Cowork, Hermes Agent, and practical AI automations on client-owned computers for small operators across greater Portland and the Pacific Northwest.";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": `${siteUrl}/#localbusiness`,
+      name: "Pacific AI Tech",
+      url: `${siteUrl}/`,
+      description: serviceDescription,
+      image: `${siteUrl}/pacific-ai-tech/img/roses.jpeg`,
+      email: contactEmail,
+      foundingDate: "2025",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Portland",
+        addressRegion: "OR",
+        addressCountry: "US",
+      },
+      areaServed: [
+        { "@type": "City", name: "Portland" },
+        { "@type": "City", name: "Vancouver" },
+        { "@type": "City", name: "Beaverton" },
+        { "@type": "City", name: "Hillsboro" },
+        { "@type": "City", name: "Tigard" },
+        { "@type": "City", name: "Lake Oswego" },
+        { "@type": "City", name: "Gresham" },
+        { "@type": "City", name: "Oregon City" },
+        { "@type": "City", name: "Salem" },
+        { "@type": "City", name: "Olympia" },
+        { "@type": "State", name: "Oregon" },
+        { "@type": "State", name: "Washington" },
+      ],
+      founder: {
+        "@type": "Person",
+        name: "Aark",
+        sameAs: "https://www.linkedin.com/in/aarkkodur/",
+      },
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}/#professionalservice`,
+      name: "Pacific AI Tech AI Agent Setup",
+      url: `${siteUrl}/`,
+      provider: { "@id": `${siteUrl}/#localbusiness` },
+      serviceType: "AI agent setup and local automation consulting",
+      areaServed: [
+        { "@type": "State", name: "Oregon" },
+        { "@type": "State", name: "Washington" },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Pacific AI Tech Setup Plans",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            "@id": `${siteUrl}/#offer-onsite`,
+            name: "In-person setup",
+            price: "2800",
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: bookingUrl,
+            itemOffered: { "@id": `${siteUrl}/#service-onsite` },
+          },
+          {
+            "@type": "Offer",
+            "@id": `${siteUrl}/#offer-remote`,
+            name: "Remote setup",
+            price: "2000",
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: bookingUrl,
+            itemOffered: { "@id": `${siteUrl}/#service-remote` },
+          },
+          {
+            "@type": "Offer",
+            "@id": `${siteUrl}/#offer-follow-up`,
+            name: "Follow-up support",
+            price: "100",
+            priceCurrency: "USD",
+            priceSpecification: {
+              "@type": "UnitPriceSpecification",
+              price: "100",
+              priceCurrency: "USD",
+              unitText: "hour",
+            },
+            availability: "https://schema.org/InStock",
+            url: bookingUrl,
+            itemOffered: { "@id": `${siteUrl}/#service-follow-up` },
+          },
+        ],
+      },
+    },
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#service-onsite`,
+      name: "In-person AI agent setup",
+      serviceType: "On-site AI automation setup",
+      provider: { "@id": `${siteUrl}/#localbusiness` },
+      description:
+        "One-day on-site installation of Claude Cowork or Hermes Agent, ten client-selected automations, training, and a handoff cheat sheet.",
+    },
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#service-remote`,
+      name: "Remote AI agent setup",
+      serviceType: "Remote AI automation setup",
+      provider: { "@id": `${siteUrl}/#localbusiness` },
+      description:
+        "Two half-day screen-share sessions to install the agent stack, build ten automations, and teach the client daily operation.",
+    },
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#service-follow-up`,
+      name: "AI automation follow-up support",
+      serviceType: "Remote AI automation support",
+      provider: { "@id": `${siteUrl}/#localbusiness` },
+      description:
+        "Hourly support for broken automations, new workflows, team onboarding, and adjustments after the initial setup.",
+    },
+  ],
+};
 
 function FramedImage({
   src,
@@ -262,6 +388,12 @@ export default function Home() {
 
   return (
     <main className="pat-site">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <header className="pat-site-head">
         <div className="pat-wrap pat-header-inner">
           <a className="pat-brand" href="#top" aria-label="Pacific AI Tech home">
@@ -590,6 +722,15 @@ export default function Home() {
                 <li>
                   <a href="#pricing">Pricing</a>
                 </li>
+                <li>
+                  <a href="/llms.txt">LLM index</a>
+                </li>
+                <li>
+                  <a href="/llms-full.txt">Full LLM context</a>
+                </li>
+                <li>
+                  <a href="/sitemap.xml">Sitemap</a>
+                </li>
               </ul>
             </div>
             <div>
@@ -605,7 +746,7 @@ export default function Home() {
               <h4>Contact</h4>
               <ul>
                 <li>
-                  <a href="mailto:hello@pacificai.tech">hello@pacificai.tech</a>
+                  <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
                 </li>
                 <li>(503) 555-0142</li>
                 <li>Mon-Fri · 9-5 PT</li>

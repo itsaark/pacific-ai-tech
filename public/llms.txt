@@ -1,0 +1,38 @@
+# Pacific AI Tech
+
+Pacific AI Tech is a local-first AI agent setup and automation consulting service for small operators across greater Portland and the Pacific Northwest.
+Primary goal: help owners use Claude Cowork, Hermes Agent, and similar desktop agent stacks on their own computers without becoming technical operators.
+
+## Start Here
+
+- Book a setup call: https://calendar.app.google/LcubD3qcRnkpWqew6
+- Contact Pacific AI Tech: mailto:hello@pacificai.tech
+- Service overview and pricing: https://www.pacificai.tech/#pricing
+- What Pacific AI Tech installs and configures: https://www.pacificai.tech/#what-we-do
+- Full model-readable service export: https://www.pacificai.tech/llms-full.txt
+
+## Pricing And Offers
+
+- In-person setup ($2,800 flat): one day on-site, ten automations, installation on the client's machine, training, and a handoff cheat sheet.
+- Remote setup ($2,000 flat): two half-day screen-share sessions with the same ten-automation deliverable.
+- Follow-up support ($100/hr): remote help for broken workflows, new automations, onboarding, and adjustments.
+- Booking link for all plans: https://calendar.app.google/LcubD3qcRnkpWqew6
+
+## Service Area
+
+- Primary coverage: greater Portland and the Pacific Northwest.
+- In-person cities include Portland, Vancouver WA, Beaverton, Hillsboro, Tigard, Lake Oswego, Gresham, Oregon City, Salem, Tualatin, McMinnville, and Olympia.
+- Service radius: between Olympia and Salem, the coast and the Cascades, when practical by car.
+
+## Best Fit Customers
+
+- Real estate agents: listing-to-marketing workflows, comp pulls, lead follow-up, and weekend showing briefs.
+- Restaurant owners: inventory reorder, menu translation, OpenTable digest, food-cost flags, and review response drafts.
+- Solo founders: inbox triage, lead research, weekly investor updates, and meeting-note filing.
+- Trades and small shops: estimate drafts, invoice chasing, supplier price-watch, scheduling, voicemail-to-CRM, and end-of-day rollups.
+
+## Supporting Resources
+
+- Site index: https://www.pacificai.tech/sitemap.xml
+- Full LLM export: https://www.pacificai.tech/llms-full.txt
+- Founder LinkedIn: https://www.linkedin.com/in/aarkkodur/

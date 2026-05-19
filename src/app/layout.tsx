@@ -15,10 +15,71 @@ const newsreader = Newsreader({
   style: ["normal", "italic"],
 });
 
+const siteUrl = "https://www.pacificai.tech";
+const siteDescription =
+  "Local-first AI agent setup and automation consulting for solo founders, real-estate agents, restaurant owners, trades, and small shops across greater Portland and the Pacific Northwest.";
+
 export const metadata: Metadata = {
-  title: "Pacific AI Tech",
-  description:
-    "AI agent setup and automation consulting for small operators across greater Portland and the Pacific Northwest.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Pacific AI Tech - Local AI Agent Setup in Portland",
+    template: "%s | Pacific AI Tech",
+  },
+  description: siteDescription,
+  applicationName: "Pacific AI Tech",
+  keywords: [
+    "Pacific AI Tech",
+    "AI agent setup",
+    "Claude Cowork setup",
+    "Hermes Agent setup",
+    "small business automation",
+    "local-first AI",
+    "Portland AI consultant",
+    "Vancouver WA AI automation",
+    "Pacific Northwest AI automation",
+  ],
+  authors: [{ name: "Pacific AI Tech", url: siteUrl }],
+  creator: "Pacific AI Tech",
+  publisher: "Pacific AI Tech",
+  alternates: {
+    canonical: "/",
+    types: {
+      "text/plain": "/llms.txt",
+    },
+  },
+  openGraph: {
+    title: "Pacific AI Tech - Local AI Agent Setup in Portland",
+    description: siteDescription,
+    url: "/",
+    siteName: "Pacific AI Tech",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/pacific-ai-tech/img/roses.jpeg",
+        width: 1200,
+        height: 800,
+        alt: "Pacific AI Tech local AI agent setup in the Pacific Northwest",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pacific AI Tech - Local AI Agent Setup in Portland",
+    description: siteDescription,
+    images: ["/pacific-ai-tech/img/roses.jpeg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({

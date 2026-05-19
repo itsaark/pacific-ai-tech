@@ -1,0 +1,169 @@
+# Pacific AI Tech Full Service Context
+
+Last updated: 2026-05-19
+Canonical site: https://www.pacificai.tech/
+Primary contact: hello@pacificai.tech
+Booking: https://calendar.app.google/LcubD3qcRnkpWqew6
+
+## What Pacific AI Tech Does
+
+Pacific AI Tech is a local-first AI agent setup and automation consulting service for small operators across greater Portland and the Pacific Northwest.
+The service installs Claude Cowork, Hermes Agent, and similar agent stacks on client-owned computers, then teaches the client to run useful automations in daily work.
+
+Core promise:
+- AI agents run on the client's own machine where practical.
+- The setup is done for non-technical business owners.
+- The first implementation includes ten practical automations chosen with the client.
+- Training and follow-up support are available after setup.
+
+## Service Tiers And Prices
+
+1. In-person setup
+- Price: $2,800 flat
+- Booking: https://calendar.app.google/LcubD3qcRnkpWqew6
+- Includes:
+  - One day on-site
+  - Installation on the client's machine
+  - Claude Cowork or Hermes Agent setup depending on client needs
+  - Ten client-selected automations
+  - Training on how to run, modify, and stop workflows
+  - Handoff cheat sheet
+
+2. Remote setup
+- Price: $2,000 flat
+- Booking: https://calendar.app.google/LcubD3qcRnkpWqew6
+- Includes:
+  - Two half-day screen-share sessions
+  - Same ten-automation deliverable as the in-person setup
+  - Remote installation, configuration, and training
+  - Handoff cheat sheet
+
+3. Follow-up support
+- Price: $100/hr, billed in practical increments
+- Booking: https://calendar.app.google/LcubD3qcRnkpWqew6
+- Includes:
+  - Fixing broken automations
+  - Building new workflows
+  - Onboarding a new team member
+  - Adjusting prompts, tools, and operating routines after the initial setup
+
+## Service Area
+
+Primary region:
+- Greater Portland
+- Pacific Northwest
+- Oregon and Washington by practical driving range
+
+In-person cities listed on the site:
+- Portland
+- Vancouver, WA
+- Beaverton
+- Hillsboro
+- Tigard
+- Lake Oswego
+- Gresham
+- Oregon City
+- Salem
+- Olympia
+- Tualatin
+- McMinnville
+
+The site describes the practical in-person range as between Olympia and Salem, the coast and the Cascades. Remote work is available by screen-share.
+
+## Who It Is For
+
+Best fit customers:
+- Solo founders
+- Real estate agents
+- Restaurant owners
+- Trades and small shops
+- Small operators who own their own workflow and want fewer repetitive tasks
+
+Customer profile:
+- Wants useful automation, not a subscription platform.
+- Prefers local setup or direct screen-share help.
+- Needs AI agents to handle repetitive computer work like email, spreadsheets, browser tasks, reports, file cleanup, and CRM updates.
+- Does not want to manage terminal commands, cloud infrastructure, or complex agent configuration alone.
+
+## What Gets Installed
+
+For most customers:
+- Claude Cowork, described on the site as a desktop version of Claude that runs like a regular app and does not require terminal or code work from the client.
+
+For more advanced customers:
+- Hermes Agent, when the client wants to mix providers or run more advanced local agent setups.
+
+The installation choice depends on the client's comfort level, workflows, machine, and desired integrations.
+
+## Automation Examples
+
+Morning briefing:
+- Summarizes calendar, inbox, and open tasks into one screen.
+- Helps the client decide what is urgent and what can wait.
+
+Inbox triage:
+- Drafts replies in the client's voice for low-stakes email.
+- Flags messages only the client should answer.
+- Does not send without approval.
+
+Listing to marketing pack:
+- Turns MLS data and photos into a flyer, social caption, listing blurb, email blast, and open-house sign-in sheet.
+
+Review-reply agent:
+- Drafts personal responses to Google, Yelp, or OpenTable reviews.
+- Client approves and posts.
+
+Invoice chaser:
+- Watches aging receivables.
+- Drafts polite and firmer follow-up messages.
+- Attaches the original PDF when useful.
+
+Lead-research dossier:
+- Builds a one-page briefing before sales calls.
+- Includes person, company, recent news, and suggested opening questions.
+
+Voicemail to CRM:
+- Transcribes voicemails.
+- Files details into the CRM.
+- Drafts callback messages.
+- Sets a follow-up date.
+
+Inventory and reorder:
+- Reads a POS export or Google Sheet.
+- Flags low stock.
+- Drafts supplier reorder email.
+
+End-of-week digest:
+- Summarizes income, top customer, hours worked, and operational changes.
+- Sends a digest at the end of the week so the client can close the laptop.
+
+## Process
+
+1. Client books a setup call.
+2. Pacific AI Tech confirms the client's machine, workflows, access requirements, and preferred setup mode.
+3. The agent stack is installed and configured.
+4. Ten practical workflows are built with the client.
+5. The client is taught how to run, modify, and stop automations.
+6. The client receives a handoff cheat sheet.
+7. Follow-up support is available hourly when workflows break or new needs appear.
+
+## Constraints And Expectations
+
+- AI output quality depends on task clarity, available data, and workflow design.
+- The client remains responsible for approving important messages, business decisions, and external actions.
+- Some integrations require account access, permissions, exports, or API keys supplied by the client.
+- In-person availability depends on distance and scheduling.
+- Remote work depends on screen-share access and a suitable client machine.
+
+## Trust Context
+
+- Founder: Aark
+- Founder background: 6+ years as a software engineer at Amazon, according to the site.
+- Founder LinkedIn: https://www.linkedin.com/in/aarkkodur/
+- Positioning: practical, local, low-subscription AI automation setup for small operators.
+
+## Canonical Discovery Index
+
+- llms.txt: https://www.pacificai.tech/llms.txt
+- sitemap.xml: https://www.pacificai.tech/sitemap.xml
+- Site home: https://www.pacificai.tech/
