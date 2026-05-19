@@ -117,6 +117,8 @@ const ticker = [
   "10 automations / install",
 ];
 
+const bookingUrl = "https://calendar.app.google/LcubD3qcRnkpWqew6";
+
 function FramedImage({
   src,
   alt,
@@ -172,9 +174,17 @@ function CtaButton({
   children: React.ReactNode;
   variant?: "default" | "outline";
 }) {
+  const isExternal = href.startsWith("http");
+
   return (
     <Button
-      render={<a href={href} />}
+      render={
+        <a
+          href={href}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+        />
+      }
       nativeButton={false}
       variant={variant === "outline" ? "outline" : "default"}
       className={variant === "outline" ? "pat-btn" : "pat-btn pat-btn-primary"}
@@ -209,7 +219,7 @@ function FounderSection() {
             <span className="pat-founder-label">Founder</span>
             <a
               className="pat-founder-title"
-              href="https://calendar.app.google/F5a61hXmqz2z4q638"
+              href={bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -233,7 +243,7 @@ function FounderSection() {
             <ArrowUpRight data-icon="inline-end" />
           </a>
           <a
-            href="https://calendar.app.google/F5a61hXmqz2z4q638"
+            href={bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="pat-founder-action primary"
@@ -264,7 +274,12 @@ export default function Home() {
             </a>
             <a href="#what-we-do">What we do</a>
             <a href="#pricing">Pricing</a>
-            <a href="mailto:hello@pacificai.tech" className="cta">
+            <a
+              href={bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta"
+            >
               Book a call
             </a>
           </nav>
@@ -290,7 +305,7 @@ export default function Home() {
                 person. Quietly.
               </p>
               <div className="pat-hero-actions">
-                <CtaButton href="mailto:hello@pacificai.tech">Book a setup</CtaButton>
+                <CtaButton href={bookingUrl}>Book a setup</CtaButton>
                 <Button
                   render={<a href="#what-we-do" />}
                   nativeButton={false}
