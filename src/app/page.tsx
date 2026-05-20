@@ -115,7 +115,7 @@ const ticker = [
 
 const siteUrl = "https://www.pacificai.tech";
 const bookingUrl = "https://calendar.app.google/4ye2LLZjAwpgNNxNA";
-const contactEmail = "hello@pacificai.tech";
+const contactEmail = "hello@pacificaitech.com";
 const serviceDescription =
   "Pacific AI Tech installs Claude Cowork, Hermes Agent, and practical AI automations on client-owned computers for small operators across greater Portland and the Pacific Northwest.";
 
@@ -711,12 +711,6 @@ export default function Home() {
                   <a href="#pricing">Pricing</a>
                 </li>
                 <li>
-                  <a href="/llms.txt">LLM index</a>
-                </li>
-                <li>
-                  <a href="/llms-full.txt">Full LLM context</a>
-                </li>
-                <li>
                   <a href="/sitemap.xml">Sitemap</a>
                 </li>
               </ul>
@@ -736,8 +730,6 @@ export default function Home() {
                 <li>
                   <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
                 </li>
-                <li>(503) 555-0142</li>
-                <li>Mon-Fri · 9-5 PT</li>
               </ul>
             </div>
           </div>

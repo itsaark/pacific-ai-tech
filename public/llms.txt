@@ -6,7 +6,7 @@ Primary goal: help owners use Claude Cowork, Hermes Agent, and similar desktop a
 ## Start Here
 
 - Book a setup call: https://calendar.app.google/LcubD3qcRnkpWqew6
-- Contact Pacific AI Tech: mailto:hello@pacificai.tech
+- Contact Pacific AI Tech: mailto:hello@pacificaitech.com
 - Service overview and pricing: https://www.pacificai.tech/#pricing
 - What Pacific AI Tech installs and configures: https://www.pacificai.tech/#what-we-do
 - Full model-readable service export: https://www.pacificai.tech/llms-full.txt
