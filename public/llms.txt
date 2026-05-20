@@ -21,7 +21,7 @@ Primary goal: help owners use Claude Cowork, Hermes Agent, and similar desktop a
 ## Service Area
 
 - Primary coverage: greater Portland and the Pacific Northwest.
-- In-person cities include Portland, Vancouver WA, Beaverton, Hillsboro, Tigard, Lake Oswego, Gresham, Oregon City, Salem, Tualatin, McMinnville, and Olympia.
+- In-person cities include Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, Gresham, Oregon City, Salem, Tualatin, McMinnville, and Olympia.
 - Service radius: between Olympia and Salem, the coast and the Cascades, when practical by car.
 
 ## Best Fit Customers

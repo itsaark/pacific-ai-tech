@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "small business automation",
     "local-first AI",
     "Portland AI consultant",
-    "Vancouver WA AI automation",
+    "Vancouver AI automation",
     "Pacific Northwest AI automation",
   ],
   authors: [{ name: "Pacific AI Tech", url: siteUrl }],

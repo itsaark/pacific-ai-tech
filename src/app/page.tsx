@@ -72,7 +72,7 @@ const automations = [
 
 const cities = [
   "Portland",
-  "Vancouver, WA",
+  "Vancouver",
   "Beaverton",
   "Hillsboro",
   "Tigard",
@@ -113,7 +113,7 @@ const ticker = [
   "Hermes Agent",
   "Local-first setups",
   "Realtors · Restaurants · Solo founders",
-  "Portland · Salem · Vancouver WA · Olympia",
+  "Portland · Salem · Vancouver · Olympia",
   "10 automations / install",
 ];
 
@@ -737,7 +737,7 @@ export default function Home() {
               <h4>Region</h4>
               <ul>
                 <li>Portland, OR</li>
-                <li>Vancouver, WA</li>
+                <li>Vancouver</li>
                 <li>Salem, OR</li>
                 <li>Olympia, WA</li>
               </ul>

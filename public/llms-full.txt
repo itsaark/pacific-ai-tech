@@ -56,7 +56,7 @@ Primary region:
 
 In-person cities listed on the site:
 - Portland
-- Vancouver, WA
+- Vancouver
 - Beaverton
 - Hillsboro
 - Tigard
