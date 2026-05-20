@@ -92,13 +92,13 @@ const prices = [
     title: "/ in-person setup",
     price: "$2,800",
     unit: "One day · ten automations · on-site",
-    desc: "We drive to you. Install on your machine. Build the ten you want. Teach you to use them. Leave a cheat sheet.",
+    desc: "We drive to you. Install on your machine. Build the ten you want. Teach you to use them. Leave a cheat sheet. Includes 30-day premium support.",
   },
   {
     title: "/ remote setup",
     price: "$2,000",
     unit: "Same ten automations · over screen-share",
-    desc: "Two half-day sessions via screen-share. Same deliverables, same cheat sheet. Great for the comfortable-with-Zoom crowd.",
+    desc: "Two half-day sessions via screen-share. Same deliverables, same cheat sheet, and 30-day premium support. Great for the comfortable-with-Zoom crowd.",
   },
   {
     title: "/ follow-up",
@@ -222,7 +222,7 @@ const jsonLd = {
       serviceType: "On-site AI automation setup",
       provider: { "@id": `${siteUrl}/#localbusiness` },
       description:
-        "One-day on-site installation of Claude Cowork or Hermes Agent, ten client-selected automations, training, and a handoff cheat sheet.",
+        "One-day on-site installation of Claude Cowork or Hermes Agent, ten client-selected automations, training, a handoff cheat sheet, and 30-day premium support.",
     },
     {
       "@type": "Service",
@@ -231,7 +231,7 @@ const jsonLd = {
       serviceType: "Remote AI automation setup",
       provider: { "@id": `${siteUrl}/#localbusiness` },
       description:
-        "Two half-day screen-share sessions to install the agent stack, build ten automations, and teach the client daily operation.",
+        "Two half-day screen-share sessions to install the agent stack, build ten automations, teach the client daily operation, and provide 30-day premium support.",
     },
     {
       "@type": "Service",
