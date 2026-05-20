@@ -642,8 +642,7 @@ export default function Home() {
             </h2>
             <p className="pat-lede">
               We drive. We don&apos;t fly. Anywhere between Olympia and Salem,
-              the coast and the Cascades. We&apos;ll be at your address within
-              two business days of booking.
+              the coast and the Cascades.
             </p>
             <div className="pat-cities">
               {cities.map((city, index) => (
