@@ -41,10 +41,6 @@ const flow = [
     text: "Describe the result: a tidy folder, a report, a draft reply to every review, and Claude figures out how to get there.",
   },
   {
-    title: "Use your computer the way you would.",
-    text: "Open files, fill spreadsheets, click around the browser, send the email. You watch the first few times; after that, you stop watching.",
-  },
-  {
     title: "Do the same thing every morning, without being asked.",
     text: '"Pull yesterday\'s sales, summarize my inbox, and put it on my desk by 7am." Tell it once. It just keeps doing it.',
   },
@@ -577,13 +573,6 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <p className="pat-install-note">
-              <strong>What we install:</strong> for almost everyone, it&apos;s{" "}
-              <em>Claude Cowork</em>, the version of Claude that lives in a
-              regular desktop app, no terminals or code. For clients who want to
-              mix providers or run more advanced setups, we install{" "}
-              <em>Hermes Agent</em> instead.
-            </p>
           </div>
           <FramedImage
             src="/pacific-ai-tech/img/tulips.jpeg"
