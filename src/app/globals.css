@@ -1148,19 +1148,232 @@ html {
 }
 
 @media (max-width: 620px) {
+  .pat-site {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .pat-wrap {
+    width: min(100% - 28px, 1240px);
+  }
+
   .pat-site h1 {
-    font-size: clamp(38px, 11vw, 52px);
-    line-height: 1.12;
-    letter-spacing: -0.01em;
+    font-size: clamp(35px, 10.6vw, 46px);
+    line-height: 1.08;
+  }
+
+  .pat-site h2 {
+    font-size: clamp(30px, 9vw, 40px);
+    line-height: 1.08;
+    letter-spacing: 0;
+  }
+
+  .pat-site h3,
+  .pat-who-card [data-slot="card-title"],
+  .pat-auto-card [data-slot="card-title"] {
+    font-size: 22px;
+  }
+
+  .pat-lede {
+    font-size: clamp(18px, 5vw, 20px);
+    line-height: 1.42;
+  }
+
+  .pat-site-head {
+    position: static;
+  }
+
+  .pat-brand {
+    min-height: 50px;
+    font-size: 12px;
+  }
+
+  .pat-brand-mark {
+    width: 18px;
+    height: 18px;
+  }
+
+  .pat-primary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow-x: visible;
+  }
+
+  .pat-primary a {
+    justify-content: center;
+    min-height: 44px;
+    border-top: 1px solid var(--rule);
+    padding: 0 8px;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .pat-primary a:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .pat-primary a.active::before {
+    width: 18px;
+  }
+
+  .pat-hero-text {
+    padding: 34px 0 30px;
+  }
+
+  .pat-hero-lede {
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.42;
+  }
+
+  .pat-hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pat-btn {
+    width: 100%;
+    min-height: 48px;
+    justify-content: space-between;
+    padding: 14px 16px;
+    white-space: normal;
   }
 
   .pat-hero-meta {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 0;
+    margin-top: 24px;
+    padding-top: 0;
+    border: 1px solid var(--rule);
+  }
+
+  .pat-hero-meta > div {
+    padding: 13px 14px;
+  }
+
+  .pat-hero-meta > div + div {
+    border-top: 1px solid var(--rule);
+  }
+
+  .pat-hero-meta .m-label {
+    margin-bottom: 3px;
+  }
+
+  .pat-hero-meta .m-val {
+    font-size: 20px;
+  }
+
+  .pat-hero-image,
+  .pat-showcase-image,
+  .pat-region-image {
+    min-height: 300px;
+  }
+
+  .pat-overlay-top {
+    right: 12px;
+    left: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .pat-overlay-top,
+  .pat-overlay-caption {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .pat-ticker {
+    padding: 8px 0;
+  }
+
+  .pat-ticker-track,
+  .pat-ticker-track span {
+    gap: 22px;
+  }
+
+  .pat-promise,
+  .pat-who,
+  .pat-autos,
+  .pat-pricing {
+    padding: 64px 0;
+  }
+
+  .pat-promise {
+    gap: 32px;
+  }
+
+  .pat-promise .col-left p,
+  .pat-promise .col-left p:first-of-type {
+    font-size: clamp(22px, 6.4vw, 28px);
+    line-height: 1.36;
+  }
+
+  .pat-section-head {
+    padding-bottom: 30px;
+  }
+
+  .pat-showcase-text,
+  .pat-region-text {
+    padding: 48px 0;
+  }
+
+  .pat-flow-row .text {
+    font-size: 17px;
+  }
+
+  .pat-flow-row em {
+    font-size: 11px;
+    letter-spacing: 0.02em;
   }
 
   .pat-who-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pat-who-card,
+  .pat-auto-card,
+  .pat-price-card {
+    min-height: auto;
+  }
+
+  .pat-who-card [data-slot="card-header"],
+  .pat-auto-card [data-slot="card-header"],
+  .pat-price-card [data-slot="card-header"] {
+    padding: 22px 20px 0;
+  }
+
+  .pat-who-card [data-slot="card-content"],
+  .pat-auto-card [data-slot="card-content"],
+  .pat-price-card [data-slot="card-content"] {
+    padding: 14px 20px 22px;
+  }
+
+  .pat-auto-id {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pat-cities {
+    gap: 6px;
+  }
+
+  .pat-city {
+    padding: 6px 9px;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+  }
+
+  .pat-price-row {
+    gap: 14px;
+    margin-top: 32px;
+  }
+
+  .pat-price-card .price {
+    font-size: clamp(42px, 13vw, 52px);
   }
 
   .pat-overlay-caption {
@@ -1197,4 +1410,33 @@ html {
     width: 100%;
   }
 
+  .pat-foot-display {
+    font-size: clamp(42px, 13vw, 58px);
+  }
+
+  .pat-site-foot .pat-wrap {
+    padding-top: 44px;
+  }
+
+}
+
+@media (max-width: 390px) {
+  .pat-wrap {
+    width: min(100% - 22px, 1240px);
+  }
+
+  .pat-site h1 {
+    font-size: clamp(32px, 10.2vw, 39px);
+  }
+
+  .pat-primary a {
+    min-height: 44px;
+    font-size: 9px;
+  }
+
+  .pat-btn,
+  .pat-founder-action {
+    font-size: 11px;
+    letter-spacing: 0.07em;
+  }
 }
