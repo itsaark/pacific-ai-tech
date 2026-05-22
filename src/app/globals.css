@@ -207,6 +207,11 @@ html {
   font-weight: 400;
 }
 
+.pat-hero h1 {
+  font-size: clamp(44px, 4.8vw, 76px);
+  line-height: 1.03;
+}
+
 .pat-site h2 {
   font-size: clamp(36px, 4.4vw, 64px);
   line-height: 1.02;
@@ -345,10 +350,10 @@ html {
 }
 
 .pat-hero-lede {
-  max-width: 50ch;
-  margin-top: clamp(18px, 3svh, 28px);
-  font-size: clamp(18px, 1.45vw, 22px);
-  line-height: 1.38;
+  max-width: 40ch;
+  margin-top: clamp(16px, 2.6svh, 24px);
+  font-size: clamp(17px, 1.25vw, 20px);
+  line-height: 1.36;
 }
 
 .pat-hero-actions {

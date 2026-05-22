@@ -431,18 +431,13 @@ export default function Home() {
                 We set up <span className="pat-underlined">AI agents</span> on
                 your computer.
                 <br />
-                Then teach you how to{" "}
-                <span className="pat-serif-italic">use them</span>.
-                <br />
                 You get your <span className="pat-serif-italic">evenings</span>{" "}
                 back.
               </h1>
               <p className="pat-lede pat-hero-lede">
-                Pacific AI Tech installs Claude Cowork and other agent stacks on
-                the machines of solo founders, real-estate agents,
-                restaurateurs, and small-shop owners across greater Portland,
-                then teaches them how to run, review, and improve automations
-                every day. Locally. In person. Quietly.
+                We install Claude Cowork, build your first automations, and
+                teach you how to use them with confidence. Local, practical,
+                in person.
               </p>
               <div className="pat-hero-actions">
                 <CtaButton href={bookingUrl}>Book a setup</CtaButton>
