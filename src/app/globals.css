@@ -261,7 +261,7 @@ html {
 .pat-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -269,24 +269,19 @@ html {
 }
 
 .pat-brand-mark {
-  position: relative;
-  display: inline-block;
+  display: inline-flex;
   width: 22px;
-  height: 22px;
+  height: 38px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 
-.pat-brand-mark::before,
-.pat-brand-mark::after {
-  position: absolute;
-  inset: 0;
-  border: 1px solid var(--ink);
-  content: "";
-}
-
-.pat-brand-mark::after {
-  background: var(--moss);
-  border-color: var(--moss-deep);
-  transform: rotate(45deg) scale(0.55);
+.pat-brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .pat-primary {
@@ -1190,7 +1185,7 @@ html {
 
   .pat-brand-mark {
     width: 18px;
-    height: 18px;
+    height: 32px;
   }
 
   .pat-primary {

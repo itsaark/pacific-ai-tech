@@ -43,6 +43,20 @@ export const metadata: Metadata = {
   authors: [{ name: "Pacific AI Tech", url: siteUrl }],
   creator: "Pacific AI Tech",
   publisher: "Pacific AI Tech",
+  icons: {
+    icon: [
+      {
+        url: "/pacific-ai-tech/img/logo-pine-icon.png",
+        type: "image/png",
+      },
+    ],
+    apple: [
+      {
+        url: "/pacific-ai-tech/img/logo-pine-icon.png",
+        type: "image/png",
+      },
+    ],
+  },
   alternates: {
     canonical: "/",
     types: {

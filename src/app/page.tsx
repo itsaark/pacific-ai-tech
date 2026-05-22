@@ -394,7 +394,15 @@ export default function Home() {
       <header className="pat-site-head">
         <div className="pat-wrap pat-header-inner">
           <a className="pat-brand" href="#top" aria-label="Pacific AI Tech home">
-            <span className="pat-brand-mark" />
+            <span className="pat-brand-mark" aria-hidden="true">
+              <Image
+                src="/pacific-ai-tech/img/logo-pine.png"
+                alt=""
+                width={225}
+                height={512}
+                priority
+              />
+            </span>
             Pacific&nbsp;AI&nbsp;Tech
           </a>
           <nav className="pat-primary" aria-label="Primary navigation">
