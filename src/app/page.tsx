@@ -700,10 +700,20 @@ export default function Home() {
 
       <footer className="pat-site-foot">
         <div className="pat-wrap">
-          <div className="pat-foot-display">
-            Free your <em>evenings.</em>
-            <br />
-            Free your <em>weekends.</em>
+          <div className="pat-foot-top">
+            <div className="pat-foot-display">
+              Free your <em>evenings.</em>
+              <br />
+              Free your <em>weekends.</em>
+            </div>
+            <div className="pat-foot-logo" aria-hidden="true">
+              <Image
+                src="/pacific-ai-tech/img/logo-pine.png"
+                alt=""
+                width={225}
+                height={512}
+              />
+            </div>
           </div>
           <Separator className="pat-foot-rule" />
           <div className="pat-foot-grid">
