@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Geist, JetBrains_Mono, Newsreader } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
@@ -97,7 +98,10 @@ export default function RootLayout({
         newsreader.variable
       )}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
