@@ -88,13 +88,13 @@ const prices = [
     title: "/ in-person setup",
     price: "$2,800",
     unit: "One day · ten automations · on-site",
-    desc: "We drive to you. Install on your machine. Build the ten you want. Teach you to use them. Leave a cheat sheet. Includes 30-day premium support.",
+    desc: "We drive to you. Install on your machine. Build the ten you want. Teach you how to run, judge, and improve them. Leave a cheat sheet. Includes 30-day premium support.",
   },
   {
     title: "/ remote setup",
     price: "$2,000",
     unit: "Same ten automations · over screen-share",
-    desc: "Two half-day sessions via screen-share. Same deliverables, same cheat sheet, and 30-day premium support. Great for the comfortable-with-Zoom crowd.",
+    desc: "Two half-day screen-share sessions. Same ten automations, same hands-on coaching, same cheat sheet, and 30-day premium support.",
   },
   {
     title: "/ follow-up",
@@ -107,17 +107,17 @@ const prices = [
 const ticker = [
   "Claude Cowork",
   "Hermes Agent",
-  "Local-first setups",
+  "Local-first setup + coaching",
   "Realtors · Restaurants · Solo founders",
   "Portland · Salem · Vancouver · Olympia",
-  "10 automations / install",
+  "10 automations / install + teach",
 ];
 
 const siteUrl = "https://www.pacificai.tech";
 const bookingUrl = "https://calendar.app.google/4ye2LLZjAwpgNNxNA";
 const contactEmail = "hello@pacificaitech.com";
 const serviceDescription =
-  "Pacific AI Tech installs Claude Cowork, Hermes Agent, and practical AI automations on client-owned computers for small operators across greater Portland and the Pacific Northwest.";
+  "Pacific AI Tech installs Claude Cowork, Hermes Agent, and practical AI automations on client-owned computers, then teaches small operators how to use them confidently across greater Portland and the Pacific Northwest.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -163,7 +163,7 @@ const jsonLd = {
       name: "Pacific AI Tech AI Agent Setup",
       url: `${siteUrl}/`,
       provider: { "@id": `${siteUrl}/#localbusiness` },
-      serviceType: "AI agent setup and local automation consulting",
+      serviceType: "AI agent setup, training, and local automation consulting",
       areaServed: [
         { "@type": "State", name: "Oregon" },
         { "@type": "State", name: "Washington" },
@@ -215,19 +215,19 @@ const jsonLd = {
       "@type": "Service",
       "@id": `${siteUrl}/#service-onsite`,
       name: "In-person AI agent setup",
-      serviceType: "On-site AI automation setup",
+      serviceType: "On-site AI automation setup and training",
       provider: { "@id": `${siteUrl}/#localbusiness` },
       description:
-        "One-day on-site installation of Claude Cowork or Hermes Agent, ten client-selected automations, training, a handoff cheat sheet, and 30-day premium support.",
+        "One-day on-site installation of Claude Cowork or Hermes Agent, ten client-selected automations, hands-on training, a handoff cheat sheet, and 30-day premium support.",
     },
     {
       "@type": "Service",
       "@id": `${siteUrl}/#service-remote`,
       name: "Remote AI agent setup",
-      serviceType: "Remote AI automation setup",
+      serviceType: "Remote AI automation setup and training",
       provider: { "@id": `${siteUrl}/#localbusiness` },
       description:
-        "Two half-day screen-share sessions to install the agent stack, build ten automations, teach the client daily operation, and provide 30-day premium support.",
+        "Two half-day screen-share sessions to install the agent stack, build ten automations, teach the client how to operate and improve them, and provide 30-day premium support.",
     },
     {
       "@type": "Service",
@@ -350,7 +350,8 @@ function FounderSection() {
             </a>
             <p>
               6+ years as a software engineer at Amazon. Now helping Pacific
-              Northwest operators put AI agents to work on their own machines.
+              Northwest operators put AI agents to work on their own machines
+              and understand how to use them well.
             </p>
           </div>
         </div>
@@ -422,6 +423,9 @@ export default function Home() {
                 We set up <span className="pat-underlined">AI agents</span> on
                 your computer.
                 <br />
+                Then teach you how to{" "}
+                <span className="pat-serif-italic">use them</span>.
+                <br />
                 You get your <span className="pat-serif-italic">evenings</span>{" "}
                 back.
               </h1>
@@ -429,8 +433,8 @@ export default function Home() {
                 Pacific AI Tech installs Claude Cowork and other agent stacks on
                 the machines of solo founders, real-estate agents,
                 restaurateurs, and small-shop owners across greater Portland,
-                then teaches them to run automations every day. Locally. In
-                person. Quietly.
+                then teaches them how to run, review, and improve automations
+                every day. Locally. In person. Quietly.
               </p>
               <div className="pat-hero-actions">
                 <CtaButton href={bookingUrl}>Book a setup</CtaButton>
@@ -498,9 +502,12 @@ export default function Home() {
             </p>
             <p>
               An AI agent on your laptop can do most of that if someone shows
-              up, sets it up, and stays on the phone when something breaks.
+              up, sets it up, teaches you how to steer it, and stays on the
+              phone when something breaks.
             </p>
-            <p className="pat-serif-italic pat-moss">That&apos;s the entire job.</p>
+            <p className="pat-serif-italic pat-moss">
+              Setup first. Confidence by the end.
+            </p>
           </div>
           <div className="col-right">
             <p>
@@ -513,7 +520,8 @@ export default function Home() {
             <p>
               <strong>Then we sit with you and build ten automations</strong>{" "}
               of your choosing. The ones you actually do every day. The boring
-              ones. We teach you how to run them, modify them, and stop them.
+              ones. As we build, we teach you how to prompt them, check their
+              work, modify them, and stop them.
             </p>
             <p>
               <strong>That&apos;s the flat fee.</strong> No retainer, no
@@ -555,13 +563,13 @@ export default function Home() {
           <div className="pat-showcase-text">
             <span className="pat-eyebrow">What you get</span>
             <h2 id="what-title">
-              After our visit, your computer can{" "}
-              <span className="pat-serif-italic">do its own work</span>.
+              After our visit, your computer can work, and{" "}
+              <span className="pat-serif-italic">you can steer it</span>.
             </h2>
             <p className="pat-lede">
               We install Claude on your laptop. Then we teach it to do the
-              things you do every day. You tell it what you want in normal
-              English and walk away.
+              things you do every day, while teaching you what to ask, what to
+              approve, and what to keep an eye on.
             </p>
             <div className="pat-flow">
               {flow.map((item) => (
@@ -652,8 +660,9 @@ export default function Home() {
         <div className="pat-wrap">
           <SectionHeading eyebrow="The whole pricing page on one row">
             <h2 id="pricing-title">
-              Flat fees. <span className="pat-serif-italic">No subscription.</span>{" "}
-              No surprise line items.
+              Flat fees for setup and teaching.{" "}
+              <span className="pat-serif-italic">No subscription.</span> No
+              surprise line items.
             </h2>
           </SectionHeading>
           <div className="pat-price-row">
@@ -695,7 +704,7 @@ export default function Home() {
               <p>
                 A two-person consultancy helping the Pacific Northwest&apos;s
                 small operators put AI to work quietly, locally, on their own
-                machines.
+                machines, then feel confident using it without us in the room.
               </p>
             </div>
             <div>

@@ -18,7 +18,7 @@ const newsreader = Newsreader({
 
 const siteUrl = "https://www.pacificai.tech";
 const siteDescription =
-  "Local-first AI agent setup and automation consulting for solo founders, real-estate agents, restaurant owners, trades, and small shops across greater Portland and the Pacific Northwest.";
+  "Local-first AI agent setup, training, and automation consulting for solo founders, real-estate agents, restaurant owners, trades, and small shops across greater Portland and the Pacific Northwest.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -31,6 +31,7 @@ export const metadata: Metadata = {
   keywords: [
     "Pacific AI Tech",
     "AI agent setup",
+    "AI agent training",
     "Claude Cowork setup",
     "Hermes Agent setup",
     "small business automation",
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
         url: "/pacific-ai-tech/img/roses.jpeg",
         width: 1200,
         height: 800,
-        alt: "Pacific AI Tech local AI agent setup in the Pacific Northwest",
+        alt: "Pacific AI Tech local AI agent setup and training in the Pacific Northwest",
       },
     ],
   },
