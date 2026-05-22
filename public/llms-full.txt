@@ -1,7 +1,7 @@
 # Pacific AI Tech Full Service Context
 
 Last updated: 2026-05-19
-Canonical site: https://www.pacificai.tech/
+Canonical site: https://www.pacificaitech.com/
 Primary contact: hello@pacificaitech.com
 Booking: https://calendar.app.google/LcubD3qcRnkpWqew6
 
@@ -166,6 +166,6 @@ End-of-week digest:
 
 ## Canonical Discovery Index
 
-- llms.txt: https://www.pacificai.tech/llms.txt
-- sitemap.xml: https://www.pacificai.tech/sitemap.xml
-- Site home: https://www.pacificai.tech/
+- llms.txt: https://www.pacificaitech.com/llms.txt
+- sitemap.xml: https://www.pacificaitech.com/sitemap.xml
+- Site home: https://www.pacificaitech.com/

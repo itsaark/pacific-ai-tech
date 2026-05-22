@@ -1,10 +1,10 @@
-# robots.txt for pacificai.tech
+# robots.txt for pacificaitech.com
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://www.pacificai.tech/sitemap.xml
+Sitemap: https://www.pacificaitech.com/sitemap.xml
 
 # LLM discovery file
 # Exposed intentionally for AI retrieval and routing
-# llms.txt: https://www.pacificai.tech/llms.txt
+# llms.txt: https://www.pacificaitech.com/llms.txt

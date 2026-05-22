@@ -113,7 +113,7 @@ const ticker = [
   "10 automations / install + teach",
 ];
 
-const siteUrl = "https://www.pacificai.tech";
+const siteUrl = "https://www.pacificaitech.com";
 const bookingUrl = "https://calendar.app.google/4ye2LLZjAwpgNNxNA";
 const contactEmail = "hello@pacificaitech.com";
 const serviceDescription =

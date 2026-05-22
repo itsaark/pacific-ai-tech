@@ -16,7 +16,7 @@ const newsreader = Newsreader({
   style: ["normal", "italic"],
 });
 
-const siteUrl = "https://www.pacificai.tech";
+const siteUrl = "https://www.pacificaitech.com";
 const siteDescription =
   "Local-first AI agent setup, training, and automation consulting for solo founders, real-estate agents, restaurant owners, trades, and small shops across greater Portland and the Pacific Northwest.";
 
