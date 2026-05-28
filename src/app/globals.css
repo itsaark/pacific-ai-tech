@@ -327,6 +327,32 @@ html {
   color: var(--paper);
 }
 
+.pat-menu-toggle,
+.pat-mobile-primary {
+  display: none;
+}
+
+.pat-menu-toggle {
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.pat-menu-toggle svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.8;
+}
+
+.pat-menu-toggle:hover {
+  background: var(--paper-deep);
+}
+
 .pat-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
@@ -1214,6 +1240,12 @@ html {
     position: static;
   }
 
+  .pat-header-inner {
+    min-height: 58px;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .pat-brand {
     min-height: 50px;
     font-size: 12px;
@@ -1225,28 +1257,57 @@ html {
   }
 
   .pat-primary {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    overflow-x: visible;
+    display: none;
   }
 
-  .pat-primary a {
-    justify-content: center;
-    min-height: 44px;
+  .pat-menu-toggle {
+    display: inline-flex;
+  }
+
+  .pat-mobile-primary.is-open {
+    display: block;
     border-top: 1px solid var(--rule);
-    padding: 0 8px;
-    font-size: 10px;
-    letter-spacing: 0.04em;
-    text-align: center;
-    white-space: normal;
+    background: var(--paper);
   }
 
-  .pat-primary a:nth-child(odd) {
-    border-left: 0;
+  .pat-mobile-primary-inner {
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 14px;
   }
 
-  .pat-primary a.active::before {
-    width: 18px;
+  .pat-mobile-primary a {
+    position: relative;
+    display: flex;
+    min-height: 48px;
+    align-items: center;
+    border-bottom: 1px solid var(--rule);
+    padding: 0 4px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .pat-mobile-primary a.active::before {
+    width: 2px;
+    height: 20px;
+    margin-right: 12px;
+    background: var(--moss);
+    content: "";
+  }
+
+  .pat-mobile-primary a.cta {
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 0;
+    padding: 0 14px;
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .pat-mobile-primary a.cta::after {
+    font-size: 18px;
+    content: "->";
   }
 
   .pat-hero-text {

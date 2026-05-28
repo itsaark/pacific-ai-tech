@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { SiteHeader } from "@/components/site-header";
 
 const clients = [
   {
@@ -391,37 +392,7 @@ export default function Home() {
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <header className="pat-site-head">
-        <div className="pat-wrap pat-header-inner">
-          <a className="pat-brand" href="#top" aria-label="Pacific AI Tech home">
-            <span className="pat-brand-mark" aria-hidden="true">
-              <Image
-                src="/pacific-ai-tech/img/logo-pine.png"
-                alt=""
-                width={225}
-                height={512}
-                priority
-              />
-            </span>
-            Pacific&nbsp;AI&nbsp;Tech
-          </a>
-          <nav className="pat-primary" aria-label="Primary navigation">
-            <a href="#top" className="active">
-              Index
-            </a>
-            <a href="#what-we-do">What we do</a>
-            <a href="#pricing">Pricing</a>
-            <a
-              href={bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta"
-            >
-              Book a call
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader bookingUrl={bookingUrl} />
 
       <div id="top" className="pat-wrap">
         <section className="pat-hero" aria-labelledby="hero-title">
