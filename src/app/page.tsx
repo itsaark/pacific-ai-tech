@@ -152,11 +152,18 @@ const jsonLd = {
         { "@type": "State", name: "Oregon" },
         { "@type": "State", name: "Washington" },
       ],
-      founder: {
-        "@type": "Person",
-        name: "Aark",
-        sameAs: "https://www.linkedin.com/in/aarkkodur/",
-      },
+      founder: [
+        {
+          "@type": "Person",
+          name: "Aark Kodur",
+          sameAs: "https://www.linkedin.com/in/aarkkodur/",
+        },
+        {
+          "@type": "Person",
+          name: "Shayan Jalalipour",
+          sameAs: "https://www.linkedin.com/in/shayanjalalipour/",
+        },
+      ],
     },
     {
       "@type": "ProfessionalService",
@@ -321,49 +328,79 @@ function CtaButton({
 function FounderSection() {
   return (
     <div className="pat-wrap pat-founder-shell">
-      <section className="pat-founder" aria-labelledby="founder-title">
+      <section
+        id="founders"
+        className="pat-founder"
+        aria-labelledby="founder-title"
+      >
         <div className="pat-founder-main">
-          <a
-            className="pat-founder-photo"
-            href="https://www.linkedin.com/in/aarkkodur/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View Aark on LinkedIn"
-          >
-            <Image
-              src="/pacific-ai-tech/img/founder.jpg"
-              alt="Aark"
-              width={462}
-              height={482}
-              sizes="104px"
-            />
-          </a>
+          <div className="pat-founder-photos" aria-label="Co-founder profiles">
+            <a
+              className="pat-founder-photo"
+              href="https://www.linkedin.com/in/aarkkodur/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Aark Kodur on LinkedIn"
+            >
+              <Image
+                src="/pacific-ai-tech/img/founder.jpg"
+                alt="Aark Kodur"
+                width={462}
+                height={482}
+                sizes="104px"
+              />
+            </a>
+            <a
+              className="pat-founder-photo pat-founder-photo-shayan"
+              href="https://www.linkedin.com/in/shayanjalalipour/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View Shayan Jalalipour on LinkedIn"
+            >
+              <Image
+                src="/pacific-ai-tech/img/shayan-jalalipour.jpg"
+                alt="Shayan Jalalipour"
+                width={654}
+                height={900}
+                sizes="104px"
+              />
+            </a>
+          </div>
           <div className="pat-founder-copy">
-            <span className="pat-founder-label">Founder</span>
+            <span className="pat-founder-label">Co-founders</span>
             <a
               className="pat-founder-title"
               href={bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h2 id="founder-title">Talk to Aark</h2>
+              <h2 id="founder-title">Talk to Aark &amp; Shayan</h2>
               <ArrowUpRight data-icon="inline-end" />
             </a>
             <p>
-              6+ years as a software engineer at Amazon. Now helping Pacific
-              Northwest operators put AI agents to work on their own machines
-              and understand how to use them well.
+              Software engineering from Amazon meets AI/ML research from
+              Portland State. We help Pacific Northwest operators put AI agents
+              to work on their own machines and understand how to use them well.
             </p>
           </div>
         </div>
-        <div className="pat-founder-actions" aria-label="Founder links">
+        <div className="pat-founder-actions" aria-label="Co-founder links">
           <a
             href="https://www.linkedin.com/in/aarkkodur/"
             target="_blank"
             rel="noopener noreferrer"
             className="pat-founder-action"
           >
-            <span>View LinkedIn</span>
+            <span>Aark LinkedIn</span>
+            <ArrowUpRight data-icon="inline-end" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shayanjalalipour/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pat-founder-action"
+          >
+            <span>Shayan LinkedIn</span>
             <ArrowUpRight data-icon="inline-end" />
           </a>
           <a

@@ -859,6 +859,7 @@ html {
   display: grid;
   grid-template-columns: minmax(0, 1fr) max-content;
   align-items: center;
+  scroll-margin-top: 112px;
   overflow: hidden;
   border: 1px solid var(--rule);
   background:
@@ -873,6 +874,12 @@ html {
   padding: 28px 32px;
 }
 
+.pat-founder-photos {
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+}
+
 .pat-founder-photo {
   position: relative;
   display: block;
@@ -885,7 +892,12 @@ html {
   transition: transform 0.15s ease, filter 0.15s ease;
 }
 
+.pat-founder-photo + .pat-founder-photo {
+  margin-left: -14px;
+}
+
 .pat-founder-photo:hover {
+  z-index: 1;
   filter: saturate(1.08);
   transform: translateY(-2px);
 }
@@ -902,6 +914,10 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.pat-founder-photo-shayan img {
+  object-position: center 37%;
 }
 
 .pat-founder-copy {
@@ -973,6 +989,7 @@ html {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  white-space: nowrap;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
