@@ -20,7 +20,20 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [currentHash, setCurrentHash] = useState("");
   const pathname = usePathname();
+
+  useEffect(() => {
+    const updateHash = () => setCurrentHash(window.location.hash);
+
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    window.addEventListener("popstate", updateHash);
+    return () => {
+      window.removeEventListener("hashchange", updateHash);
+      window.removeEventListener("popstate", updateHash);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     if (!menuOpen) {
@@ -38,16 +51,23 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
+  const setActiveFromHref = (href: string) => {
+    const hrefHash = href.split("#")[1];
+    setCurrentHash(hrefHash ? `#${hrefHash}` : "");
+  };
+
   const isActive = (href: string) => {
+    const [hrefPath, hrefHash = ""] = href.split("#");
+
     if (href === "/case-studies") {
       return pathname.startsWith("/case-studies");
     }
 
-    if (href.includes("#")) {
-      return false;
+    if (hrefHash) {
+      return pathname === hrefPath && currentHash === `#${hrefHash}`;
     }
 
-    return pathname === href;
+    return pathname === href && currentHash === "";
   };
 
   return (
@@ -94,6 +114,7 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
               key={item.href}
               href={item.href}
               className={isActive(item.href) ? "active" : undefined}
+              onClick={() => setActiveFromHref(item.href)}
             >
               {item.label}
             </Link>
@@ -112,7 +133,10 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
               key={item.href}
               href={item.href}
               className={isActive(item.href) ? "active" : undefined}
-              onClick={closeMenu}
+              onClick={() => {
+                setActiveFromHref(item.href);
+                closeMenu();
+              }}
             >
               {item.label}
             </Link>
