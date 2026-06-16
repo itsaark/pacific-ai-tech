@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
@@ -34,9 +35,8 @@ export default function CaseStudiesPage() {
               </h1>
             </div>
             <p className="pat-lede">
-              This is where client stories will live: the starting problem, the
-              setup we built, the handoff, and the outcome the client approved
-              us to share.
+              These stories show the starting problem, the setup we built, the
+              handoff, and the operational change clients approved us to share.
             </p>
           </div>
         </div>
@@ -58,6 +58,17 @@ export default function CaseStudiesPage() {
                     </Badge>
                     <span>{study.status}</span>
                   </div>
+                  {study.heroImage ? (
+                    <div className="pat-case-index-thumb" aria-hidden="true">
+                      <Image
+                        src={study.heroImage.src}
+                        alt=""
+                        width={study.heroImage.width}
+                        height={study.heroImage.height}
+                        sizes="(max-width: 620px) calc(100vw - 40px), (max-width: 1080px) calc(50vw - 62px), 540px"
+                      />
+                    </div>
+                  ) : null}
                   <h2>{study.title}</h2>
                   <p>{study.summary}</p>
                 </div>
@@ -76,12 +87,12 @@ export default function CaseStudiesPage() {
 
           <div className="pat-case-submit">
             <div>
-              <span className="pat-eyebrow">Publishing workflow</span>
-              <h2>Send over the two stories when they are ready.</h2>
+              <span className="pat-eyebrow">Build the next one</span>
+              <h2>Have a workflow that keeps stealing the day?</h2>
               <p>
-                Each story can be published with a client name, or anonymized by
-                industry if approval is limited. The page already has slots for
-                challenge, approach, outcomes, and a quote.
+                We help small operators turn repeat work into local AI systems:
+                research, reminders, files, follow-ups, approvals, and the
+                handoff back to the person in charge.
               </p>
             </div>
             <Button
@@ -89,7 +100,7 @@ export default function CaseStudiesPage() {
               nativeButton={false}
               className="pat-btn pat-btn-primary"
             >
-              Talk through a story
+              Talk through a workflow
               <ArrowRight data-icon="inline-end" />
             </Button>
           </div>

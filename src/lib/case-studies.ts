@@ -141,6 +141,14 @@ export const caseStudies: CaseStudy[] = [
     status: "Published",
     publishedDate: "2026-06-16",
     modifiedDate: "2026-06-16",
+    heroImage: {
+      src: "/pacific-ai-tech/img/case-studies/kristi-blain-real-estate-ai-assistant-ascii.jpg",
+      alt: "ASCII-style image of a red residential home representing real estate research and client work",
+      width: 1800,
+      height: 1200,
+      caption:
+        "Kristi Blain's Claude Cowork setup watches listings, gathers property context, and keeps client follow-up organized between showings.",
+    },
     summary:
       "Kristi Blain is a real estate broker in the Eugene and Coburg area. Pacific AI Tech helped her move from scattered tabs, notes, county records, reminders, and end-of-day memory work into a local Claude Cowork setup on a MacBook Pro.",
     metrics: [

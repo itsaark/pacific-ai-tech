@@ -869,6 +869,28 @@ html {
   color: var(--ink-mute);
 }
 
+.pat-case-index-thumb {
+  overflow: hidden;
+  aspect-ratio: 16 / 5;
+  margin: 22px 0 24px;
+  border: 1px solid var(--rule);
+  background: var(--paper-deep);
+}
+
+.pat-case-index-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.94) contrast(0.98);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.pat-case-index-card:hover .pat-case-index-thumb img {
+  filter: saturate(1.06) contrast(1.02);
+  transform: scale(1.025);
+}
+
 .pat-case-index-details {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1088,6 +1110,10 @@ html {
 
 .pat-case-narrative h2 {
   font-size: clamp(30px, 3vw, 42px);
+}
+
+.pat-case-narrative-copy {
+  min-width: 0;
 }
 
 .pat-case-narrative p {
@@ -1951,6 +1977,11 @@ html {
   .pat-case-story-block h2 {
     max-width: none;
     font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .pat-case-index-thumb {
+    aspect-ratio: 16 / 7;
+    margin: 18px 0 20px;
   }
 
   .pat-case-index-details {

@@ -200,9 +200,11 @@ export default async function CaseStudyPage({ params }: Props) {
             {study.narrative.map((section) => (
               <section key={section.heading}>
                 <h2>{section.heading}</h2>
-                {section.paragraphs.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+                <div className="pat-case-narrative-copy">
+                  {section.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
               </section>
             ))}
           </div>
