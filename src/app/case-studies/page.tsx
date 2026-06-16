@@ -28,7 +28,6 @@ export default function CaseStudiesPage() {
         <div className="pat-wrap">
           <div className="pat-subpage-hero-grid">
             <div>
-              <span className="pat-eyebrow">Case studies</span>
               <h1 id="case-studies-title">
                 Proof from client work, not just{" "}
                 <span className="pat-serif-emphasis">promises</span>.
@@ -53,8 +52,8 @@ export default function CaseStudiesPage() {
               >
                 <div>
                   <div className="pat-case-index-meta">
-                    <Badge variant="ghost" className="pat-num">
-                      {study.eyebrow}
+                    <Badge variant="ghost" className="pat-num" aria-label="Client">
+                      {study.clientLabel}
                     </Badge>
                     <span>{study.status}</span>
                   </div>
@@ -73,9 +72,9 @@ export default function CaseStudiesPage() {
                   <p>{study.summary}</p>
                 </div>
                 <div className="pat-case-index-details">
-                  <span>{study.clientLabel}</span>
                   <span>{study.industry}</span>
                   <span>{study.location}</span>
+                  <span>{study.metrics[0]?.value ?? "Published"}</span>
                 </div>
                 <span className="pat-case-card-foot">
                   Open story
@@ -87,7 +86,6 @@ export default function CaseStudiesPage() {
 
           <div className="pat-case-submit">
             <div>
-              <span className="pat-eyebrow">Build the next one</span>
               <h2>Have a workflow that keeps stealing the day?</h2>
               <p>
                 We help small operators turn repeat work into local AI systems:

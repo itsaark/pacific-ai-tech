@@ -134,7 +134,9 @@ export default async function CaseStudyPage({ params }: Props) {
 
           <header className="pat-case-detail-hero">
             <div>
-              <span className="pat-eyebrow">{study.eyebrow}</span>
+              <p className="pat-case-client-line">
+                {study.clientLabel} · {study.industry}
+              </p>
               <h1>{study.title}</h1>
               <p className="pat-lede">{study.summary}</p>
             </div>
@@ -186,14 +188,23 @@ export default async function CaseStudyPage({ params }: Props) {
             </figure>
           ) : null}
 
-          <section className="pat-case-metrics" aria-label="Case study results">
-            {study.metrics.map((metric) => (
-              <div className="pat-case-metric" key={`${metric.value}-${metric.label}`}>
-                <strong>{metric.value}</strong>
-                <span>{metric.label}</span>
-                <p>{metric.detail}</p>
-              </div>
-            ))}
+          <section className="pat-case-proof" aria-labelledby="case-proof-title">
+            <div className="pat-case-proof-head">
+              <h2 id="case-proof-title">What we can responsibly claim</h2>
+              <p>
+                A short ledger of observable changes, cadences, and control
+                points approved for publication.
+              </p>
+            </div>
+            <div className="pat-case-proof-ledger">
+              {study.metrics.map((metric) => (
+                <div className="pat-case-proof-row" key={`${metric.value}-${metric.label}`}>
+                  <strong>{metric.value}</strong>
+                  <span>{metric.label}</span>
+                  <p>{metric.detail}</p>
+                </div>
+              ))}
+            </div>
           </section>
 
           <div className="pat-case-narrative">
@@ -209,42 +220,40 @@ export default async function CaseStudyPage({ params }: Props) {
             ))}
           </div>
 
-          <div className="pat-case-story-grid">
-            <section className="pat-case-story-block" aria-labelledby="challenge-title">
-              <span className="pat-case-label">01 / Challenge</span>
-              <h2 id="challenge-title">What needed to change</h2>
-              <p>{study.challenge}</p>
-            </section>
+          <section className="pat-case-record" aria-labelledby="case-record-title">
+            <div className="pat-case-record-head">
+              <h2 id="case-record-title">Operational record</h2>
+              <blockquote>{study.pullQuote}</blockquote>
+            </div>
 
-            <section className="pat-case-story-block" aria-labelledby="approach-title">
-              <span className="pat-case-label">02 / Approach</span>
-              <h2 id="approach-title">What we built and taught</h2>
-              <ul>
-                {study.approach.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </section>
+            <div className="pat-case-record-rows">
+              <section aria-labelledby="challenge-title">
+                <h3 id="challenge-title">What needed to change</h3>
+                <p>{study.challenge}</p>
+              </section>
 
-            <section className="pat-case-story-block" aria-labelledby="outcomes-title">
-              <span className="pat-case-label">03 / Outcomes</span>
-              <h2 id="outcomes-title">What changed</h2>
-              <ul>
-                {study.outcomes.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </section>
+              <section aria-labelledby="approach-title">
+                <h3 id="approach-title">What we built and taught</h3>
+                <ul>
+                  {study.approach.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </section>
 
-            <aside className="pat-case-quote">
-              <span className="pat-case-label">Quote</span>
-              <p>{study.pullQuote}</p>
-            </aside>
-          </div>
+              <section aria-labelledby="outcomes-title">
+                <h3 id="outcomes-title">What changed</h3>
+                <ul>
+                  {study.outcomes.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </section>
+            </div>
+          </section>
 
           <div className="pat-case-next">
             <div>
-              <span className="pat-eyebrow">Build the next workflow</span>
               <h2>Have a dispatch, inbox, or operations workflow like this?</h2>
             </div>
             <Button

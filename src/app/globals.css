@@ -844,13 +844,31 @@ body {
   justify-content: space-between;
   background: var(--paper);
   color: var(--ink);
+  outline: 2px solid transparent;
+  outline-offset: 4px;
   padding: 30px;
-  transition: background-color 0.15s var(--ease-out, ease-out), color 0.15s var(--ease-out, ease-out);
+  transition: background-color 0.15s var(--ease-out, ease-out), color 0.15s var(--ease-out, ease-out), transform 0.15s var(--ease-out, ease-out);
 }
 
 .pat-case-card:hover,
-.pat-case-index-card:hover {
+.pat-case-index-card:hover,
+.pat-case-card:focus-visible,
+.pat-case-index-card:focus-visible {
   background: var(--paper-hover);
+}
+
+.pat-case-card:focus-visible,
+.pat-case-index-card:focus-visible,
+.pat-back-link:focus-visible,
+.pat-case-facts dd a:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 4px;
+}
+
+.pat-case-card:active,
+.pat-case-index-card:active,
+.pat-back-link:active {
+  transform: translateY(1px);
 }
 
 .pat-case-card-meta,
@@ -1043,6 +1061,16 @@ body {
   margin-top: 20px;
 }
 
+.pat-case-client-line {
+  max-width: 64ch;
+  color: var(--ink-mute);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
 .pat-case-detail-hero .pat-lede {
   margin-top: 24px;
   overflow-wrap: break-word;
@@ -1111,33 +1139,62 @@ body {
   text-transform: uppercase;
 }
 
-.pat-case-metrics {
+.pat-case-proof {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1px;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  gap: 48px;
+  align-items: start;
   margin-top: 48px;
-  border: 1px solid var(--rule);
-  background: var(--rule);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 36px 0;
 }
 
-.pat-case-metric {
-  background: var(--paper-deep);
-  padding: 24px;
+.pat-case-proof-head {
+  position: sticky;
+  top: 116px;
 }
 
-.pat-case-metric strong {
+.pat-case-proof-head h2 {
+  max-width: 12ch;
+  font-size: clamp(30px, 3vw, 42px);
+}
+
+.pat-case-proof-head p {
+  max-width: 34ch;
+  margin-top: 16px;
+  color: var(--ink-mute);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.pat-case-proof-ledger {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.pat-case-proof-row {
+  display: grid;
+  grid-template-columns: minmax(96px, 0.32fr) minmax(140px, 0.58fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: baseline;
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 0;
+}
+
+.pat-case-proof-row strong {
   display: block;
   color: var(--ink);
   font-family: var(--font-serif), Georgia, serif;
-  font-size: clamp(34px, 4vw, 56px);
+  font-size: clamp(28px, 3.2vw, 46px);
   font-weight: 300;
   letter-spacing: -0.01em;
   line-height: 1;
 }
 
-.pat-case-metric span {
+.pat-case-proof-row span {
   display: block;
-  margin-top: 10px;
   color: var(--ink);
   font-size: 11px;
   font-weight: 600;
@@ -1146,8 +1203,7 @@ body {
   text-transform: uppercase;
 }
 
-.pat-case-metric p {
-  margin-top: 14px;
+.pat-case-proof-row p {
   color: var(--ink-mute);
   font-size: 12px;
   line-height: 1.65;
@@ -1188,67 +1244,73 @@ body {
   margin-top: 18px;
 }
 
-.pat-case-story-grid {
+.pat-case-record {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 1px;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+  gap: 56px;
+  align-items: start;
   margin-top: 56px;
-  border: 1px solid var(--rule);
-  background: var(--rule);
+  border-top: 1px solid var(--rule);
+  padding-top: 48px;
 }
 
-.pat-case-story-block,
-.pat-case-quote {
-  min-height: 320px;
-  background: var(--paper);
-  padding: 32px;
+.pat-case-record-head {
+  display: grid;
+  gap: 24px;
 }
 
-.pat-case-story-block h2 {
-  max-width: 14ch;
-  margin-top: 18px;
+.pat-case-record-head h2 {
+  max-width: 10ch;
   font-size: clamp(30px, 3vw, 44px);
 }
 
-.pat-case-story-block p,
-.pat-case-story-block li {
+.pat-case-record-head blockquote {
+  margin: 0;
+  border-left: 1px solid var(--moss);
+  color: var(--ink);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(24px, 2.8vw, 38px);
+  font-weight: 300;
+  line-height: 1.18;
+  padding-left: 22px;
+}
+
+.pat-case-record-rows {
+  display: grid;
+  border-top: 1px solid var(--rule);
+}
+
+.pat-case-record-rows section {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.42fr) minmax(0, 1fr);
+  gap: 28px;
+  border-bottom: 1px solid var(--rule);
+  padding: 26px 0;
+}
+
+.pat-case-record-rows h3 {
+  max-width: 14ch;
+  font-size: clamp(22px, 2vw, 30px);
+}
+
+.pat-case-record-rows p,
+.pat-case-record-rows li {
   color: var(--ink-soft);
   font-size: 14px;
   line-height: 1.7;
 }
 
-.pat-case-story-block p {
-  margin-top: 20px;
-}
-
-.pat-case-story-block ul {
+.pat-case-record-rows ul {
   display: grid;
   gap: 14px;
-  margin: 22px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.pat-case-story-block li {
+.pat-case-record-rows li + li {
   border-top: 1px solid var(--rule);
   padding-top: 14px;
-}
-
-.pat-case-quote {
-  background: var(--ink);
-  color: var(--paper);
-}
-
-.pat-case-quote .pat-case-label {
-  color: var(--moss-pale);
-}
-
-.pat-case-quote p {
-  margin-top: 22px;
-  font-family: var(--font-serif), Georgia, serif;
-  font-size: clamp(26px, 3vw, 40px);
-  font-weight: 300;
-  line-height: 1.16;
 }
 
 .pat-auto-id {
@@ -1838,6 +1900,8 @@ body {
   .pat-section-title-row,
   .pat-subpage-hero-grid,
   .pat-case-detail-hero,
+  .pat-case-proof,
+  .pat-case-record,
   .pat-case-submit,
   .pat-case-next,
   .pat-local-area {
@@ -1850,7 +1914,6 @@ body {
 
   .pat-case-preview-grid,
   .pat-case-index-grid,
-  .pat-case-story-grid,
   .pat-local-request-list,
   .pat-local-faq {
     grid-template-columns: 1fr;
@@ -2159,8 +2222,6 @@ body {
 
   .pat-case-card,
   .pat-case-index-card,
-  .pat-case-story-block,
-  .pat-case-quote,
   .pat-local-faq section,
   .pat-local-request-list p {
     min-height: auto;
@@ -2177,8 +2238,7 @@ body {
   }
 
   .pat-case-card h3,
-  .pat-case-index-card h2,
-  .pat-case-story-block h2 {
+  .pat-case-index-card h2 {
     max-width: none;
     font-size: clamp(28px, 8vw, 38px);
   }
@@ -2192,9 +2252,19 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .pat-case-metrics,
+  .pat-case-proof-row,
+  .pat-case-record-rows section,
   .pat-case-narrative section {
     grid-template-columns: 1fr;
+  }
+
+  .pat-case-proof-head {
+    position: static;
+  }
+
+  .pat-case-proof-row,
+  .pat-case-record-rows section {
+    gap: 12px;
   }
 
   .pat-case-narrative {
@@ -2220,12 +2290,13 @@ body {
     padding: 15px;
   }
 
-  .pat-case-story-grid {
+  .pat-case-record {
     margin-top: 36px;
+    gap: 28px;
   }
 
   .pat-case-hero-image,
-  .pat-case-metrics {
+  .pat-case-proof {
     margin-top: 34px;
   }
 
