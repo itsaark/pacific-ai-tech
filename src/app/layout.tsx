@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Pacific AI Tech",
     "AI agent setup",
     "AI agent training",
-    "Claude Cowork setup",
+    "AI setup help",
     "Hermes Agent setup",
     "small business automation",
     "local-first AI",

@@ -42,7 +42,7 @@ const clients = [
 const flow = [
   {
     title: "Tell it what you want. Walk away. Come back to it done.",
-    text: "Describe the result: a tidy folder, a report, a draft reply to every review, and Claude figures out how to get there.",
+    text: "Describe the result: a tidy folder, a report, a draft reply to every review, and AI figures out how to get there.",
   },
   {
     title: "Do the same thing every morning, without being asked.",
@@ -109,7 +109,7 @@ const prices = [
 ];
 
 const ticker = [
-  "Claude Cowork",
+  "AI agents",
   "Hermes Agent",
   "Local-first setup + coaching",
   "Realtors · Restaurants · Solo founders",
@@ -223,7 +223,7 @@ const jsonLd = {
       serviceType: "On-site AI automation setup and training",
       provider: { "@id": `${siteUrl}/#localbusiness` },
       description:
-        "One-day on-site installation of Claude Cowork or Hermes Agent, ten client-selected automations, hands-on training, a handoff cheat sheet, and 30 days of on-demand remote AI coaching after setup.",
+        "One-day on-site installation of AI tools or Hermes Agent, ten client-selected automations, hands-on training, a handoff cheat sheet, and 30 days of on-demand remote AI coaching after setup.",
     },
     {
       "@type": "Service",
@@ -446,7 +446,7 @@ export default function Home() {
                 back.
               </h1>
               <p className="pat-lede pat-hero-lede">
-                We install Claude Cowork, build your first automations, and
+                We install AI tools, build your first automations, and
                 teach you how to use them with confidence. Local, practical,
                 in person.
               </p>
@@ -528,7 +528,7 @@ export default function Home() {
               <strong>
                 We come to your shop, kitchen, office, or kitchen table.
               </strong>{" "}
-              We install Claude Cowork or Hermes directly on your computer: no
+              We install AI tools directly on your computer: no
               cloud middleman, no $99/month SaaS to forget about.
             </p>
             <p>
@@ -581,7 +581,7 @@ export default function Home() {
               <span className="pat-serif-italic">you can steer it</span>.
             </h2>
             <p className="pat-lede">
-              We install Claude on your laptop. Then we teach it to do the
+              We install AI on your laptop. Then we teach it to do the
               things you do every day, while teaching you what to ask, what to
               approve, and what to keep an eye on.
             </p>
