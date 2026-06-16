@@ -28,7 +28,7 @@ Core promise:
   - Ten client-selected automations
   - Training on how to run, modify, and stop workflows
   - Handoff cheat sheet
-  - 30-day premium support
+  - 30 days of on-demand remote AI coaching after setup
 
 2. Remote setup
 - Price: $2,000 flat
@@ -38,7 +38,7 @@ Core promise:
   - Same ten-automation deliverable as the in-person setup
   - Remote installation, configuration, and training
   - Handoff cheat sheet
-  - 30-day premium support
+  - 30 days of on-demand remote AI coaching after setup
 
 3. Follow-up support
 - Price: $100/hr, billed in practical increments

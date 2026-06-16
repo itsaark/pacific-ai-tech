@@ -13,8 +13,8 @@ Primary goal: help owners use Claude Cowork, Hermes Agent, and similar desktop a
 
 ## Pricing And Offers
 
-- In-person setup ($2,800 flat): one day on-site, ten automations, installation on the client's machine, training, a handoff cheat sheet, and 30-day premium support.
-- Remote setup ($2,000 flat): two half-day screen-share sessions with the same ten-automation deliverable and 30-day premium support.
+- In-person setup ($2,800 flat): one day on-site, ten automations, installation on the client's machine, training, a handoff cheat sheet, and 30 days of on-demand remote AI coaching after setup.
+- Remote setup ($2,000 flat): two half-day screen-share sessions with the same ten-automation deliverable and 30 days of on-demand remote AI coaching after setup.
 - Follow-up support ($100/hr): remote help for broken workflows, new automations, onboarding, and adjustments.
 - Booking link for all plans: https://calendar.app.google/LcubD3qcRnkpWqew6
 

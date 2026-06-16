@@ -92,13 +92,13 @@ const prices = [
     title: "/ in-person setup",
     price: "$2,800",
     unit: "One day · ten automations · on-site",
-    desc: "We drive to you. Install on your machine. Build the ten you want. Teach you how to run, judge, and improve them. Leave a cheat sheet. Includes 30-day premium support.",
+    desc: "We drive to you. Install on your machine. Build the ten you want. Teach you how to run, judge, and improve them. Leave a cheat sheet. Includes 30 days of on-demand remote AI coaching after setup.",
   },
   {
     title: "/ remote setup",
     price: "$2,000",
     unit: "Same ten automations · over screen-share",
-    desc: "Two half-day screen-share sessions. Same ten automations, same hands-on coaching, same cheat sheet, and 30-day premium support.",
+    desc: "Two half-day screen-share sessions. Same ten automations, same hands-on coaching, same cheat sheet, plus 30 days of on-demand remote AI coaching after setup.",
   },
   {
     title: "/ follow-up",
@@ -223,7 +223,7 @@ const jsonLd = {
       serviceType: "On-site AI automation setup and training",
       provider: { "@id": `${siteUrl}/#localbusiness` },
       description:
-        "One-day on-site installation of Claude Cowork or Hermes Agent, ten client-selected automations, hands-on training, a handoff cheat sheet, and 30-day premium support.",
+        "One-day on-site installation of Claude Cowork or Hermes Agent, ten client-selected automations, hands-on training, a handoff cheat sheet, and 30 days of on-demand remote AI coaching after setup.",
     },
     {
       "@type": "Service",
@@ -232,7 +232,7 @@ const jsonLd = {
       serviceType: "Remote AI automation setup and training",
       provider: { "@id": `${siteUrl}/#localbusiness` },
       description:
-        "Two half-day screen-share sessions to install the agent stack, build ten automations, teach the client how to operate and improve them, and provide 30-day premium support.",
+        "Two half-day screen-share sessions to install the agent stack, build ten automations, teach the client how to operate and improve them, and provide 30 days of on-demand remote AI coaching after setup.",
     },
     {
       "@type": "Service",
