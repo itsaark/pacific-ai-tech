@@ -339,13 +339,16 @@ function FounderSection() {
               rel="noopener noreferrer"
               aria-label="View Aark Kodur on LinkedIn"
             >
-              <Image
-                src="/pacific-ai-tech/img/founder.jpg"
-                alt="Aark Kodur"
-                width={462}
-                height={482}
-                sizes="104px"
-              />
+              <span className="pat-founder-photo-image">
+                <Image
+                  src="/pacific-ai-tech/img/founder.jpg"
+                  alt="Aark Kodur"
+                  width={462}
+                  height={482}
+                  sizes="(max-width: 620px) calc((100vw - 76px) / 2), 132px"
+                />
+              </span>
+              <span className="pat-founder-photo-name">Aark Kodur</span>
             </a>
             <a
               className="pat-founder-photo pat-founder-photo-shayan"
@@ -354,13 +357,16 @@ function FounderSection() {
               rel="noopener noreferrer"
               aria-label="View Shayan Jalalipour on LinkedIn"
             >
-              <Image
-                src="/pacific-ai-tech/img/shayan-jalalipour.jpg"
-                alt="Shayan Jalalipour"
-                width={654}
-                height={900}
-                sizes="104px"
-              />
+              <span className="pat-founder-photo-image">
+                <Image
+                  src="/pacific-ai-tech/img/shayan-jalalipour.jpg"
+                  alt="Shayan Jalalipour"
+                  width={654}
+                  height={900}
+                  sizes="(max-width: 620px) calc((100vw - 76px) / 2), 132px"
+                />
+              </span>
+              <span className="pat-founder-photo-name">Shayan Jalalipour</span>
             </a>
           </div>
           <div className="pat-founder-copy">
