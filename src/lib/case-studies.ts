@@ -133,7 +133,7 @@ export const caseStudies: CaseStudy[] = [
     title: "A real-estate workday that stops disappearing into notes",
     seoTitle: "AI Assistant for Kristi Blain Real Estate",
     metaDescription:
-      "How Pacific AI Tech helped Kristi Blain, a real estate broker in the Eugene and Coburg area, run Claude Cowork on a MacBook Pro for listing research, follow-ups, PDFs, and client work.",
+      "How Pacific AI Tech helped Kristi Blain, a real estate broker in the Eugene and Coburg area, run Claude Cowork on a MacBook Pro for listing research, follow-ups, Canva flyers, PDFs, and client work.",
     clientLabel: "Kristi Blain",
     clientUrl: "https://www.zillow.com/profile/CEGkristi",
     industry: "Residential real estate",
@@ -178,12 +178,14 @@ export const caseStudies: CaseStudy[] = [
       "Set up a daily listing-research automation for the Eugene, Coburg, and surrounding areas she watches closely.",
       "Built an end-of-day AskKit workflow that captures people met, details learned, commitments made, and follow-up tasks.",
       "Configured Claude Cowork to research properties through public county records, collect relevant documents, and organize reminders around key transaction dates.",
+      "Connected Claude Cowork to Kristi's Canva account so open-house flyer work can start from a listing request instead of a blank design file.",
       "Taught Kristi how to use Dispatch while she is out showing homes so she can reach files and context on the MacBook running at home.",
     ],
     outcomes: [
       "Kristi starts the day with a sharper view of new listings instead of rebuilding the same search from scratch.",
       "Meeting notes and follow-up tasks are captured before the details fade.",
       "Property research, county records, document reminders, and important dates are organized into reviewable work instead of loose tabs and memory.",
+      "When Kristi needs an open-house flyer, Claude Cowork can pull the Zillow listing context, gather the house photos, prepare the Canva design, and leave Kristi to approve and order the print run.",
       "Remote access through Dispatch gives Kristi more room to be present with clients while her home laptop keeps the back-office context available.",
     ],
     narrative: [
@@ -213,6 +215,13 @@ export const caseStudies: CaseStudy[] = [
         paragraphs: [
           "Real-estate research is often scattered across listing pages, county records, saved files, email threads, and calendar reminders. We taught Claude Cowork how Kristi likes that work gathered and formatted, then gave it access to the local file context it needs to keep research moving.",
           "The setup helps with county property information, document retrieval, date reminders, and the kind of back-and-forth that can otherwise turn a client day into an administrative night.",
+        ],
+      },
+      {
+        heading: "A flyer that starts with the listing",
+        paragraphs: [
+          "Open-house marketing used to mean another small production cycle: find the listing, pull the right photos, open a design tool, lay out the flyer, check the details, and get it ready for print.",
+          "Now Claude Cowork is connected to Kristi's Canva account. When she needs a flyer, she can ask for it in plain language. The system knows the Zillow listing context, gathers the house imagery, builds the Canva design, and leaves Kristi with the part that should stay hers: review it, approve it, and order the printed flyers for the open house.",
         ],
       },
       {
