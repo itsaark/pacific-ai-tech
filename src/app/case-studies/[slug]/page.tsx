@@ -62,13 +62,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: study.metaDescription,
       images: study.heroImage ? [study.heroImage.src] : undefined,
     },
-    robots:
-      study.status === "Draft slot"
-        ? {
-            index: false,
-            follow: false,
-          }
-        : undefined,
   };
 }
 
@@ -122,45 +115,40 @@ export default async function CaseStudyPage({ params }: Props) {
     notFound();
   }
 
-  const jsonLd =
-    study.status === "Published"
-      ? {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: study.title,
-          description: study.metaDescription,
-          image: study.heroImage ? `${siteUrl}${study.heroImage.src}` : undefined,
-          datePublished: study.publishedDate,
-          dateModified: study.modifiedDate,
-          author: {
-            "@type": "Organization",
-            name: "Pacific AI Tech",
-            url: siteUrl,
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "Pacific AI Tech",
-            logo: {
-              "@type": "ImageObject",
-              url: `${siteUrl}/pacific-ai-tech/img/logo-pine-icon.png`,
-            },
-          },
-          mainEntityOfPage: `${siteUrl}/case-studies/${study.slug}`,
-          about: getSchemaAbout(study),
-          keywords: getSchemaKeywords(study),
-        }
-      : undefined;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: study.title,
+    description: study.metaDescription,
+    image: study.heroImage ? `${siteUrl}${study.heroImage.src}` : undefined,
+    datePublished: study.publishedDate,
+    dateModified: study.modifiedDate,
+    author: {
+      "@type": "Organization",
+      name: "Pacific AI Tech",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Pacific AI Tech",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/pacific-ai-tech/img/logo-pine-icon.png`,
+      },
+    },
+    mainEntityOfPage: `${siteUrl}/case-studies/${study.slug}`,
+    about: getSchemaAbout(study),
+    keywords: getSchemaKeywords(study),
+  };
 
   return (
     <main className="pat-site">
-      {jsonLd ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-          }}
-        />
-      ) : null}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <SiteHeader bookingUrl={bookingUrl} />
 
       <article className="pat-case-detail">
@@ -204,10 +192,6 @@ export default async function CaseStudyPage({ params }: Props) {
                   <dt>Location</dt>
                   <dd>{study.location}</dd>
                 </div>
-                <div>
-                  <dt>Status</dt>
-                  <dd>{study.status}</dd>
-                </div>
               </dl>
             </aside>
           </header>
@@ -228,10 +212,10 @@ export default async function CaseStudyPage({ params }: Props) {
 
           <section className="pat-case-proof" aria-labelledby="case-proof-title">
             <div className="pat-case-proof-head">
-              <h2 id="case-proof-title">What we can responsibly claim</h2>
+              <h2 id="case-proof-title">What changed</h2>
               <p>
-                A short ledger of observable changes, cadences, and control
-                points approved for publication.
+                Observable changes in daily work, operating cadence, and the
+                decisions that still stay with the owner.
               </p>
             </div>
             <div className="pat-case-proof-ledger">

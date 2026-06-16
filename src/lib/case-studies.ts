@@ -1,6 +1,5 @@
 export type CaseStudy = {
   slug: string;
-  eyebrow: string;
   title: string;
   seoTitle: string;
   metaDescription: string;
@@ -10,7 +9,6 @@ export type CaseStudy = {
   location: string;
   services: string[];
   topics: string[];
-  status: string;
   summary: string;
   publishedDate?: string;
   modifiedDate?: string;
@@ -39,7 +37,6 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "frostbox-logistics-ai-dispatch",
-    eyebrow: "Case study / Frostbox Logistics",
     title: "The dispatcher who stopped living inside the load boards",
     seoTitle: "AI Dispatch Automation for Frostbox Logistics",
     metaDescription:
@@ -66,7 +63,6 @@ export const caseStudies: CaseStudy[] = [
       "owner-approved dispatch",
       "Pacific Northwest freight",
     ],
-    status: "Published",
     publishedDate: "2026-06-15",
     modifiedDate: "2026-06-16",
     heroImage: {
@@ -149,7 +145,6 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "kristi-blain-real-estate-ai-assistant",
-    eyebrow: "Case study / Kristi Blain",
     title: "A real-estate workday that stops disappearing into notes",
     seoTitle: "AI Assistant for Kristi Blain Real Estate",
     metaDescription:
@@ -177,7 +172,6 @@ export const caseStudies: CaseStudy[] = [
       "client relationship notes",
       "transaction reminders",
     ],
-    status: "Published",
     publishedDate: "2026-06-16",
     modifiedDate: "2026-06-16",
     heroImage: {

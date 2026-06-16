@@ -19,6 +19,16 @@ export const metadata: Metadata = {
   },
 };
 
+function getPrimaryChange(study: (typeof caseStudies)[number]) {
+  const primaryMetric = study.metrics[0];
+
+  if (!primaryMetric) {
+    return study.services[0] ?? study.industry;
+  }
+
+  return `${primaryMetric.value} ${primaryMetric.label}`;
+}
+
 export default function CaseStudiesPage() {
   return (
     <main className="pat-site">
@@ -35,13 +45,13 @@ export default function CaseStudiesPage() {
             </div>
             <p className="pat-lede">
               These stories show the starting problem, the setup we built, the
-              handoff, and the operational change clients approved us to share.
+              handoff, and the operating change that followed.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="pat-case-index" aria-label="Published case studies">
+      <section className="pat-case-index" aria-label="Client case studies">
         <div className="pat-wrap">
           <div className="pat-case-index-grid">
             {caseStudies.map((study) => (
@@ -55,7 +65,7 @@ export default function CaseStudiesPage() {
                     <Badge variant="ghost" className="pat-num" aria-label="Client">
                       {study.clientLabel}
                     </Badge>
-                    <span>{study.status}</span>
+                    <span>{study.industry}</span>
                   </div>
                   {study.heroImage ? (
                     <div className="pat-case-index-thumb" aria-hidden="true">
@@ -72,12 +82,12 @@ export default function CaseStudiesPage() {
                   <p>{study.summary}</p>
                 </div>
                 <div className="pat-case-index-details">
-                  <span>{study.industry}</span>
+                  <span>{study.clientLabel}</span>
                   <span>{study.location}</span>
-                  <span>{study.metrics[0]?.value ?? "Published"}</span>
+                  <span>{getPrimaryChange(study)}</span>
                 </div>
                 <span className="pat-case-card-foot">
-                  Open story
+                  Read case study
                   <ArrowUpRight data-icon="inline-end" />
                 </span>
               </Link>

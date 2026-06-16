@@ -620,7 +620,7 @@ export default function Home() {
           <SectionHeading eyebrow="Case studies">
             <div className="pat-section-title-row">
               <h2 id="case-preview-title">
-                Real client stories, written as proof of{" "}
+                Real client stories, showing{" "}
                 <span className="pat-serif-emphasis">what changed</span>.
               </h2>
               <CtaButton href="/case-studies" variant="outline">
@@ -635,11 +635,13 @@ export default function Home() {
                 href={`/case-studies/${study.slug}`}
                 key={study.slug}
               >
-                <span className="pat-case-card-meta">{study.eyebrow}</span>
+                <span className="pat-case-card-meta">
+                  {study.clientLabel} · {study.industry}
+                </span>
                 <h3>{study.title}</h3>
                 <p>{study.summary}</p>
                 <span className="pat-case-card-foot">
-                  {study.clientLabel} · {study.status}
+                  Read case study
                   <ArrowUpRight data-icon="inline-end" />
                 </span>
               </Link>
