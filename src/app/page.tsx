@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, ArrowUpRight, CalendarDays } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -10,8 +11,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { caseStudies } from "@/lib/case-studies";
+import { bookingUrl, contactEmail, serviceDescription, siteUrl } from "@/lib/site";
 
 const clients = [
   {
@@ -113,12 +116,6 @@ const ticker = [
   "Portland · Salem · Vancouver · Olympia",
   "10 automations / install + teach",
 ];
-
-const siteUrl = "https://www.pacificaitech.com";
-const bookingUrl = "https://calendar.app.google/4ye2LLZjAwpgNNxNA";
-const contactEmail = "hello@pacificaitech.com";
-const serviceDescription =
-  "Pacific AI Tech installs Claude Cowork, Hermes Agent, and practical AI automations on client-owned computers, then teaches small operators how to use them confidently across greater Portland and the Pacific Northwest.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -631,6 +628,39 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="pat-case-preview" aria-labelledby="case-preview-title">
+        <div className="pat-wrap">
+          <SectionHeading eyebrow="Case studies">
+            <div className="pat-section-title-row">
+              <h2 id="case-preview-title">
+                Real client stories, written as proof of{" "}
+                <span className="pat-serif-italic">what changed</span>.
+              </h2>
+              <CtaButton href="/case-studies" variant="outline">
+                View case studies
+              </CtaButton>
+            </div>
+          </SectionHeading>
+          <div className="pat-case-preview-grid">
+            {caseStudies.map((study) => (
+              <Link
+                className="pat-case-card"
+                href={`/case-studies/${study.slug}`}
+                key={study.slug}
+              >
+                <span className="pat-case-card-meta">{study.eyebrow}</span>
+                <h3>{study.title}</h3>
+                <p>{study.summary}</p>
+                <span className="pat-case-card-foot">
+                  {study.clientLabel} · {study.status}
+                  <ArrowUpRight data-icon="inline-end" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <div className="pat-wrap">
         <section className="pat-region" aria-labelledby="region-title">
           <FramedImage
@@ -701,74 +731,7 @@ export default function Home() {
 
       <FounderSection />
 
-      <footer className="pat-site-foot">
-        <div className="pat-wrap">
-          <div className="pat-foot-top">
-            <div className="pat-foot-display">
-              Free your <em>evenings.</em>
-              <br />
-              Free your <em>weekends.</em>
-            </div>
-            <div className="pat-foot-logo" aria-hidden="true">
-              <Image
-                src="/pacific-ai-tech/img/logo-pine.png"
-                alt=""
-                width={225}
-                height={512}
-              />
-            </div>
-          </div>
-          <Separator className="pat-foot-rule" />
-          <div className="pat-foot-grid">
-            <div>
-              <h4>Pacific AI Tech</h4>
-              <p>
-                A two-person consultancy helping the Pacific Northwest&apos;s
-                small operators put AI to work quietly, locally, on their own
-                machines, then feel confident using it without us in the room.
-              </p>
-            </div>
-            <div>
-              <h4>Pages</h4>
-              <ul>
-                <li>
-                  <a href="#top">Index</a>
-                </li>
-                <li>
-                  <a href="#what-we-do">What we do</a>
-                </li>
-                <li>
-                  <a href="#pricing">Pricing</a>
-                </li>
-                <li>
-                  <a href="/sitemap.xml">Sitemap</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4>Region</h4>
-              <ul>
-                <li>Portland, OR</li>
-                <li>Vancouver</li>
-                <li>Salem, OR</li>
-                <li>Olympia, WA</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Contact</h4>
-              <ul>
-                <li>
-                  <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="pat-foot-bottom">
-            <span>© 2025 Pacific AI Tech LLC · Portland, OR</span>
-            <span>v 26.05 · built on a porch</span>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
 
     </main>
   );

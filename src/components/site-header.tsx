@@ -2,12 +2,15 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { href: "#top", label: "Index", active: true },
-  { href: "#what-we-do", label: "What we do" },
-  { href: "#pricing", label: "Pricing" },
+  { href: "/", label: "Index", match: "home" },
+  { href: "/#what-we-do", label: "What we do", match: "home" },
+  { href: "/case-studies", label: "Case studies", match: "case-studies" },
+  { href: "/#pricing", label: "Pricing", match: "home" },
 ];
 
 type SiteHeaderProps = {
@@ -16,6 +19,7 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     if (!menuOpen) {
@@ -33,11 +37,18 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
+  const isActive = (match: string) => {
+    if (match === "case-studies") {
+      return pathname.startsWith("/case-studies");
+    }
+
+    return pathname === "/";
+  };
 
   return (
     <header className="pat-site-head">
       <div className="pat-wrap pat-header-inner">
-        <a className="pat-brand" href="#top" aria-label="Pacific AI Tech home">
+        <Link className="pat-brand" href="/" aria-label="Pacific AI Tech home">
           <span className="pat-brand-mark" aria-hidden="true">
             <Image
               src="/pacific-ai-tech/img/logo-pine.png"
@@ -48,7 +59,7 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
             />
           </span>
           Pacific&nbsp;AI&nbsp;Tech
-        </a>
+        </Link>
 
         <button
           className="pat-menu-toggle"
@@ -63,13 +74,13 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
 
         <nav className="pat-primary" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
-              className={item.active ? "active" : undefined}
+              className={isActive(item.match) ? "active" : undefined}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <a
             href={bookingUrl}
@@ -89,14 +100,14 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
       >
         <div className="pat-wrap pat-mobile-primary-inner">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
-              className={item.active ? "active" : undefined}
+              className={isActive(item.match) ? "active" : undefined}
               onClick={closeMenu}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <a
             href={bookingUrl}
