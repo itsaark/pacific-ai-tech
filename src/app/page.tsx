@@ -46,7 +46,7 @@ const flow = [
   },
   {
     title: "Do the same thing every morning, without being asked.",
-    text: '"Pull yesterday\'s sales, summarize my inbox, and put it on my desk by 7am." Tell it once. It just keeps doing it.',
+    text: "“Pull yesterday's sales, summarize my inbox, and put it on my desk by 7am.” Tell it once. It just keeps doing it.",
   },
   {
     title: "Turn a pile of stuff into a finished thing.",
@@ -284,9 +284,7 @@ function SectionHeading({
 }) {
   return (
     <div className="pat-section-head">
-      <div>
-        <span className="pat-eyebrow">{eyebrow}</span>
-      </div>
+      <span className="pat-eyebrow">{eyebrow}</span>
       <div>{children}</div>
     </div>
   );
@@ -442,7 +440,7 @@ export default function Home() {
                 We set up <span className="pat-underlined">AI agents</span> on
                 your computer.
                 <br />
-                You get your <span className="pat-serif-italic">evenings</span>{" "}
+                You get your <span className="pat-serif-emphasis">evenings</span>{" "}
                 back.
               </h1>
               <p className="pat-lede pat-hero-lede">
@@ -466,19 +464,19 @@ export default function Home() {
               <div>
                 <div className="m-label">In-person setup</div>
                 <div className="m-val">
-                  $2,800 <em>flat</em>
+                  $2,800 <span className="m-unit">flat</span>
                 </div>
               </div>
               <div>
                 <div className="m-label">Remote setup</div>
                 <div className="m-val">
-                  $2,000 <em>flat</em>
+                  $2,000 <span className="m-unit">flat</span>
                 </div>
               </div>
               <div>
                 <div className="m-label">Follow-up</div>
                 <div className="m-val">
-                  $100 <em>/hr</em>
+                  $100 <span className="m-unit">/hr</span>
                 </div>
               </div>
             </div>
@@ -519,7 +517,7 @@ export default function Home() {
               up, sets it up, teaches you how to steer it, and stays on the
               phone when something breaks.
             </p>
-            <p className="pat-serif-italic pat-moss">
+            <p className="pat-serif-emphasis pat-moss">
               Setup first. Confidence by the end.
             </p>
           </div>
@@ -550,7 +548,7 @@ export default function Home() {
         <div className="pat-wrap">
           <SectionHeading eyebrow="Who we work with">
             <h2 id="clients-title">
-              People who own their <span className="pat-serif-italic">own thing</span>,
+              People who own their <span className="pat-serif-emphasis">own thing</span>,
               and would like to keep owning it.
             </h2>
           </SectionHeading>
@@ -578,7 +576,7 @@ export default function Home() {
             <span className="pat-eyebrow">What you get</span>
             <h2 id="what-title">
               After our visit, your computer can work, and{" "}
-              <span className="pat-serif-italic">you can steer it</span>.
+              <span className="pat-serif-emphasis">you can steer it</span>.
             </h2>
             <p className="pat-lede">
               We install AI on your laptop. Then we teach it to do the
@@ -590,7 +588,7 @@ export default function Home() {
                 <div className="pat-flow-row" key={item.title}>
                   <span className="text">
                     {item.title}
-                    <em>{item.text}</em>
+                    <span className="pat-flow-detail">{item.text}</span>
                   </span>
                 </div>
               ))}
@@ -612,7 +610,7 @@ export default function Home() {
           <SectionHeading eyebrow="Ten automations · examples">
             <h2 id="autos-title">
               You pick the ten. Here are the ones most of our clients{" "}
-              <span className="pat-serif-italic">end up keeping</span>.
+              <span className="pat-serif-emphasis">end up keeping</span>.
             </h2>
           </SectionHeading>
           <div className="pat-autos-grid">
@@ -640,7 +638,7 @@ export default function Home() {
             <div className="pat-section-title-row">
               <h2 id="case-preview-title">
                 Real client stories, written as proof of{" "}
-                <span className="pat-serif-italic">what changed</span>.
+                <span className="pat-serif-emphasis">what changed</span>.
               </h2>
               <CtaButton href="/case-studies" variant="outline">
                 View case studies
@@ -682,7 +680,7 @@ export default function Home() {
             <h2 id="region-title">
               In your kitchen, your office, your back booth.
               <br />
-              <span className="pat-serif-italic">We come to you.</span>
+              <span className="pat-serif-emphasis">We come to you.</span>
             </h2>
             <p className="pat-lede">
               We drive. We don&apos;t fly. Anywhere between Olympia and Salem,
@@ -708,7 +706,7 @@ export default function Home() {
           <SectionHeading eyebrow="The whole pricing page on one row">
             <h2 id="pricing-title">
               Flat fees for setup and teaching.{" "}
-              <span className="pat-serif-italic">No subscription.</span> No
+              <span className="pat-serif-emphasis">No subscription.</span> No
               surprise line items.
             </h2>
           </SectionHeading>

@@ -7,11 +7,11 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { href: "/", label: "Index", match: "home" },
-  { href: "/#what-we-do", label: "What we do", match: "home" },
-  { href: "/portland-ai-consultant", label: "AI consulting", match: "local" },
-  { href: "/case-studies", label: "Case studies", match: "case-studies" },
-  { href: "/#pricing", label: "Pricing", match: "home" },
+  { href: "/", label: "Index" },
+  { href: "/#what-we-do", label: "What we do" },
+  { href: "/portland-ai-consultant", label: "AI consulting" },
+  { href: "/case-studies", label: "Case studies" },
+  { href: "/#pricing", label: "Pricing" },
 ];
 
 type SiteHeaderProps = {
@@ -38,21 +38,21 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
   }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
-  const isActive = (match: string) => {
-    if (match === "case-studies") {
+  const isActive = (href: string) => {
+    if (href === "/case-studies") {
       return pathname.startsWith("/case-studies");
     }
 
-    if (match === "local") {
-      return pathname === "/portland-ai-consultant";
+    if (href.includes("#")) {
+      return false;
     }
 
-    return pathname === "/";
+    return pathname === href;
   };
 
   return (
     <header className="pat-site-head">
-      <div className="pat-wrap pat-header-inner">
+      <div className="pat-wrap pat-header-brand-row">
         <Link className="pat-brand" href="/" aria-label="Pacific AI Tech home">
           <span className="pat-brand-mark" aria-hidden="true">
             <Image
@@ -66,6 +66,15 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
           Pacific&nbsp;AI&nbsp;Tech
         </Link>
 
+        <a
+          href={bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pat-header-action"
+        >
+          Book a call
+        </a>
+
         <button
           className="pat-menu-toggle"
           type="button"
@@ -76,25 +85,19 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
         >
           {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
+      </div>
 
+      <div className="pat-wrap pat-header-nav-row">
         <nav className="pat-primary" aria-label="Primary navigation">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className={isActive(item.match) ? "active" : undefined}
+              className={isActive(item.href) ? "active" : undefined}
             >
               {item.label}
             </Link>
           ))}
-          <a
-            href={bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta"
-          >
-            Book a call
-          </a>
         </nav>
       </div>
 
@@ -108,7 +111,7 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={isActive(item.match) ? "active" : undefined}
+              className={isActive(item.href) ? "active" : undefined}
               onClick={closeMenu}
             >
               {item.label}

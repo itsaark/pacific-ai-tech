@@ -31,7 +31,7 @@ export default function CaseStudiesPage() {
               <span className="pat-eyebrow">Case studies</span>
               <h1 id="case-studies-title">
                 Proof from client work, not just{" "}
-                <span className="pat-serif-italic">promises</span>.
+                <span className="pat-serif-emphasis">promises</span>.
               </h1>
             </div>
             <p className="pat-lede">
