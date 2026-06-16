@@ -107,6 +107,24 @@ const requestPatterns = [
   "Are there AI classes in Portland that teach our actual tools, files, and tasks?",
 ];
 
+const differentiators = [
+  {
+    title: "Setup happens on your actual machine",
+    description:
+      "We work inside the laptop, desktop, files, inboxes, browser tools, and accounts you already use instead of sending you home with a generic AI strategy deck.",
+  },
+  {
+    title: "Coaching is part of the implementation",
+    description:
+      "A useful Portland AI setup should end with the owner knowing how to prompt, approve, inspect, adjust, and stop the workflows without waiting on a developer.",
+  },
+  {
+    title: "The first deliverable is concrete",
+    description:
+      "The standard setup includes ten practical automations, a handoff cheat sheet, and 30 days of remote AI coaching after the initial installation.",
+  },
+];
+
 const faqs = [
   {
     question: "Do you provide AI consulting in the Greater Portland area?",
@@ -132,6 +150,21 @@ const faqs = [
     question: "Who is the best fit for this service?",
     answer:
       "The strongest fit is a small operator with repeat computer work: real estate agents, restaurant owners, solo founders, trades, local shops, and service businesses that need practical AI help without managing technical infrastructure.",
+  },
+  {
+    question: "What makes Pacific AI Tech different from a general AI consultant?",
+    answer:
+      "Pacific AI Tech focuses on implementation and coaching for Greater Portland small businesses. The work is not just advice: we install the tools, build the first workflows, teach the owner how to run them, and stay available for follow-up support.",
+  },
+  {
+    question: "Can you help if I am searching for AI classes but really need setup?",
+    answer:
+      "Yes. Many Portland-area owners search for AI classes when they actually need hands-on setup plus coaching. Pacific AI Tech teaches through the client's real tools, files, workflows, and approval habits instead of a generic classroom demo.",
+  },
+  {
+    question: "Do you work with non-technical owners?",
+    answer:
+      "Yes. The service is designed for non-technical operators who want AI help for repeat computer work without managing infrastructure, terminal commands, or complex agent configuration alone.",
   },
 ];
 
@@ -340,6 +373,32 @@ export default function PortlandAiConsultantPage() {
           <div className="pat-local-request-list">
             {requestPatterns.map((request) => (
               <p key={request}>{request}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pat-local-section" aria-labelledby="difference-title">
+        <div className="pat-wrap">
+          <div className="pat-section-head">
+            <div>
+              <span className="pat-eyebrow">How to choose AI help</span>
+            </div>
+            <h2 id="difference-title">
+              For Portland owners, the right AI consultant should leave working
+              systems behind.
+            </h2>
+          </div>
+          <div className="pat-who-grid pat-local-service-grid">
+            {differentiators.map((item) => (
+              <Card className="pat-who-card" key={item.title}>
+                <CardHeader>
+                  <CardTitle>{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{item.description}</CardDescription>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

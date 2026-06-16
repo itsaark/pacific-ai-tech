@@ -1,4 +1,29 @@
 # robots.txt for pacificaitech.com
+
+# Major search crawlers
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: DuckDuckBot
+User-agent: Applebot
+Allow: /
+
+# AI search, assistant, and model crawlers
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Meta-ExternalAgent
+User-agent: CCBot
+Allow: /
+
+# Preserve allow-all behavior for every other crawler
 User-agent: *
 Allow: /
 

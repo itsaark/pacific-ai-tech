@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";
+import type { CaseStudy } from "@/lib/case-studies";
 import { bookingUrl, siteUrl } from "@/lib/site";
 
 type Props = {
@@ -71,6 +72,48 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+function getSchemaKeywords(study: CaseStudy) {
+  return [
+    study.clientLabel,
+    study.industry,
+    study.location,
+    ...study.services,
+    ...study.topics,
+  ];
+}
+
+function getSchemaAbout(study: CaseStudy) {
+  return [
+    {
+      "@type": "Organization",
+      name: study.clientLabel,
+      url: study.clientUrl,
+    },
+    {
+      "@type": "Thing",
+      name: study.industry,
+    },
+    {
+      "@type": "Place",
+      name: study.location,
+    },
+    ...study.services.map((service) => ({
+      "@type": "Service",
+      name: service,
+      provider: {
+        "@type": "Organization",
+        name: "Pacific AI Tech",
+        url: siteUrl,
+      },
+      areaServed: study.location,
+    })),
+    ...study.topics.map((topic) => ({
+      "@type": "Thing",
+      name: topic,
+    })),
+  ];
+}
+
 export default async function CaseStudyPage({ params }: Props) {
   const { slug } = await params;
   const study = getCaseStudy(slug);
@@ -103,13 +146,8 @@ export default async function CaseStudyPage({ params }: Props) {
             },
           },
           mainEntityOfPage: `${siteUrl}/case-studies/${study.slug}`,
-          about: [
-            study.clientLabel,
-            study.industry,
-            "AI dispatch automation",
-            "freight load board automation",
-            "Pacific Northwest logistics",
-          ],
+          about: getSchemaAbout(study),
+          keywords: getSchemaKeywords(study),
         }
       : undefined;
 

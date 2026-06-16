@@ -8,6 +8,8 @@ export type CaseStudy = {
   clientUrl?: string;
   industry: string;
   location: string;
+  services: string[];
+  topics: string[];
   status: string;
   summary: string;
   publishedDate?: string;
@@ -41,11 +43,29 @@ export const caseStudies: CaseStudy[] = [
     title: "The dispatcher who stopped living inside the load boards",
     seoTitle: "AI Dispatch Automation for Frostbox Logistics",
     metaDescription:
-      "How Pacific AI Tech helped Frostbox Logistics use a local Hermes AI agent with Truckstop, DAT, and Motive to monitor freight, draft bids, and keep the owner in control.",
+      "How Pacific AI Tech helped Frostbox Logistics use a local Hermes agent to monitor Truckstop and DAT, draft bids, scout return loads, and keep owner approval.",
     clientLabel: "Frostbox Logistics",
     clientUrl: "https://www.frostboxlogistics.com/",
     industry: "Refrigerated trucking",
     location: "Coburg, Oregon · Pacific Northwest",
+    services: [
+      "Local AI agent setup",
+      "Dispatch workflow automation",
+      "Load-board monitoring",
+      "Broker email drafting",
+      "Route-aware return-load scouting",
+      "Human approval workflow",
+    ],
+    topics: [
+      "Hermes AI agent",
+      "Truckstop",
+      "DAT",
+      "Motive GPS and ELD",
+      "refrigerated freight",
+      "cold-chain logistics",
+      "owner-approved dispatch",
+      "Pacific Northwest freight",
+    ],
     status: "Published",
     publishedDate: "2026-06-15",
     modifiedDate: "2026-06-16",
@@ -133,11 +153,30 @@ export const caseStudies: CaseStudy[] = [
     title: "A real-estate workday that stops disappearing into notes",
     seoTitle: "AI Assistant for Kristi Blain Real Estate",
     metaDescription:
-      "How Pacific AI Tech helped Kristi Blain, a real estate broker in the Eugene and Coburg area, run Claude Cowork on a MacBook Pro for listing research, follow-ups, Canva flyers, PDFs, and client work.",
+      "How Pacific AI Tech helped Kristi Blain run Claude Cowork for listing research, client follow-up, Canva flyers, property PDFs, and transaction reminders.",
     clientLabel: "Kristi Blain",
     clientUrl: "https://www.zillow.com/profile/CEGkristi",
     industry: "Residential real estate",
     location: "Eugene and Coburg, Oregon",
+    services: [
+      "Claude Cowork setup",
+      "Real-estate listing research automation",
+      "AskKit end-of-day workflow",
+      "Client follow-up system",
+      "Canva flyer automation",
+      "Property research and PDF workflow",
+      "Remote Dispatch training",
+    ],
+    topics: [
+      "residential real estate",
+      "Eugene Oregon real estate",
+      "Coburg Oregon real estate",
+      "Zillow listing research",
+      "county records",
+      "open-house marketing",
+      "client relationship notes",
+      "transaction reminders",
+    ],
     status: "Published",
     publishedDate: "2026-06-16",
     modifiedDate: "2026-06-16",
