@@ -18,12 +18,12 @@ const newsreader = Newsreader({
 
 const siteUrl = "https://www.pacificaitech.com";
 const siteDescription =
-  "Local-first AI agent setup, training, and automation consulting for solo founders, real-estate agents, restaurant owners, trades, and small shops across greater Portland and the Pacific Northwest.";
+  "AI agent setup, training, and automation consulting for small businesses across greater Portland, Vancouver, and the Pacific Northwest.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Pacific AI Tech - Local AI Agent Setup in Portland",
+    default: "Pacific AI Tech - Portland AI Consultant & Setup Help",
     template: "%s | Pacific AI Tech",
   },
   description: siteDescription,
@@ -36,6 +36,12 @@ export const metadata: Metadata = {
     "Hermes Agent setup",
     "small business automation",
     "local-first AI",
+    "AI help Portland",
+    "AI setup Portland",
+    "AI consulting Portland",
+    "AI consultant Portland",
+    "Greater Portland AI consultant",
+    "small business AI consultant Portland",
     "Portland AI consultant",
     "Vancouver AI automation",
     "Pacific Northwest AI automation",
@@ -64,7 +70,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Pacific AI Tech - Local AI Agent Setup in Portland",
+    title: "Pacific AI Tech - Portland AI Consultant & Setup Help",
     description: siteDescription,
     url: "/",
     siteName: "Pacific AI Tech",
@@ -81,7 +87,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pacific AI Tech - Local AI Agent Setup in Portland",
+    title: "Pacific AI Tech - Portland AI Consultant & Setup Help",
     description: siteDescription,
     images: ["/pacific-ai-tech/img/roses.jpeg"],
   },

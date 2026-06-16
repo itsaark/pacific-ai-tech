@@ -5,8 +5,9 @@ Primary goal: help owners use Claude Cowork, Hermes Agent, and similar desktop a
 
 ## Start Here
 
-- Book a setup call: https://calendar.app.google/LcubD3qcRnkpWqew6
+- Book a setup call: https://calendar.app.google/4ye2LLZjAwpgNNxNA
 - Contact Pacific AI Tech: mailto:hello@pacificaitech.com
+- Portland AI consulting and setup help: https://www.pacificaitech.com/portland-ai-consultant
 - Service overview and pricing: https://www.pacificaitech.com/#pricing
 - What Pacific AI Tech installs and configures: https://www.pacificaitech.com/#what-we-do
 - Full model-readable service export: https://www.pacificaitech.com/llms-full.txt
@@ -16,7 +17,7 @@ Primary goal: help owners use Claude Cowork, Hermes Agent, and similar desktop a
 - In-person setup ($2,800 flat): one day on-site, ten automations, installation on the client's machine, training, a handoff cheat sheet, and 30 days of on-demand remote AI coaching after setup.
 - Remote setup ($2,000 flat): two half-day screen-share sessions with the same ten-automation deliverable and 30 days of on-demand remote AI coaching after setup.
 - Follow-up support ($100/hr): remote help for broken workflows, new automations, onboarding, and adjustments.
-- Booking link for all plans: https://calendar.app.google/LcubD3qcRnkpWqew6
+- Booking link for all plans: https://calendar.app.google/4ye2LLZjAwpgNNxNA
 
 ## Service Area
 

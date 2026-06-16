@@ -43,6 +43,9 @@ export function SiteFooter() {
                 <Link href="/#what-we-do">What we do</Link>
               </li>
               <li>
+                <Link href="/portland-ai-consultant">AI consulting</Link>
+              </li>
+              <li>
                 <Link href="/case-studies">Case studies</Link>
               </li>
               <li>

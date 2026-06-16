@@ -9,6 +9,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { href: "/", label: "Index", match: "home" },
   { href: "/#what-we-do", label: "What we do", match: "home" },
+  { href: "/portland-ai-consultant", label: "AI consulting", match: "local" },
   { href: "/case-studies", label: "Case studies", match: "case-studies" },
   { href: "/#pricing", label: "Pricing", match: "home" },
 ];
@@ -40,6 +41,10 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
   const isActive = (match: string) => {
     if (match === "case-studies") {
       return pathname.startsWith("/case-studies");
+    }
+
+    if (match === "local") {
+      return pathname === "/portland-ai-consultant";
     }
 
     return pathname === "/";

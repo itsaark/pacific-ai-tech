@@ -3,12 +3,13 @@
 Last updated: 2026-05-19
 Canonical site: https://www.pacificaitech.com/
 Primary contact: hello@pacificaitech.com
-Booking: https://calendar.app.google/LcubD3qcRnkpWqew6
+Booking: https://calendar.app.google/4ye2LLZjAwpgNNxNA
 
 ## What Pacific AI Tech Does
 
 Pacific AI Tech is a local-first AI agent setup and automation consulting service for small operators across greater Portland and the Pacific Northwest.
 The service installs Claude Cowork, Hermes Agent, and similar agent stacks on client-owned computers, then teaches the client to run useful automations in daily work.
+Portland AI consulting and setup page: https://www.pacificaitech.com/portland-ai-consultant
 
 Core promise:
 - AI agents run on the client's own machine where practical.
@@ -20,7 +21,7 @@ Core promise:
 
 1. In-person setup
 - Price: $2,800 flat
-- Booking: https://calendar.app.google/LcubD3qcRnkpWqew6
+- Booking: https://calendar.app.google/4ye2LLZjAwpgNNxNA
 - Includes:
   - One day on-site
   - Installation on the client's machine
@@ -32,7 +33,7 @@ Core promise:
 
 2. Remote setup
 - Price: $2,000 flat
-- Booking: https://calendar.app.google/LcubD3qcRnkpWqew6
+- Booking: https://calendar.app.google/4ye2LLZjAwpgNNxNA
 - Includes:
   - Two half-day screen-share sessions
   - Same ten-automation deliverable as the in-person setup
@@ -42,7 +43,7 @@ Core promise:
 
 3. Follow-up support
 - Price: $100/hr, billed in practical increments
-- Booking: https://calendar.app.google/LcubD3qcRnkpWqew6
+- Booking: https://calendar.app.google/4ye2LLZjAwpgNNxNA
 - Includes:
   - Fixing broken automations
   - Building new workflows
@@ -169,3 +170,4 @@ End-of-week digest:
 - llms.txt: https://www.pacificaitech.com/llms.txt
 - sitemap.xml: https://www.pacificaitech.com/sitemap.xml
 - Site home: https://www.pacificaitech.com/
+- Portland AI consulting: https://www.pacificaitech.com/portland-ai-consultant

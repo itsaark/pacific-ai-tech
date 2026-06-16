@@ -1451,6 +1451,98 @@ html {
   stroke-width: 1.8;
 }
 
+.pat-local-hero h1 {
+  max-width: 14ch;
+}
+
+.pat-local-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.pat-local-section {
+  border-bottom: 1px solid var(--rule);
+  padding: 96px 0;
+}
+
+.pat-local-section-alt {
+  background: var(--paper-deep);
+}
+
+.pat-local-service-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pat-local-request-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.pat-local-request-list p {
+  min-height: 150px;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(22px, 2.4vw, 34px);
+  font-weight: 300;
+  line-height: 1.24;
+  padding: 28px;
+}
+
+.pat-local-area {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.pat-local-area h2 {
+  max-width: 14ch;
+  margin-top: 20px;
+}
+
+.pat-local-area p {
+  max-width: 48ch;
+  margin-top: 18px;
+  color: var(--ink-soft);
+}
+
+.pat-city svg {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  stroke-width: 2;
+  vertical-align: -2px;
+}
+
+.pat-local-faq {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  border: 1px solid var(--rule);
+  background: var(--rule);
+}
+
+.pat-local-faq section {
+  min-height: 220px;
+  background: var(--paper);
+  padding: 28px;
+}
+
+.pat-local-faq h3 {
+  max-width: 18ch;
+}
+
+.pat-local-faq p {
+  margin-top: 18px;
+  color: var(--ink-soft);
+}
+
 .pat-site-foot {
   margin-top: 0;
   border-top: 1px solid var(--rule);
@@ -1645,7 +1737,8 @@ html {
   .pat-subpage-hero-grid,
   .pat-case-detail-hero,
   .pat-case-submit,
-  .pat-case-next {
+  .pat-case-next,
+  .pat-local-area {
     grid-template-columns: 1fr;
   }
 
@@ -1655,7 +1748,9 @@ html {
 
   .pat-case-preview-grid,
   .pat-case-index-grid,
-  .pat-case-story-grid {
+  .pat-case-story-grid,
+  .pat-local-request-list,
+  .pat-local-faq {
     grid-template-columns: 1fr;
   }
 
@@ -1862,7 +1957,8 @@ html {
   .pat-who,
   .pat-autos,
   .pat-case-preview,
-  .pat-pricing {
+  .pat-pricing,
+  .pat-local-section {
     padding: 64px 0;
   }
 
@@ -1958,7 +2054,9 @@ html {
   .pat-case-card,
   .pat-case-index-card,
   .pat-case-story-block,
-  .pat-case-quote {
+  .pat-case-quote,
+  .pat-local-faq section,
+  .pat-local-request-list p {
     min-height: auto;
     padding: 24px 20px;
   }
