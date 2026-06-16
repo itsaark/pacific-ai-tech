@@ -153,7 +153,6 @@ body {
   --ink-soft: oklch(0.315 0.025 156);
   --ink-mute: oklch(0.49 0.032 154);
   --ink-shadow: oklch(0 0 0 / 70%);
-  --ink-overlay: oklch(0.225 0.024 156 / 55%);
   --moss: oklch(0.42 0.047 132);
   --moss-deep: oklch(0.31 0.046 132);
   --moss-pale: oklch(0.78 0.04 132);
@@ -512,34 +511,6 @@ body {
 .pat-hero-image {
   min-height: 0;
   border-left: 1px solid var(--rule);
-}
-
-.pat-overlay-top,
-.pat-overlay-caption {
-  position: absolute;
-  z-index: 2;
-  color: var(--paper);
-  font-family: var(--font-mono), ui-monospace, Menlo, monospace;
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-shadow: 0 1px 3px var(--ink-shadow);
-  text-transform: uppercase;
-}
-
-.pat-overlay-top {
-  top: 16px;
-  left: 16px;
-  background: var(--ink-overlay);
-  padding: 4px 8px;
-}
-
-.pat-overlay-caption {
-  right: 16px;
-  bottom: 16px;
-  left: 16px;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
 }
 
 .pat-ticker {
@@ -2099,20 +2070,6 @@ body {
     min-height: 300px;
   }
 
-  .pat-overlay-top {
-    right: 12px;
-    left: 12px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .pat-overlay-top,
-  .pat-overlay-caption {
-    font-size: 9px;
-    letter-spacing: 0.08em;
-  }
-
   .pat-ticker {
     padding: 8px 0;
   }
@@ -2302,11 +2259,6 @@ body {
 
   .pat-case-detail-hero {
     padding-bottom: 48px;
-  }
-
-  .pat-overlay-caption {
-    flex-direction: column;
-    gap: 4px;
   }
 
   .pat-foot-colophon {

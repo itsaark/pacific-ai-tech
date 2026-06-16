@@ -249,28 +249,17 @@ const jsonLd = {
 function FramedImage({
   src,
   alt,
-  top,
-  left,
-  right,
   className = "",
 }: {
   src: string;
   alt: string;
-  top: string;
-  left: string;
-  right: string;
   className?: string;
 }) {
   return (
     <div className={`pat-ascii-frame ${className}`}>
-      <span className="pat-overlay-top">{top}</span>
       {/* Native img keeps the local ASCII assets visible in browser full-page captures. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={src} alt={alt} loading="eager" decoding="async" />
-      <div className="pat-overlay-caption">
-        <span>{left}</span>
-        <span>{right}</span>
-      </div>
     </div>
   );
 }
@@ -484,9 +473,6 @@ export default function Home() {
           <FramedImage
             src="/pacific-ai-tech/img/roses.jpeg"
             alt="Washington Park rose garden rendered in ASCII"
-            top="/img/01 - washington_park.rose_garden.jpeg"
-            left="N 45.51° · W 122.71°"
-            right="RGB -> ASCII · 0.86 density"
             className="pat-hero-image"
           />
         </section>
@@ -597,9 +583,6 @@ export default function Home() {
           <FramedImage
             src="/pacific-ai-tech/img/tulips.jpeg"
             alt="Wooden Shoe tulip fields rendered in ASCII"
-            top="/img/02 - wooden_shoe.tulip_festival.jpeg"
-            left="Woodburn, OR"
-            right="palette · bloom + slate"
             className="pat-showcase-image"
           />
         </section>
@@ -670,9 +653,6 @@ export default function Home() {
           <FramedImage
             src="/pacific-ai-tech/img/bridge.jpeg"
             alt="Portland's Steel Bridge with cherry blossoms in ASCII"
-            top="/img/03 - steel_bridge.april.jpeg"
-            left="Willamette River · downtown"
-            right="service radius · 95 mi"
             className="pat-region-image"
           />
           <div className="pat-region-text">
