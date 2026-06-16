@@ -16,9 +16,9 @@ import { SiteHeader } from "@/components/site-header";
 import { bookingUrl, contactEmail, serviceDescription, siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Portland AI Consultant for AI Setup",
+  title: "Portland AI Consultant for AI Setup & Training",
   description:
-    "Greater Portland AI help for small businesses: local AI setup, automation consulting, training, and on-site support in Portland, Vancouver, and Beaverton.",
+    "Portland AI consultant for small business AI setup, coaching, training, and practical AI help across Portland, Vancouver, and Beaverton.",
   alternates: {
     canonical: "/portland-ai-consultant",
   },
@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     "AI consulting Portland",
     "AI setup Portland",
     "AI help Portland",
+    "AI coaching Portland",
+    "AI classes Portland",
+    "AI training Portland",
+    "private AI setup classes Portland",
+    "AI tech Portland",
     "Greater Portland AI help",
     "small business AI setup Portland",
     "AI automation consultant Portland",
@@ -35,9 +40,9 @@ export const metadata: Metadata = {
     "Beaverton AI consultant",
   ],
   openGraph: {
-    title: "Portland AI Consultant for AI Setup",
+    title: "Portland AI Consultant for AI Setup & Training",
     description:
-      "Local AI setup and consulting for small businesses across greater Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, and nearby cities.",
+      "Local AI setup, coaching, and consulting for small businesses across greater Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, and nearby cities.",
     url: "/portland-ai-consultant",
     siteName: "Pacific AI Tech",
     type: "website",
@@ -52,9 +57,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portland AI Consultant for AI Setup",
+    title: "Portland AI Consultant for AI Setup & Training",
     description:
-      "Greater Portland AI help for small businesses: setup, automations, training, and practical support.",
+      "Greater Portland AI help for small businesses: setup, coaching, training, automations, and practical support.",
     images: ["/pacific-ai-tech/img/bridge.jpeg"],
   },
 };
@@ -79,7 +84,7 @@ const services = [
     number: "/ 01",
     title: "AI setup on your computer",
     description:
-      "We install and configure Claude Cowork, Hermes Agent, or the agent stack that fits your machine and workflow.",
+      "We install and configure Claude Cowork, Hermes Agent, or the agent stack that fits your Portland-area machine and workflow.",
   },
   {
     number: "/ 02",
@@ -89,17 +94,17 @@ const services = [
   },
   {
     number: "/ 03",
-    title: "Hands-on AI training",
+    title: "Hands-on AI coaching and training",
     description:
-      "We teach you how to prompt, approve, inspect, adjust, and stop automations so the system stays under your control.",
+      "Private AI coaching and setup classes teach Portland-area owners how to prompt, approve, inspect, adjust, and stop automations.",
   },
 ];
 
 const requestPatterns = [
   "I need AI help for my Portland business, but I do not know what to install.",
-  "Can someone set up AI on my laptop and show me how to use it?",
+  "Can someone set up AI on my laptop and coach our team through the first workflows?",
   "I want an AI consultant who can automate repeat work, not just give advice.",
-  "Can AI handle follow-ups, notes, files, listings, reviews, or invoices for us?",
+  "Are there AI classes in Portland that teach our actual tools, files, and tasks?",
 ];
 
 const faqs = [
@@ -116,7 +121,12 @@ const faqs = [
   {
     question: "Can you set up AI tools on my own computer?",
     answer:
-      "Yes. The core service is local-first AI setup on client-owned computers where practical, using tools such as Claude Cowork or Hermes Agent depending on the workflow and machine.",
+      "Yes. The core service is local-first AI setup on client-owned computers where practical, using tools such as Claude Cowork or Hermes Agent depending on the workflow and machine. For Portland owners, the goal is a working system you understand before we leave.",
+  },
+  {
+    question: "Do you offer private AI classes or AI coaching in Portland?",
+    answer:
+      "Yes. We provide practical AI coaching, AI training, and private AI setup classes for Portland-area owners and teams. Sessions are built around your real inboxes, documents, spreadsheets, listings, reviews, invoices, or reports instead of generic demos.",
   },
   {
     question: "Who is the best fit for this service?",
@@ -132,7 +142,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${siteUrl}/portland-ai-consultant#webpage`,
       url: `${siteUrl}/portland-ai-consultant`,
-      name: "Portland AI Consultant for AI Setup",
+      name: "Portland AI Consultant for AI Setup & Training",
       description: metadata.description,
       isPartOf: {
         "@type": "WebSite",
@@ -159,9 +169,22 @@ const jsonLd = {
       serviceType: [
         "AI consulting",
         "AI setup",
+        "AI coaching",
+        "Private AI classes",
+        "AI training",
+        "Private AI setup classes",
         "AI automation consulting",
         "AI agent training",
+        "AI tech support",
         "Small business automation",
+      ],
+      knowsAbout: [
+        "AI consultant Portland",
+        "AI setup Portland",
+        "AI help Portland",
+        "AI training Portland",
+        "AI classes Portland",
+        "AI tech Portland",
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -180,6 +203,12 @@ const jsonLd = {
             name: "Remote AI setup",
             price: "2000",
             priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            url: bookingUrl,
+          },
+          {
+            "@type": "Offer",
+            name: "Private AI coaching and setup class",
             availability: "https://schema.org/InStock",
             url: bookingUrl,
           },
@@ -236,14 +265,15 @@ export default function PortlandAiConsultantPage() {
             <div>
               <span className="pat-eyebrow">Greater Portland AI help</span>
               <h1 id="local-title">
-                Portland AI consultant for practical AI setup.
+                Portland AI consultant for practical AI setup and training.
               </h1>
             </div>
             <div>
               <p className="pat-lede">
                 We help small businesses in Portland, Vancouver, Beaverton,
                 Hillsboro, Tigard, Lake Oswego, and nearby cities set up AI
-                tools that do real work on their own computers.
+                tools, learn the workflow, and get practical AI tech help on
+                their own computers.
               </p>
               <div className="pat-local-actions">
                 <Button
@@ -321,11 +351,12 @@ export default function PortlandAiConsultantPage() {
             <div>
               <span className="pat-eyebrow">Service area</span>
               <h2 id="area-title">
-                AI setup for Greater Portland and nearby cities.
+                AI setup and AI training for Greater Portland and nearby cities.
               </h2>
               <p>
                 We provide on-site AI setup when the drive makes sense, and
-                remote AI consulting when screen-share is the better fit.
+                remote AI consulting, coaching, and private setup classes when
+                screen-share is the better fit.
               </p>
             </div>
             <div className="pat-cities" aria-label="AI consulting service area cities">
@@ -366,8 +397,9 @@ export default function PortlandAiConsultantPage() {
               <h2>Bring the repeat task. We will map the AI setup.</h2>
               <p>
                 A good first call is simple: what you do every week, where the
-                information lives, and what you would trust an AI agent to draft
-                before you approve it.
+                information lives, what you would trust an AI agent to draft
+                before you approve it, and whether you need setup, coaching, or
+                a short class for your team.
               </p>
             </div>
             <Button
