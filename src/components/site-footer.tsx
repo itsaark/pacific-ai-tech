@@ -41,7 +41,7 @@ export function SiteFooter() {
           </div>
         </div>
         <p className="pat-foot-bottom">
-          © 2025 Pacific AI Tech LLC · Portland, OR · v 26.05 · built on a porch
+          © 2026 Pacific AI Tech LLC · Portland, OR · v 26.05 · built on a porch
         </p>
       </div>
     </footer>
