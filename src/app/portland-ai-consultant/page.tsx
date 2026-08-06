@@ -13,7 +13,15 @@ import {
 } from "@/components/ui/card";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { bookingUrl, contactEmail, serviceDescription, siteUrl } from "@/lib/site";
+import {
+  bookingUrl,
+  businessId,
+  greaterPortlandSchemaAreas,
+  greaterPortlandServiceAreas,
+  serviceDescription,
+  siteUrl,
+  websiteId,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Portland AI Consultant for AI Setup & Training",
@@ -64,21 +72,6 @@ export const metadata: Metadata = {
   },
 };
 
-const serviceAreas = [
-  "Portland",
-  "Vancouver",
-  "Beaverton",
-  "Hillsboro",
-  "Tigard",
-  "Lake Oswego",
-  "Gresham",
-  "Oregon City",
-  "Tualatin",
-  "McMinnville",
-  "Salem",
-  "Olympia",
-];
-
 const services = [
   {
     number: "/ 01",
@@ -121,7 +114,31 @@ const differentiators = [
   {
     title: "The first deliverable is concrete",
     description:
-      "The standard setup includes ten practical automations, a handoff cheat sheet, and 30 days of remote AI coaching after the initial installation.",
+      "Your proposal names the first workflows, guardrails, training, handoff, support plan, timeline, and quote. The scope matches your business instead of forcing every client into the same package.",
+  },
+];
+
+const evidence = [
+  {
+    title: "Small businesses get better results by starting with one useful task.",
+    description:
+      "The U.S. Small Business Administration recommends beginning with a small, low-risk AI use case and keeping human review in the process.",
+    href: "https://www.sba.gov/business-guide/manage-your-business/ai-small-business",
+    source: "U.S. Small Business Administration",
+  },
+  {
+    title: "AI adoption is growing, but it is not universal.",
+    description:
+      "U.S. Census Bureau data published in 2026 puts business AI use near one in five firms, which is why our work starts with the workflow rather than assuming every tool is a fit.",
+    href: "https://www.census.gov/library/stories/2026/05/ai-use-businesses.html",
+    source: "U.S. Census Bureau",
+  },
+  {
+    title: "Risk controls belong inside the workflow.",
+    description:
+      "The NIST AI Risk Management Framework emphasizes practical governance and measurement. We translate that into approvals, inspectable outputs, and clear stop points.",
+    href: "https://airc.nist.gov/airmf-resources/airmf/",
+    source: "National Institute of Standards and Technology",
   },
 ];
 
@@ -129,7 +146,7 @@ const faqs = [
   {
     question: "Do you provide AI consulting in the Greater Portland area?",
     answer:
-      "Yes. Pacific AI Tech works across Portland and nearby Oregon and Washington cities, including Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, Gresham, Oregon City, Tualatin, Salem, and Olympia.",
+      "Yes. Pacific AI Tech serves the Greater Portland metro across Oregon and southwest Washington, including Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, Gresham, Oregon City, Tualatin, Milwaukie, Happy Valley, and Camas. Wider Pacific Northwest work is available when practical.",
   },
   {
     question: "Is this AI consulting or AI implementation?",
@@ -177,28 +194,30 @@ const jsonLd = {
       url: `${siteUrl}/portland-ai-consultant`,
       name: "Portland AI Consultant for AI Setup & Training",
       description: metadata.description,
-      isPartOf: {
-        "@type": "WebSite",
-        "@id": `${siteUrl}/#website`,
-        name: "Pacific AI Tech",
-        url: siteUrl,
-      },
+      isPartOf: { "@id": websiteId },
       about: {
         "@id": `${siteUrl}/portland-ai-consultant#service`,
       },
+      breadcrumb: {
+        "@id": `${siteUrl}/portland-ai-consultant#breadcrumb`,
+      },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/pacific-ai-tech/img/bridge.jpeg`,
+      },
+      dateModified: "2026-08-06",
+      inLanguage: "en-US",
+      citation: evidence.map((item) => item.href),
     },
     {
-      "@type": "ProfessionalService",
+      "@type": "Service",
       "@id": `${siteUrl}/portland-ai-consultant#service`,
-      name: "Pacific AI Tech Portland AI Consulting and Setup",
+      name: "Greater Portland AI Consulting, Setup, and Training",
       url: `${siteUrl}/portland-ai-consultant`,
       description: serviceDescription,
-      email: contactEmail,
       image: `${siteUrl}/pacific-ai-tech/img/bridge.jpeg`,
-      areaServed: serviceAreas.map((name) => ({
-        "@type": "City",
-        name,
-      })),
+      provider: { "@id": businessId },
+      areaServed: greaterPortlandSchemaAreas,
       serviceType: [
         "AI consulting",
         "AI setup",
@@ -210,14 +229,6 @@ const jsonLd = {
         "AI agent training",
         "AI tech support",
         "Small business automation",
-      ],
-      knowsAbout: [
-        "AI consultant Portland",
-        "AI setup Portland",
-        "AI help Portland",
-        "AI training Portland",
-        "AI classes Portland",
-        "AI tech Portland",
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -415,14 +426,14 @@ export default function PortlandAiConsultantPage() {
               </p>
             </div>
             <div className="pat-cities" aria-label="AI consulting service area cities">
-              {serviceAreas.map((city, index) => (
+              {greaterPortlandServiceAreas.map((area, index) => (
                 <Badge
-                  key={city}
+                  key={`${area.city}-${area.region}`}
                   variant={index < 4 ? "default" : "outline"}
                   className="pat-city"
                 >
                   {index < 4 ? <MapPin aria-hidden="true" /> : null}
-                  {city}
+                  {area.displayName}
                 </Badge>
               ))}
             </div>
@@ -430,7 +441,41 @@ export default function PortlandAiConsultantPage() {
         </div>
       </section>
 
-      <section className="pat-local-section pat-local-section-alt" aria-labelledby="faq-title">
+      <section className="pat-local-section pat-local-section-alt" aria-labelledby="evidence-title">
+        <div className="pat-wrap">
+          <div className="pat-section-head">
+            <div>
+              <span className="pat-eyebrow">How we make AI practical</span>
+            </div>
+            <h2 id="evidence-title">
+              Start small, keep a person in control, and measure what changes.
+            </h2>
+          </div>
+          <div className="pat-who-grid pat-local-service-grid">
+            {evidence.map((item) => (
+              <Card className="pat-who-card" key={item.href}>
+                <CardHeader>
+                  <CardTitle>{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{item.description}</CardDescription>
+                  <a
+                    className="pat-source-link"
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Source: {item.source}
+                    <ArrowRight aria-hidden="true" />
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="pat-local-section" aria-labelledby="faq-title">
         <div className="pat-wrap">
           <div className="pat-section-head">
             <div>

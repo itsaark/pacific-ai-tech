@@ -9,7 +9,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";
 import type { CaseStudy } from "@/lib/case-studies";
-import { bookingUrl, siteUrl } from "@/lib/site";
+import { businessId, bookingUrl, siteUrl, websiteId } from "@/lib/site";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -93,11 +93,7 @@ function getSchemaAbout(study: CaseStudy) {
     ...study.services.map((service) => ({
       "@type": "Service",
       name: service,
-      provider: {
-        "@type": "Organization",
-        name: "Pacific AI Tech",
-        url: siteUrl,
-      },
+      provider: { "@id": businessId },
       areaServed: study.location,
     })),
     ...study.topics.map((topic) => ({
@@ -117,28 +113,78 @@ export default async function CaseStudyPage({ params }: Props) {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: study.title,
-    description: study.metaDescription,
-    image: study.heroImage ? `${siteUrl}${study.heroImage.src}` : undefined,
-    datePublished: study.publishedDate,
-    dateModified: study.modifiedDate,
-    author: {
-      "@type": "Organization",
-      name: "Pacific AI Tech",
-      url: siteUrl,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Pacific AI Tech",
-      logo: {
-        "@type": "ImageObject",
-        url: `${siteUrl}/pacific-ai-tech/img/logo-pine-icon.png`,
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${siteUrl}/case-studies/${study.slug}#webpage`,
+        url: `${siteUrl}/case-studies/${study.slug}`,
+        name: study.seoTitle,
+        description: study.metaDescription,
+        isPartOf: { "@id": websiteId },
+        about: { "@id": `${siteUrl}/case-studies/${study.slug}#article` },
+        breadcrumb: {
+          "@id": `${siteUrl}/case-studies/${study.slug}#breadcrumb`,
+        },
+        datePublished: study.publishedDate,
+        dateModified: study.modifiedDate,
+        inLanguage: "en-US",
       },
-    },
-    mainEntityOfPage: `${siteUrl}/case-studies/${study.slug}`,
-    about: getSchemaAbout(study),
-    keywords: getSchemaKeywords(study),
+      {
+        "@type": "Article",
+        "@id": `${siteUrl}/case-studies/${study.slug}#article`,
+        headline: study.title,
+        description: study.metaDescription,
+        image: study.heroImage ? `${siteUrl}${study.heroImage.src}` : undefined,
+        datePublished: study.publishedDate,
+        dateModified: study.modifiedDate,
+        author: {
+          "@type": "Organization",
+          "@id": businessId,
+          name: "Pacific AI Tech",
+          url: siteUrl,
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": businessId,
+          name: "Pacific AI Tech",
+          url: siteUrl,
+          logo: {
+            "@type": "ImageObject",
+            url: `${siteUrl}/pacific-ai-tech/img/logo-pine-icon.png`,
+          },
+        },
+        mainEntityOfPage: {
+          "@id": `${siteUrl}/case-studies/${study.slug}#webpage`,
+        },
+        about: getSchemaAbout(study),
+        keywords: getSchemaKeywords(study),
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${siteUrl}/case-studies/${study.slug}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: `${siteUrl}/`,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Case studies",
+            item: `${siteUrl}/case-studies`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: study.clientLabel,
+            item: `${siteUrl}/case-studies/${study.slug}`,
+          },
+        ],
+      },
+    ],
   };
 
   return (

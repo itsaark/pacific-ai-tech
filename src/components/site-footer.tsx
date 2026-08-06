@@ -24,7 +24,7 @@ export function SiteFooter() {
         <Separator className="pat-foot-rule" />
         <div className="pat-foot-colophon">
           <div className="pat-foot-note">
-            <h4>Colophon</h4>
+            <h2>Colophon</h2>
             <p>
               A two-person consultancy helping the Pacific Northwest&apos;s
               small operators put AI to work quietly, locally, on their own
@@ -32,12 +32,12 @@ export function SiteFooter() {
             </p>
           </div>
           <div className="pat-foot-contact">
-            <h4>Contact</h4>
+            <h2>Contact</h2>
             <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
           </div>
           <div className="pat-foot-region">
-            <h4>Region</h4>
-            <p>Portland · Vancouver · Salem · Olympia · nearby towns</p>
+            <h2>Region</h2>
+            <p>Greater Portland · Vancouver · nearby Oregon and Washington towns</p>
           </div>
         </div>
         <p className="pat-foot-bottom">

@@ -14,7 +14,15 @@ import {
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { caseStudies } from "@/lib/case-studies";
-import { bookingUrl, contactEmail, serviceDescription, siteUrl } from "@/lib/site";
+import {
+  bookingUrl,
+  businessId,
+  contactEmail,
+  greaterPortlandSchemaAreas,
+  serviceDescription,
+  siteUrl,
+  websiteId,
+} from "@/lib/site";
 
 const clients = [
   {
@@ -125,12 +133,14 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
-      "@id": `${siteUrl}/#localbusiness`,
+      "@type": "ProfessionalService",
+      "@id": businessId,
       name: "Pacific AI Tech",
+      legalName: "Pacific AI Tech LLC",
       url: `${siteUrl}/`,
       description: serviceDescription,
       image: `${siteUrl}/pacific-ai-tech/img/roses.jpeg`,
+      logo: `${siteUrl}/pacific-ai-tech/img/logo-pine-icon.png`,
       email: contactEmail,
       foundingDate: "2025",
       address: {
@@ -140,53 +150,64 @@ const jsonLd = {
         addressCountry: "US",
       },
       areaServed: [
-        { "@type": "City", name: "Portland" },
-        { "@type": "City", name: "Vancouver" },
-        { "@type": "City", name: "Beaverton" },
-        { "@type": "City", name: "Hillsboro" },
-        { "@type": "City", name: "Tigard" },
-        { "@type": "City", name: "Lake Oswego" },
-        { "@type": "City", name: "Gresham" },
-        { "@type": "City", name: "Oregon City" },
-        { "@type": "City", name: "Salem" },
-        { "@type": "City", name: "Olympia" },
-        { "@type": "State", name: "Oregon" },
-        { "@type": "State", name: "Washington" },
+        ...greaterPortlandSchemaAreas,
+        { "@type": "City", name: "Salem, Oregon" },
+        { "@type": "City", name: "Olympia, Washington" },
+        { "@type": "AdministrativeArea", name: "Pacific Northwest" },
+      ],
+      knowsAbout: [
+        "AI consulting",
+        "AI solutions architecture",
+        "AI agent deployment",
+        "small business workflow automation",
+        "local-first AI",
+        "AI training",
       ],
       founder: [
         {
           "@type": "Person",
+          "@id": `${siteUrl}/#aark-kodur`,
           name: "Aark Kodur",
           sameAs: "https://www.linkedin.com/in/aarkkodur/",
         },
         {
           "@type": "Person",
+          "@id": `${siteUrl}/#shayan-jalalipour`,
           name: "Shayan Jalalipour",
           sameAs: "https://www.linkedin.com/in/shayanjalalipour/",
         },
       ],
     },
     {
-      "@type": "ProfessionalService",
-      "@id": `${siteUrl}/#professionalservice`,
-      name: "Pacific AI Tech AI Consulting",
+      "@type": "WebSite",
+      "@id": websiteId,
+      name: "Pacific AI Tech",
       url: `${siteUrl}/`,
-      provider: { "@id": `${siteUrl}/#localbusiness` },
-      serviceType:
-        "AI consulting, AI solutions architecture, AI agent deployment, and automation training",
-      areaServed: [
-        { "@type": "State", name: "Oregon" },
-        { "@type": "State", name: "Washington" },
-      ],
-      description:
-        "Custom-scoped AI consulting engagements for small businesses. Every engagement is quoted individually after an intro call; no published packages or rates.",
+      description: serviceDescription,
+      publisher: { "@id": businessId },
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/#webpage`,
+      url: `${siteUrl}/`,
+      name: "Pacific AI Tech - Portland AI Consultant & AI Solutions",
+      description: serviceDescription,
+      isPartOf: { "@id": websiteId },
+      about: { "@id": businessId },
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/pacific-ai-tech/img/roses.jpeg`,
+      },
+      inLanguage: "en-US",
     },
     {
       "@type": "Service",
       "@id": `${siteUrl}/#service-consulting`,
       name: "AI consulting and workflow audit",
       serviceType: "AI consulting",
-      provider: { "@id": `${siteUrl}/#localbusiness` },
+      provider: { "@id": businessId },
+      areaServed: greaterPortlandSchemaAreas,
       description:
         "On-site or remote working sessions to map the repeat work inside a small business, decide what AI should and should not touch, and scope a deployment plan.",
     },
@@ -195,7 +216,8 @@ const jsonLd = {
       "@id": `${siteUrl}/#service-deployment`,
       name: "AI solutions deployment",
       serviceType: "AI solutions architecture and deployment",
-      provider: { "@id": `${siteUrl}/#localbusiness` },
+      provider: { "@id": businessId },
+      areaServed: greaterPortlandSchemaAreas,
       description:
         "Architecture and deployment of AI agent stacks and custom automations on client-owned machines, built around the client's actual workflows.",
     },
@@ -204,7 +226,8 @@ const jsonLd = {
       "@id": `${siteUrl}/#service-training`,
       name: "AI training and ongoing support",
       serviceType: "AI training and support",
-      provider: { "@id": `${siteUrl}/#localbusiness` },
+      provider: { "@id": businessId },
+      areaServed: greaterPortlandSchemaAreas,
       description:
         "Hands-on training so owners and teams can run, inspect, and adjust their AI workflows, with continued support after handoff.",
     },

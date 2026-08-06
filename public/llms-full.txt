@@ -1,6 +1,6 @@
 # Pacific AI Tech Full Service Context
 
-Last updated: 2026-08-05
+Last updated: 2026-08-06
 Canonical site: https://www.pacificaitech.com/
 Primary contact: hello@pacificaitech.com
 Booking: https://calendar.app.google/4ye2LLZjAwpgNNxNA
@@ -70,12 +70,12 @@ In-person cities listed on the site:
 - Lake Oswego
 - Gresham
 - Oregon City
-- Salem
-- Olympia
 - Tualatin
-- McMinnville
+- Milwaukie
+- Happy Valley
+- Camas
 
-The site describes the practical in-person range as between Olympia and Salem, the coast and the Cascades. Remote work is available by screen-share.
+The local page focuses on the Greater Portland metro across Oregon and southwest Washington. Wider Pacific Northwest work is available when practical, and remote work is available by screen-share.
 
 Local intent covered by the site:
 - Portland AI consultant
@@ -203,7 +203,7 @@ Case studies index: https://www.pacificaitech.com/case-studies
 1. Client books a setup call.
 2. Pacific AI Tech confirms the client's machine, workflows, access requirements, and preferred setup mode.
 3. The agent stack is installed and configured.
-4. Ten practical workflows are built with the client.
+4. The workflows, guardrails, training, and support defined in the custom proposal are built with the client.
 5. The client is taught how to run, modify, and stop automations.
 6. The client receives a handoff cheat sheet.
 7. Ongoing support is available after handoff when workflows break or new needs appear.

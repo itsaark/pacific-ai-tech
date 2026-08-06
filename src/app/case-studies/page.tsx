@@ -8,15 +8,87 @@ import { Button } from "@/components/ui/button";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { caseStudies } from "@/lib/case-studies";
-import { bookingUrl } from "@/lib/site";
+import { businessId, bookingUrl, siteUrl, websiteId } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Case Studies",
+  title: "Small Business AI Consulting Case Studies",
   description:
-    "Client stories from Pacific AI Tech showing how local AI agent setup changes day-to-day operations for small businesses.",
+    "See how Oregon small businesses use local AI agents for dispatch, real estate research, follow-up, approvals, and day-to-day operations.",
   alternates: {
     canonical: "/case-studies",
   },
+  openGraph: {
+    title: "Small Business AI Consulting Case Studies",
+    description:
+      "Oregon client stories showing how practical, local AI agent setups change day-to-day operations while owners stay in control.",
+    url: "/case-studies",
+    siteName: "Pacific AI Tech",
+    type: "website",
+    images: [
+      {
+        url: "/pacific-ai-tech/img/case-studies/frostbox-logistics-ascii.jpg",
+        width: 1800,
+        height: 1040,
+        alt: "Pacific AI Tech small business AI consulting case studies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Small Business AI Consulting Case Studies",
+    description:
+      "Practical AI deployment stories from Oregon small businesses, with implementation details and owner-controlled outcomes.",
+    images: ["/pacific-ai-tech/img/case-studies/frostbox-logistics-ascii.jpg"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${siteUrl}/case-studies#webpage`,
+      url: `${siteUrl}/case-studies`,
+      name: "Small Business AI Consulting Case Studies",
+      description: metadata.description,
+      isPartOf: { "@id": websiteId },
+      about: { "@id": businessId },
+      breadcrumb: { "@id": `${siteUrl}/case-studies#breadcrumb` },
+      mainEntity: { "@id": `${siteUrl}/case-studies#case-study-list` },
+      dateModified: "2026-08-06",
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${siteUrl}/case-studies#case-study-list`,
+      name: "Pacific AI Tech client case studies",
+      numberOfItems: caseStudies.length,
+      itemListElement: caseStudies.map((study, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${siteUrl}/case-studies/${study.slug}`,
+        name: study.title,
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${siteUrl}/case-studies#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${siteUrl}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Case studies",
+          item: `${siteUrl}/case-studies`,
+        },
+      ],
+    },
+  ],
 };
 
 function getPrimaryChange(study: (typeof caseStudies)[number]) {
@@ -32,6 +104,12 @@ function getPrimaryChange(study: (typeof caseStudies)[number]) {
 export default function CaseStudiesPage() {
   return (
     <main className="pat-site">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <SiteHeader bookingUrl={bookingUrl} />
 
       <section className="pat-subpage-hero" aria-labelledby="case-studies-title">
@@ -39,13 +117,14 @@ export default function CaseStudiesPage() {
           <div className="pat-subpage-hero-grid">
             <div>
               <h1 id="case-studies-title">
-                Proof from client work, not just{" "}
+                AI consulting case studies: proof from client work, not just{" "}
                 <span className="pat-serif-emphasis">promises</span>.
               </h1>
             </div>
             <p className="pat-lede">
-              These stories show the starting problem, the setup we built, the
-              handoff, and the operating change that followed.
+              These Oregon small business stories show the starting problem,
+              the local AI setup we built, the handoff, and the operating
+              change that followed while each owner stayed in control.
             </p>
           </div>
         </div>
