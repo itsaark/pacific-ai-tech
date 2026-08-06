@@ -29,7 +29,7 @@ const clients = [
   },
   {
     id: "/ 03",
-    title: "Solo founders",
+    title: "Founders & lean teams",
     text: "Inbox triage, lead-research before calls, weekly investor updates, a meeting-notes agent that actually files things.",
   },
   {
@@ -86,35 +86,39 @@ const cities = [
   "+ all points between",
 ];
 
-const prices = [
+const contactOptions = [
   {
     featured: true,
-    title: "/ in-person setup",
-    price: "$2,800",
-    unit: "One day · ten automations · on-site",
-    desc: "We drive to you. Install on your machine. Build the ten you want. Teach you how to run, judge, and improve them. Leave a cheat sheet. Includes 30 days of on-demand remote AI coaching after setup.",
+    title: "/ book a meeting",
+    headline: "Book a call",
+    meta: "Intro call · video or phone",
+    desc: "Bring one workflow that keeps stealing the week. We will tell you honestly whether AI can take it, what deployment would look like, and what we would build first.",
+    cta: "Book a meeting",
+    href: bookingUrl,
   },
   {
-    title: "/ remote setup",
-    price: "$2,000",
-    unit: "Same ten automations · over screen-share",
-    desc: "Two half-day screen-share sessions. Same ten automations, same hands-on coaching, same cheat sheet, plus 30 days of on-demand remote AI coaching after setup.",
+    title: "/ contact us",
+    headline: "Email us",
+    meta: contactEmail,
+    desc: "Prefer writing first? Tell us what your team does every day and where the information lives. We reply within one business day.",
+    cta: "Send an email",
+    href: `mailto:${contactEmail}`,
   },
   {
-    title: "/ follow-up",
-    price: "$100",
-    unit: "Remote · billed in 15-min increments",
-    desc: "Something broke. You want a new automation. You hired someone and need them onboarded. Call us when you need us.",
+    title: "/ what happens next",
+    headline: "Custom scope",
+    meta: "Proposal · timeline · quote",
+    desc: "After the first call we send a scoped proposal: what we will build, what it costs, and when it ships. No subscription, no platform tax, no surprise line items.",
   },
 ];
 
 const ticker = [
-  "AI agents",
-  "Hermes Agent",
+  "AI consulting",
+  "Solutions architecture + deployment",
   "Local-first setup + coaching",
-  "Realtors · Restaurants · Solo founders",
+  "Realtors · Restaurants · Founders · Trades",
   "Portland · Salem · Vancouver · Olympia",
-  "10 automations / install + teach",
+  "Custom engagements / scoped per business",
 ];
 
 const jsonLd = {
@@ -165,83 +169,44 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": `${siteUrl}/#professionalservice`,
-      name: "Pacific AI Tech AI Agent Setup",
+      name: "Pacific AI Tech AI Consulting",
       url: `${siteUrl}/`,
       provider: { "@id": `${siteUrl}/#localbusiness` },
-      serviceType: "AI agent setup, training, and local automation consulting",
+      serviceType:
+        "AI consulting, AI solutions architecture, AI agent deployment, and automation training",
       areaServed: [
         { "@type": "State", name: "Oregon" },
         { "@type": "State", name: "Washington" },
       ],
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "Pacific AI Tech Setup Plans",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            "@id": `${siteUrl}/#offer-onsite`,
-            name: "In-person setup",
-            price: "2800",
-            priceCurrency: "USD",
-            availability: "https://schema.org/InStock",
-            url: bookingUrl,
-            itemOffered: { "@id": `${siteUrl}/#service-onsite` },
-          },
-          {
-            "@type": "Offer",
-            "@id": `${siteUrl}/#offer-remote`,
-            name: "Remote setup",
-            price: "2000",
-            priceCurrency: "USD",
-            availability: "https://schema.org/InStock",
-            url: bookingUrl,
-            itemOffered: { "@id": `${siteUrl}/#service-remote` },
-          },
-          {
-            "@type": "Offer",
-            "@id": `${siteUrl}/#offer-follow-up`,
-            name: "Follow-up support",
-            price: "100",
-            priceCurrency: "USD",
-            priceSpecification: {
-              "@type": "UnitPriceSpecification",
-              price: "100",
-              priceCurrency: "USD",
-              unitText: "hour",
-            },
-            availability: "https://schema.org/InStock",
-            url: bookingUrl,
-            itemOffered: { "@id": `${siteUrl}/#service-follow-up` },
-          },
-        ],
-      },
+      description:
+        "Custom-scoped AI consulting engagements for small businesses. Every engagement is quoted individually after an intro call; no published packages or rates.",
     },
     {
       "@type": "Service",
-      "@id": `${siteUrl}/#service-onsite`,
-      name: "In-person AI agent setup",
-      serviceType: "On-site AI automation setup and training",
+      "@id": `${siteUrl}/#service-consulting`,
+      name: "AI consulting and workflow audit",
+      serviceType: "AI consulting",
       provider: { "@id": `${siteUrl}/#localbusiness` },
       description:
-        "One-day on-site installation of AI tools or Hermes Agent, ten client-selected automations, hands-on training, a handoff cheat sheet, and 30 days of on-demand remote AI coaching after setup.",
+        "On-site or remote working sessions to map the repeat work inside a small business, decide what AI should and should not touch, and scope a deployment plan.",
     },
     {
       "@type": "Service",
-      "@id": `${siteUrl}/#service-remote`,
-      name: "Remote AI agent setup",
-      serviceType: "Remote AI automation setup and training",
+      "@id": `${siteUrl}/#service-deployment`,
+      name: "AI solutions deployment",
+      serviceType: "AI solutions architecture and deployment",
       provider: { "@id": `${siteUrl}/#localbusiness` },
       description:
-        "Two half-day screen-share sessions to install the agent stack, build ten automations, teach the client how to operate and improve them, and provide 30 days of on-demand remote AI coaching after setup.",
+        "Architecture and deployment of AI agent stacks and custom automations on client-owned machines, built around the client's actual workflows.",
     },
     {
       "@type": "Service",
-      "@id": `${siteUrl}/#service-follow-up`,
-      name: "AI automation follow-up support",
-      serviceType: "Remote AI automation support",
+      "@id": `${siteUrl}/#service-training`,
+      name: "AI training and ongoing support",
+      serviceType: "AI training and support",
       provider: { "@id": `${siteUrl}/#localbusiness` },
       description:
-        "Hourly support for broken automations, new workflows, team onboarding, and adjustments after the initial setup.",
+        "Hands-on training so owners and teams can run, inspect, and adjust their AI workflows, with continued support after handoff.",
     },
   ],
 };
@@ -426,19 +391,20 @@ export default function Home() {
           <div className="pat-hero-text">
             <div>
               <h1 id="hero-title">
-                We set up <span className="pat-underlined">AI agents</span> on
-                your computer.
+                We architect &amp; deploy{" "}
+                <span className="pat-underlined">AI solutions</span> for small
+                businesses.
                 <br />
                 You get your <span className="pat-serif-emphasis">evenings</span>{" "}
                 back.
               </h1>
               <p className="pat-lede pat-hero-lede">
-                We install AI tools, build your first automations, and
-                teach you how to use them with confidence. Local, practical,
-                in person.
+                AI consulting, hands-on: we study your workflows, design the
+                right AI systems, deploy them on your machines, and teach your
+                team to run them with confidence.
               </p>
               <div className="pat-hero-actions">
-                <CtaButton href={bookingUrl}>Book a setup</CtaButton>
+                <CtaButton href={bookingUrl}>Book a consultation</CtaButton>
                 <Button
                   render={<a href="#what-we-do" />}
                   nativeButton={false}
@@ -451,21 +417,21 @@ export default function Home() {
             </div>
             <div className="pat-hero-meta">
               <div>
-                <div className="m-label">In-person setup</div>
+                <div className="m-label">Engagements</div>
                 <div className="m-val">
-                  $2,800 <span className="m-unit">flat</span>
+                  Custom <span className="m-unit">scoped</span>
                 </div>
               </div>
               <div>
-                <div className="m-label">Remote setup</div>
+                <div className="m-label">Delivery</div>
                 <div className="m-val">
-                  $2,000 <span className="m-unit">flat</span>
+                  On-site <span className="m-unit">+ remote</span>
                 </div>
               </div>
               <div>
-                <div className="m-label">Follow-up</div>
+                <div className="m-label">First step</div>
                 <div className="m-val">
-                  $100 <span className="m-unit">/hr</span>
+                  Intro call <span className="m-unit">book online</span>
                 </div>
               </div>
             </div>
@@ -516,15 +482,15 @@ export default function Home() {
               cloud middleman, no $99/month SaaS to forget about.
             </p>
             <p>
-              <strong>Then we sit with you and build ten automations</strong>{" "}
-              of your choosing. The ones you actually do every day. The boring
+              <strong>Then we sit with you and build the workflows</strong>{" "}
+              that matter most. The ones you actually do every day. The boring
               ones. As we build, we teach you how to prompt them, check their
               work, modify them, and stop them.
             </p>
             <p>
-              <strong>That&apos;s the flat fee.</strong> No retainer, no
-              platform tax. If you need us again next month, we charge by the
-              hour, like a plumber.
+              <strong>Every engagement is custom-scoped.</strong> No
+              subscription, no platform tax, no surprise line items. You get a
+              proposal built around your workflows before any work begins.
             </p>
           </div>
         </section>
@@ -534,7 +500,7 @@ export default function Home() {
         <div className="pat-wrap">
           <SectionHeading eyebrow="Who we work with">
             <h2 id="clients-title">
-              People who own their <span className="pat-serif-emphasis">own thing</span>,
+              Small businesses that <span className="pat-serif-emphasis">own their thing</span>,
               and would like to keep owning it.
             </h2>
           </SectionHeading>
@@ -590,10 +556,10 @@ export default function Home() {
 
       <section className="pat-autos" aria-labelledby="autos-title">
         <div className="pat-wrap">
-          <SectionHeading eyebrow="Ten automations · examples">
+          <SectionHeading eyebrow="Automations · examples">
             <h2 id="autos-title">
-              You pick the ten. Here are the ones most of our clients{" "}
-              <span className="pat-serif-emphasis">end up keeping</span>.
+              Every engagement is different. These are the ones most of our
+              clients <span className="pat-serif-emphasis">end up keeping</span>.
             </h2>
           </SectionHeading>
           <div className="pat-autos-grid">
@@ -683,31 +649,37 @@ export default function Home() {
         </section>
       </div>
 
-      <section id="pricing" className="pat-pricing" aria-labelledby="pricing-title">
+      <section id="contact" className="pat-contact" aria-labelledby="contact-title">
         <div className="pat-wrap">
-          <SectionHeading eyebrow="The whole pricing page on one row">
-            <h2 id="pricing-title">
-              Flat fees for setup and teaching.{" "}
-              <span className="pat-serif-emphasis">No subscription.</span> No
-              surprise line items.
+          <SectionHeading eyebrow="How engagements start">
+            <h2 id="contact-title">
+              No published packages. Every engagement is{" "}
+              <span className="pat-serif-emphasis">scoped to your business</span>.
             </h2>
           </SectionHeading>
-          <div className="pat-price-row">
-            {prices.map((price) => (
+          <div className="pat-contact-row">
+            {contactOptions.map((option) => (
               <Card
-                className={price.featured ? "pat-price-card feature" : "pat-price-card"}
-                key={price.title}
+                className={option.featured ? "pat-contact-card feature" : "pat-contact-card"}
+                key={option.title}
               >
                 <CardHeader>
-                  <CardTitle>{price.title}</CardTitle>
-                  <div className="price">
-                    {price.price}
-                    <small>{price.title === "/ follow-up" ? "/hr" : "flat"}</small>
-                  </div>
-                  <CardDescription className="unit">{price.unit}</CardDescription>
+                  <CardTitle>{option.title}</CardTitle>
+                  <div className="headline">{option.headline}</div>
+                  <CardDescription className="meta">{option.meta}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription>{price.desc}</CardDescription>
+                  <CardDescription>{option.desc}</CardDescription>
+                  {option.href ? (
+                    <div className="mt-5">
+                      <CtaButton
+                        href={option.href}
+                        variant={option.featured ? "outline" : "default"}
+                      >
+                        {option.cta}
+                      </CtaButton>
+                    </div>
+                  ) : null}
                 </CardContent>
               </Card>
             ))}

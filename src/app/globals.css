@@ -206,7 +206,7 @@ body {
 .pat-hero-meta .m-val,
 .pat-flow-row .text,
 .pat-promise .col-left p,
-.pat-price-card .price {
+.pat-contact-card .headline {
   font-family: var(--font-serif), Georgia, serif;
 }
 
@@ -595,7 +595,7 @@ body {
 }
 
 .pat-who,
-.pat-pricing {
+.pat-contact {
   border-bottom: 1px solid var(--rule);
   background: var(--paper-deep);
   padding: 96px 0;
@@ -656,7 +656,7 @@ body {
 
 .pat-who-card,
 .pat-auto-card,
-.pat-price-card {
+.pat-contact-card {
   gap: 0;
   min-height: 240px;
   border-radius: 0;
@@ -672,14 +672,14 @@ body {
 
 .pat-who-card [data-slot="card-header"],
 .pat-auto-card [data-slot="card-header"],
-.pat-price-card [data-slot="card-header"] {
+.pat-contact-card [data-slot="card-header"] {
   gap: 14px;
   padding: 28px 24px 0;
 }
 
 .pat-who-card [data-slot="card-content"],
 .pat-auto-card [data-slot="card-content"],
-.pat-price-card [data-slot="card-content"] {
+.pat-contact-card [data-slot="card-content"] {
   padding: 18px 24px 28px;
 }
 
@@ -695,7 +695,7 @@ body {
 
 .pat-who-card [data-slot="card-description"],
 .pat-auto-card [data-slot="card-description"],
-.pat-price-card [data-slot="card-description"] {
+.pat-contact-card [data-slot="card-description"] {
   color: var(--ink-mute);
   font-size: 12px;
   line-height: 1.6;
@@ -1328,19 +1328,19 @@ body {
   text-transform: uppercase;
 }
 
-.pat-price-row {
+.pat-contact-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   margin-top: 48px;
 }
 
-.pat-price-card {
+.pat-contact-card {
   min-height: 220px;
   border: 1px solid var(--rule);
 }
 
-.pat-price-card.feature {
+.pat-contact-card.feature {
   --card: var(--ink);
   --card-foreground: var(--paper);
   background: var(--ink);
@@ -1348,7 +1348,7 @@ body {
   color: var(--paper);
 }
 
-.pat-price-card [data-slot="card-title"] {
+.pat-contact-card [data-slot="card-title"] {
   color: inherit;
   font-size: 11px;
   font-weight: 600;
@@ -1356,28 +1356,21 @@ body {
   text-transform: uppercase;
 }
 
-.pat-price-card .price {
+.pat-contact-card .headline {
   margin-top: 8px;
   font-size: 56px;
   letter-spacing: -0.02em;
   line-height: 1;
 }
 
-.pat-price-card .price small {
-  margin-left: 2px;
-  font-family: var(--font-mono), ui-monospace, Menlo, monospace;
-  font-size: 16px;
-  vertical-align: top;
-}
-
-.pat-price-card .unit {
+.pat-contact-card .meta {
   color: var(--ink-mute);
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.pat-price-card.feature [data-slot="card-description"] {
+.pat-contact-card.feature [data-slot="card-description"] {
   color: var(--moss-soft);
 }
 
@@ -1891,7 +1884,7 @@ body {
   }
 
   .pat-autos-grid,
-  .pat-price-row {
+  .pat-contact-row {
     grid-template-columns: 1fr;
   }
 
@@ -2083,7 +2076,7 @@ body {
   .pat-who,
   .pat-autos,
   .pat-case-preview,
-  .pat-pricing,
+  .pat-contact,
   .pat-local-section {
     padding: 64px 0;
   }
@@ -2122,19 +2115,19 @@ body {
 
   .pat-who-card,
   .pat-auto-card,
-  .pat-price-card {
+  .pat-contact-card {
     min-height: auto;
   }
 
   .pat-who-card [data-slot="card-header"],
   .pat-auto-card [data-slot="card-header"],
-  .pat-price-card [data-slot="card-header"] {
+  .pat-contact-card [data-slot="card-header"] {
     padding: 22px 20px 0;
   }
 
   .pat-who-card [data-slot="card-content"],
   .pat-auto-card [data-slot="card-content"],
-  .pat-price-card [data-slot="card-content"] {
+  .pat-contact-card [data-slot="card-content"] {
     padding: 14px 20px 22px;
   }
 
@@ -2154,12 +2147,12 @@ body {
     letter-spacing: 0.06em;
   }
 
-  .pat-price-row {
+  .pat-contact-row {
     gap: 14px;
     margin-top: 32px;
   }
 
-  .pat-price-card .price {
+  .pat-contact-card .headline {
     font-size: clamp(42px, 13vw, 52px);
   }
 

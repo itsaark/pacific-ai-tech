@@ -221,21 +221,17 @@ const jsonLd = {
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
-        name: "Pacific AI Tech AI setup services",
+        name: "Pacific AI Tech AI consulting services",
         itemListElement: [
           {
             "@type": "Offer",
-            name: "In-person AI setup",
-            price: "2800",
-            priceCurrency: "USD",
+            name: "AI consulting engagement (custom scope)",
             availability: "https://schema.org/InStock",
             url: bookingUrl,
           },
           {
             "@type": "Offer",
-            name: "Remote AI setup",
-            price: "2000",
-            priceCurrency: "USD",
+            name: "AI solutions deployment (custom scope)",
             availability: "https://schema.org/InStock",
             url: bookingUrl,
           },
@@ -318,12 +314,12 @@ export default function PortlandAiConsultantPage() {
                   Book AI setup help
                 </Button>
                 <Button
-                  render={<Link href="/#pricing" />}
+                  render={<Link href="/#contact" />}
                   nativeButton={false}
                   variant="outline"
                   className="pat-btn"
                 >
-                  See pricing
+                  Contact us
                   <ArrowRight data-icon="inline-end" />
                 </Button>
               </div>
