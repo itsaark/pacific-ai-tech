@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { ConsultationForm } from "@/components/consultation-form";
 import { caseStudies } from "@/lib/case-studies";
 import {
   bookingUrl,
@@ -398,6 +399,9 @@ function FounderSection() {
 
 export default function Home() {
   const tickerItems = [...ticker, ...ticker];
+  const leadFormEnabled = Boolean(
+    process.env.RESEND_API_KEY && process.env.LEAD_FROM_EMAIL
+  );
 
   return (
     <main className="pat-site">
@@ -707,6 +711,9 @@ export default function Home() {
               </Card>
             ))}
           </div>
+          {leadFormEnabled ? (
+            <ConsultationForm location="homepage" />
+          ) : null}
         </div>
       </section>
 

@@ -11,6 +11,7 @@ const navItems = [
   { href: "/#what-we-do", label: "What we do" },
   { href: "/portland-ai-consultant", label: "AI consulting" },
   { href: "/case-studies", label: "Case studies" },
+  { href: "/about", label: "About" },
   { href: "/#contact", label: "Contact" },
 ];
 

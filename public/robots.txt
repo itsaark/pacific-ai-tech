@@ -7,6 +7,11 @@ User-agent: DuckDuckBot
 User-agent: Applebot
 Allow: /
 
+# Google advertising destination crawlers
+User-agent: AdsBot-Google
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
 # AI search, assistant, and model crawlers
 User-agent: GPTBot
 User-agent: ChatGPT-User

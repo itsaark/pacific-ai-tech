@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { PrivacyChoicesButton } from "@/components/analytics/consent-banner";
 import { Separator } from "@/components/ui/separator";
 import { contactEmail } from "@/lib/site";
 
@@ -40,9 +42,15 @@ export function SiteFooter() {
             <p>Greater Portland · Vancouver · nearby Oregon and Washington towns</p>
           </div>
         </div>
-        <p className="pat-foot-bottom">
-          © 2026 Pacific AI Tech LLC · Portland, OR · v 26.05 · built on a porch
-        </p>
+        <div className="pat-foot-bottom">
+          <p>© 2026 Pacific AI Tech LLC · Portland, OR · v 26.08 · built on a porch</p>
+          <nav aria-label="Company and legal">
+            <Link href="/about">About</Link>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+            <PrivacyChoicesButton />
+          </nav>
+        </div>
       </div>
     </footer>
   );

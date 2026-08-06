@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/card";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { ConsultationForm } from "@/components/consultation-form";
+import { caseStudies } from "@/lib/case-studies";
 import {
   bookingUrl,
   businessId,
@@ -24,9 +26,9 @@ import {
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Portland AI Consultant for AI Setup & Training",
+  title: "Portland AI Consultant for Small Businesses",
   description:
-    "Portland AI consultant for small business AI setup, coaching, training, and practical AI help across Portland, Vancouver, and Beaverton.",
+    "Business-only AI consulting, workflow implementation, and team training for small businesses across Portland, Vancouver, Beaverton, and Greater Portland.",
   alternates: {
     canonical: "/portland-ai-consultant",
   },
@@ -34,23 +36,19 @@ export const metadata: Metadata = {
     "Portland AI consultant",
     "AI consultant Portland Oregon",
     "AI consulting Portland",
-    "AI setup Portland",
-    "AI help Portland",
-    "AI coaching Portland",
-    "AI classes Portland",
-    "AI training Portland",
-    "private AI setup classes Portland",
-    "AI tech Portland",
-    "Greater Portland AI help",
-    "small business AI setup Portland",
+    "business AI consulting Portland",
+    "AI workflow implementation Portland",
+    "business AI training Portland",
+    "Greater Portland AI consultant",
+    "small business AI consultant Portland",
     "AI automation consultant Portland",
     "Vancouver WA AI consultant",
     "Beaverton AI consultant",
   ],
   openGraph: {
-    title: "Portland AI Consultant for AI Setup & Training",
+    title: "Portland AI Consultant for Small Businesses",
     description:
-      "Local AI setup, coaching, and consulting for small businesses across greater Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, and nearby cities.",
+      "Business-only AI consulting, workflow implementation, and team training across Greater Portland, Vancouver, Beaverton, Hillsboro, and nearby cities.",
     url: "/portland-ai-consultant",
     siteName: "Pacific AI Tech",
     type: "website",
@@ -65,9 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portland AI Consultant for AI Setup & Training",
+    title: "Portland AI Consultant for Small Businesses",
     description:
-      "Greater Portland AI help for small businesses: setup, coaching, training, automations, and practical support.",
+      "Business-only AI consulting, workflow implementation, and team training for Greater Portland small businesses.",
     images: ["/pacific-ai-tech/img/bridge.jpeg"],
   },
 };
@@ -75,9 +73,9 @@ export const metadata: Metadata = {
 const services = [
   {
     number: "/ 01",
-    title: "AI setup on your computer",
+    title: "AI workflow implementation",
     description:
-      "We install and configure Claude Cowork, Hermes Agent, or the agent stack that fits your Portland-area machine and workflow.",
+      "We configure the agent stack that fits your company's approved computers, accounts, data, and operating workflow.",
   },
   {
     number: "/ 02",
@@ -87,34 +85,59 @@ const services = [
   },
   {
     number: "/ 03",
-    title: "Hands-on AI coaching and training",
+    title: "Owner and team training",
     description:
-      "Private AI coaching and setup classes teach Portland-area owners how to prompt, approve, inspect, adjust, and stop automations.",
+      "Hands-on training teaches owners and teams how to prompt, approve, inspect, adjust, and stop business automations.",
   },
 ];
 
 const requestPatterns = [
-  "I need AI help for my Portland business, but I do not know what to install.",
-  "Can someone set up AI on my laptop and coach our team through the first workflows?",
-  "I want an AI consultant who can automate repeat work, not just give advice.",
-  "Are there AI classes in Portland that teach our actual tools, files, and tasks?",
+  "Which repetitive business workflow is worth improving first?",
+  "Can an AI agent draft this work while our team keeps final approval?",
+  "How do we implement AI inside the tools and accounts our company already uses?",
+  "Can you train our team on a working system instead of giving a generic presentation?",
 ];
 
 const differentiators = [
   {
-    title: "Setup happens on your actual machine",
+    title: "Implementation fits your operating environment",
     description:
-      "We work inside the laptop, desktop, files, inboxes, browser tools, and accounts you already use instead of sending you home with a generic AI strategy deck.",
+      "We work with the company-approved computers, files, inboxes, browser tools, and accounts you already use instead of handing over a generic AI strategy deck.",
   },
   {
     title: "Coaching is part of the implementation",
     description:
-      "A useful Portland AI setup should end with the owner knowing how to prompt, approve, inspect, adjust, and stop the workflows without waiting on a developer.",
+      "A useful AI engagement should end with the owner knowing how to prompt, approve, inspect, adjust, and stop the workflows without waiting on a developer.",
   },
   {
     title: "The first deliverable is concrete",
     description:
       "Your proposal names the first workflows, guardrails, training, handoff, support plan, timeline, and quote. The scope matches your business instead of forcing every client into the same package.",
+  },
+];
+
+const featuredProof = caseStudies.slice(0, 2).map((study) => ({
+  title: study.clientLabel,
+  description: study.summary,
+  href: `/case-studies/${study.slug}`,
+  label: `Read the ${study.clientLabel} case study`,
+}));
+
+const introCallSteps = [
+  {
+    title: "Choose an available time",
+    description:
+      "Our booking page shows current appointment availability immediately. You choose the time that works for your business.",
+  },
+  {
+    title: "Meet with a co-founder",
+    description:
+      "Aark or Shayan will ask about the repeat work, the tools involved, what must stay human-approved, and what a useful outcome looks like.",
+  },
+  {
+    title: "Leave with a clear next step",
+    description:
+      "We will tell you whether the workflow looks suitable for an engagement. If it does, the next step is a custom scope, timeline, and quote—not a surprise subscription.",
   },
 ];
 
@@ -151,37 +174,37 @@ const faqs = [
   {
     question: "Is this AI consulting or AI implementation?",
     answer:
-      "Both. We help decide what should be automated, then install the tools, build the first workflows, train the owner, and provide follow-up support when something needs adjustment.",
+      "Both. We help decide what should be automated, configure the business tools, build the first workflows, train the owner or team, and provide follow-up support when something needs adjustment.",
   },
   {
-    question: "Can you set up AI tools on my own computer?",
+    question: "Can you implement AI on company-owned computers?",
     answer:
-      "Yes. The core service is local-first AI setup on client-owned computers where practical, using tools such as Claude Cowork or Hermes Agent depending on the workflow and machine. For Portland owners, the goal is a working system you understand before we leave.",
+      "Yes. We can implement local-first AI on client-owned business computers when practical, using tools such as Claude Cowork or Hermes Agent depending on the workflow and approved machine. The goal is a working business system the owner or team understands.",
   },
   {
-    question: "Do you offer private AI classes or AI coaching in Portland?",
+    question: "Do you offer business AI training in Portland?",
     answer:
-      "Yes. We provide practical AI coaching, AI training, and private AI setup classes for Portland-area owners and teams. Sessions are built around your real inboxes, documents, spreadsheets, listings, reviews, invoices, or reports instead of generic demos.",
+      "Yes. We provide practical AI workflow training for Portland-area owners and teams. Sessions are built around the business's real inboxes, documents, spreadsheets, listings, reviews, invoices, or reports instead of generic demos.",
   },
   {
     question: "Who is the best fit for this service?",
     answer:
-      "The strongest fit is a small operator with repeat computer work: real estate agents, restaurant owners, solo founders, trades, local shops, and service businesses that need practical AI help without managing technical infrastructure.",
+      "The strongest fit is a small operator with repeat computer work: real estate agents, restaurant owners, solo founders, trades, local shops, and service businesses that need practical AI implementation without managing technical infrastructure.",
   },
   {
     question: "What makes Pacific AI Tech different from a general AI consultant?",
     answer:
-      "Pacific AI Tech focuses on implementation and coaching for Greater Portland small businesses. The work is not just advice: we install the tools, build the first workflows, teach the owner how to run them, and stay available for follow-up support.",
+      "Pacific AI Tech focuses on implementation and coaching for Greater Portland small businesses. The work is not just advice: we configure the chosen tools, build the first workflows, teach the owner how to run them, and stay available for follow-up support.",
   },
   {
-    question: "Can you help if I am searching for AI classes but really need setup?",
+    question: "Do you provide consumer computer repair or general tech support?",
     answer:
-      "Yes. Many Portland-area owners search for AI classes when they actually need hands-on setup plus coaching. Pacific AI Tech teaches through the client's real tools, files, workflows, and approval habits instead of a generic classroom demo.",
+      "No. Pacific AI Tech works exclusively with businesses on AI consulting, workflow implementation, and team training. We do not provide consumer computer repair, account recovery, device troubleshooting, or general-purpose technical support.",
   },
   {
     question: "Do you work with non-technical owners?",
     answer:
-      "Yes. The service is designed for non-technical operators who want AI help for repeat computer work without managing infrastructure, terminal commands, or complex agent configuration alone.",
+      "Yes. The service is designed for non-technical operators who want practical AI workflows without managing infrastructure, terminal commands, or complex agent configuration alone.",
   },
 ];
 
@@ -192,7 +215,7 @@ const jsonLd = {
       "@type": "WebPage",
       "@id": `${siteUrl}/portland-ai-consultant#webpage`,
       url: `${siteUrl}/portland-ai-consultant`,
-      name: "Portland AI Consultant for AI Setup & Training",
+      name: "Portland AI Consultant for Small Businesses",
       description: metadata.description,
       isPartOf: { "@id": websiteId },
       about: {
@@ -212,22 +235,22 @@ const jsonLd = {
     {
       "@type": "Service",
       "@id": `${siteUrl}/portland-ai-consultant#service`,
-      name: "Greater Portland AI Consulting, Setup, and Training",
+      name: "Greater Portland Business AI Consulting and Workflow Implementation",
       url: `${siteUrl}/portland-ai-consultant`,
       description: serviceDescription,
       image: `${siteUrl}/pacific-ai-tech/img/bridge.jpeg`,
       provider: { "@id": businessId },
       areaServed: greaterPortlandSchemaAreas,
+      audience: {
+        "@type": "BusinessAudience",
+        audienceType: "Small businesses and local operators",
+      },
       serviceType: [
-        "AI consulting",
-        "AI setup",
-        "AI coaching",
-        "Private AI classes",
-        "AI training",
-        "Private AI setup classes",
+        "Business AI consulting",
+        "AI workflow implementation",
+        "Business AI training",
         "AI automation consulting",
         "AI agent training",
-        "AI tech support",
         "Small business automation",
       ],
       hasOfferCatalog: {
@@ -248,7 +271,7 @@ const jsonLd = {
           },
           {
             "@type": "Offer",
-            name: "Private AI coaching and setup class",
+            name: "Business AI workflow coaching and team training",
             availability: "https://schema.org/InStock",
             url: bookingUrl,
           },
@@ -289,6 +312,10 @@ const jsonLd = {
 };
 
 export default function PortlandAiConsultantPage() {
+  const leadFormEnabled = Boolean(
+    process.env.RESEND_API_KEY && process.env.LEAD_FROM_EMAIL
+  );
+
   return (
     <main className="pat-site">
       <script
@@ -303,17 +330,20 @@ export default function PortlandAiConsultantPage() {
         <div className="pat-wrap">
           <div className="pat-subpage-hero-grid">
             <div>
-              <span className="pat-eyebrow">Greater Portland AI help</span>
+              <span className="pat-eyebrow">
+                Business-only AI consulting · Greater Portland
+              </span>
               <h1 id="local-title">
-                Portland AI consultant for practical AI setup and training.
+                Portland AI consultant for small-business workflows.
               </h1>
             </div>
             <div>
               <p className="pat-lede">
                 We help small businesses in Portland, Vancouver, Beaverton,
-                Hillsboro, Tigard, Lake Oswego, and nearby cities set up AI
-                tools, learn the workflow, and get practical AI tech help on
-                their own computers.
+                Hillsboro, Tigard, Lake Oswego, and nearby cities design AI
+                workflows, implement the right tools, and train the people who
+                will use them. We do not provide consumer computer repair,
+                account recovery, or general technical support.
               </p>
               <div className="pat-local-actions">
                 <Button
@@ -322,7 +352,7 @@ export default function PortlandAiConsultantPage() {
                   className="pat-btn pat-btn-primary"
                 >
                   <CalendarDays data-icon="inline-start" />
-                  Book AI setup help
+                  Book a business AI consultation
                 </Button>
                 <Button
                   render={<Link href="/#contact" />}
@@ -339,11 +369,60 @@ export default function PortlandAiConsultantPage() {
         </div>
       </section>
 
+      <section
+        className="pat-local-section pat-local-section-alt"
+        aria-labelledby="proof-title"
+      >
+        <div className="pat-wrap">
+          <div className="pat-section-head">
+            <div>
+              <span className="pat-eyebrow">Real work, visible proof</span>
+            </div>
+            <h2 id="proof-title">
+              Oregon client workflows, built and documented by the people you
+              will meet.
+            </h2>
+          </div>
+          <div className="pat-who-grid pat-local-service-grid">
+            {featuredProof.map((item) => (
+              <Card className="pat-who-card" key={item.href}>
+                <CardHeader>
+                  <CardTitle>{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{item.description}</CardDescription>
+                  <Link className="pat-source-link" href={item.href}>
+                    {item.label}
+                    <ArrowRight aria-hidden="true" />
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+            <Card className="pat-who-card">
+              <CardHeader>
+                <CardTitle>Work directly with the co-founders</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Aark Kodur and Shayan Jalalipour combine software engineering
+                  experience from Amazon with AI and machine-learning research
+                  from Portland State University.
+                </CardDescription>
+                <Link className="pat-source-link" href="/#founders">
+                  Meet Aark and Shayan
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="pat-local-section" aria-labelledby="services-title">
         <div className="pat-wrap">
           <div className="pat-section-head">
             <div>
-              <span className="pat-eyebrow">AI setup, not just advice</span>
+              <span className="pat-eyebrow">Implementation, not just advice</span>
             </div>
             <h2 id="services-title">
               The useful kind of AI consulting ends with something running.
@@ -371,10 +450,10 @@ export default function PortlandAiConsultantPage() {
         <div className="pat-wrap">
           <div className="pat-section-head">
             <div>
-              <span className="pat-eyebrow">What people ask for</span>
+              <span className="pat-eyebrow">What owners bring to the call</span>
             </div>
             <h2 id="requests-title">
-              Local AI help usually starts with a practical workflow.
+              A useful business AI engagement starts with a practical workflow.
             </h2>
           </div>
           <div className="pat-local-request-list">
@@ -389,7 +468,7 @@ export default function PortlandAiConsultantPage() {
         <div className="pat-wrap">
           <div className="pat-section-head">
             <div>
-              <span className="pat-eyebrow">How to choose AI help</span>
+              <span className="pat-eyebrow">How to choose an AI consultant</span>
             </div>
             <h2 id="difference-title">
               For Portland owners, the right AI consultant should leave working
@@ -417,11 +496,11 @@ export default function PortlandAiConsultantPage() {
             <div>
               <span className="pat-eyebrow">Service area</span>
               <h2 id="area-title">
-                AI setup and AI training for Greater Portland and nearby cities.
+                Business AI consulting and team training across Greater Portland.
               </h2>
               <p>
-                We provide on-site AI setup when the drive makes sense, and
-                remote AI consulting, coaching, and private setup classes when
+                We provide on-site workflow implementation when the drive makes
+                sense, and remote AI consulting and team training when
                 screen-share is the better fit.
               </p>
             </div>
@@ -475,6 +554,45 @@ export default function PortlandAiConsultantPage() {
         </div>
       </section>
 
+      <section className="pat-local-section" aria-labelledby="consultation-title">
+        <div className="pat-wrap">
+          <div className="pat-section-head">
+            <div>
+              <span className="pat-eyebrow">Your introductory consultation</span>
+            </div>
+            <h2 id="consultation-title">
+              Know who you will meet, what we will discuss, and what comes next.
+            </h2>
+          </div>
+          <div className="pat-who-grid pat-local-service-grid">
+            {introCallSteps.map((step, index) => (
+              <Card className="pat-who-card" key={step.title}>
+                <CardHeader>
+                  <Badge variant="ghost" className="pat-num">
+                    / {String(index + 1).padStart(2, "0")}
+                  </Badge>
+                  <CardTitle>{step.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{step.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {leadFormEnabled ? (
+        <section
+          className="pat-local-section pat-local-section-alt"
+          aria-label="Request a business AI consultation"
+        >
+          <div className="pat-wrap">
+            <ConsultationForm location="portland-landing-page" />
+          </div>
+        </section>
+      ) : null}
+
       <section className="pat-local-section" aria-labelledby="faq-title">
         <div className="pat-wrap">
           <div className="pat-section-head">
@@ -493,13 +611,15 @@ export default function PortlandAiConsultantPage() {
           </div>
           <div className="pat-case-submit">
             <div>
-              <span className="pat-eyebrow">Start with one workflow</span>
-              <h2>Bring the repeat task. We will map the AI setup.</h2>
+              <span className="pat-eyebrow">Start with one business workflow</span>
+              <h2>Bring the repeat task. We will map the first useful workflow.</h2>
               <p>
-                A good first call is simple: what you do every week, where the
-                information lives, what you would trust an AI agent to draft
-                before you approve it, and whether you need setup, coaching, or
-                a short class for your team.
+                Tell us what your team repeats, where the information lives,
+                and what must remain human-approved. The booking calendar shows
+                current appointment availability immediately. If you prefer
+                email, include your business and workflow so a co-founder can
+                review the fit; the calendar is the clearest view of current
+                availability.
               </p>
             </div>
             <Button
@@ -507,7 +627,7 @@ export default function PortlandAiConsultantPage() {
               nativeButton={false}
               className="pat-btn pat-btn-primary"
             >
-              Book a call
+              Schedule a business consultation
               <ArrowRight data-icon="inline-end" />
             </Button>
           </div>

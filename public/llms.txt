@@ -8,6 +8,7 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 
 - [Pacific AI Tech home](https://www.pacificaitech.com/): Services, process, founders, engagement model, and contact details.
 - [Greater Portland AI consultant](https://www.pacificaitech.com/portland-ai-consultant): Local AI consulting, setup, coaching, training, service area, FAQs, and evidence sources.
+- [About Pacific AI Tech](https://www.pacificaitech.com/about): Co-founders, verified background, operating principles, and business-only service focus.
 - [Small business AI case studies](https://www.pacificaitech.com/case-studies): Client implementations and operating outcomes.
 - [Frostbox Logistics AI dispatch case study](https://www.pacificaitech.com/case-studies/frostbox-logistics-ai-dispatch): Local Hermes agent for load research, bid drafting, return-load scouting, and owner approval.
 - [Kristi Blain real estate AI assistant case study](https://www.pacificaitech.com/case-studies/kristi-blain-real-estate-ai-assistant): Claude Cowork for listing research, client follow-up, property documents, and Canva workflows.
@@ -31,3 +32,5 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 - [Shayan Jalalipour on LinkedIn](https://www.linkedin.com/in/shayanjalalipour/): Co-founder profile.
 - [XML sitemap](https://www.pacificaitech.com/sitemap.xml): Canonical indexable page inventory.
 - [Robots policy](https://www.pacificaitech.com/robots.txt): Search and AI crawler access policy.
+- [Privacy Policy](https://www.pacificaitech.com/privacy): Website measurement, consultation-request, and privacy-choice details.
+- [Website and consulting terms](https://www.pacificaitech.com/terms): Website use and custom engagement terms.
