@@ -45,12 +45,12 @@ The website stores the most recent non-direct campaign attribution for 90 days a
 
 After a lead becomes qualified or a signed client, record that outcome with its click ID and import it into Google Ads as an offline qualified-lead conversion. This gives bidding a stronger signal than raw form submissions alone.
 
-## 5. Finish local and trust setup
+## 5. Finish identity and trust setup
 
-1. Verify or create the Pacific AI Tech Google Business Profile as a service-area business.
-2. Link that profile to Google Ads if it is eligible for location assets.
-3. Use the exact legal/domain business name during advertiser verification.
-4. Use the public business number `(971) 979-0077` for the Google Business Profile and Google Ads call assets. The site publishes the same number and can measure click-to-call intent with `phone_click`.
+1. Do not create or link a Google Business Profile. Pacific AI Tech does not want a Google review presence or Business Profile location assets.
+2. Use Greater Portland campaign location targeting without a Business Profile or location asset.
+3. Use the exact legal/domain business name during Google Ads advertiser verification.
+4. Use the public business number `(971) 979-0077` for Google Ads call assets. The site publishes the same number and can measure click-to-call intent with `phone_click`.
 5. Have an Oregon attorney review the working Privacy Policy and Terms before relying on them as bespoke legal documents.
 
 ## First campaign guardrails
