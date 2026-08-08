@@ -1,4 +1,5 @@
 /* Hallmark · macrostructure: Photographic · genre: editorial · tone: local-utilitarian · theme: custom Cascadian paper · nav: N6 masthead · footer: Ft6 letter close · contrast: pass (40-41) · mobile: pass (34,49-54) */
+@import "../../tokens.css";
 @import "tailwindcss";
 @import "tw-animate-css";
 

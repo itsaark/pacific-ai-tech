@@ -1,0 +1,277 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 · macrostructure: Split Studio · genre: editorial · tone: austere · theme: Cascadian paper · nav: N9 edge-aligned minimal · footer: Ft2 inline rule · enrichment: none · contrast: pass (40–41) · slop: pass (42–45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49) · icons: pass (30) · mobile: pass (34,49,50–57) */
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
+  background: var(--color-booking-paper);
+  color: var(--color-booking-ink);
+  font-family: var(--font-booking-body);
+  font-size: var(--text-booking-base);
+  line-height: 1.55;
+}
+
+.page,
+.page * {
+  box-sizing: border-box;
+}
+
+.shell {
+  width: min(var(--layout-booking-max), calc(100% - (var(--space-booking-md) * 2)));
+  margin-inline: auto;
+}
+
+.header {
+  border-bottom: var(--rule-booking-hairline) solid var(--color-booking-rule);
+  background: var(--color-booking-paper);
+  color: var(--color-booking-ink);
+}
+
+.headerInner {
+  min-height: var(--size-booking-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-booking-lg);
+}
+
+.brand,
+.backLink,
+.contact a,
+.footerLinks a {
+  color: inherit;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand {
+  min-height: var(--size-booking-target);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-booking-sm);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.brandMark {
+  width: var(--size-booking-logo-width);
+  height: var(--size-booking-logo-height);
+  object-fit: contain;
+}
+
+.backLink {
+  min-height: var(--size-booking-target);
+  display: inline-flex;
+  align-items: center;
+  border-bottom: var(--rule-booking-hairline) solid var(--color-booking-ink);
+  font-size: var(--text-booking-sm);
+}
+
+.booking {
+  flex: 1;
+  padding-block: var(--space-booking-xl) var(--space-booking-2xl);
+}
+
+.bookingLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-booking-xl);
+  align-items: start;
+}
+
+.intro {
+  display: grid;
+  gap: var(--space-booking-lg);
+}
+
+.intro h1,
+.calendarHeader h2,
+.intro p,
+.footer p {
+  margin: 0;
+}
+
+.intro h1,
+.calendarHeader h2 {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-family: var(--font-booking-display);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.intro h1 {
+  max-width: 12ch;
+  font-size: var(--text-booking-display);
+  line-height: 0.98;
+}
+
+.introCopy {
+  max-width: 45ch;
+  color: var(--color-booking-ink-soft);
+  font-size: var(--text-booking-lg);
+  line-height: 1.45;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-booking-xs) var(--space-booking-lg);
+  padding-top: var(--space-booking-sm);
+  border-top: var(--rule-booking-hairline) solid var(--color-booking-rule);
+  font-size: var(--text-booking-sm);
+}
+
+.contact a,
+.footerLinks a {
+  min-height: var(--size-booking-target);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: underline;
+  text-decoration-color: var(--color-booking-rule-strong);
+  text-underline-offset: var(--space-booking-2xs);
+}
+
+.calendar {
+  min-width: 0;
+  border: var(--rule-booking-hairline) solid var(--color-booking-rule-strong);
+  background: var(--color-booking-surface);
+  color: var(--color-booking-ink);
+}
+
+.calendarHeader {
+  padding: var(--space-booking-lg);
+  border-bottom: var(--rule-booking-hairline) solid var(--color-booking-rule-strong);
+}
+
+.calendarHeader h2 {
+  font-size: var(--text-booking-xl);
+  line-height: 1.1;
+}
+
+.page :global(.pat-booking-scheduler) {
+  background: var(--color-booking-surface);
+  color: var(--color-booking-ink);
+}
+
+.page :global(.pat-booking-embed) {
+  min-width: 0;
+  height: var(--size-booking-calendar-mobile);
+  background: var(--color-booking-surface);
+}
+
+.page :global(.pat-booking-fallback) {
+  margin: 0;
+  border-top: var(--rule-booking-hairline) solid var(--color-booking-rule);
+  color: var(--color-booking-ink-soft);
+  font-family: var(--font-booking-body);
+  font-size: var(--text-booking-xs);
+  letter-spacing: 0;
+  line-height: 1.5;
+  padding: var(--space-booking-md);
+}
+
+.page :global(.pat-booking-fallback a) {
+  min-height: var(--size-booking-target);
+  white-space: nowrap;
+  color: var(--color-booking-ink);
+  text-underline-offset: var(--space-booking-2xs);
+}
+
+.footer {
+  border-top: var(--rule-booking-hairline) solid var(--color-booking-rule);
+  background: var(--color-booking-paper);
+  color: var(--color-booking-ink-soft);
+}
+
+.footerInner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-booking-sm) var(--space-booking-lg);
+  padding-block: var(--space-booking-md);
+  font-size: var(--text-booking-xs);
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-booking-lg);
+}
+
+.actionLink:focus-visible,
+.page :global(.pat-booking-fallback a:focus-visible) {
+  outline: var(--rule-booking-focus) solid var(--color-booking-focus);
+  outline-offset: var(--space-booking-2xs);
+}
+
+.actionLink:active,
+.page :global(.pat-booking-fallback a:active) {
+  transform: translateY(var(--rule-booking-hairline));
+}
+
+.actionLink[aria-disabled="true"],
+.actionLink[data-state="loading"],
+.page :global(.pat-booking-fallback a[aria-disabled="true"]),
+.page :global(.pat-booking-fallback a[data-state="loading"]) {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.actionLink[data-state="error"],
+.page :global(.pat-booking-fallback a[data-state="error"]) {
+  color: var(--color-booking-error);
+  text-decoration-style: wavy;
+}
+
+.actionLink[data-state="success"],
+.page :global(.pat-booking-fallback a[data-state="success"]) {
+  color: var(--color-booking-success);
+  text-decoration-thickness: var(--rule-booking-focus);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .actionLink:hover,
+  .page :global(.pat-booking-fallback a:hover) {
+    text-decoration-color: var(--color-booking-accent);
+  }
+}
+
+@media (min-width: 60rem) {
+  .shell {
+    width: min(var(--layout-booking-max), calc(100% - (var(--space-booking-xl) * 2)));
+  }
+
+  .booking {
+    padding-block: var(--space-booking-2xl) var(--space-booking-3xl);
+  }
+
+  .bookingLayout {
+    grid-template-columns: minmax(14rem, 0.58fr) minmax(0, 1.42fr);
+    gap: var(--space-booking-2xl);
+  }
+
+  .intro {
+    position: sticky;
+    top: var(--space-booking-lg);
+  }
+
+  .calendarHeader {
+    padding: var(--space-booking-xl);
+  }
+
+  .page :global(.pat-booking-embed) {
+    height: var(--size-booking-calendar-desktop);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .actionLink:active,
+  .page :global(.pat-booking-fallback a:active) {
+    transform: none;
+  }
+}

@@ -1,0 +1,51 @@
+/* Hallmark tokens · Pacific AI Tech booking page · Cascadian paper */
+:root {
+  --color-booking-paper: oklch(0.955 0.018 84);
+  --color-booking-surface: oklch(0.985 0.008 84);
+  --color-booking-ink: oklch(0.225 0.024 156);
+  --color-booking-ink-soft: oklch(0.355 0.025 156);
+  --color-booking-rule: oklch(0.75 0.025 104);
+  --color-booking-rule-strong: oklch(0.48 0.03 145);
+  --color-booking-accent: oklch(0.42 0.047 132);
+  --color-booking-accent-ink: oklch(0.985 0.008 84);
+  --color-booking-focus: oklch(0.38 0.09 132);
+  --color-booking-error: oklch(0.46 0.15 26);
+  --color-booking-success: oklch(0.36 0.08 145);
+
+  --font-booking-display: var(--font-serif), ui-serif, serif;
+  --font-booking-body: var(--font-sans), ui-sans-serif, sans-serif;
+
+  --space-booking-2xs: 0.25rem;
+  --space-booking-xs: 0.5rem;
+  --space-booking-sm: 0.75rem;
+  --space-booking-md: 1rem;
+  --space-booking-lg: 1.5rem;
+  --space-booking-xl: 2.5rem;
+  --space-booking-2xl: 4rem;
+  --space-booking-3xl: 6rem;
+
+  --text-booking-xs: 0.75rem;
+  --text-booking-sm: 0.875rem;
+  --text-booking-base: 1rem;
+  --text-booking-lg: 1.25rem;
+  --text-booking-xl: clamp(1.75rem, 3vw, 2.5rem);
+  --text-booking-display: clamp(3rem, 4.5vw, 4rem);
+
+  --ease-booking-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-booking-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-booking-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-booking-micro: 120ms;
+  --dur-booking-short: 220ms;
+  --dur-booking-long: 420ms;
+
+  --rule-booking-hairline: 1px;
+  --rule-booking-focus: 2px;
+  --radius-booking-surface: 0;
+  --layout-booking-max: 74rem;
+  --size-booking-target: 2.75rem;
+  --size-booking-header: 4.5rem;
+  --size-booking-logo-width: 1.25rem;
+  --size-booking-logo-height: 2.75rem;
+  --size-booking-calendar-mobile: 43.75rem;
+  --size-booking-calendar-desktop: 47.5rem;
+}
