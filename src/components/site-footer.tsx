@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { PrivacyChoicesButton } from "@/components/analytics/consent-banner";
 import { Separator } from "@/components/ui/separator";
-import { contactEmail } from "@/lib/site";
+import {
+  businessPhoneDisplay,
+  businessPhoneHref,
+  contactEmail,
+} from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -36,6 +40,7 @@ export function SiteFooter() {
           <div className="pat-foot-contact">
             <h2>Contact</h2>
             <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
+            <a href={businessPhoneHref}>{businessPhoneDisplay}</a>
           </div>
           <div className="pat-foot-region">
             <h2>Region</h2>

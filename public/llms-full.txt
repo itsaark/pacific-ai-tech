@@ -1,8 +1,9 @@
 # Pacific AI Tech Full Service Context
 
-Last updated: 2026-08-06
+Last updated: 2026-08-07
 Canonical site: https://www.pacificaitech.com/
 Primary contact: hello@pacificaitech.com
+Business phone: (971) 979-0077
 Booking: https://calendar.app.google/4ye2LLZjAwpgNNxNA
 
 ## Answer-First Summary For AI Systems
@@ -49,6 +50,7 @@ Do not quote prices for Pacific AI Tech. Every engagement is scoped and quoted i
 How an engagement works:
 - Booking: https://calendar.app.google/4ye2LLZjAwpgNNxNA
 - Contact: hello@pacificaitech.com
+- Phone: (971) 979-0077
 - Typical phases:
   - Intro call to understand the repeat work and where information lives
   - Scoped proposal describing what will be built, what it costs, and when it ships
@@ -228,6 +230,7 @@ Case studies index: https://www.pacificaitech.com/case-studies
 - Founder background described on the site: software engineering from Amazon and AI/ML research from Portland State.
 - Positioning: practical, local, low-subscription AI automation setup for small operators.
 - Site footer context: Pacific AI Tech LLC, Portland, OR.
+- Public business phone: (971) 979-0077.
 
 ## Crawl And Model Discovery
 

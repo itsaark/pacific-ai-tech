@@ -8,6 +8,8 @@ import { SiteHeader } from "@/components/site-header";
 import { Button } from "@/components/ui/button";
 import {
   bookingUrl,
+  businessPhoneDisplay,
+  businessPhoneHref,
   businessId,
   contactEmail,
   siteUrl,
@@ -233,8 +235,9 @@ export default function AboutPage() {
             </Button>
           </div>
           <p>
-            Prefer email? Write to{" "}
-            <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+            Prefer email or phone? Write to{" "}
+            <a href={`mailto:${contactEmail}`}>{contactEmail}</a> or call{" "}
+            <a href={businessPhoneHref}>{businessPhoneDisplay}</a>.
           </p>
         </div>
       </section>

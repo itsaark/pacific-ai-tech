@@ -35,8 +35,9 @@ Create these website conversion actions and copy each full `send_to` value from 
 | `lead_form_submit` | Primary | `NEXT_PUBLIC_GOOGLE_ADS_LEAD_FORM_SEND_TO` |
 | `book_call_click` | Secondary | `NEXT_PUBLIC_GOOGLE_ADS_BOOK_CALL_SEND_TO` |
 | `email_click` | Secondary | `NEXT_PUBLIC_GOOGLE_ADS_EMAIL_SEND_TO` |
+| `phone_click` | Secondary | `NEXT_PUBLIC_GOOGLE_ADS_PHONE_CLICK_SEND_TO` |
 
-Do not optimize bidding around booking-button clicks. The external Google Calendar page does not return a completed-booking event to this website. Treat button and email clicks as secondary intent signals.
+Do not optimize bidding around booking-button clicks. The external Google Calendar page does not return a completed-booking event to this website. Treat booking, email, and phone clicks as secondary intent signals until confirmed lead outcomes are available.
 
 ## 4. Preserve and qualify paid leads
 
@@ -49,7 +50,7 @@ After a lead becomes qualified or a signed client, record that outcome with its 
 1. Verify or create the Pacific AI Tech Google Business Profile as a service-area business.
 2. Link that profile to Google Ads if it is eligible for location assets.
 3. Use the exact legal/domain business name during advertiser verification.
-4. Add a public business phone number to the site and Ads call assets if Pacific AI Tech wants phone leads.
+4. Use the public business number `(971) 979-0077` for the Google Business Profile and Google Ads call assets. The site publishes the same number and can measure click-to-call intent with `phone_click`.
 5. Have an Oregon attorney review the working Privacy Policy and Terms before relying on them as bespoke legal documents.
 
 ## First campaign guardrails

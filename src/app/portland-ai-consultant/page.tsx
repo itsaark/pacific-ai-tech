@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CalendarDays, MapPin } from "lucide-react";
+import { ArrowRight, CalendarDays, MapPin, Phone } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,7 +17,11 @@ import { ConsultationForm } from "@/components/consultation-form";
 import { caseStudies } from "@/lib/case-studies";
 import {
   bookingUrl,
+  businessPhone,
+  businessPhoneDisplay,
+  businessPhoneHref,
   businessId,
+  contactEmail,
   greaterPortlandSchemaAreas,
   greaterPortlandServiceAreas,
   serviceDescription,
@@ -212,6 +216,30 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "ProfessionalService",
+      "@id": businessId,
+      name: "Pacific AI Tech",
+      legalName: "Pacific AI Tech LLC",
+      url: `${siteUrl}/`,
+      telephone: businessPhone,
+      email: contactEmail,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Portland",
+        addressRegion: "OR",
+        addressCountry: "US",
+      },
+      areaServed: greaterPortlandSchemaAreas,
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "sales and customer service",
+        telephone: businessPhone,
+        email: contactEmail,
+        areaServed: "US",
+        availableLanguage: "English",
+      },
+    },
+    {
       "@type": "WebPage",
       "@id": `${siteUrl}/portland-ai-consultant#webpage`,
       url: `${siteUrl}/portland-ai-consultant`,
@@ -228,7 +256,7 @@ const jsonLd = {
         "@type": "ImageObject",
         url: `${siteUrl}/pacific-ai-tech/img/bridge.jpeg`,
       },
-      dateModified: "2026-08-06",
+      dateModified: "2026-08-07",
       inLanguage: "en-US",
       citation: evidence.map((item) => item.href),
     },
@@ -355,13 +383,13 @@ export default function PortlandAiConsultantPage() {
                   Book a business AI consultation
                 </Button>
                 <Button
-                  render={<Link href="/#contact" />}
+                  render={<a href={businessPhoneHref} />}
                   nativeButton={false}
                   variant="outline"
                   className="pat-btn"
                 >
-                  Contact us
-                  <ArrowRight data-icon="inline-end" />
+                  <Phone data-icon="inline-start" />
+                  Call {businessPhoneDisplay}
                 </Button>
               </div>
             </div>
@@ -617,9 +645,10 @@ export default function PortlandAiConsultantPage() {
                 Tell us what your team repeats, where the information lives,
                 and what must remain human-approved. The booking calendar shows
                 current appointment availability immediately. If you prefer
-                email, include your business and workflow so a co-founder can
-                review the fit; the calendar is the clearest view of current
-                availability.
+                phone, call <a href={businessPhoneHref}>{businessPhoneDisplay}</a>.
+                If you prefer email, include your business and workflow so a
+                co-founder can review the fit; the calendar is the clearest view
+                of current availability.
               </p>
             </div>
             <Button

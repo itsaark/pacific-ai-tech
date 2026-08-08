@@ -7,6 +7,7 @@ import {
   trackBookCallClick,
   trackEmailClick,
   trackLeadFormSubmit,
+  trackPhoneClick,
 } from "@/lib/analytics/google";
 
 declare global {
@@ -49,6 +50,8 @@ export function GoogleMeasurementClient() {
         trackBookCallClick({ placement, destination: href });
       } else if (href.startsWith("mailto:")) {
         trackEmailClick({ placement });
+      } else if (href.startsWith("tel:")) {
+        trackPhoneClick({ placement });
       }
     };
 

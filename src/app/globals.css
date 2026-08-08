@@ -1766,6 +1766,13 @@ body {
   min-width: 0;
 }
 
+.pat-foot-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
 .pat-foot-contact a {
   display: inline-flex;
   max-width: 100%;

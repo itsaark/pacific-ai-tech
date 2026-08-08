@@ -17,6 +17,9 @@ import { ConsultationForm } from "@/components/consultation-form";
 import { caseStudies } from "@/lib/case-studies";
 import {
   bookingUrl,
+  businessPhone,
+  businessPhoneDisplay,
+  businessPhoneHref,
   businessId,
   contactEmail,
   greaterPortlandSchemaAreas,
@@ -114,10 +117,12 @@ const contactOptions = [
     href: `mailto:${contactEmail}`,
   },
   {
-    title: "/ what happens next",
-    headline: "Custom scope",
-    meta: "Proposal · timeline · quote",
-    desc: "After the first call we send a scoped proposal: what we will build, what it costs, and when it ships. No subscription, no platform tax, no surprise line items.",
+    title: "/ call us",
+    headline: "Call us",
+    meta: businessPhoneDisplay,
+    desc: "Have a business workflow in mind? Call Pacific AI Tech to discuss the fit. If we miss you, leave your name, business, and the best time to call back.",
+    cta: `Call ${businessPhoneDisplay}`,
+    href: businessPhoneHref,
   },
 ];
 
@@ -143,6 +148,15 @@ const jsonLd = {
       image: `${siteUrl}/pacific-ai-tech/img/roses.jpeg`,
       logo: `${siteUrl}/pacific-ai-tech/img/logo-pine-icon.png`,
       email: contactEmail,
+      telephone: businessPhone,
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "sales and customer service",
+        telephone: businessPhone,
+        email: contactEmail,
+        areaServed: "US",
+        availableLanguage: "English",
+      },
       foundingDate: "2025",
       address: {
         "@type": "PostalAddress",

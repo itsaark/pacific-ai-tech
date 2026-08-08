@@ -34,6 +34,10 @@ export type EmailClickParameters = {
   placement: ConversionPlacement;
 };
 
+export type PhoneClickParameters = {
+  placement: ConversionPlacement;
+};
+
 export type LeadFormSubmitParameters = {
   formId: string;
   formLocation?: string;
@@ -51,6 +55,7 @@ const conversionDestinations = {
   book_call_click:
     process.env.NEXT_PUBLIC_GOOGLE_ADS_BOOK_CALL_SEND_TO?.trim(),
   email_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_SEND_TO?.trim(),
+  phone_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_PHONE_CLICK_SEND_TO?.trim(),
   lead_form_submit:
     process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_FORM_SEND_TO?.trim(),
 } as const;
@@ -178,6 +183,12 @@ export function trackBookCallClick(parameters: BookCallClickParameters) {
 
 export function trackEmailClick(parameters: EmailClickParameters) {
   trackConversionEvent("email_click", {
+    placement: parameters.placement,
+  });
+}
+
+export function trackPhoneClick(parameters: PhoneClickParameters) {
+  trackConversionEvent("phone_click", {
     placement: parameters.placement,
   });
 }
