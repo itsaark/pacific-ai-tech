@@ -43,6 +43,10 @@ export type LeadFormSubmitParameters = {
   formLocation?: string;
 };
 
+export type AppointmentBookedParameters = {
+  provider?: string;
+};
+
 declare global {
   interface Window {
     dataLayer?: unknown[];
@@ -58,6 +62,8 @@ const conversionDestinations = {
   phone_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_PHONE_CLICK_SEND_TO?.trim(),
   lead_form_submit:
     process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_FORM_SEND_TO?.trim(),
+  appointment_booked:
+    process.env.NEXT_PUBLIC_GOOGLE_ADS_APPOINTMENT_BOOKED_SEND_TO?.trim(),
 } as const;
 
 function consentValue(value: boolean): ConsentValue {
@@ -178,6 +184,14 @@ export function trackBookCallClick(parameters: BookCallClickParameters) {
   trackConversionEvent("book_call_click", {
     placement: parameters.placement,
     destination: parameters.destination,
+  });
+}
+
+export function trackAppointmentBooked(
+  parameters: AppointmentBookedParameters = {},
+) {
+  trackConversionEvent("appointment_booked", {
+    provider: parameters.provider,
   });
 }
 

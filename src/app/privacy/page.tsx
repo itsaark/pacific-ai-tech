@@ -143,11 +143,11 @@ export default function PrivacyPage() {
               <h2>Scheduling and outside services</h2>
               <div className="pat-case-narrative-copy">
                 <p>
-                  Our booking links open Google Calendar, and other links may
-                  open third-party websites such as LinkedIn. Information you
-                  provide on those services is handled under their policies and
-                  settings. We encourage you to review them before submitting
-                  information.
+                  Our booking page may embed or open Google Calendar or another
+                  scheduling provider such as Calendly. Other links may open
+                  third-party websites such as LinkedIn. Information you provide
+                  on those services is handled under their policies and settings.
+                  We encourage you to review them before submitting information.
                 </p>
               </div>
             </section>

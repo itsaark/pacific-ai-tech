@@ -1,5 +1,45 @@
 export const siteUrl = "https://www.pacificaitech.com";
-export const bookingUrl = "https://calendar.app.google/4ye2LLZjAwpgNNxNA";
+export const bookingPath = "/book";
+export const bookingUrl = bookingPath;
+export const bookingPageUrl = `${siteUrl}${bookingPath}`;
+export const bookingConfirmationPath = "/booking-confirmed";
+export const bookingConfirmationUrl = `${siteUrl}${bookingConfirmationPath}`;
+
+const googleSchedulerUrl =
+  "https://calendar.app.google/4ye2LLZjAwpgNNxNA";
+const googleSchedulerEmbedUrl =
+  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2z4aNeV1doWLl4L0rKNNHecJr_TBCWCJeKeMmEF1dzxfQpRIxOjBcRvX1mRnPXwWQPvIvOc84w?gv=true";
+
+function approvedSchedulerUrl(value: string | undefined, fallback: string) {
+  const candidate = value?.trim();
+  if (!candidate) return fallback;
+
+  try {
+    const url = new URL(candidate);
+    const approvedHost =
+      url.hostname === "calendar.app.google" ||
+      url.hostname === "calendar.google.com" ||
+      url.hostname === "calendly.com" ||
+      url.hostname.endsWith(".calendly.com");
+
+    return url.protocol === "https:" && approvedHost ? url.toString() : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+/** Public scheduling destinations. Override both values when Calendly is ready. */
+export const schedulerUrl = approvedSchedulerUrl(
+  process.env.NEXT_PUBLIC_SCHEDULER_URL,
+  googleSchedulerUrl,
+);
+export const schedulerEmbedUrl = approvedSchedulerUrl(
+  process.env.NEXT_PUBLIC_SCHEDULER_EMBED_URL,
+  googleSchedulerEmbedUrl,
+);
+export const schedulerProvider = schedulerEmbedUrl.includes("calendly.com")
+  ? "calendly"
+  : "google-calendar";
 export const contactEmail = "hello@pacificaitech.com";
 export const businessPhone = "+1-971-979-0077";
 export const businessPhoneDisplay = "(971) 979-0077";

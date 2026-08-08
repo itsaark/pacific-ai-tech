@@ -325,7 +325,7 @@ export default async function CaseStudyPage({ params }: Props) {
               <h2>Have a dispatch, inbox, or operations workflow like this?</h2>
             </div>
             <Button
-              render={<a href={bookingUrl} target="_blank" rel="noopener noreferrer" />}
+              render={<a href={bookingUrl} />}
               nativeButton={false}
               className="pat-btn pat-btn-primary"
             >

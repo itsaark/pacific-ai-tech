@@ -87,14 +87,12 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
           Pacific&nbsp;AI&nbsp;Tech
         </Link>
 
-        <a
+        <Link
           href={bookingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
           className="pat-header-action"
         >
           Book a call
-        </a>
+        </Link>
 
         <button
           className="pat-menu-toggle"
@@ -142,15 +140,13 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
               {item.label}
             </Link>
           ))}
-          <a
+          <Link
             href={bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="cta"
             onClick={closeMenu}
           >
             Book a call
-          </a>
+          </Link>
         </div>
       </nav>
     </header>

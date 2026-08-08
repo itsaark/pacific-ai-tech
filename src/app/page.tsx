@@ -364,8 +364,6 @@ function FounderSection() {
             <a
               className="pat-founder-title"
               href={bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <h2 id="founder-title">Talk to Aark &amp; Shayan</h2>
               <ArrowUpRight data-icon="inline-end" />
@@ -398,8 +396,6 @@ function FounderSection() {
           </a>
           <a
             href={bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
             className="pat-founder-action primary"
           >
             <CalendarDays data-icon="inline-start" />

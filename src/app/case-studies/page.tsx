@@ -183,7 +183,7 @@ export default function CaseStudiesPage() {
               </p>
             </div>
             <Button
-              render={<a href={bookingUrl} target="_blank" rel="noopener noreferrer" />}
+              render={<a href={bookingUrl} />}
               nativeButton={false}
               className="pat-btn pat-btn-primary"
             >

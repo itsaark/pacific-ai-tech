@@ -43,7 +43,7 @@ export default function ThankYouPage() {
               <div className="pat-local-actions">
                 <Button
                   render={
-                    <a href={bookingUrl} target="_blank" rel="noopener noreferrer" />
+                    <a href={bookingUrl} />
                   }
                   nativeButton={false}
                   className="pat-btn pat-btn-primary"

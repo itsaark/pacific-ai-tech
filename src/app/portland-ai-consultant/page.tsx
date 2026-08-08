@@ -17,6 +17,7 @@ import { ConsultationForm } from "@/components/consultation-form";
 import { caseStudies } from "@/lib/case-studies";
 import {
   bookingUrl,
+  bookingPageUrl,
   businessPhone,
   businessPhoneDisplay,
   businessPhoneHref,
@@ -289,19 +290,19 @@ const jsonLd = {
             "@type": "Offer",
             name: "AI consulting engagement (custom scope)",
             availability: "https://schema.org/InStock",
-            url: bookingUrl,
+            url: bookingPageUrl,
           },
           {
             "@type": "Offer",
             name: "AI solutions deployment (custom scope)",
             availability: "https://schema.org/InStock",
-            url: bookingUrl,
+            url: bookingPageUrl,
           },
           {
             "@type": "Offer",
             name: "Business AI workflow coaching and team training",
             availability: "https://schema.org/InStock",
-            url: bookingUrl,
+            url: bookingPageUrl,
           },
         ],
       },
@@ -375,7 +376,7 @@ export default function PortlandAiConsultantPage() {
               </p>
               <div className="pat-local-actions">
                 <Button
-                  render={<a href={bookingUrl} target="_blank" rel="noopener noreferrer" />}
+                  render={<a href={bookingUrl} />}
                   nativeButton={false}
                   className="pat-btn pat-btn-primary"
                 >
@@ -652,7 +653,7 @@ export default function PortlandAiConsultantPage() {
               </p>
             </div>
             <Button
-              render={<a href={bookingUrl} target="_blank" rel="noopener noreferrer" />}
+              render={<a href={bookingUrl} />}
               nativeButton={false}
               className="pat-btn pat-btn-primary"
             >
