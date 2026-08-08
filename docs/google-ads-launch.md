@@ -4,22 +4,26 @@ The website code is prepared for measurement and lead attribution without hard-c
 
 ## 1. Activate the completed-booking flow
 
-The website now sends every booking CTA to `/book`. Google Calendar is embedded
-there by default, so scheduling remains usable before another provider is
-configured.
+The website now sends every booking CTA to `/book`, where the configured
+Calendly event is embedded. Calendly checks the connected Google Calendar for
+conflicts and adds confirmed consultations to it.
 
-For a reliable completed-appointment conversion:
+The completed-appointment flow is active:
 
-1. Create a Calendly Standard account and connect it to the existing Google Calendar.
-2. Create the public introductory-consultation event.
-3. In Vercel Production, set both `NEXT_PUBLIC_SCHEDULER_URL` and
-   `NEXT_PUBLIC_SCHEDULER_EMBED_URL` to that event's public `https://calendly.com/...`
-   URL.
-4. In Calendly, set the post-booking redirect to
-   `https://www.pacificaitech.com/booking-confirmed`.
-5. Redeploy and make a real test booking. Confirm that the browser reaches
+1. The public event is `https://calendly.com/aark-pacificaitech/30min`.
+2. The embedded Calendly widget emits `calendly.event_scheduled` after a real
+   booking. Only that verified event creates the short-lived conversion marker.
+3. The website then sends the invitee to `/booking-confirmed`, which emits
+   `appointment_booked` once and consumes the marker.
+4. After the Google measurement IDs are configured, make a real test booking.
+   Confirm that the browser reaches
    `/booking-confirmed`, the event appears in Google Calendar, and the invitee
    receives the confirmation.
+
+Calendly Free is sufficient for this embedded event flow; its paid external
+redirect is not required. `NEXT_PUBLIC_SCHEDULER_URL` and
+`NEXT_PUBLIC_SCHEDULER_EMBED_URL` remain optional overrides for a future
+scheduling-provider change.
 
 The `/book` page is indexable and appears in the XML sitemap. The
 `/booking-confirmed` page is `noindex` and intentionally absent from the sitemap.

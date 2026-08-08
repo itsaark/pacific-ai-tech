@@ -4,6 +4,11 @@ import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { captureLandingAttribution } from "@/lib/analytics/attribution";
 import {
+  VERIFIED_BOOKING_STORAGE_KEY,
+  VERIFIED_BOOKING_TTL_MS,
+  type VerifiedBooking,
+} from "@/lib/analytics/booking";
+import {
   trackAppointmentBooked,
   trackBookCallClick,
   trackEmailClick,
@@ -79,29 +84,33 @@ export function GoogleMeasurementClient() {
   useEffect(() => {
     if (pathname !== "/booking-confirmed") return;
 
-    const storageKey = "pacificaitech_booking_flow_started";
-    let flowStarted: string | null = null;
+    let verifiedBooking: string | null = null;
     try {
-      flowStarted = window.sessionStorage.getItem(storageKey);
+      verifiedBooking = window.sessionStorage.getItem(
+        VERIFIED_BOOKING_STORAGE_KEY,
+      );
     } catch {
       return;
     }
-    if (!flowStarted) return;
+    if (!verifiedBooking) return;
 
     try {
-      const parsed = JSON.parse(flowStarted) as { startedAt?: string };
-      const startedAt = parsed.startedAt ? Date.parse(parsed.startedAt) : NaN;
-      const withinBookingWindow =
-        Number.isFinite(startedAt) && Date.now() - startedAt < 4 * 60 * 60 * 1000;
+      const parsed = JSON.parse(verifiedBooking) as Partial<VerifiedBooking>;
+      const completedAt = parsed.completedAt
+        ? Date.parse(parsed.completedAt)
+        : NaN;
+      const isRecentVerifiedBooking =
+        Number.isFinite(completedAt) &&
+        Date.now() - completedAt < VERIFIED_BOOKING_TTL_MS;
 
-      if (withinBookingWindow) {
-        trackAppointmentBooked();
+      if (isRecentVerifiedBooking && parsed.provider === "calendly") {
+        trackAppointmentBooked({ provider: parsed.provider });
       }
     } catch {
       // Ignore malformed state rather than emitting an unverified conversion.
     } finally {
       try {
-        window.sessionStorage.removeItem(storageKey);
+        window.sessionStorage.removeItem(VERIFIED_BOOKING_STORAGE_KEY);
       } catch {
         // The conversion has already been queued for this page view.
       }

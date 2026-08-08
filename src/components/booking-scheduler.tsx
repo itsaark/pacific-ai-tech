@@ -3,8 +3,10 @@
 import { useEffect } from "react";
 import Script from "next/script";
 import { ExternalLink } from "lucide-react";
-
-const BOOKING_FLOW_STORAGE_KEY = "pacificaitech_booking_flow_started";
+import {
+  VERIFIED_BOOKING_STORAGE_KEY,
+  type VerifiedBooking,
+} from "@/lib/analytics/booking";
 
 type BookingSchedulerProps = {
   embedUrl: string;
@@ -12,11 +14,16 @@ type BookingSchedulerProps = {
   schedulerUrl: string;
 };
 
-function rememberBookingFlow() {
+function rememberVerifiedBooking() {
+  const booking: VerifiedBooking = {
+    completedAt: new Date().toISOString(),
+    provider: "calendly",
+  };
+
   try {
     window.sessionStorage.setItem(
-      BOOKING_FLOW_STORAGE_KEY,
-      JSON.stringify({ startedAt: new Date().toISOString() }),
+      VERIFIED_BOOKING_STORAGE_KEY,
+      JSON.stringify(booking),
     );
   } catch {
     // The scheduler remains usable when browser storage is unavailable.
@@ -28,10 +35,6 @@ export function BookingScheduler({
   provider,
   schedulerUrl,
 }: BookingSchedulerProps) {
-  useEffect(() => {
-    rememberBookingFlow();
-  }, []);
-
   useEffect(() => {
     if (provider !== "calendly") return;
 
@@ -45,7 +48,7 @@ export function BookingScheduler({
         return;
       }
 
-      rememberBookingFlow();
+      rememberVerifiedBooking();
       window.location.assign("/booking-confirmed");
     };
 

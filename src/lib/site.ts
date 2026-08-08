@@ -5,10 +5,7 @@ export const bookingPageUrl = `${siteUrl}${bookingPath}`;
 export const bookingConfirmationPath = "/booking-confirmed";
 export const bookingConfirmationUrl = `${siteUrl}${bookingConfirmationPath}`;
 
-const googleSchedulerUrl =
-  "https://calendar.app.google/4ye2LLZjAwpgNNxNA";
-const googleSchedulerEmbedUrl =
-  "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2z4aNeV1doWLl4L0rKNNHecJr_TBCWCJeKeMmEF1dzxfQpRIxOjBcRvX1mRnPXwWQPvIvOc84w?gv=true";
+const defaultSchedulerUrl = "https://calendly.com/aark-pacificaitech/30min";
 
 function approvedSchedulerUrl(value: string | undefined, fallback: string) {
   const candidate = value?.trim();
@@ -28,14 +25,14 @@ function approvedSchedulerUrl(value: string | undefined, fallback: string) {
   }
 }
 
-/** Public scheduling destinations. Override both values when Calendly is ready. */
+/** Public scheduling destinations. Environment values allow a future provider change. */
 export const schedulerUrl = approvedSchedulerUrl(
   process.env.NEXT_PUBLIC_SCHEDULER_URL,
-  googleSchedulerUrl,
+  defaultSchedulerUrl,
 );
 export const schedulerEmbedUrl = approvedSchedulerUrl(
   process.env.NEXT_PUBLIC_SCHEDULER_EMBED_URL,
-  googleSchedulerEmbedUrl,
+  defaultSchedulerUrl,
 );
 export const schedulerProvider = schedulerEmbedUrl.includes("calendly.com")
   ? "calendly"

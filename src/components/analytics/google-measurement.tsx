@@ -39,37 +39,36 @@ try {
 `;
 }
 
-/**
- * Site-wide Google measurement. It renders nothing unless a valid public Google
- * tag ID is configured at build time.
- */
+/** Site-wide Google measurement with client-side attribution bookkeeping. */
 export function GoogleMeasurement() {
   const googleTagId = validTagId(process.env.NEXT_PUBLIC_GOOGLE_TAG_ID);
   const googleAdsId = validTagId(process.env.NEXT_PUBLIC_GOOGLE_ADS_ID);
 
-  if (!googleTagId) return null;
-
   return (
     <>
-      <Script
-        id="google-consent-defaults"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{ __html: consentInitializationScript() }}
-      />
-      <Script
-        id="google-tag-library"
-        src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(googleTagId)}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-tag-config" strategy="afterInteractive">
-        {`
+      {googleTagId ? (
+        <>
+          <Script
+            id="google-consent-defaults"
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{ __html: consentInitializationScript() }}
+          />
+          <Script
+            id="google-tag-library"
+            src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(googleTagId)}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-tag-config" strategy="afterInteractive">
+            {`
 window.gtag('js', new Date());
 window.gtag('config', ${JSON.stringify(googleTagId)}, { send_page_view: false });
 ${googleAdsId && googleAdsId !== googleTagId ? `window.gtag('config', ${JSON.stringify(googleAdsId)}, { send_page_view: false });` : ""}
 `}
-      </Script>
+          </Script>
+          <ConsentBanner />
+        </>
+      ) : null}
       <GoogleMeasurementClient />
-      <ConsentBanner />
     </>
   );
 }
