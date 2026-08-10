@@ -156,6 +156,46 @@
   color: var(--color-booking-ink);
 }
 
+.page :global(.pat-booking-embed-shell) {
+  position: relative;
+  min-width: 0;
+  height: var(--size-booking-calendar-mobile);
+  background: var(--color-booking-surface);
+}
+
+.page :global(.pat-booking-loader) {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-booking-sm);
+  padding: var(--space-booking-lg);
+  background: var(--color-booking-surface);
+  color: var(--color-booking-ink-soft);
+  font-family: var(--font-booking-body);
+  font-size: var(--text-booking-sm);
+  pointer-events: none;
+  transition:
+    opacity 160ms ease,
+    visibility 160ms ease;
+}
+
+.page :global(.pat-booking-embed-shell[data-ready="true"] .pat-booking-loader) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.page :global(.pat-booking-loader-mark) {
+  width: var(--space-booking-md);
+  height: var(--space-booking-md);
+  border: var(--rule-booking-hairline) solid var(--color-booking-rule-strong);
+  border-top-color: var(--color-booking-accent);
+  border-radius: 50%;
+  animation: pat-booking-loader-spin 700ms linear infinite;
+}
+
 .page :global(.pat-booking-embed) {
   min-width: 0;
   height: var(--size-booking-calendar-mobile);
@@ -267,11 +307,27 @@
   .page :global(.pat-booking-embed) {
     height: var(--size-booking-calendar-desktop);
   }
+
+  .page :global(.pat-booking-embed-shell) {
+    height: var(--size-booking-calendar-desktop);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .actionLink:active,
   .page :global(.pat-booking-fallback a:active) {
     transform: none;
+  }
+
+  .page :global(.pat-booking-loader),
+  .page :global(.pat-booking-loader-mark) {
+    transition: none;
+    animation: none;
+  }
+}
+
+@keyframes pat-booking-loader-spin {
+  to {
+    transform: rotate(1turn);
   }
 }
