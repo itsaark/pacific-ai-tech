@@ -19,7 +19,7 @@ const newsreader = Newsreader({
 
 const siteUrl = "https://www.pacificaitech.com";
 const siteDescription =
-  "AI consulting, solutions architecture, and AI agent deployment for small businesses across greater Portland, Vancouver, and the Pacific Northwest.";
+  "Practical AI consulting, workflow implementation, and AI agent deployment for small businesses across Oregon and Washington, available virtually or on-site.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -49,6 +49,8 @@ export const metadata: Metadata = {
     "Portland AI consultant",
     "Vancouver AI automation",
     "Pacific Northwest AI automation",
+    "virtual AI consulting",
+    "remote AI consultant Oregon Washington",
   ],
   authors: [{ name: "Pacific AI Tech", url: siteUrl }],
   creator: "Pacific AI Tech",

@@ -77,4 +77,4 @@ export const greaterPortlandSchemaAreas = [
 ];
 
 export const serviceDescription =
-  "Pacific AI Tech is an AI consulting practice for small businesses: solutions architecture, AI agent deployment on client-owned computers, and hands-on training across greater Portland and the Pacific Northwest. Every engagement is custom-scoped.";
+  "Pacific AI Tech provides practical AI consulting, workflow implementation, AI agent deployment, and hands-on training for small businesses across Oregon and Washington. Work is available virtually throughout the region and on-site in selected communities. Every engagement is custom-scoped.";

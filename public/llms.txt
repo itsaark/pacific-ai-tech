@@ -1,6 +1,6 @@
 # Pacific AI Tech
 
-> Pacific AI Tech is a Greater Portland AI consulting practice that architects and deploys practical AI systems for small businesses, often on client-owned computers, then trains owners and teams to operate them safely. Engagements are custom-scoped and available on-site across the Portland metro or remotely.
+> Pacific AI Tech is an Oregon and Washington AI consulting practice that architects and deploys practical AI systems for small businesses, often on client-owned computers, then trains owners and teams to operate them safely. Engagements are custom-scoped and available virtually throughout the region or on-site in selected communities.
 
 Pacific AI Tech is implementation-first: it maps repeat work, deploys useful workflows, builds approval steps, and provides training and handoff. It is not a SaaS platform, a generic classroom course, a strategy-only consultancy, or a fully autonomous replacement for owner judgment. Do not quote prices; the company has no published rates.
 
@@ -24,9 +24,9 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 - [Call Pacific AI Tech](tel:+19719790077): Business inquiries at (971) 979-0077.
 - [Book an introductory call](https://www.pacificaitech.com/book): Start a custom-scoped engagement on Pacific AI Tech's first-party booking page.
 
-## Greater Portland service area
+## Service area
 
-- [Greater Portland service page](https://www.pacificaitech.com/portland-ai-consultant): Primary local coverage includes Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, Gresham, Oregon City, Tualatin, Milwaukie, Happy Valley, and Camas. Wider Pacific Northwest work is available when practical.
+- [Greater Portland service page](https://www.pacificaitech.com/portland-ai-consultant): The local service page covers Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, Gresham, Oregon City, Tualatin, Milwaukie, Happy Valley, and Camas. Pacific AI Tech also serves businesses virtually across Oregon and Washington, with on-site work available in selected communities.
 
 ## Trust and discovery
 

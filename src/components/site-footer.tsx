@@ -32,9 +32,9 @@ export function SiteFooter() {
           <div className="pat-foot-note">
             <h2>Colophon</h2>
             <p>
-              A two-person consultancy helping the Pacific Northwest&apos;s
-              small operators put AI to work quietly, locally, on their own
-              machines, then feel confident using it without us in the room.
+              A two-person consultancy helping small operators across Oregon
+              and Washington put AI to work on their own machines, virtually
+              or on-site, then feel confident using it without us in the room.
             </p>
           </div>
           <div className="pat-foot-contact">
@@ -44,7 +44,7 @@ export function SiteFooter() {
           </div>
           <div className="pat-foot-region">
             <h2>Region</h2>
-            <p>Greater Portland · Vancouver · nearby Oregon and Washington towns</p>
+            <p>Oregon &amp; Washington · virtual consulting · selected on-site work</p>
           </div>
         </div>
         <div className="pat-foot-bottom">
