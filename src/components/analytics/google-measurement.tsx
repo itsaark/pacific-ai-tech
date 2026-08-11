@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-before-interactive-script-outside-document -- This component is mounted once by the root App Router layout, where Next 16 permits beforeInteractive scripts. */
 import Script from "next/script";
-import { ConsentBanner } from "@/components/analytics/consent-banner";
 import { GoogleMeasurementClient } from "@/components/analytics/google-measurement-client";
 import { GOOGLE_CONSENT_STORAGE_KEY } from "@/lib/analytics/google";
 
@@ -65,7 +64,6 @@ window.gtag('config', ${JSON.stringify(googleTagId)}, { send_page_view: false })
 ${googleAdsId && googleAdsId !== googleTagId ? `window.gtag('config', ${JSON.stringify(googleAdsId)}, { send_page_view: false });` : ""}
 `}
           </Script>
-          <ConsentBanner />
         </>
       ) : null}
       <GoogleMeasurementClient />

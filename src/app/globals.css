@@ -2143,8 +2143,7 @@ body {
   align-items: center;
 }
 
-.pat-foot-bottom a,
-.pat-privacy-choices {
+.pat-foot-bottom a {
   border: 0;
   border-bottom: 1px solid transparent;
   background: transparent;
@@ -2154,15 +2153,9 @@ body {
   text-transform: inherit;
 }
 
-.pat-foot-bottom a:hover,
-.pat-privacy-choices:hover {
+.pat-foot-bottom a:hover {
   border-color: currentColor;
   color: var(--paper);
-}
-
-.pat-privacy-choices {
-  padding: 0;
-  cursor: pointer;
 }
 
 .pat-lead-form {
@@ -2300,99 +2293,9 @@ body {
   color: var(--ink-soft);
 }
 
-.pat-consent {
-  position: fixed;
-  z-index: 100;
-  right: 18px;
-  bottom: 18px;
-  left: 18px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 24px;
-  align-items: end;
-  max-width: 1080px;
-  margin: 0 auto;
-  border: 1px solid var(--paper-alpha-rule);
-  background: var(--ink);
-  box-shadow: 0 16px 48px rgb(0 0 0 / 28%);
-  color: var(--paper);
-  padding: 22px 24px;
-}
-
-.pat-consent h2 {
-  font-size: 21px;
-}
-
-.pat-consent p {
-  max-width: 70ch;
-  margin-top: 7px;
-  color: var(--paper-alpha-soft);
-  font-size: 13px;
-}
-
-.pat-consent a {
-  border-bottom: 1px solid currentColor;
-  color: var(--paper);
-}
-
-.pat-consent-options {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 20px;
-  border: 1px solid var(--paper-alpha-hairline);
-  padding: 14px;
-}
-
-.pat-consent-options legend {
-  padding: 0 8px;
-  font-family: var(--font-mono), ui-monospace, Menlo, monospace;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.pat-consent-options label {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  font-size: 13px;
-}
-
-.pat-consent-options input {
-  accent-color: var(--moss-pale);
-}
-
-.pat-consent-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: flex-end;
-}
-
-.pat-consent-actions button {
-  border: 1px solid var(--paper-alpha-rule);
-  background: transparent;
-  color: var(--paper);
-  cursor: pointer;
-  font-family: var(--font-mono), ui-monospace, Menlo, monospace;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  padding: 9px 12px;
-  text-transform: uppercase;
-}
-
-.pat-consent-actions button.primary {
-  border-color: var(--moss-pale);
-  background: var(--moss-pale);
-  color: var(--ink);
-}
-
 @media (max-width: 760px) {
   .pat-foot-bottom,
-  .pat-lead-form-head,
-  .pat-consent {
+  .pat-lead-form-head {
     grid-template-columns: 1fr;
   }
 
@@ -2419,18 +2322,6 @@ body {
     width: 100%;
   }
 
-  .pat-consent {
-    gap: 16px;
-    padding: 18px;
-  }
-
-  .pat-consent-actions {
-    justify-content: stretch;
-  }
-
-  .pat-consent-actions button {
-    flex: 1 1 auto;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

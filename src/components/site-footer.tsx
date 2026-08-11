@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PrivacyChoicesButton } from "@/components/analytics/consent-banner";
 import { Separator } from "@/components/ui/separator";
 import {
   businessPhoneDisplay,
@@ -53,7 +52,6 @@ export function SiteFooter() {
             <Link href="/about">About</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
-            <PrivacyChoicesButton />
           </nav>
         </div>
       </div>
