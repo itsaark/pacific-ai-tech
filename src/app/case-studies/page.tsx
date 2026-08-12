@@ -55,7 +55,7 @@ const jsonLd = {
       about: { "@id": businessId },
       breadcrumb: { "@id": `${siteUrl}/case-studies#breadcrumb` },
       mainEntity: { "@id": `${siteUrl}/case-studies#case-study-list` },
-      dateModified: "2026-08-11",
+      dateModified: "2026-08-12",
       inLanguage: "en-US",
     },
     {
@@ -122,9 +122,9 @@ export default function CaseStudiesPage() {
               </h1>
             </div>
             <p className="pat-lede">
-              These Oregon small business stories show the starting problem,
-              the local AI setup we built, the handoff, and the operating
-              change that followed while each owner stayed in control.
+              These Oregon and southwest Washington small business stories show
+              the starting problem, the AI setup we built, the handoff, and the
+              operating change that followed while each owner stayed in control.
             </p>
           </div>
         </div>

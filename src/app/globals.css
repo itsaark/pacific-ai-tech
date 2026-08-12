@@ -980,10 +980,16 @@ body {
   font-size: clamp(30px, 3vw, 44px);
 }
 
-.pat-case-submit p {
+.pat-case-submit p,
+.pat-case-next p {
   max-width: 64ch;
   margin-top: 16px;
   color: var(--ink-soft);
+}
+
+.pat-case-next p a {
+  border-bottom: 1px solid var(--moss);
+  color: var(--ink);
 }
 
 .pat-case-detail {
@@ -2102,10 +2108,12 @@ body {
   text-transform: uppercase;
 }
 
-.pat-foot-colophon p {
+.pat-foot-colophon p,
+.pat-foot-colophon address {
   max-width: 30ch;
   font-family: var(--font-serif), Georgia, serif;
   font-size: 18px;
+  font-style: normal;
   line-height: 1.4;
 }
 

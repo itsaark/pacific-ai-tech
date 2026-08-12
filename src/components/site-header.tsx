@@ -81,7 +81,7 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
               alt=""
               width={225}
               height={512}
-              priority
+              sizes="22px"
             />
           </span>
           Pacific&nbsp;AI&nbsp;Tech

@@ -263,7 +263,7 @@ export default async function CaseStudyPage({ params }: Props) {
                 width={study.heroImage.width}
                 height={study.heroImage.height}
                 sizes="(max-width: 900px) calc(100vw - 28px), 1240px"
-                priority
+                preload
               />
               <figcaption>{study.heroImage.caption}</figcaption>
             </figure>
@@ -340,7 +340,14 @@ export default async function CaseStudyPage({ params }: Props) {
 
           <div className="pat-case-next">
             <div>
-              <h2>Have a dispatch, inbox, or operations workflow like this?</h2>
+              <h2>Have a business workflow like this?</h2>
+              <p>
+                See how our{" "}
+                <Link href="/portland-ai-consultant">
+                  Portland AI consulting and workflow implementation
+                </Link>{" "}
+                works, or bring us the repeat task that keeps stealing the day.
+              </p>
             </div>
             <Button
               render={<a href={bookingUrl} />}

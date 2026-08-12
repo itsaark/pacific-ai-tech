@@ -29,12 +29,8 @@ export function SiteFooter() {
         <Separator className="pat-foot-rule" />
         <div className="pat-foot-colophon">
           <div className="pat-foot-note">
-            <h2>Colophon</h2>
-            <p>
-              A two-person consultancy helping small operators across Oregon
-              and Washington put AI to work on their own machines, virtually
-              or on-site, then feel confident using it without us in the room.
-            </p>
+            <h2>Address</h2>
+            <address>1455 SW Broadway, Portland, OR 97201</address>
           </div>
           <div className="pat-foot-contact">
             <h2>Contact</h2>

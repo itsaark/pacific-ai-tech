@@ -33,7 +33,7 @@ import {
 export const metadata: Metadata = {
   title: "Portland AI Consultant for Small Businesses",
   description:
-    "Business-only AI consulting, workflow implementation, and team training for small businesses across Portland, Vancouver, Beaverton, and Greater Portland.",
+    "Portland AI consultant helping small businesses automate workflows, implement AI tools, and train teams across Oregon and southwest Washington.",
   alternates: {
     canonical: "/portland-ai-consultant",
   },
@@ -121,12 +121,19 @@ const differentiators = [
   },
 ];
 
-const featuredProof = caseStudies.slice(0, 2).map((study) => ({
-  title: study.clientLabel,
-  description: study.summary,
-  href: `/case-studies/${study.slug}`,
-  label: `Read the ${study.clientLabel} case study`,
-}));
+const featuredProof = caseStudies
+  .filter((study) =>
+    [
+      "northbank-home-inspection-ai-automation",
+      "aspen-pest-control-ai-marketing-automation",
+    ].includes(study.slug),
+  )
+  .map((study) => ({
+    title: study.clientLabel,
+    description: study.summary,
+    href: `/case-studies/${study.slug}`,
+    label: `Read the ${study.clientLabel} case study`,
+  }));
 
 const introCallSteps = [
   {
@@ -226,8 +233,10 @@ const jsonLd = {
       email: contactEmail,
       address: {
         "@type": "PostalAddress",
+        streetAddress: "1455 SW Broadway",
         addressLocality: "Portland",
         addressRegion: "OR",
+        postalCode: "97201",
         addressCountry: "US",
       },
       areaServed: greaterPortlandSchemaAreas,
@@ -257,7 +266,7 @@ const jsonLd = {
         "@type": "ImageObject",
         url: `${siteUrl}/pacific-ai-tech/img/bridge.jpeg`,
       },
-      dateModified: "2026-08-07",
+      dateModified: "2026-08-12",
       inLanguage: "en-US",
       citation: evidence.map((item) => item.href),
     },
@@ -408,8 +417,8 @@ export default function PortlandAiConsultantPage() {
               <span className="pat-eyebrow">Real work, visible proof</span>
             </div>
             <h2 id="proof-title">
-              Oregon client workflows, built and documented by the people you
-              will meet.
+              Oregon and Washington client workflows, built and documented by
+              the people you will meet.
             </h2>
           </div>
           <div className="pat-who-grid pat-local-service-grid">

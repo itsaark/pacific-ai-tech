@@ -160,8 +160,10 @@ const jsonLd = {
       foundingDate: "2025",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "1455 SW Broadway",
         addressLocality: "Portland",
         addressRegion: "OR",
+        postalCode: "97201",
         addressCountry: "US",
       },
       areaServed: [
@@ -252,17 +254,19 @@ const jsonLd = {
 function FramedImage({
   src,
   alt,
+  sizes,
+  preload = false,
   className = "",
 }: {
   src: string;
   alt: string;
+  sizes: string;
+  preload?: boolean;
   className?: string;
 }) {
   return (
     <div className={`pat-ascii-frame ${className}`}>
-      {/* Native img keeps the local ASCII assets visible in browser full-page captures. */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt={alt} loading="eager" decoding="async" />
+      <Image src={src} alt={alt} fill sizes={sizes} preload={preload} />
     </div>
   );
 }
@@ -476,6 +480,8 @@ export default function Home() {
           <FramedImage
             src="/pacific-ai-tech/img/roses.jpeg"
             alt="Washington Park rose garden rendered in ASCII"
+            sizes="(max-width: 900px) 100vw, 50vw"
+            preload
             className="pat-hero-image"
           />
         </section>
@@ -586,6 +592,7 @@ export default function Home() {
           <FramedImage
             src="/pacific-ai-tech/img/tulips.jpeg"
             alt="Wooden Shoe tulip fields rendered in ASCII"
+            sizes="(max-width: 900px) 100vw, 50vw"
             className="pat-showcase-image"
           />
         </section>
@@ -658,6 +665,7 @@ export default function Home() {
           <FramedImage
             src="/pacific-ai-tech/img/bridge.jpeg"
             alt="Portland's Steel Bridge with cherry blossoms in ASCII"
+            sizes="(max-width: 900px) 100vw, 50vw"
             className="pat-region-image"
           />
           <div className="pat-region-text">
@@ -671,6 +679,10 @@ export default function Home() {
               We drive. We don&apos;t fly. Anywhere between Olympia and Salem,
               the coast and the Cascades.
             </p>
+            <Link className="pat-source-link" href="/portland-ai-consultant">
+              Explore AI consulting in Portland and Greater Portland
+              <ArrowUpRight aria-hidden="true" />
+            </Link>
             <div className="pat-cities">
               {cities.map((city, index) => (
                 <Badge
