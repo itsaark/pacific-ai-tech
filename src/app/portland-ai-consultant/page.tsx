@@ -25,6 +25,7 @@ import {
   contactEmail,
   greaterPortlandSchemaAreas,
   greaterPortlandServiceAreas,
+  regionalConsultingPath,
   serviceDescription,
   siteUrl,
   websiteId,
@@ -33,7 +34,7 @@ import {
 export const metadata: Metadata = {
   title: "Portland AI Consultant for Small Businesses",
   description:
-    "Portland AI consultant helping small businesses automate workflows, implement AI tools, and train teams across Oregon and southwest Washington.",
+    "Portland AI consultant helping small businesses automate workflows, implement AI tools, and train teams across Greater Portland, Vancouver, Beaverton, and nearby metro cities.",
   alternates: {
     canonical: "/portland-ai-consultant",
   },
@@ -49,6 +50,8 @@ export const metadata: Metadata = {
     "AI automation consultant Portland",
     "Vancouver WA AI consultant",
     "Beaverton AI consultant",
+    "Hillsboro AI consultant",
+    "Lake Oswego AI consultant",
   ],
   openGraph: {
     title: "Portland AI Consultant for Small Businesses",
@@ -181,7 +184,7 @@ const faqs = [
   {
     question: "Do you provide AI consulting in the Greater Portland area?",
     answer:
-      "Yes. Pacific AI Tech serves the Greater Portland metro across Oregon and southwest Washington, including Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, Gresham, Oregon City, Tualatin, Milwaukie, Happy Valley, and Camas. Wider Pacific Northwest work is available when practical.",
+      "Yes. Pacific AI Tech serves the Greater Portland metro, including Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, West Linn, Gresham, Oregon City, Tualatin, Milwaukie, Happy Valley, Camas, Battle Ground, and Ridgefield, plus Multnomah, Washington, Clackamas, and Clark counties.",
   },
   {
     question: "Is this AI consulting or AI implementation?",
@@ -217,6 +220,11 @@ const faqs = [
     question: "Do you work with non-technical owners?",
     answer:
       "Yes. The service is designed for non-technical operators who want practical AI workflows without managing infrastructure, terminal commands, or complex agent configuration alone.",
+  },
+  {
+    question: "What if my business is in Eugene, Salem, Bend, Olympia, or Spokane?",
+    answer:
+      "That work is covered on the Oregon and Washington AI consulting page. Those engagements are usually virtual. This page is for Greater Portland businesses.",
   },
 ];
 
@@ -378,10 +386,10 @@ export default function PortlandAiConsultantPage() {
             <div>
               <p className="pat-lede">
                 We help small businesses in Portland, Vancouver, Beaverton,
-                Hillsboro, Tigard, Lake Oswego, and nearby cities design AI
+                Hillsboro, Lake Oswego, and nearby metro cities design AI
                 workflows, implement the right tools, and train the people who
-                will use them. We do not provide consumer computer repair,
-                account recovery, or general technical support.
+                will use them. Outside Greater Portland, use the Oregon and
+                Washington consulting page.
               </p>
               <div className="pat-local-actions">
                 <Button
@@ -417,8 +425,8 @@ export default function PortlandAiConsultantPage() {
               <span className="pat-eyebrow">Real work, visible proof</span>
             </div>
             <h2 id="proof-title">
-              Oregon and Washington client workflows, built and documented by
-              the people you will meet.
+              Greater Portland client workflows, built and documented by the
+              people you will meet.
             </h2>
           </div>
           <div className="pat-who-grid pat-local-service-grid">
@@ -537,10 +545,14 @@ export default function PortlandAiConsultantPage() {
                 Business AI consulting and team training across Greater Portland.
               </h2>
               <p>
-                We provide on-site workflow implementation when the drive makes
-                sense, and remote AI consulting and team training when
-                screen-share is the better fit.
+                We provide on-site workflow implementation across Multnomah,
+                Washington, Clackamas, and Clark counties when the drive makes
+                sense, and remote sessions when screen-share is the better fit.
               </p>
+              <Link className="pat-source-link" href={regionalConsultingPath}>
+                Looking for Eugene, Salem, Bend, Olympia, or Spokane?
+                <ArrowRight aria-hidden="true" />
+              </Link>
             </div>
             <div className="pat-cities" aria-label="AI consulting service area cities">
               {greaterPortlandServiceAreas.map((area, index) => (

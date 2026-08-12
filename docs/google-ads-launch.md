@@ -78,6 +78,19 @@ After a lead becomes qualified or a signed client, record that outcome with its 
 
 1. Do not create or link a Google Business Profile. Pacific AI Tech does not want a Google review presence or Business Profile location assets.
 2. Use Greater Portland campaign location targeting without a Business Profile or location asset.
+
+## 7. Match landing pages to geography
+
+Do not send every geo to the Portland page. Ads location targeting is wider
+than the Portland metro, and message match matters more than extra URLs.
+
+| Ad geography | Final URL |
+| --- | --- |
+| Portland, Beaverton, Hillsboro, Lake Oswego, West Linn, Happy Valley, Vancouver, Battle Ground, Ridgefield, Multnomah / Washington / Clackamas / Clark counties | `https://www.pacificaitech.com/portland-ai-consultant` |
+| Eugene, Salem, Corvallis, McMinnville, Bend, Olympia, Spokane, Yakima, Wenatchee, Chelan, Leavenworth, and the remaining Oregon and Washington counties | `https://www.pacificaitech.com/oregon-washington-ai-consulting` |
+
+Keep this as two ad groups or two campaigns so each can use matching copy.
+Do not create a landing page per city or county.
 3. Use the exact legal/domain business name during Google Ads advertiser verification.
 4. Use the public business number `(971) 979-0077` for Google Ads call assets. The site publishes the same number and can measure click-to-call intent with `phone_click`.
 5. Have an Oregon attorney review the working Privacy Policy and Terms before relying on them as bespoke legal documents.

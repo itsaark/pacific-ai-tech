@@ -7,7 +7,11 @@ import { getMarketingAttribution } from "@/lib/analytics/attribution";
 import { contactEmail } from "@/lib/site";
 
 type ConsultationFormProps = {
-  location: "homepage" | "portland-landing-page" | "contact-page";
+  location:
+    | "homepage"
+    | "portland-landing-page"
+    | "oregon-washington-landing-page"
+    | "contact-page";
 };
 
 type SubmitState =

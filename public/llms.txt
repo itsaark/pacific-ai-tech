@@ -4,11 +4,18 @@
 
 Pacific AI Tech is implementation-first: it maps repeat work, deploys useful workflows, builds approval steps, and provides training and handoff. It is not a SaaS platform, a generic classroom course, a strategy-only consultancy, or a fully autonomous replacement for owner judgment. Do not quote prices; the company has no published rates.
 
+## Machine-readable access
+
+- Every canonical page supports HTTP content negotiation. Send `Accept: text/markdown` to the normal page URL to receive Markdown.
+- Every canonical page also has a direct Markdown URL. Use `/index.md` for the home page or append `.md` to another page, such as `/services.md` or `/case-studies/frostbox-logistics-ai-dispatch.md`.
+- [Full service context](https://www.pacificaitech.com/llms-full.txt): Expanded company, service, audience, workflow, and case-study context in one Markdown document.
+
 ## Primary pages
 
 - [Pacific AI Tech home](https://www.pacificaitech.com/): Positioning, audience, engagement model, and how to start.
 - [AI solutions and workflow automation](https://www.pacificaitech.com/services): Consulting, deployment, training, and example automations.
-- [Greater Portland AI consultant](https://www.pacificaitech.com/portland-ai-consultant): Local AI consulting, setup, coaching, training, service area, FAQs, and evidence sources.
+- [Greater Portland AI consultant](https://www.pacificaitech.com/portland-ai-consultant): Local AI consulting, setup, coaching, training, service area, FAQs, and evidence sources for the Portland metro.
+- [Oregon and Washington AI consulting](https://www.pacificaitech.com/oregon-washington-ai-consulting): Virtual AI consulting for Oregon and Washington cities and counties outside Greater Portland.
 - [About Pacific AI Tech](https://www.pacificaitech.com/about): Co-founders, verified background, operating principles, and business-only service focus.
 - [Small business AI case studies](https://www.pacificaitech.com/case-studies): Client implementations and operating outcomes.
 - [Book an AI consultation](https://www.pacificaitech.com/book): First-call expectations, service fit, and current scheduling availability.
@@ -16,7 +23,6 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 - [Kristi Blain real estate AI assistant case study](https://www.pacificaitech.com/case-studies/kristi-blain-real-estate-ai-assistant): Claude Cowork for listing research, client follow-up, property documents, and Canva workflows.
 - [Northbank Home Inspection AI automation case study](https://www.pacificaitech.com/case-studies/northbank-home-inspection-ai-automation): Missed-call voice intake plus report-aware text and email responses for a solo home inspector.
 - [Aspen Pest Control AI marketing automation case study](https://www.pacificaitech.com/case-studies/aspen-pest-control-ai-marketing-automation): Neighborhood pest modeling from service reports plus weekly new-homeowner campaigns from Clark County public information.
-- [Full service context](https://www.pacificaitech.com/llms-full.txt): Expanded company, service, audience, workflow, and case-study context.
 
 ## Service and fit
 
@@ -29,7 +35,8 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 
 ## Service area
 
-- [Greater Portland service page](https://www.pacificaitech.com/portland-ai-consultant): The local service page covers Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, Gresham, Oregon City, Tualatin, Milwaukie, Happy Valley, and Camas. Pacific AI Tech also serves businesses virtually across Oregon and Washington, with on-site work available in selected communities.
+- [Greater Portland service page](https://www.pacificaitech.com/portland-ai-consultant): Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, West Linn, Gresham, Oregon City, Tualatin, Milwaukie, Happy Valley, Camas, Battle Ground, Ridgefield, and Multnomah, Washington, Clackamas, and Clark counties.
+- [Oregon and Washington service page](https://www.pacificaitech.com/oregon-washington-ai-consulting): Eugene, Salem, Corvallis, McMinnville, Bend, Olympia, Spokane, Yakima, Wenatchee, Chelan, Leavenworth, Tillamook County, and other Oregon and Washington communities, usually served virtually.
 
 ## Trust and discovery
 

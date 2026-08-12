@@ -387,13 +387,22 @@ export default function Home() {
               <span className="pat-serif-emphasis">We come to you.</span>
             </h2>
             <p className="pat-lede">
-              We drive. We don&apos;t fly. Anywhere between Olympia and Salem,
-              the coast and the Cascades.
+              On-site in Greater Portland. Virtual across Oregon and
+              Washington, including smaller cities and rural counties.
             </p>
-            <Link className="pat-source-link" href="/portland-ai-consultant">
-              Explore AI consulting in Portland and Greater Portland
-              <ArrowUpRight aria-hidden="true" />
-            </Link>
+            <div className="pat-close-inline-links">
+              <Link className="pat-source-link" href="/portland-ai-consultant">
+                Portland and Greater Portland
+                <ArrowUpRight aria-hidden="true" />
+              </Link>
+              <Link
+                className="pat-source-link"
+                href="/oregon-washington-ai-consulting"
+              >
+                Oregon and Washington
+                <ArrowUpRight aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </section>
       </div>

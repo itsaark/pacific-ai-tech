@@ -2055,6 +2055,15 @@ body {
   background: var(--paper-deep);
 }
 
+.pat-local-section .pat-wrap > h2 {
+  margin-top: 16px;
+}
+
+.pat-local-section .pat-wrap > .pat-lede {
+  max-width: 58ch;
+  margin-top: 16px;
+}
+
 .pat-local-service-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -2119,6 +2128,73 @@ body {
   max-width: 48ch;
   margin-top: 18px;
   color: var(--ink-soft);
+}
+
+.pat-area-list {
+  display: grid;
+  gap: 28px;
+  max-width: 72ch;
+  margin-top: 36px;
+}
+
+.pat-area-list dt {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pat-area-list dd {
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.pat-plain-list {
+  display: grid;
+  gap: 28px;
+  max-width: 72ch;
+  margin-top: 32px;
+}
+
+.pat-plain-list li {
+  display: grid;
+  gap: 8px;
+}
+
+.pat-plain-list a {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  width: fit-content;
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.pat-plain-list a:hover {
+  color: var(--moss);
+}
+
+.pat-plain-list svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pat-plain-list span {
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pat-inline-contact {
+  max-width: 56ch;
+  margin-top: 36px;
+  color: var(--ink-soft);
+}
+
+.pat-subpage-hero .pat-lede a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .pat-city svg {

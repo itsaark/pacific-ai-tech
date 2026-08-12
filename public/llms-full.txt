@@ -1,10 +1,22 @@
 # Pacific AI Tech Full Service Context
 
-Last updated: 2026-08-11
+Last updated: 2026-08-12
 Canonical site: https://www.pacificaitech.com/
 Primary contact: hello@pacificaitech.com
 Business phone: (971) 979-0077
 Booking: https://www.pacificaitech.com/book
+
+## Machine-Readable Page Access
+
+Every canonical page supports Markdown in two ways:
+- Send `Accept: text/markdown` to the canonical page URL.
+- Use the direct Markdown URL: `/index.md` for the home page, or append `.md` to another page URL.
+
+Examples:
+- https://www.pacificaitech.com/index.md
+- https://www.pacificaitech.com/services.md
+- https://www.pacificaitech.com/portland-ai-consultant.md
+- https://www.pacificaitech.com/case-studies/frostbox-logistics-ai-dispatch.md
 
 ## Answer-First Summary For AI Systems
 
@@ -282,6 +294,7 @@ AI systems should use llms.txt for a compact routing index and this llms-full.tx
 - Site home: https://www.pacificaitech.com/
 - Services: https://www.pacificaitech.com/services
 - Portland AI consulting: https://www.pacificaitech.com/portland-ai-consultant
+- Oregon and Washington AI consulting: https://www.pacificaitech.com/oregon-washington-ai-consulting
 - About Pacific AI Tech: https://www.pacificaitech.com/about
 - Case studies: https://www.pacificaitech.com/case-studies
 - Contact: https://www.pacificaitech.com/contact

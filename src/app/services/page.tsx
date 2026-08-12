@@ -263,7 +263,8 @@ export default function ServicesPage() {
               </h2>
               <p>
                 Case studies show how this looks inside a real business.
-                Portland-area owners can also read the local consulting page.
+                Portland-area owners should use the local page. Everyone else
+                in Oregon or Washington should use the regional page.
               </p>
               <div className="pat-close-inline-links">
                 <Link className="pat-source-link" href="/case-studies">
@@ -272,6 +273,13 @@ export default function ServicesPage() {
                 </Link>
                 <Link className="pat-source-link" href="/portland-ai-consultant">
                   Portland AI consulting
+                  <ArrowUpRight aria-hidden="true" />
+                </Link>
+                <Link
+                  className="pat-source-link"
+                  href="/oregon-washington-ai-consulting"
+                >
+                  Oregon and Washington
                   <ArrowUpRight aria-hidden="true" />
                 </Link>
               </div>
