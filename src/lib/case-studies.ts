@@ -406,6 +406,127 @@ export const caseStudies: CaseStudy[] = [
       "I tried setting these automations up on my own, but I spent too much time getting lost in the setup. Working with an expert was much easier, and it has saved me a tremendous amount of time and money. It feels like I have an invisible assistant running in the background, watching out for me and taking care of things.",
     pullQuoteAttribution: "Will Graff, founder of Northbank Home Inspection",
   },
+  {
+    slug: "aspen-pest-control-ai-marketing-automation",
+    title: "How AI turned nearly 8,000 service histories into a neighborhood growth engine",
+    seoTitle: "AI Marketing Automation for Pest Control",
+    metaDescription:
+      "AI marketing automation helped Aspen turn service reports into neighborhood campaigns and find new Clark County homeowners each week. See how it works.",
+    clientLabel: "Aspen Pest Control",
+    clientUrl: "https://aspenpestservice.com/",
+    founderName: "Joseph H.",
+    industry: "Residential and commercial pest control",
+    location: "Vancouver, Washington · Vancouver–Portland metro",
+    services: [
+      "Pest activity neighborhood modeling",
+      "Service report data automation",
+      "Geographic customer clustering",
+      "AI campaign generation",
+      "New development monitoring",
+      "Clark County public-record monitoring",
+      "Weekly new-homeowner marketing workflow",
+    ],
+    topics: [
+      "AI marketing automation for pest control",
+      "pest control neighborhood targeting",
+      "pest activity modeling",
+      "home service marketing automation",
+      "new homeowner marketing",
+      "Clark County property sales data",
+      "route density marketing",
+      "Vancouver Washington pest control",
+      "local customer acquisition",
+    ],
+    publishedDate: "2026-08-11",
+    modifiedDate: "2026-08-11",
+    heroImage: {
+      src: "/pacific-ai-tech/img/case-studies/aspen-pest-control-ai-marketing-automation-ascii.jpg",
+      alt: "ASCII-style image of an Aspen pest control technician treating the exterior of a Vancouver-area home",
+      width: 1920,
+      height: 1280,
+      caption:
+        "Aspen Pest Control serves homes across the Vancouver and Portland metro area, generating local service data with every completed visit.",
+    },
+    summary:
+      "Aspen Pest Control already had the raw material for smarter growth: service history from nearly 8,000 residential homes. Pacific AI Tech built two end-to-end workflows that turn technician reports into neighborhood campaigns and Clark County public records into a weekly new-homeowner audience.",
+    metrics: [
+      {
+        value: "~8,000 homes",
+        label: "feeding the neighborhood model",
+        detail:
+          "Aspen's existing residential service history gives the workflow a substantial first-party view of which pest issues appear in different parts of the Vancouver area.",
+      },
+      {
+        value: "Every report",
+        label: "becomes a fresh local signal",
+        detail:
+          "When a technician completes a service report, the workflow extracts the address and pest context, updates its geographic cluster, and prepares a neighborhood-specific campaign.",
+      },
+      {
+        value: "Weekly",
+        label: "new-homeowner campaign list",
+        detail:
+          "A second workflow monitors Clark County property and development information, compiles newly sold homes, and turns the current list into a focused marketing audience.",
+      },
+    ],
+    challenge:
+      "Aspen had years of useful field knowledge distributed across thousands of service reports, but turning that history into neighborhood-level marketing required repeated exports, address work, pest categorization, geographic grouping, and campaign preparation. At the same time, new neighborhoods and recent home sales created another valuable audience that changed every week. The company needed both opportunities to move from occasional research projects into reliable operating workflows.",
+    approach: [
+      "Connected Aspen's completed service reports to an automated intake that extracts the service address and relevant pest findings after a technician updates the system.",
+      "Grouped those signals geographically to model aggregate pest patterns by neighborhood instead of treating every Vancouver-area household as if it faced the same problem.",
+      "Built campaign generation into the workflow so each meaningful neighborhood cluster can produce marketing tailored to the pests appearing nearby.",
+      "Set up monitoring for new residential development and Clark County's public property information so the business can keep track of changing housing activity.",
+      "Created a weekly process that identifies newly sold homes, compiles the current homeowner audience, and prepares it for a targeted pest-control marketing campaign.",
+      "Kept the system focused on campaign preparation and audience relevance, leaving Aspen's team in control of the marketing that goes out.",
+    ],
+    outcomes: [
+      "Technician reports now do more than close the service visit: they continuously improve Aspen's picture of local pest activity.",
+      "Neighborhood campaigns can reflect actual nearby service patterns instead of relying on one generic message across the entire metro area.",
+      "The workflow turns a growing first-party data set into a repeatable local acquisition system without rebuilding the analysis by hand for every campaign.",
+      "New construction and recent property sales are monitored as an ongoing source of timely marketing opportunities.",
+      "Aspen receives a fresh weekly audience of new homeowners who may be evaluating pest protection for a property they just purchased.",
+      "The two systems connect field operations and public information directly to marketing while keeping final campaign decisions with Aspen's team.",
+    ],
+    narrative: [
+      {
+        heading: "The answer was already in the service reports",
+        paragraphs: [
+          "Aspen Pest Control had a useful problem: too much local knowledge to analyze by hand. After serving nearly 8,000 residential homes, the business could see that pest activity was not evenly distributed across the Vancouver area. One neighborhood might be producing ant calls. Another might be seeing rodents or wasps. But those patterns were buried inside individual service records.",
+          "That is the opportunity behind AI marketing automation for pest control. Aspen did not need another generic campaign writer. It needed a system that could turn the work its technicians were already documenting into a clearer picture of what was happening street by street and neighborhood by neighborhood.",
+        ],
+      },
+      {
+        heading: "One technician report starts the workflow",
+        paragraphs: [
+          "The first automation begins when a service person updates a completed report in Aspen's existing system. The workflow takes the report, extracts the address and relevant pest context, then adds that observation to the appropriate geographic cluster.",
+          "The important part is the handoff. No one has to remember to export the record, clean the address, update a map, compare nearby jobs, and open a marketing document. The completed service report is the trigger. The rest of the chain starts on its own.",
+        ],
+      },
+      {
+        heading: "From pest cluster to neighborhood campaign",
+        paragraphs: [
+          "As service signals accumulate, the model builds an aggregate view of which pest issues are appearing in which neighborhoods. The output is not a prediction about one particular household. It is a practical marketing signal drawn from Aspen's own work in the surrounding area.",
+          "The system then turns that signal into a neighborhood-specific campaign. Homeowners near a cluster of relevant service activity can receive a message about the pests Aspen is actually encountering nearby, instead of a broad promotion written for the entire Vancouver–Portland market.",
+        ],
+      },
+      {
+        heading: "The week a house gets a new owner",
+        paragraphs: [
+          "The second workflow watches a different signal: change. New neighborhoods are built. Homes sell. New owners move into properties with unfamiliar crawlspaces, landscaping, entry points, and seasonal pest patterns.",
+          "Pacific AI Tech set up an automation that monitors residential development and public Clark County property information. Each week, it compiles newly sold homes into a current marketing audience so Aspen can introduce its services when pest protection is likely to be part of a new homeowner's checklist.",
+        ],
+      },
+      {
+        heading: "Marketing that starts with operations",
+        paragraphs: [
+          "The two automations look like marketing systems, but both begin somewhere more useful: Aspen's operations. One starts with what technicians find in the field. The other starts with verifiable changes in the local housing market.",
+          "That makes the campaigns more specific without asking the team to become full-time data analysts. Reports update the neighborhood model. Public records refresh the new-homeowner list. AI prepares the campaign work. Aspen's team keeps control of what gets sent and how the company shows up in the communities it serves.",
+        ],
+      },
+    ],
+    pullQuote:
+      "The useful part is not that AI can write another ad. It is that every completed service report and every week of local property activity can now tell Aspen where its next relevant campaign should begin.",
+  },
 ];
 
 export function getCaseStudy(slug: string) {

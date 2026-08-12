@@ -13,14 +13,14 @@ import { businessId, bookingUrl, siteUrl, websiteId } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Small Business AI Consulting Case Studies",
   description:
-    "See how Oregon and Washington small businesses use practical AI for dispatch, real estate research, missed calls, report follow-up, and daily operations.",
+    "See how Oregon and Washington small businesses use practical AI for dispatch, real estate research, customer communication, and neighborhood marketing.",
   alternates: {
     canonical: "/case-studies",
   },
   openGraph: {
     title: "Small Business AI Consulting Case Studies",
     description:
-      "Oregon and Washington client stories showing how practical AI workflows change day-to-day operations while owners stay in control.",
+      "Oregon and Washington client stories showing how practical AI changes dispatch, customer communication, research, and neighborhood marketing.",
     url: "/case-studies",
     siteName: "Pacific AI Tech",
     type: "website",
