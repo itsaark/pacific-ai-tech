@@ -13,6 +13,7 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 - [Book an AI consultation](https://www.pacificaitech.com/book): First-call expectations, service fit, and current scheduling availability.
 - [Frostbox Logistics AI dispatch case study](https://www.pacificaitech.com/case-studies/frostbox-logistics-ai-dispatch): Local Hermes agent for load research, bid drafting, return-load scouting, and owner approval.
 - [Kristi Blain real estate AI assistant case study](https://www.pacificaitech.com/case-studies/kristi-blain-real-estate-ai-assistant): Claude Cowork for listing research, client follow-up, property documents, and Canva workflows.
+- [Northbank Home Inspection AI automation case study](https://www.pacificaitech.com/case-studies/northbank-home-inspection-ai-automation): Missed-call voice intake plus report-aware text and email responses for a solo home inspector.
 - [Full service context](https://www.pacificaitech.com/llms-full.txt): Expanded company, service, audience, workflow, and case-study context.
 
 ## Service and fit

@@ -1247,6 +1247,23 @@ body {
   padding-left: 22px;
 }
 
+.pat-case-record-head blockquote p {
+  margin: 0;
+}
+
+.pat-case-record-head blockquote cite {
+  display: block;
+  margin-top: 16px;
+  color: var(--ink-soft);
+  font-family: var(--font-sans), Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
 .pat-case-record-rows {
   display: grid;
   border-top: 1px solid var(--rule);

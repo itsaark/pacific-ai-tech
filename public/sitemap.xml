@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://www.pacificaitech.com/case-studies</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -51,6 +51,12 @@
   <url>
     <loc>https://www.pacificaitech.com/case-studies/kristi-blain-real-estate-ai-assistant</loc>
     <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.pacificaitech.com/case-studies/northbank-home-inspection-ai-automation</loc>
+    <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

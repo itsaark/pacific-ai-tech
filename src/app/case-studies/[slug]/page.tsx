@@ -68,6 +68,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function getSchemaKeywords(study: CaseStudy) {
   return [
     study.clientLabel,
+    ...(study.founderName ? [study.founderName] : []),
     study.industry,
     study.location,
     ...study.services,
@@ -81,6 +82,12 @@ function getSchemaAbout(study: CaseStudy) {
       "@type": "Organization",
       name: study.clientLabel,
       url: study.clientUrl,
+      founder: study.founderName
+        ? {
+            "@type": "Person",
+            name: study.founderName,
+          }
+        : undefined,
     },
     {
       "@type": "Thing",
@@ -230,6 +237,12 @@ export default async function CaseStudyPage({ params }: Props) {
                     )}
                   </dd>
                 </div>
+                {study.founderName ? (
+                  <div>
+                    <dt>Founder</dt>
+                    <dd>{study.founderName}</dd>
+                  </div>
+                ) : null}
                 <div>
                   <dt>Industry</dt>
                   <dd>{study.industry}</dd>
@@ -291,7 +304,12 @@ export default async function CaseStudyPage({ params }: Props) {
           <section className="pat-case-record" aria-labelledby="case-record-title">
             <div className="pat-case-record-head">
               <h2 id="case-record-title">Operational record</h2>
-              <blockquote>{study.pullQuote}</blockquote>
+              <blockquote>
+                <p>{study.pullQuote}</p>
+                {study.pullQuoteAttribution ? (
+                  <cite>{study.pullQuoteAttribution}</cite>
+                ) : null}
+              </blockquote>
             </div>
 
             <div className="pat-case-record-rows">
