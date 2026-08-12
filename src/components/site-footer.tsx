@@ -45,6 +45,9 @@ export function SiteFooter() {
         <div className="pat-foot-bottom">
           <p>© 2026 Pacific AI Tech LLC · Portland, OR · v 26.08 · built on a porch</p>
           <nav aria-label="Company and legal">
+            <Link href="/services">Services</Link>
+            <Link href="/case-studies">Case studies</Link>
+            <Link href="/contact">Contact</Link>
             <Link href="/about">About</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>

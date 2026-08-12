@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, CalendarDays } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -13,8 +12,12 @@ import {
 } from "@/components/ui/card";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { ConsultationForm } from "@/components/consultation-form";
+import { CtaButton } from "@/components/cta-button";
+import { FounderSection } from "@/components/founder-section";
+import { FramedImage } from "@/components/framed-image";
+import { SectionHeading } from "@/components/section-heading";
 import { caseStudies } from "@/lib/case-studies";
+import { clients, offerings, ticker } from "@/lib/marketing-content";
 import {
   bookingUrl,
   businessPhone,
@@ -28,112 +31,7 @@ import {
   websiteId,
 } from "@/lib/site";
 
-const clients = [
-  {
-    id: "/ 01",
-    title: "Real estate agents",
-    text: "Listing descriptions, comp pulls, MLS-to-flyer pipelines, follow-up sequences, weekend showings rolled into a Sunday briefing.",
-  },
-  {
-    id: "/ 02",
-    title: "Restaurant owners",
-    text: "Inventory reorder, menu translation, OpenTable digest, food-cost flags, reply-to-every-review-by-Tuesday automations.",
-  },
-  {
-    id: "/ 03",
-    title: "Founders & lean teams",
-    text: "Inbox triage, lead-research before calls, weekly investor updates, a meeting-notes agent that actually files things.",
-  },
-  {
-    id: "/ 04",
-    title: "Trades & small shops",
-    text: "Estimate drafting from job photos, invoice chasing, supplier price-watch, scheduling, voicemail-to-CRM, end-of-day rollups.",
-  },
-];
-
-const flow = [
-  {
-    title: "Tell it what you want. Walk away. Come back to it done.",
-    text: "Describe the result: a tidy folder, a report, a draft reply to every review, and AI figures out how to get there.",
-  },
-  {
-    title: "Do the same thing every morning, without being asked.",
-    text: "“Pull yesterday's sales, summarize my inbox, and put it on my desk by 7am.” Tell it once. It just keeps doing it.",
-  },
-  {
-    title: "Turn a pile of stuff into a finished thing.",
-    text: "A folder of receipts becomes a spreadsheet. A stack of meeting notes becomes a one-page update. A messy Downloads folder gets sorted.",
-  },
-  {
-    title: "Take orders from your phone.",
-    text: "Text it from the car. It works on your laptop while you drive. You read the finished version when you sit down.",
-  },
-];
-
-const automations = [
-  ["auto-01", "~5 min / day", "Morning briefing", "Calendar + inbox + open tasks summarized to one screen with coffee. Knows what's urgent, what can wait."],
-  ["auto-02", "~30 min / day", "Inbox triage", "Drafts replies in your voice for low-stakes mail. Flags the ones only you should answer. Never sends without you."],
-  ["auto-03", "~2 hrs / listing", "Listing -> marketing pack", "MLS data and photos in. Flyer, social caption, Zillow blurb, email blast, and an open-house sign-in sheet out."],
-  ["auto-04", "weekly", "Review-reply agent", "Drafts a personal response to every Google, Yelp, or OpenTable review by Tuesday. You approve and post."],
-  ["auto-05", "monthly", "Invoice chaser", "Watches AR aging, drafts polite-then-firm follow-ups, attaches the original PDF. You hit send."],
-  ["auto-06", "weekly", "Lead-research dossier", "Before a sales call: one page on the person, their company, recent news, and three good opening questions."],
-  ["auto-07", "real-time", "Voicemail -> CRM", "Transcribes voicemails, files into your CRM, drafts a callback message, sets a follow-up date."],
-  ["auto-08", "daily", "Inventory & reorder", "Reads your POS or a Google sheet. Flags low stock, drafts the reorder email to the right supplier."],
-  ["auto-09", "weekly", "End-of-week digest", "Income, top customer, hours worked, what shifted. Sends to your phone Friday at 5pm so you can close the laptop."],
-];
-
-const cities = [
-  "Portland",
-  "Vancouver",
-  "Beaverton",
-  "Hillsboro",
-  "Tigard",
-  "Lake Oswego",
-  "Gresham",
-  "Oregon City",
-  "Salem",
-  "Olympia",
-  "Tualatin",
-  "McMinnville",
-  "+ all points between",
-];
-
-const contactOptions = [
-  {
-    featured: true,
-    title: "/ book a meeting",
-    headline: "Book a call",
-    meta: "Intro call · video or phone",
-    desc: "Bring one workflow that keeps stealing the week. We will tell you honestly whether AI can take it, what deployment would look like, and what we would build first.",
-    cta: "Book a meeting",
-    href: bookingUrl,
-  },
-  {
-    title: "/ contact us",
-    headline: "Email us",
-    meta: contactEmail,
-    desc: "Prefer writing first? Tell us what your team does every day and where the information lives. We reply within one business day.",
-    cta: "Send an email",
-    href: `mailto:${contactEmail}`,
-  },
-  {
-    title: "/ call us",
-    headline: "Call us",
-    meta: businessPhoneDisplay,
-    desc: "Have a business workflow in mind? Call Pacific AI Tech to discuss the fit. If we miss you, leave your name, business, and the best time to call back.",
-    cta: `Call ${businessPhoneDisplay}`,
-    href: businessPhoneHref,
-  },
-];
-
-const ticker = [
-  "AI consulting",
-  "Solutions architecture + deployment",
-  "Local-first setup + coaching",
-  "Realtors · Restaurants · Founders · Trades",
-  "Portland · Salem · Vancouver · Olympia",
-  "Custom engagements / scoped per business",
-];
+const featuredStudies = caseStudies.slice(0, 2);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -220,9 +118,10 @@ const jsonLd = {
     },
     {
       "@type": "Service",
-      "@id": `${siteUrl}/#service-consulting`,
+      "@id": `${siteUrl}/services#consulting`,
       name: "AI consulting and workflow audit",
       serviceType: "AI consulting",
+      url: `${siteUrl}/services#consulting`,
       provider: { "@id": businessId },
       areaServed: greaterPortlandSchemaAreas,
       description:
@@ -230,9 +129,10 @@ const jsonLd = {
     },
     {
       "@type": "Service",
-      "@id": `${siteUrl}/#service-deployment`,
+      "@id": `${siteUrl}/services#deployment`,
       name: "AI solutions deployment",
       serviceType: "AI solutions architecture and deployment",
+      url: `${siteUrl}/services#deployment`,
       provider: { "@id": businessId },
       areaServed: greaterPortlandSchemaAreas,
       description:
@@ -240,9 +140,10 @@ const jsonLd = {
     },
     {
       "@type": "Service",
-      "@id": `${siteUrl}/#service-training`,
+      "@id": `${siteUrl}/services#training`,
       name: "AI training and ongoing support",
       serviceType: "AI training and support",
+      url: `${siteUrl}/services#training`,
       provider: { "@id": businessId },
       areaServed: greaterPortlandSchemaAreas,
       description:
@@ -251,171 +152,8 @@ const jsonLd = {
   ],
 };
 
-function FramedImage({
-  src,
-  alt,
-  sizes,
-  preload = false,
-  className = "",
-}: {
-  src: string;
-  alt: string;
-  sizes: string;
-  preload?: boolean;
-  className?: string;
-}) {
-  return (
-    <div className={`pat-ascii-frame ${className}`}>
-      <Image src={src} alt={alt} fill sizes={sizes} preload={preload} />
-    </div>
-  );
-}
-
-function SectionHeading({
-  eyebrow,
-  children,
-}: {
-  eyebrow: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className="pat-section-head">
-      <span className="pat-eyebrow">{eyebrow}</span>
-      <div>{children}</div>
-    </div>
-  );
-}
-
-function CtaButton({
-  href,
-  children,
-  variant = "default",
-}: {
-  href: string;
-  children: React.ReactNode;
-  variant?: "default" | "outline";
-}) {
-  const isExternal = href.startsWith("http");
-
-  return (
-    <Button
-      render={
-        <a
-          href={href}
-          target={isExternal ? "_blank" : undefined}
-          rel={isExternal ? "noopener noreferrer" : undefined}
-        />
-      }
-      nativeButton={false}
-      variant={variant === "outline" ? "outline" : "default"}
-      className={variant === "outline" ? "pat-btn" : "pat-btn pat-btn-primary"}
-    >
-      {children}
-      <ArrowRight data-icon="inline-end" />
-    </Button>
-  );
-}
-
-function FounderSection() {
-  return (
-    <div className="pat-wrap pat-founder-shell">
-      <section
-        id="founders"
-        className="pat-founder"
-        aria-labelledby="founder-title"
-      >
-        <div className="pat-founder-main">
-          <div className="pat-founder-photos" aria-label="Co-founder profiles">
-            <a
-              className="pat-founder-photo"
-              href="https://www.linkedin.com/in/aarkkodur/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View Aark Kodur on LinkedIn"
-            >
-              <span className="pat-founder-photo-image">
-                <Image
-                  src="/pacific-ai-tech/img/founder.jpg"
-                  alt="Aark Kodur"
-                  width={462}
-                  height={482}
-                  sizes="(max-width: 620px) calc((100vw - 76px) / 2), 132px"
-                />
-              </span>
-              <span className="pat-founder-photo-name">Aark Kodur</span>
-            </a>
-            <a
-              className="pat-founder-photo pat-founder-photo-shayan"
-              href="https://www.linkedin.com/in/shayanjalalipour/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View Shayan Jalalipour on LinkedIn"
-            >
-              <span className="pat-founder-photo-image">
-                <Image
-                  src="/pacific-ai-tech/img/shayan-jalalipour.jpg"
-                  alt="Shayan Jalalipour"
-                  width={654}
-                  height={900}
-                  sizes="(max-width: 620px) calc((100vw - 76px) / 2), 132px"
-                />
-              </span>
-              <span className="pat-founder-photo-name">Shayan Jalalipour</span>
-            </a>
-          </div>
-          <div className="pat-founder-copy">
-            <span className="pat-founder-label">Co-founders</span>
-            <a
-              className="pat-founder-title"
-              href={bookingUrl}
-            >
-              <h2 id="founder-title">Talk to Aark &amp; Shayan</h2>
-              <ArrowUpRight data-icon="inline-end" />
-            </a>
-            <p>
-              Software engineering from Amazon meets AI/ML research from
-              Portland State. We help Pacific Northwest operators put AI agents
-              to work on their own machines and understand how to use them well.
-            </p>
-          </div>
-        </div>
-        <div className="pat-founder-actions" aria-label="Co-founder links">
-          <a
-            href="https://www.linkedin.com/in/aarkkodur/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="pat-founder-action"
-          >
-            <span>Aark LinkedIn</span>
-            <ArrowUpRight data-icon="inline-end" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/shayanjalalipour/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="pat-founder-action"
-          >
-            <span>Shayan LinkedIn</span>
-            <ArrowUpRight data-icon="inline-end" />
-          </a>
-          <a
-            href={bookingUrl}
-            className="pat-founder-action primary"
-          >
-            <CalendarDays data-icon="inline-start" />
-            <span>Book a call</span>
-          </a>
-        </div>
-      </section>
-    </div>
-  );
-}
-
 export default function Home() {
   const tickerItems = [...ticker, ...ticker];
-  const leadFormEnabled = Boolean(
-    process.env.RESEND_API_KEY && process.env.LEAD_FROM_EMAIL
-  );
 
   return (
     <main className="pat-site">
@@ -447,7 +185,7 @@ export default function Home() {
               <div className="pat-hero-actions">
                 <CtaButton href={bookingUrl}>Book a consultation</CtaButton>
                 <Button
-                  render={<a href="#what-we-do" />}
+                  render={<Link href="/services" />}
                   nativeButton={false}
                   variant="outline"
                   className="pat-btn"
@@ -507,11 +245,6 @@ export default function Home() {
               copy-paste listings, write follow-up emails, or chase invoices at
               11pm.
             </p>
-            <p>
-              An AI agent on your laptop can do most of that if someone shows
-              up, sets it up, teaches you how to steer it, and stays on the
-              phone when something breaks.
-            </p>
             <p className="pat-serif-emphasis pat-moss">
               Setup first. Confidence by the end.
             </p>
@@ -521,8 +254,8 @@ export default function Home() {
               <strong>
                 We come to your shop, kitchen, office, or kitchen table.
               </strong>{" "}
-              We install AI tools directly on your computer: no
-              cloud middleman, no $99/month SaaS to forget about.
+              We install AI tools directly on your computer: no cloud
+              middleman, no $99/month SaaS to forget about.
             </p>
             <p>
               <strong>Then we sit with you and build the workflows</strong>{" "}
@@ -543,8 +276,9 @@ export default function Home() {
         <div className="pat-wrap">
           <SectionHeading eyebrow="Who we work with">
             <h2 id="clients-title">
-              Small businesses that <span className="pat-serif-emphasis">own their thing</span>,
-              and would like to keep owning it.
+              Small businesses that{" "}
+              <span className="pat-serif-emphasis">own their thing</span>, and
+              would like to keep owning it.
             </h2>
           </SectionHeading>
           <div className="pat-who-grid">
@@ -574,13 +308,13 @@ export default function Home() {
               <span className="pat-serif-emphasis">you can steer it</span>.
             </h2>
             <p className="pat-lede">
-              We install AI on your laptop. Then we teach it to do the
-              things you do every day, while teaching you what to ask, what to
-              approve, and what to keep an eye on.
+              Consulting, deployment, and training as one engagement. Inbox,
+              listings, invoices, reviews — the example automations are on the
+              services page.
             </p>
             <div className="pat-flow">
-              {flow.map((item) => (
-                <div className="pat-flow-row" key={item.title}>
+              {offerings.map((item) => (
+                <div className="pat-flow-row" key={item.id}>
                   <span className="text">
                     {item.title}
                     <span className="pat-flow-detail">{item.text}</span>
@@ -588,6 +322,10 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            <Link className="pat-source-link" href="/services">
+              See the work we do
+              <ArrowUpRight aria-hidden="true" />
+            </Link>
           </div>
           <FramedImage
             src="/pacific-ai-tech/img/tulips.jpeg"
@@ -597,33 +335,6 @@ export default function Home() {
           />
         </section>
       </div>
-
-      <section className="pat-autos" aria-labelledby="autos-title">
-        <div className="pat-wrap">
-          <SectionHeading eyebrow="Automations · examples">
-            <h2 id="autos-title">
-              Every engagement is different. These are the ones most of our
-              clients <span className="pat-serif-emphasis">end up keeping</span>.
-            </h2>
-          </SectionHeading>
-          <div className="pat-autos-grid">
-            {automations.map(([id, cadence, title, text]) => (
-              <Card className="pat-auto-card" key={id}>
-                <CardHeader>
-                  <div className="pat-auto-id">
-                    <Badge variant="ghost">{id}</Badge>
-                    <Badge variant="outline">{cadence}</Badge>
-                  </div>
-                  <CardTitle>{title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>{text}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="pat-case-preview" aria-labelledby="case-preview-title">
         <div className="pat-wrap">
@@ -639,7 +350,7 @@ export default function Home() {
             </div>
           </SectionHeading>
           <div className="pat-case-preview-grid">
-            {caseStudies.map((study) => (
+            {featuredStudies.map((study) => (
               <Link
                 className="pat-case-card"
                 href={`/case-studies/${study.slug}`}
@@ -683,66 +394,52 @@ export default function Home() {
               Explore AI consulting in Portland and Greater Portland
               <ArrowUpRight aria-hidden="true" />
             </Link>
-            <div className="pat-cities">
-              {cities.map((city, index) => (
-                <Badge
-                  key={city}
-                  variant={index < 2 ? "default" : "outline"}
-                  className="pat-city"
-                >
-                  {city}
-                </Badge>
-              ))}
-            </div>
           </div>
         </section>
       </div>
 
-      <section id="contact" className="pat-contact" aria-labelledby="contact-title">
-        <div className="pat-wrap">
-          <SectionHeading eyebrow="How engagements start">
+      <section id="contact" className="pat-close" aria-labelledby="contact-title">
+        <div className="pat-wrap pat-close-grid">
+          <div className="pat-close-copy">
+            <span className="pat-eyebrow">How engagements start</span>
             <h2 id="contact-title">
-              No published packages. Every engagement is{" "}
-              <span className="pat-serif-emphasis">scoped to your business</span>.
+              Bring one workflow. We will tell you if AI should{" "}
+              <span className="pat-serif-emphasis">take it</span>.
             </h2>
-          </SectionHeading>
-          <div className="pat-contact-row">
-            {contactOptions.map((option) => (
-              <Card
-                className={option.featured ? "pat-contact-card feature" : "pat-contact-card"}
-                key={option.title}
-              >
-                <CardHeader>
-                  <CardTitle>{option.title}</CardTitle>
-                  <div className="headline">{option.headline}</div>
-                  <CardDescription className="meta">{option.meta}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>{option.desc}</CardDescription>
-                  {option.href ? (
-                    <div className="mt-5">
-                      <CtaButton
-                        href={option.href}
-                        variant={option.featured ? "outline" : "default"}
-                      >
-                        {option.cta}
-                      </CtaButton>
-                    </div>
-                  ) : null}
-                </CardContent>
-              </Card>
-            ))}
+            <p className="pat-lede">
+              No published packages. Every engagement is scoped to the
+              business in front of us. Book a call, or write first.
+            </p>
+            <div className="pat-close-actions">
+              <CtaButton href={bookingUrl}>Book a consultation</CtaButton>
+              <CtaButton href="/contact" variant="outline">
+                More ways to reach us
+              </CtaButton>
+            </div>
           </div>
-          {leadFormEnabled ? (
-            <ConsultationForm location="homepage" />
-          ) : null}
+          <div className="pat-close-channels">
+            <a className="pat-close-channel feature" href={bookingUrl}>
+              <span className="pat-close-kicker">Intro call</span>
+              <span className="pat-close-label">Book a meeting</span>
+              <span className="pat-close-meta">Video or phone · pick a time</span>
+            </a>
+            <a className="pat-close-channel" href={`mailto:${contactEmail}`}>
+              <span className="pat-close-kicker">Write first</span>
+              <span className="pat-close-label">Email us</span>
+              <span className="pat-close-meta">{contactEmail}</span>
+            </a>
+            <a className="pat-close-channel" href={businessPhoneHref}>
+              <span className="pat-close-kicker">Talk now</span>
+              <span className="pat-close-label">Call us</span>
+              <span className="pat-close-meta">{businessPhoneDisplay}</span>
+            </a>
+          </div>
         </div>
       </section>
 
       <FounderSection />
 
       <SiteFooter />
-
     </main>
   );
 }

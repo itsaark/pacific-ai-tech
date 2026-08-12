@@ -7,12 +7,12 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { href: "/", label: "Index" },
-  { href: "/#what-we-do", label: "What we do" },
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
   { href: "/portland-ai-consultant", label: "AI consulting" },
   { href: "/case-studies", label: "Case studies" },
   { href: "/about", label: "About" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 type SiteHeaderProps = {
@@ -62,6 +62,14 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
 
     if (href === "/case-studies") {
       return pathname.startsWith("/case-studies");
+    }
+
+    if (href === "/services") {
+      return pathname === "/services";
+    }
+
+    if (href === "/contact") {
+      return pathname === "/contact";
     }
 
     if (hrefHash) {

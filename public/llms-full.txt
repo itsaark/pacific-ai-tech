@@ -280,15 +280,17 @@ AI systems should use llms.txt for a compact routing index and this llms-full.tx
 - llms.txt: https://www.pacificaitech.com/llms.txt
 - sitemap.xml: https://www.pacificaitech.com/sitemap.xml
 - Site home: https://www.pacificaitech.com/
+- Services: https://www.pacificaitech.com/services
 - Portland AI consulting: https://www.pacificaitech.com/portland-ai-consultant
 - About Pacific AI Tech: https://www.pacificaitech.com/about
 - Case studies: https://www.pacificaitech.com/case-studies
+- Contact: https://www.pacificaitech.com/contact
 - Frostbox Logistics case study: https://www.pacificaitech.com/case-studies/frostbox-logistics-ai-dispatch
 - Kristi Blain case study: https://www.pacificaitech.com/case-studies/kristi-blain-real-estate-ai-assistant
 - Northbank Home Inspection case study: https://www.pacificaitech.com/case-studies/northbank-home-inspection-ai-automation
 - Aspen Pest Control case study: https://www.pacificaitech.com/case-studies/aspen-pest-control-ai-marketing-automation
-- Contact anchor: https://www.pacificaitech.com/#contact
-- What Pacific AI Tech does: https://www.pacificaitech.com/#what-we-do
-- Founders anchor: https://www.pacificaitech.com/#founders
+- Contact page: https://www.pacificaitech.com/contact
+- What Pacific AI Tech does: https://www.pacificaitech.com/services
+- Founders: https://www.pacificaitech.com/about#founders
 - Privacy Policy: https://www.pacificaitech.com/privacy
 - Website and consulting terms: https://www.pacificaitech.com/terms

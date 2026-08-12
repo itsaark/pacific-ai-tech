@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-12",
+    "macrostructure": "Photographic",
+    "theme": "custom Cascadian paper",
+    "enrichment": "none",
+    "scope": "app",
+    "brief": "Split cluttered homepage catalogs into /services and /contact while preserving hero, footer, fonts, and theme"
+  },
+  {
     "date": "2026-08-07",
     "macrostructure": "Split Studio",
     "theme": "custom Cascadian paper",

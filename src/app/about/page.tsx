@@ -127,7 +127,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="pat-local-section" aria-labelledby="founders-title">
+      <section id="founders" className="pat-local-section" aria-labelledby="founders-title">
         <div className="pat-wrap">
           <div className="pat-case-detail-hero">
             <div>

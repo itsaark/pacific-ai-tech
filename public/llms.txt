@@ -6,7 +6,8 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 
 ## Primary pages
 
-- [Pacific AI Tech home](https://www.pacificaitech.com/): Services, process, founders, engagement model, and contact details.
+- [Pacific AI Tech home](https://www.pacificaitech.com/): Positioning, audience, engagement model, and how to start.
+- [AI solutions and workflow automation](https://www.pacificaitech.com/services): Consulting, deployment, training, and example automations.
 - [Greater Portland AI consultant](https://www.pacificaitech.com/portland-ai-consultant): Local AI consulting, setup, coaching, training, service area, FAQs, and evidence sources.
 - [About Pacific AI Tech](https://www.pacificaitech.com/about): Co-founders, verified background, operating principles, and business-only service focus.
 - [Small business AI case studies](https://www.pacificaitech.com/case-studies): Client implementations and operating outcomes.
@@ -19,10 +20,10 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 
 ## Service and fit
 
-- [AI consulting and workflow audit](https://www.pacificaitech.com/#what-we-do): Map repeat work and decide where AI is useful, risky, or unnecessary.
-- [AI solutions deployment](https://www.pacificaitech.com/#what-we-do): Configure agent tools and automations around the client's actual machines, files, and software.
-- [Hands-on training and support](https://www.pacificaitech.com/#how-it-works): Teach owners and teams to run, inspect, approve, adjust, and stop workflows.
-- [Contact Pacific AI Tech](mailto:hello@pacificaitech.com): Ask about service fit or a workflow.
+- [AI consulting and workflow audit](https://www.pacificaitech.com/services#consulting): Map repeat work and decide where AI is useful, risky, or unnecessary.
+- [AI solutions deployment](https://www.pacificaitech.com/services#deployment): Configure agent tools and automations around the client's actual machines, files, and software.
+- [Hands-on training and support](https://www.pacificaitech.com/services#training): Teach owners and teams to run, inspect, approve, adjust, and stop workflows.
+- [Contact Pacific AI Tech](https://www.pacificaitech.com/contact): Ask about service fit or a workflow.
 - [Call Pacific AI Tech](tel:+19719790077): Business inquiries at (971) 979-0077.
 - [Book an introductory call](https://www.pacificaitech.com/book): Start a custom-scoped engagement on Pacific AI Tech's first-party booking page.
 

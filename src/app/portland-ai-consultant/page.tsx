@@ -446,7 +446,7 @@ export default function PortlandAiConsultantPage() {
                   experience from Amazon with AI and machine-learning research
                   from Portland State University.
                 </CardDescription>
-                <Link className="pat-source-link" href="/#founders">
+                <Link className="pat-source-link" href="/about#founders">
                   Meet Aark and Shayan
                   <ArrowRight aria-hidden="true" />
                 </Link>
