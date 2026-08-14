@@ -80,7 +80,11 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
   };
 
   return (
+    <>
     <header className="pat-site-head">
+      <a className="pat-skip-link" href="#pat-content">
+        Skip to content
+      </a>
       <div className="pat-wrap pat-header-brand-row">
         <Link className="pat-brand" href="/" aria-label="Pacific AI Tech home">
           <span className="pat-brand-mark" aria-hidden="true">
@@ -158,5 +162,7 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
         </div>
       </nav>
     </header>
+    <span id="pat-content" tabIndex={-1} />
+    </>
   );
 }
