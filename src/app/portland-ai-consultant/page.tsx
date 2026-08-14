@@ -63,8 +63,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/pacific-ai-tech/img/bridge.jpeg",
-        width: 1200,
-        height: 800,
+        width: 1280,
+        height: 854,
         alt: "Portland bridge representing Pacific AI Tech's Greater Portland AI consulting service area",
       },
     ],

@@ -47,6 +47,7 @@ export const websiteId = `${siteUrl}/#website`;
 
 export const portlandConsultingPath = "/portland-ai-consultant";
 export const regionalConsultingPath = "/oregon-washington-ai-consulting";
+export const idahoConsultingPath = "/idaho-ai-consulting";
 
 export const greaterPortlandServiceAreas = [
   { displayName: "Portland", city: "Portland", region: "Oregon" },
@@ -132,6 +133,37 @@ export const regionalServiceClusters = [
   },
 ] as const;
 
+export const idahoServiceClusters = [
+  {
+    name: "Treasure Valley",
+    delivery: "Virtual",
+    places: [
+      "Boise",
+      "Meridian",
+      "Nampa",
+      "Caldwell",
+      "Eagle",
+      "Ada County",
+      "Canyon County",
+    ],
+  },
+  {
+    name: "North Idaho",
+    delivery: "Virtual",
+    places: ["Coeur d'Alene", "Post Falls", "Sandpoint", "Kootenai County"],
+  },
+  {
+    name: "Eastern Idaho",
+    delivery: "Virtual",
+    places: ["Idaho Falls", "Pocatello", "Bonneville County", "Bannock County"],
+  },
+  {
+    name: "Magic Valley & Wood River",
+    delivery: "Virtual",
+    places: ["Twin Falls", "Ketchum", "Twin Falls County", "Blaine County"],
+  },
+] as const;
+
 export const greaterPortlandSchemaAreas = [
   {
     "@type": "AdministrativeArea",
@@ -184,5 +216,30 @@ export const oregonWashingtonSchemaAreas = [
   ),
 ];
 
+export const idahoSchemaAreas = [
+  { "@type": "State", name: "Idaho" },
+  ...idahoServiceClusters.flatMap((cluster) =>
+    cluster.places.map((place) =>
+      place.includes("County")
+        ? {
+            "@type": "AdministrativeArea",
+            name: `${place}, Idaho`,
+            containedInPlace: {
+              "@type": "State",
+              name: "Idaho",
+            },
+          }
+        : {
+            "@type": "City",
+            name: `${place}, Idaho`,
+            containedInPlace: {
+              "@type": "State",
+              name: "Idaho",
+            },
+          },
+    ),
+  ),
+];
+
 export const serviceDescription =
-  "Pacific AI Tech provides practical AI consulting, workflow implementation, AI agent deployment, and hands-on training for small businesses across Oregon and Washington. Work is available virtually throughout the region and on-site in selected communities. Every engagement is custom-scoped.";
+  "Pacific AI Tech provides practical AI consulting, workflow implementation, AI agent deployment, and hands-on training for small businesses across Oregon, Washington, and Idaho. Work is available virtually throughout the region and on-site in selected communities. Every engagement is custom-scoped.";

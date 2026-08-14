@@ -39,7 +39,7 @@ export function SiteFooter() {
           </div>
           <div className="pat-foot-region">
             <h2>Region</h2>
-            <p>Oregon &amp; Washington · virtual consulting · selected on-site work</p>
+            <p>Oregon, Washington &amp; Idaho · virtual consulting · selected on-site work</p>
           </div>
         </div>
         <div className="pat-foot-bottom">
@@ -48,6 +48,7 @@ export function SiteFooter() {
             <Link href="/services">Services</Link>
             <Link href="/portland-ai-consultant">Portland</Link>
             <Link href="/oregon-washington-ai-consulting">Oregon &amp; Washington</Link>
+            <Link href="/idaho-ai-consulting">Idaho</Link>
             <Link href="/case-studies">Case studies</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/about">About</Link>

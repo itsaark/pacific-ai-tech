@@ -19,7 +19,7 @@ const newsreader = Newsreader({
 
 const siteUrl = "https://www.pacificaitech.com";
 const siteDescription =
-  "Practical AI consulting, workflow implementation, and AI agent deployment for small businesses across Oregon and Washington, available virtually or on-site.";
+  "Practical AI consulting, workflow implementation, and AI agent deployment for small businesses across Oregon, Washington, and Idaho, available virtually or on-site.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -51,6 +51,8 @@ export const metadata: Metadata = {
     "Pacific Northwest AI automation",
     "virtual AI consulting",
     "remote AI consultant Oregon Washington",
+    "Idaho AI consulting",
+    "Boise AI consultant",
   ],
   authors: [{ name: "Pacific AI Tech", url: siteUrl }],
   creator: "Pacific AI Tech",
@@ -71,9 +73,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
-    types: {
-      "text/plain": "/llms.txt",
-    },
   },
   openGraph: {
     title: "Pacific AI Tech - Portland AI Consultant & AI Solutions",
@@ -85,8 +84,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/pacific-ai-tech/img/roses.jpeg",
-        width: 1200,
-        height: 800,
+        width: 1280,
+        height: 853,
         alt: "Pacific AI Tech local AI agent setup and training in the Pacific Northwest",
       },
     ],

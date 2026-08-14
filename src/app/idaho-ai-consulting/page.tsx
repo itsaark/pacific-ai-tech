@@ -13,48 +13,48 @@ import {
   businessPhoneDisplay,
   businessPhoneHref,
   contactEmail,
-  oregonWashingtonSchemaAreas,
-  portlandConsultingPath,
+  idahoConsultingPath,
+  idahoSchemaAreas,
+  idahoServiceClusters,
   regionalConsultingPath,
-  regionalServiceClusters,
   serviceDescription,
   siteUrl,
   websiteId,
 } from "@/lib/site";
 
-const pageTitle = "Oregon & Washington AI Consulting";
+const pageTitle = "Idaho AI Consulting";
 const pageDescription =
-  "AI consulting for small businesses across Oregon and Washington. Virtual throughout both states, with on-site work in Greater Portland and selected nearby communities.";
+  "Virtual AI consulting for small businesses across Idaho, from Boise and the Treasure Valley to Coeur d'Alene, Idaho Falls, and Twin Falls. Workflow automation, AI agent deployment, and hands-on training.";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
   alternates: {
-    canonical: regionalConsultingPath,
+    canonical: idahoConsultingPath,
   },
   keywords: [
-    "Oregon AI consulting",
-    "Washington AI consulting",
-    "Oregon AI consultant",
-    "Washington small business AI",
-    "Eugene AI consultant",
-    "Salem AI consulting",
-    "Bend AI consultant",
-    "Spokane AI consulting",
-    "virtual AI consulting Oregon Washington",
+    "Idaho AI consulting",
+    "Idaho AI consultant",
+    "Boise AI consultant",
+    "Boise AI consulting",
+    "Idaho small business AI",
+    "Coeur d'Alene AI consultant",
+    "Idaho Falls AI consulting",
+    "Twin Falls AI consultant",
+    "virtual AI consulting Idaho",
   ],
   openGraph: {
     title: pageTitle,
     description: pageDescription,
-    url: regionalConsultingPath,
+    url: idahoConsultingPath,
     siteName: "Pacific AI Tech",
     type: "website",
     images: [
       {
-        url: "/pacific-ai-tech/img/bridge.jpeg",
+        url: "/pacific-ai-tech/img/tulips.jpeg",
         width: 1280,
-        height: 854,
-        alt: "Pacific AI Tech AI consulting across Oregon and Washington",
+        height: 853,
+        alt: "Pacific AI Tech AI consulting for Idaho small businesses",
       },
     ],
   },
@@ -62,37 +62,37 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
-    images: ["/pacific-ai-tech/img/bridge.jpeg"],
+    images: ["/pacific-ai-tech/img/tulips.jpeg"],
   },
 };
 
 const featuredProof = caseStudies.filter((study) =>
   [
     "frostbox-logistics-ai-dispatch",
-    "kristi-blain-real-estate-ai-assistant",
+    "aspen-pest-control-ai-marketing-automation",
   ].includes(study.slug),
 );
 
 const faqs = [
   {
-    question: "Do you only work in Portland?",
+    question: "Do you come on-site in Idaho?",
     answer:
-      "No. We work with businesses across Oregon and Washington. Greater Portland is where we do most on-site work. Other locations are usually served remotely.",
+      "Idaho engagements start virtually, and most stay that way: working sessions over video, deployment on your machines by screen share, and training with your team. An on-site visit is added to the scope only when it is needed.",
   },
   {
-    question: "Do you travel to Bend, Spokane, or the coast?",
+    question: "Does remote setup actually work?",
     answer:
-      "Those engagements start remotely. An on-site visit is added to the scope only when it is needed.",
+      "Yes. The work happens on your computers either way. We map your workflows over video calls, install and configure the tools on your machines, and teach your team to run them. Several of our engagements have been fully remote.",
   },
   {
-    question: "I am in Greater Portland. Is this the right page?",
+    question: "We are in Coeur d'Alene. Is North Idaho covered?",
     answer:
-      "Use the Portland AI consultant page if your business is in Portland, Vancouver, Beaverton, Hillsboro, or a nearby metro city.",
+      "Yes. We already serve Spokane and Eastern Washington, so North Idaho sits inside our regular working footprint.",
   },
   {
-    question: "Do you work in Idaho?",
+    question: "What about Oregon or Washington?",
     answer:
-      "Yes. Idaho engagements are virtual and are covered on the dedicated Idaho AI consulting page.",
+      "Businesses in Oregon or Washington should use the Oregon and Washington page, and Greater Portland businesses should use the Portland page.",
   },
 ];
 
@@ -101,23 +101,23 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": `${siteUrl}${regionalConsultingPath}#webpage`,
-      url: `${siteUrl}${regionalConsultingPath}`,
+      "@id": `${siteUrl}${idahoConsultingPath}#webpage`,
+      url: `${siteUrl}${idahoConsultingPath}`,
       name: pageTitle,
       description: pageDescription,
       isPartOf: { "@id": websiteId },
-      about: { "@id": `${siteUrl}${regionalConsultingPath}#service` },
-      breadcrumb: { "@id": `${siteUrl}${regionalConsultingPath}#breadcrumb` },
+      about: { "@id": `${siteUrl}${idahoConsultingPath}#service` },
+      breadcrumb: { "@id": `${siteUrl}${idahoConsultingPath}#breadcrumb` },
       inLanguage: "en-US",
     },
     {
       "@type": "Service",
-      "@id": `${siteUrl}${regionalConsultingPath}#service`,
-      name: "Oregon and Washington business AI consulting",
-      url: `${siteUrl}${regionalConsultingPath}`,
+      "@id": `${siteUrl}${idahoConsultingPath}#service`,
+      name: "Idaho business AI consulting",
+      url: `${siteUrl}${idahoConsultingPath}`,
       description: serviceDescription,
       provider: { "@id": businessId },
-      areaServed: oregonWashingtonSchemaAreas,
+      areaServed: idahoSchemaAreas,
       audience: {
         "@type": "BusinessAudience",
         audienceType: "Small businesses and local operators",
@@ -131,7 +131,7 @@ const jsonLd = {
     },
     {
       "@type": "FAQPage",
-      "@id": `${siteUrl}${regionalConsultingPath}#faq`,
+      "@id": `${siteUrl}${idahoConsultingPath}#faq`,
       mainEntity: faqs.map((faq) => ({
         "@type": "Question",
         name: faq.question,
@@ -143,7 +143,7 @@ const jsonLd = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${siteUrl}${regionalConsultingPath}#breadcrumb`,
+      "@id": `${siteUrl}${idahoConsultingPath}#breadcrumb`,
       itemListElement: [
         {
           "@type": "ListItem",
@@ -154,23 +154,17 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Oregon & Washington AI consulting",
-          item: `${siteUrl}${regionalConsultingPath}`,
+          name: "Idaho AI consulting",
+          item: `${siteUrl}${idahoConsultingPath}`,
         },
       ],
     },
   ],
 };
 
-export default function OregonWashingtonConsultingPage() {
+export default function IdahoConsultingPage() {
   const leadFormEnabled = Boolean(
     process.env.RESEND_API_KEY && process.env.LEAD_FROM_EMAIL,
-  );
-  const oregonClusters = regionalServiceClusters.filter(
-    (cluster) => cluster.state === "Oregon",
-  );
-  const washingtonClusters = regionalServiceClusters.filter(
-    (cluster) => cluster.state === "Washington",
   );
 
   return (
@@ -183,22 +177,21 @@ export default function OregonWashingtonConsultingPage() {
       />
       <SiteHeader bookingUrl={bookingUrl} />
 
-      <section className="pat-subpage-hero" aria-labelledby="regional-title">
+      <section className="pat-subpage-hero" aria-labelledby="idaho-title">
         <div className="pat-wrap">
           <div className="pat-subpage-hero-grid">
             <div>
-              <span className="pat-eyebrow">Oregon &amp; Washington</span>
-              <h1 id="regional-title">
-                AI consulting across Oregon and Washington.
-              </h1>
+              <span className="pat-eyebrow">Idaho</span>
+              <h1 id="idaho-title">AI consulting for Idaho small businesses.</h1>
             </div>
             <div>
               <p className="pat-lede">
-                We help small businesses automate repeat work, set up the
-                tools, and train the people who will run them. Work outside
-                Greater Portland is usually remote.{" "}
-                <Link href={portlandConsultingPath}>
-                  Greater Portland businesses should use the Portland page
+                We help small businesses automate repeat work, set up the tools
+                on their own machines, and train the people who will run them.
+                Idaho engagements are virtual-first, from the Treasure Valley
+                to the Panhandle.{" "}
+                <Link href={regionalConsultingPath}>
+                  Oregon and Washington businesses should use the regional page
                 </Link>
                 .
               </p>
@@ -229,24 +222,16 @@ export default function OregonWashingtonConsultingPage() {
           <span className="pat-eyebrow">Service area</span>
           <h2 id="coverage-title">Cities and counties we serve.</h2>
           <p className="pat-lede">
-            Remote consulting is available throughout both states. On-site
-            work is scheduled when the drive makes sense.
+            Remote consulting is available throughout Idaho. On-site visits are
+            added to a scope when they are needed.
           </p>
           <dl className="pat-area-list">
-            <div>
-              <dt>Oregon</dt>
-              <dd>
-                {oregonClusters.flatMap((cluster) => cluster.places).join(", ")}
-              </dd>
-            </div>
-            <div>
-              <dt>Washington</dt>
-              <dd>
-                {washingtonClusters
-                  .flatMap((cluster) => cluster.places)
-                  .join(", ")}
-              </dd>
-            </div>
+            {idahoServiceClusters.map((cluster) => (
+              <div key={cluster.name}>
+                <dt>{cluster.name}</dt>
+                <dd>{cluster.places.join(", ")}</dd>
+              </div>
+            ))}
           </dl>
         </div>
       </section>
@@ -257,7 +242,7 @@ export default function OregonWashingtonConsultingPage() {
       >
         <div className="pat-wrap">
           <span className="pat-eyebrow">Case studies</span>
-          <h2 id="proof-title">Recent work in Oregon.</h2>
+          <h2 id="proof-title">Recent work in the Pacific Northwest.</h2>
           <ul className="pat-plain-list">
             {featuredProof.map((study) => (
               <li key={study.slug}>
@@ -275,10 +260,10 @@ export default function OregonWashingtonConsultingPage() {
       {leadFormEnabled ? (
         <section
           className="pat-local-section"
-          aria-label="Request an Oregon or Washington AI consultation"
+          aria-label="Request an Idaho AI consultation"
         >
           <div className="pat-wrap">
-            <ConsultationForm location="oregon-washington-landing-page" />
+            <ConsultationForm location="idaho-landing-page" />
           </div>
         </section>
       ) : null}

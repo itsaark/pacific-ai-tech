@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/pacific-ai-tech/img/roses.jpeg",
-        width: 1200,
-        height: 800,
+        width: 1280,
+        height: 853,
         alt: "Contact Pacific AI Tech in Portland, Oregon",
       },
     ],

@@ -11,6 +11,7 @@ type ConsultationFormProps = {
     | "homepage"
     | "portland-landing-page"
     | "oregon-washington-landing-page"
+    | "idaho-landing-page"
     | "contact-page";
 };
 

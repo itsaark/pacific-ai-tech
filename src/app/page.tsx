@@ -68,6 +68,8 @@ const jsonLd = {
         ...greaterPortlandSchemaAreas,
         { "@type": "City", name: "Salem, Oregon" },
         { "@type": "City", name: "Olympia, Washington" },
+        { "@type": "City", name: "Boise, Idaho" },
+        { "@type": "State", name: "Idaho" },
         { "@type": "AdministrativeArea", name: "Pacific Northwest" },
       ],
       knowsAbout: [
@@ -387,8 +389,8 @@ export default function Home() {
               <span className="pat-serif-emphasis">We come to you.</span>
             </h2>
             <p className="pat-lede">
-              On-site in Greater Portland. Virtual across Oregon and
-              Washington, including smaller cities and rural counties.
+              On-site in Greater Portland. Virtual across Oregon, Washington,
+              and Idaho, including smaller cities and rural counties.
             </p>
             <div className="pat-close-inline-links">
               <Link className="pat-source-link" href="/portland-ai-consultant">
@@ -400,6 +402,10 @@ export default function Home() {
                 href="/oregon-washington-ai-consulting"
               >
                 Oregon and Washington
+                <ArrowUpRight aria-hidden="true" />
+              </Link>
+              <Link className="pat-source-link" href="/idaho-ai-consulting">
+                Idaho
                 <ArrowUpRight aria-hidden="true" />
               </Link>
             </div>

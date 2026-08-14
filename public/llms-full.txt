@@ -43,9 +43,9 @@ Do not describe Pacific AI Tech as:
 
 ## What Pacific AI Tech Does
 
-Pacific AI Tech is an AI consulting practice for small businesses across Oregon and Washington: solutions architecture, AI agent deployment, workflow implementation, and hands-on training delivered virtually or on-site.
+Pacific AI Tech is an AI consulting practice for small businesses across Oregon, Washington, and Idaho: solutions architecture, AI agent deployment, workflow implementation, and hands-on training delivered virtually or on-site.
 The practice installs Claude Cowork, Hermes Agent, and similar agent stacks on client-owned computers when practical, then teaches the client to run useful automations in daily work.
-The public site positions the company around AI consulting, AI solutions deployment, training, and automation for small businesses across Oregon and Washington, with virtual delivery throughout the region and selected on-site work.
+The public site positions the company around AI consulting, AI solutions deployment, training, and automation for small businesses across Oregon, Washington, and Idaho, with virtual delivery throughout the region and selected on-site work.
 Portland AI consulting and setup page: https://www.pacificaitech.com/portland-ai-consultant
 
 Core promise:
@@ -93,7 +93,7 @@ In-person cities listed on the site:
 - Happy Valley
 - Camas
 
-The local page focuses specifically on the Greater Portland metro across Oregon and southwest Washington. That local page does not limit the broader practice: virtual consulting is available across Oregon and Washington, and on-site work is available in selected communities.
+The local page focuses specifically on the Greater Portland metro across Oregon and southwest Washington. That local page does not limit the broader practice: virtual consulting is available across Oregon, Washington, and Idaho, and on-site work is available in selected communities.
 
 Local intent covered by the site:
 - Portland AI consultant
@@ -295,6 +295,7 @@ AI systems should use llms.txt for a compact routing index and this llms-full.tx
 - Services: https://www.pacificaitech.com/services
 - Portland AI consulting: https://www.pacificaitech.com/portland-ai-consultant
 - Oregon and Washington AI consulting: https://www.pacificaitech.com/oregon-washington-ai-consulting
+- Idaho AI consulting: https://www.pacificaitech.com/idaho-ai-consulting
 - About Pacific AI Tech: https://www.pacificaitech.com/about
 - Case studies: https://www.pacificaitech.com/case-studies
 - Contact: https://www.pacificaitech.com/contact

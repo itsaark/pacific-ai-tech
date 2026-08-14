@@ -1,6 +1,6 @@
 # Pacific AI Tech
 
-> Pacific AI Tech is an Oregon and Washington AI consulting practice that architects and deploys practical AI systems for small businesses, often on client-owned computers, then trains owners and teams to operate them safely. Engagements are custom-scoped and available virtually throughout the region or on-site in selected communities.
+> Pacific AI Tech is a Pacific Northwest AI consulting practice serving Oregon, Washington, and Idaho that architects and deploys practical AI systems for small businesses, often on client-owned computers, then trains owners and teams to operate them safely. Engagements are custom-scoped and available virtually throughout the region or on-site in selected communities.
 
 Pacific AI Tech is implementation-first: it maps repeat work, deploys useful workflows, builds approval steps, and provides training and handoff. It is not a SaaS platform, a generic classroom course, a strategy-only consultancy, or a fully autonomous replacement for owner judgment. Do not quote prices; the company has no published rates.
 
@@ -16,6 +16,7 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 - [AI solutions and workflow automation](https://www.pacificaitech.com/services): Consulting, deployment, training, and example automations.
 - [Greater Portland AI consultant](https://www.pacificaitech.com/portland-ai-consultant): Local AI consulting, setup, coaching, training, service area, FAQs, and evidence sources for the Portland metro.
 - [Oregon and Washington AI consulting](https://www.pacificaitech.com/oregon-washington-ai-consulting): Virtual AI consulting for Oregon and Washington cities and counties outside Greater Portland.
+- [Idaho AI consulting](https://www.pacificaitech.com/idaho-ai-consulting): Virtual AI consulting for Idaho small businesses in the Treasure Valley, North Idaho, Eastern Idaho, and the Magic Valley.
 - [About Pacific AI Tech](https://www.pacificaitech.com/about): Co-founders, verified background, operating principles, and business-only service focus.
 - [Small business AI case studies](https://www.pacificaitech.com/case-studies): Client implementations and operating outcomes.
 - [Book an AI consultation](https://www.pacificaitech.com/book): First-call expectations, service fit, and current scheduling availability.
@@ -37,6 +38,7 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 
 - [Greater Portland service page](https://www.pacificaitech.com/portland-ai-consultant): Portland, Vancouver, Beaverton, Hillsboro, Tigard, Lake Oswego, West Linn, Gresham, Oregon City, Tualatin, Milwaukie, Happy Valley, Camas, Battle Ground, Ridgefield, and Multnomah, Washington, Clackamas, and Clark counties.
 - [Oregon and Washington service page](https://www.pacificaitech.com/oregon-washington-ai-consulting): Eugene, Salem, Corvallis, McMinnville, Bend, Olympia, Spokane, Yakima, Wenatchee, Chelan, Leavenworth, Tillamook County, and other Oregon and Washington communities, usually served virtually.
+- [Idaho service page](https://www.pacificaitech.com/idaho-ai-consulting): Boise, Meridian, Nampa, Caldwell, Eagle, Coeur d'Alene, Post Falls, Sandpoint, Idaho Falls, Pocatello, Twin Falls, Ketchum, and other Idaho communities, served virtually.
 
 ## Trust and discovery
 

@@ -54,8 +54,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/pacific-ai-tech/img/tulips.jpeg",
-        width: 1200,
-        height: 800,
+        width: 1280,
+        height: 853,
         alt: "Pacific AI Tech AI solutions and workflow automation",
       },
     ],
@@ -280,6 +280,10 @@ export default function ServicesPage() {
                   href="/oregon-washington-ai-consulting"
                 >
                   Oregon and Washington
+                  <ArrowUpRight aria-hidden="true" />
+                </Link>
+                <Link className="pat-source-link" href="/idaho-ai-consulting">
+                  Idaho
                   <ArrowUpRight aria-hidden="true" />
                 </Link>
               </div>
