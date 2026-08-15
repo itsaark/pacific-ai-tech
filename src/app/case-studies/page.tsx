@@ -13,14 +13,14 @@ import { businessId, bookingUrl, siteUrl, websiteId } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Small Business AI Consulting Case Studies",
   description:
-    "See how Oregon and Washington small businesses use practical AI for dispatch, real estate research, customer communication, and neighborhood marketing.",
+    "See how small businesses use practical AI for dispatch, real estate research, customer communication, neighborhood marketing, and purchase-order intake.",
   alternates: {
     canonical: "/case-studies",
   },
   openGraph: {
     title: "Small Business AI Consulting Case Studies",
     description:
-      "Oregon and Washington client stories showing how practical AI changes dispatch, customer communication, research, and neighborhood marketing.",
+      "Client stories showing how practical AI changes dispatch, customer communication, research, neighborhood marketing, and purchase-order intake.",
     url: "/case-studies",
     siteName: "Pacific AI Tech",
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Small Business AI Consulting Case Studies",
     description:
-      "Practical AI deployment stories from Oregon small businesses, with implementation details and owner-controlled outcomes.",
+      "Practical AI deployment stories with implementation details and owner-controlled outcomes, from freight and real estate to manufacturing order intake.",
     images: ["/pacific-ai-tech/img/case-studies/frostbox-logistics-ascii.jpg"],
   },
 };
@@ -55,7 +55,7 @@ const jsonLd = {
       about: { "@id": businessId },
       breadcrumb: { "@id": `${siteUrl}/case-studies#breadcrumb` },
       mainEntity: { "@id": `${siteUrl}/case-studies#case-study-list` },
-      dateModified: "2026-08-12",
+      dateModified: "2026-08-15",
       inLanguage: "en-US",
     },
     {
@@ -122,9 +122,9 @@ export default function CaseStudiesPage() {
               </h1>
             </div>
             <p className="pat-lede">
-              These Oregon and southwest Washington small business stories show
-              the starting problem, the AI setup we built, the handoff, and the
-              operating change that followed while each owner stayed in control.
+              These client stories show the starting problem, the AI setup we
+              built, the handoff, and the operating change that followed while
+              each owner stayed in control.
             </p>
           </div>
         </div>

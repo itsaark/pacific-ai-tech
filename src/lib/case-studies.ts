@@ -527,6 +527,139 @@ export const caseStudies: CaseStudy[] = [
     pullQuote:
       "The useful part is not that AI can write another ad. It is that every completed service report and every week of local property activity can now tell Aspen where its next relevant campaign should begin.",
   },
+  {
+    slug: "paragon-international-ai-purchase-order-automation",
+    title: "Purchase orders used to wait for someone to open the attachment",
+    seoTitle: "AI Purchase Order Automation for Paragon",
+    metaDescription:
+      "How Pacific AI Tech helped Paragon International use a Hermes agent to read Gmail purchase orders, extract data, catch duplicates, and print valid POs.",
+    clientLabel: "Paragon International",
+    clientUrl: "https://www.paragonconcessions.com/",
+    industry: "Concession equipment manufacturing",
+    location: "Nevada, Iowa",
+    services: [
+      "Local Hermes agent setup",
+      "Gmail inbox monitoring",
+      "Purchase order classification",
+      "Multi-format document reading",
+      "OCR for scans and photographed orders",
+      "Order data extraction",
+      "Duplicate purchase order detection",
+      "Network printer workflow",
+      "Document filing and naming",
+      "Audit logging",
+    ],
+    topics: [
+      "purchase order automation",
+      "AI purchase order processing",
+      "email purchase order OCR",
+      "Gmail document intake",
+      "manufacturer order entry automation",
+      "scanned purchase order processing",
+      "duplicate purchase order detection",
+      "concession equipment manufacturer",
+      "intelligent document processing",
+      "Hermes AI agent",
+      "sales order intake",
+    ],
+    publishedDate: "2026-08-15",
+    modifiedDate: "2026-08-15",
+    heroImage: {
+      src: "/pacific-ai-tech/img/case-studies/paragon-international-ai-purchase-order-automation-ascii.jpg",
+      alt: "ASCII-style image of popcorn being scooped from a commercial popcorn machine into a striped bag",
+      width: 1600,
+      height: 1067,
+      caption:
+        "Paragon International manufactures commercial concession equipment in Nevada, Iowa, including popcorn machines used in stadiums, schools, and restaurants.",
+    },
+    summary:
+      "Paragon International is a U.S. manufacturer of commercial concession equipment in Nevada, Iowa. Purchase orders arrive by email as PDFs, Word files, spreadsheets, scans, and photos. Pacific AI Tech set up a Hermes agent to watch Gmail, classify the mail, extract order data, catch duplicates, print valid POs, and file the work.",
+    metrics: [
+      {
+        value: "24/7",
+        label: "Gmail inbox watch",
+        detail:
+          "The agent monitors one or more inboxes continuously so a purchase order does not sit unseen until someone happens to open the next message.",
+      },
+      {
+        value: "Six types",
+        label: "of incoming mail sorted first",
+        detail:
+          "Each email is classified as a purchase order, quote request, cancellation, return/RMA, customer inquiry, or other before any printing or filing happens.",
+      },
+      {
+        value: "Print + file",
+        label: "when the purchase order is valid",
+        detail:
+          "Valid orders print to the network printer, get a consistent file name, land in organized folders, and leave a log the team can audit later.",
+      },
+    ],
+    challenge:
+      "Paragon receives purchase orders from customers such as Amazon, Home Depot, distributors, school systems, and other commercial buyers. The orders arrive by email in many formats: PDFs, Word documents, Excel spreadsheets, scanned pages, and photographs of printed forms. Someone had to open each attachment, decide what the message was, identify the customer, pull the order details, watch for duplicates, print the valid POs, and file the rest. The factory could not start from an unread inbox.",
+    approach: [
+      "Set up a Hermes agent to monitor one or more Gmail inboxes continuously and download incoming attachments as they arrive.",
+      "Taught the agent to read PDFs, Word documents, Excel spreadsheets, scanned PDFs, and image files, using OCR when the page was a scan or a photograph of a purchase order.",
+      "Built a classification step that separates purchase orders from quote requests, cancellations, returns and RMAs, customer inquiries, and other mail before any order work begins.",
+      "Configured customer identification and extraction into a standardized order structure so mixed inbound formats become the same kind of record.",
+      "Added duplicate purchase-order detection so the same order is not printed, filed, or treated as new work a second time.",
+      "Connected valid purchase orders to Paragon's network printer, then saved and renamed the documents into organized folders with a consistent naming convention.",
+      "Moved processed mail into Gmail labels and wrote audit logs so the team can see what the agent classified, extracted, printed, filed, or held back.",
+    ],
+    outcomes: [
+      "Incoming mail is watched around the clock instead of waiting for the next person to open Gmail.",
+      "Attachments in different formats are read as documents, not left as a pile of files that someone has to interpret one by one.",
+      "Purchase orders are separated from quotes, cancellations, returns, and ordinary questions before they reach the printer.",
+      "Valid purchase orders print automatically, land in named folders, and leave a record of what happened.",
+      "Duplicate orders are caught before they become a second print job or a second trip through the shop.",
+      "The team can review logs when something looks off, instead of reconstructing the inbox by memory.",
+    ],
+    narrative: [
+      {
+        heading: "The order is already in the inbox",
+        paragraphs: [
+          "Paragon International builds commercial concession equipment in Nevada, Iowa: popcorn machines, snow cone machines, cotton candy equipment, fryers, and the other machines that show up at stadiums, schools, and restaurant counters. The manufacturing work is straightforward once the order is clear. The delay was earlier than that.",
+          "Customers such as Amazon, Home Depot, distributors, and school systems send purchase orders by email. Some attach a clean PDF. Others send a spreadsheet. Some forward a Word document. Some photograph a printed form and send the picture. Until someone opened that attachment, the factory did not yet have an order. It had a file.",
+        ],
+      },
+      {
+        heading: "Not every email is a purchase order",
+        paragraphs: [
+          "The same inboxes also receive quote requests, cancellations, returns, RMAs, and ordinary customer questions. Treating all of that mail as an order would create as much trouble as missing a real PO.",
+          "Pacific AI Tech set up Hermes to classify each incoming message first. The agent identifies the customer and decides whether the mail is a purchase order, a quote request, a cancellation, a return, an inquiry, or something else. Only then does the order path continue.",
+        ],
+      },
+      {
+        heading: "Read the page that arrived",
+        paragraphs: [
+          "Purchase-order automation fails when it expects one template. Paragon's customers do not share a form. A useful system has to read the page that actually arrived, including scans and photographs that are not already text.",
+          "The Hermes setup reads PDFs, Word documents, Excel files, scanned PDFs, and image formats such as JPG, PNG, and TIFF. When the attachment is a picture of a printed order, OCR turns the page into text the agent can use. The extracted details then go into one standardized structure, so a photo of a PO and a native spreadsheet can become the same kind of record.",
+        ],
+      },
+      {
+        heading: "The same order twice is worse than a late one",
+        paragraphs: [
+          "A missed purchase order delays the shop. A duplicated one wastes material, time, and follow-up. Because the same customer can resend a PO, forward it again, or attach it to a new thread, the workflow has to notice when the order has already been seen.",
+          "Duplicate detection sits in front of printing and filing. If the agent recognizes a purchase order it has already processed, it does not send a second copy to the printer or create a second official file.",
+        ],
+      },
+      {
+        heading: "A valid PO should leave the inbox and hit the printer",
+        paragraphs: [
+          "When the message is a valid purchase order, the rest of the work is physical and boring on purpose. The agent prints the order to Paragon's network printer, renames the document with a consistent convention, and saves it into the right folder.",
+          "Processed mail moves into Gmail labels so the inbox is no longer the archive. Logs record what was classified, extracted, printed, filed, or held back. The team can audit the trail later without reconstructing the day from memory.",
+        ],
+      },
+      {
+        heading: "The agent does the reading. The company still owns the order.",
+        paragraphs: [
+          "This is not a new purchasing portal and not another monthly document platform. It is a Hermes agent taught the shape of Paragon's inbound mail, the document formats customers actually send, and the point at which a purchase order should become paper on the shop side of the building.",
+          "The useful change is not that nobody looks at orders anymore. It is that the shop no longer waits for someone to open every attachment before the real work can start.",
+        ],
+      },
+    ],
+    pullQuote:
+      "The useful part is not that AI can open an email. It is that a purchase order can arrive as a PDF, a spreadsheet, or a photo of a printed form and still become the same structured order the shop can act on.",
+  },
 ];
 
 export function getCaseStudy(slug: string) {
