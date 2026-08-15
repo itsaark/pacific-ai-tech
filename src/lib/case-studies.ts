@@ -660,6 +660,137 @@ export const caseStudies: CaseStudy[] = [
     pullQuote:
       "The useful part is not that AI can open an email. It is that a purchase order can arrive as a PDF, a spreadsheet, or a photo of a printed form and still become the same structured order the shop can act on.",
   },
+  {
+    slug: "dental-practice-ai-voice-receptionist",
+    title: "Every missed call was a new patient Googling the next dentist",
+    seoTitle: "AI Voice Receptionist for a Vancouver Dental Practice",
+    metaDescription:
+      "A Vancouver dental practice's 24/7 AI voice receptionist: Retell.ai voice flows, n8n workflows, Dentrix Ascend scheduling via NexHealth, and clean human escalation.",
+    clientLabel: "Confidential dental practice",
+    industry: "General and family dentistry",
+    location: "Vancouver, Washington · Portland metro",
+    services: [
+      "AI voice receptionist build on Retell.ai",
+      "n8n workflow orchestration",
+      "NexHealth integration",
+      "Dentrix Ascend integration",
+      "New and returning patient booking flows",
+      "Rescheduling and cancellation handling",
+      "Insurance and FAQ call answering",
+      "Urgent-call triage and human escalation",
+      "HIPAA-conscious stack configuration",
+      "Call performance tracking and prompt iteration",
+    ],
+    topics: [
+      "AI voice receptionist for dental practices",
+      "dental office answering service",
+      "AI appointment booking for dentists",
+      "Retell.ai voice agent",
+      "n8n healthcare automation",
+      "NexHealth integration",
+      "Dentrix Ascend integration",
+      "HIPAA-conscious AI receptionist",
+      "dental emergency call triage",
+      "Vancouver Washington dental practice",
+    ],
+    publishedDate: "2026-08-15",
+    modifiedDate: "2026-08-15",
+    heroImage: {
+      src: "/pacific-ai-tech/img/case-studies/dental-practice-ai-voice-receptionist-ascii.jpg",
+      alt: "ASCII-style image of a dentist and assistant treating a patient in a dental chair",
+      width: 1920,
+      height: 1282,
+      caption:
+        "A Vancouver, Washington dental practice keeps its chairs full and its staff focused while an AI voice receptionist covers the phones around the clock.",
+    },
+    summary:
+      "A dental practice in Vancouver, Washington was losing callers whenever the front desk had its hands full, which was most of the day. Pacific AI Tech built a 24/7 AI voice receptionist on Retell.ai and n8n that books, reschedules, and cancels against the live Dentrix Ascend schedule through NexHealth, answers insurance questions, triages urgent calls, and hands complex situations to humans.",
+    metrics: [
+      {
+        value: "24/7",
+        label: "every call answered, even after close",
+        detail:
+          "The voice receptionist picks up during lunch, after hours, on weekends, and in the moments when the entire front desk is with patients.",
+      },
+      {
+        value: "Real-time",
+        label: "schedule reads and writes",
+        detail:
+          "n8n workflows connect the voice agent to Dentrix Ascend through NexHealth, so bookings, reschedules, and cancellations land on the live calendar instead of in a callback queue.",
+      },
+      {
+        value: "Human handoff",
+        label: "for the calls that need one",
+        detail:
+          "Urgent symptoms, complicated insurance situations, and anything outside the agent's lane escalate to staff with the caller's context already collected.",
+      },
+    ],
+    challenge:
+      "A dental front desk answers the phone while checking in patients, verifying insurance, and running the day's schedule. Every call that rolls to voicemail is a coin flip the practice loses twice: existing patients wait for a callback, and new patients often hang up and dial the next office on the search results page. The team needed full phone coverage — mornings, lunch hours, evenings, and weekends — without hiring another full-time receptionist.",
+    approach: [
+      "Designed conversational voice flows in Retell.ai for the calls a dental office actually gets: new-patient booking, returning-patient booking, rescheduling, cancellations, FAQs, and insurance questions.",
+      "Built an urgent-call triage path that recognizes emergency language — a knocked-out tooth, facial swelling, pain that cannot wait — and escalates instead of offering a routine cleaning slot.",
+      "Connected the voice agent to the practice management system with n8n workflows, using the NexHealth integration with Dentrix Ascend for real-time schedule reads and writes.",
+      "Gave the agent clean escalation paths: when a call exceeds its authority, it hands off to human staff with the caller's details and reason for calling already captured.",
+      "Made HIPAA-conscious tool and configuration choices throughout the stack, so what the agent collects, where call data flows, and what gets stored are deliberate decisions.",
+      "Set up call performance tracking and a review loop, so real transcripts drive ongoing prompt and flow improvements after launch.",
+    ],
+    outcomes: [
+      "The phone is answered 24/7: during lunch, after close, on weekends, and in the middle of a packed morning.",
+      "Appointments are booked, rescheduled, and canceled against the live schedule, so the calendar stays the single source of truth.",
+      "Routine questions about hours, directions, services, and insurance are answered without interrupting the front desk.",
+      "Urgent calls are triaged and escalated instead of sitting in a voicemail box until morning.",
+      "Front desk staff spend their attention on the patients standing in front of them instead of on a ringing line.",
+      "The system keeps improving from real call feedback instead of staying frozen at launch quality.",
+    ],
+    narrative: [
+      {
+        heading: "The phone does not care that the waiting room is full",
+        paragraphs: [
+          "A dental front desk is one of the few jobs where answering the phone is both the whole job and constantly impossible. Check-ins stack up at eight in the morning. Insurance verifications run long. Two lines ring while the patient at the counter is asking about a crown. The caller knows none of this. They just hear ringing.",
+          "Here is the uncomfortable math of a missed call. An existing patient might leave a voicemail and wait for a callback. A new patient usually will not. They found the office on Google, and Google showed them nine other dentists within a few miles. For a first-time caller, a missed call is not a delayed conversation. It is usually the end of one.",
+          "The problem also keeps its own hours. Teeth crack on Saturdays. Toothaches peak at night. Some of the most motivated callers of the week were dialing after close, and every one of them went straight to a voicemail box.",
+        ],
+      },
+      {
+        heading: "An agent that answers like a receptionist, not a phone tree",
+        paragraphs: [
+          "Pacific AI Tech built the voice layer on Retell.ai, with separate conversational flows for the calls a dental office actually receives. New patients get one path: who they are, what they need, which insurance they carry, and what times work. Returning patients get a faster one. Booking, rescheduling, and cancellations each carry their own logic, because a cancellation is not a booking with the sign flipped. It is an open chair the practice can refill.",
+          "The agent also absorbs the questions that used to interrupt the front desk all week: hours, directions, parking, what to bring, whether a plan is accepted. The goal was never to sound clever. The goal was to sound like a good receptionist on a good day, every day, including Sunday.",
+        ],
+      },
+      {
+        heading: "A booking in a voicemail is not a booking",
+        paragraphs: [
+          "Most after-hours systems are politely dressed-up message takers. They promise a callback, and every promised callback is another chance for the patient to keep shopping. So this agent does not take messages about the calendar. It works the calendar.",
+          "n8n workflows connect the voice agent to the practice management system, using the NexHealth integration with Dentrix Ascend for real-time schedule reads and writes. When a caller asks for a Tuesday afternoon, the agent is looking at the actual Tuesday afternoon. When the call ends, the appointment is on the schedule — not in a queue for someone to transcribe in the morning.",
+        ],
+      },
+      {
+        heading: "Knowing which calls to keep, and which to hand off",
+        paragraphs: [
+          "Any system can say yes to everything and fail quietly. The useful part of this build is the opposite: the agent knows the edge of its lane. A knocked-out tooth, facial swelling, pain that cannot wait until Thursday — the triage flow recognizes urgent language and escalates immediately instead of cheerfully offering a routine slot.",
+          "The same discipline applies to tangled insurance situations and anything that needs a coordinator's judgment. When the agent hands off, it hands over the context with it: who called, what they need, and what has already been said. The human picks up the conversation instead of restarting it.",
+        ],
+      },
+      {
+        heading: "HIPAA is not a feature. It is the floor.",
+        paragraphs: [
+          "A dental office does not get to move fast and break things. Every tool choice in the stack was made with patient data in the room: what the agent collects, where call recordings and transcripts flow, which systems touch patient information, and what gets stored at all.",
+          "That is not the glamorous part of the project, but it is the part that makes the rest of it safe to run. The stack was chosen so the practice could answer every call without cutting corners on the trust those calls carry.",
+        ],
+      },
+      {
+        heading: "Every call makes the next one better",
+        paragraphs: [
+          "Launch was not the finish. Call performance is tracked, real transcripts get reviewed, and the prompts and flows are adjusted based on what actual patients say: the phrasing that confuses them, the questions that show up twice a day, the moments a handoff should have happened sooner.",
+          "The version answering the phone today is measurably better than the one that launched, because real calls said so. Meanwhile, the front desk got something it never had before: coverage that never pulls anyone away from the patient standing at the counter.",
+        ],
+      },
+    ],
+    pullQuote:
+      "The front desk did not get replaced. It got backup that answers at 8:47 p.m., books against the live schedule, and knows which calls it should never try to keep.",
+  },
 ];
 
 export function getCaseStudy(slug: string) {
