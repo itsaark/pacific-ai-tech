@@ -77,18 +77,27 @@ function getSchemaKeywords(study: CaseStudy) {
 }
 
 function getSchemaAbout(study: CaseStudy) {
+  const client =
+    study.clientSchemaType === "Person"
+      ? {
+          "@type": "Person",
+          name: study.clientLabel,
+          url: study.clientUrl,
+        }
+      : {
+          "@type": "Organization",
+          name: study.clientLabel,
+          url: study.clientUrl,
+          founder: study.founderName
+            ? {
+                "@type": "Person",
+                name: study.founderName,
+              }
+            : undefined,
+        };
+
   return [
-    {
-      "@type": "Organization",
-      name: study.clientLabel,
-      url: study.clientUrl,
-      founder: study.founderName
-        ? {
-            "@type": "Person",
-            name: study.founderName,
-          }
-        : undefined,
-    },
+    client,
     {
       "@type": "Thing",
       name: study.industry,
@@ -288,6 +297,28 @@ export default async function CaseStudyPage({ params }: Props) {
             </div>
           </section>
 
+          <aside
+            className="pat-case-inline-cta"
+            aria-label="Discuss a similar AI workflow"
+          >
+            <div>
+              <p className="pat-case-inline-cta-label">See a similar bottleneck?</p>
+              <p>
+                Bring us one repeat task from your business. In a 30-minute
+                consultation, we&apos;ll compare it with the workflow above and
+                tell you whether AI is a practical fit.
+              </p>
+            </div>
+            <Button
+              render={<Link href={bookingUrl} />}
+              nativeButton={false}
+              className="pat-btn"
+            >
+              Discuss your workflow
+              <ArrowRight data-icon="inline-end" />
+            </Button>
+          </aside>
+
           <div className="pat-case-narrative">
             {study.narrative.map((section) => (
               <section key={section.heading}>
@@ -340,21 +371,20 @@ export default async function CaseStudyPage({ params }: Props) {
 
           <div className="pat-case-next">
             <div>
-              <h2>Have a business workflow like this?</h2>
+              <h2>Book a 30-minute AI workflow consultation.</h2>
               <p>
-                See how our{" "}
-                <Link href="/portland-ai-consultant">
-                  Portland AI consulting and workflow implementation
-                </Link>{" "}
-                works, or bring us the repeat task that keeps stealing the day.
+                Talk directly with a founder about the repeat task slowing down
+                your business. See how our{" "}
+                <Link href={study.servicePath}>{study.serviceLinkLabel}</Link>{" "}
+                works, then choose a time that fits your schedule.
               </p>
             </div>
             <Button
-              render={<a href={bookingUrl} />}
+              render={<Link href={bookingUrl} />}
               nativeButton={false}
               className="pat-btn pat-btn-primary"
             >
-              Book a call
+              Choose a time
               <ArrowRight data-icon="inline-end" />
             </Button>
           </div>

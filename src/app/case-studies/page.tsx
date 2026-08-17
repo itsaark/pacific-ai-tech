@@ -13,7 +13,7 @@ import { businessId, bookingUrl, siteUrl, websiteId } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Small Business AI Consulting Case Studies",
   description:
-    "See how small businesses use practical AI for dispatch, real estate research, customer communication, neighborhood marketing, purchase-order intake, and front-desk phone coverage.",
+    "See how small businesses use practical AI for dispatch, real estate, home services, purchase-order intake, marketing, and front-desk call coverage.",
   alternates: {
     canonical: "/case-studies",
   },

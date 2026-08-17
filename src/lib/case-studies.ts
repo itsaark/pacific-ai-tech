@@ -5,9 +5,15 @@ export type CaseStudy = {
   metaDescription: string;
   clientLabel: string;
   clientUrl?: string;
+  clientSchemaType: "Person" | "Organization";
   founderName?: string;
   industry: string;
   location: string;
+  servicePath:
+    | "/services"
+    | "/portland-ai-consultant"
+    | "/oregon-washington-ai-consulting";
+  serviceLinkLabel: string;
   services: string[];
   topics: string[];
   summary: string;
@@ -39,14 +45,18 @@ export type CaseStudy = {
 export const caseStudies: CaseStudy[] = [
   {
     slug: "frostbox-logistics-ai-dispatch",
-    title: "The dispatcher who stopped living inside the load boards",
+    title: "AI dispatch automation for refrigerated trucking",
     seoTitle: "AI Dispatch Automation for Frostbox Logistics",
     metaDescription:
       "How Pacific AI Tech helped Frostbox Logistics use a local Hermes agent to monitor Truckstop and DAT, draft bids, scout return loads, and keep owner approval.",
     clientLabel: "Frostbox Logistics",
     clientUrl: "https://www.frostboxlogistics.com/",
+    clientSchemaType: "Organization",
     industry: "Refrigerated trucking",
     location: "Coburg, Oregon · Pacific Northwest",
+    servicePath: "/oregon-washington-ai-consulting",
+    serviceLinkLabel:
+      "Oregon and Washington AI consulting and workflow implementation",
     services: [
       "Local AI agent setup",
       "Hadley AI assistant configuration",
@@ -151,14 +161,18 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "kristi-blain-real-estate-ai-assistant",
-    title: "A real-estate workday that stops disappearing into notes",
+    title: "An AI assistant for a real estate workday",
     seoTitle: "AI Assistant for Kristi Blain Real Estate",
     metaDescription:
       "How Pacific AI Tech helped Kristi Blain run Claude Cowork for listing research, client follow-up, Canva flyers, property PDFs, and transaction reminders.",
     clientLabel: "Kristi Blain",
     clientUrl: "https://www.zillow.com/profile/CEGkristi",
+    clientSchemaType: "Person",
     industry: "Residential real estate",
     location: "Eugene and Coburg, Oregon",
+    servicePath: "/oregon-washington-ai-consulting",
+    serviceLinkLabel:
+      "Oregon and Washington AI consulting and workflow implementation",
     services: [
       "Claude Cowork setup",
       "Real-estate listing research automation",
@@ -282,9 +296,12 @@ export const caseStudies: CaseStudy[] = [
       "AI automation for home inspectors helped Northbank capture missed calls, answer report questions, and save Will Graff time and money. See what changed.",
     clientLabel: "Northbank Home Inspection",
     clientUrl: "https://www.northbankhomeinspection.com/",
+    clientSchemaType: "Organization",
     founderName: "Will Graff",
     industry: "Residential home inspection",
     location: "Vancouver, Washington · Portland metro",
+    servicePath: "/portland-ai-consultant",
+    serviceLinkLabel: "Portland AI consulting and workflow implementation",
     services: [
       "AI voice assistant workflow",
       "Missed-call intake automation",
@@ -408,15 +425,18 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "aspen-pest-control-ai-marketing-automation",
-    title: "How AI turned nearly 8,000 service histories into a neighborhood growth engine",
+    title: "AI marketing automation for pest control",
     seoTitle: "AI Marketing Automation for Pest Control",
     metaDescription:
       "AI marketing automation helped Aspen turn service reports into neighborhood campaigns and find new Clark County homeowners each week. See how it works.",
     clientLabel: "Aspen Pest Control",
     clientUrl: "https://aspenpestservice.com/",
+    clientSchemaType: "Organization",
     founderName: "Joseph H.",
     industry: "Residential and commercial pest control",
     location: "Vancouver, Washington · Vancouver–Portland metro",
+    servicePath: "/portland-ai-consultant",
+    serviceLinkLabel: "Portland AI consulting and workflow implementation",
     services: [
       "Pest activity neighborhood modeling",
       "Service report data automation",
@@ -529,14 +549,17 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "paragon-international-ai-purchase-order-automation",
-    title: "Purchase orders used to wait for someone to open the attachment",
+    title: "AI purchase order automation for emailed POs",
     seoTitle: "AI Purchase Order Automation for Paragon",
     metaDescription:
       "How Pacific AI Tech helped Paragon International use a Hermes agent to read Gmail purchase orders, extract data, catch duplicates, and print valid POs.",
     clientLabel: "Paragon International",
     clientUrl: "https://www.paragonconcessions.com/",
+    clientSchemaType: "Organization",
     industry: "Concession equipment manufacturing",
     location: "Nevada, Iowa",
+    servicePath: "/services",
+    serviceLinkLabel: "AI consulting and workflow implementation services",
     services: [
       "Local Hermes agent setup",
       "Gmail inbox monitoring",
@@ -662,13 +685,16 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "dental-practice-ai-voice-receptionist",
-    title: "Every missed call was a new patient Googling the next dentist",
-    seoTitle: "AI Voice Receptionist for a Vancouver Dental Practice",
+    title: "An AI voice receptionist for a dental practice",
+    seoTitle: "Dental AI Voice Receptionist Case Study",
     metaDescription:
-      "A Vancouver dental practice's 24/7 AI voice receptionist: Retell.ai voice flows, n8n workflows, Dentrix Ascend scheduling via NexHealth, and clean human escalation.",
+      "See how a Vancouver dental practice uses a 24/7 AI voice receptionist to answer calls, manage the live schedule, and escalate urgent cases to staff.",
     clientLabel: "Confidential dental practice",
+    clientSchemaType: "Organization",
     industry: "General and family dentistry",
     location: "Vancouver, Washington · Portland metro",
+    servicePath: "/portland-ai-consultant",
+    serviceLinkLabel: "Portland AI consulting and workflow implementation",
     services: [
       "AI voice receptionist build on Retell.ai",
       "n8n workflow orchestration",
