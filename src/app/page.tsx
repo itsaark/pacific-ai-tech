@@ -172,7 +172,7 @@ export default function Home() {
           <div className="pat-hero-text">
             <div>
               <h1 id="hero-title">
-                We architect &amp; deploy{" "}
+                We build{" "}
                 <span className="pat-underlined">AI solutions</span> for small
                 businesses.
                 <br />
@@ -274,6 +274,41 @@ export default function Home() {
         </section>
       </div>
 
+      <section className="pat-case-preview" aria-labelledby="case-preview-title">
+        <div className="pat-wrap">
+          <SectionHeading eyebrow="Case studies">
+            <div className="pat-section-title-row">
+              <h2 id="case-preview-title">
+                Real client stories, showing{" "}
+                <span className="pat-serif-emphasis">what changed</span>.
+              </h2>
+              <CtaButton href="/case-studies" variant="outline">
+                View case studies
+              </CtaButton>
+            </div>
+          </SectionHeading>
+          <div className="pat-case-preview-grid">
+            {featuredStudies.map((study) => (
+              <Link
+                className="pat-case-card"
+                href={`/case-studies/${study.slug}`}
+                key={study.slug}
+              >
+                <span className="pat-case-card-meta">
+                  {study.clientLabel} · {study.industry}
+                </span>
+                <h3>{study.title}</h3>
+                <p>{study.summary}</p>
+                <span className="pat-case-card-foot">
+                  Read case study
+                  <ArrowUpRight data-icon="inline-end" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="pat-who" aria-labelledby="clients-title">
         <div className="pat-wrap">
           <SectionHeading eyebrow="Who we work with">
@@ -337,41 +372,6 @@ export default function Home() {
           />
         </section>
       </div>
-
-      <section className="pat-case-preview" aria-labelledby="case-preview-title">
-        <div className="pat-wrap">
-          <SectionHeading eyebrow="Case studies">
-            <div className="pat-section-title-row">
-              <h2 id="case-preview-title">
-                Real client stories, showing{" "}
-                <span className="pat-serif-emphasis">what changed</span>.
-              </h2>
-              <CtaButton href="/case-studies" variant="outline">
-                View case studies
-              </CtaButton>
-            </div>
-          </SectionHeading>
-          <div className="pat-case-preview-grid">
-            {featuredStudies.map((study) => (
-              <Link
-                className="pat-case-card"
-                href={`/case-studies/${study.slug}`}
-                key={study.slug}
-              >
-                <span className="pat-case-card-meta">
-                  {study.clientLabel} · {study.industry}
-                </span>
-                <h3>{study.title}</h3>
-                <p>{study.summary}</p>
-                <span className="pat-case-card-foot">
-                  Read case study
-                  <ArrowUpRight data-icon="inline-end" />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <div className="pat-wrap">
         <section className="pat-region" aria-labelledby="region-title">
