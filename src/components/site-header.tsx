@@ -11,6 +11,7 @@ const navItems = [
   { href: "/services", label: "Services" },
   { href: "/portland-ai-consultant", label: "AI consulting" },
   { href: "/case-studies", label: "Case studies" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -62,6 +63,10 @@ export function SiteHeader({ bookingUrl }: SiteHeaderProps) {
 
     if (href === "/case-studies") {
       return pathname.startsWith("/case-studies");
+    }
+
+    if (href === "/blog") {
+      return pathname.startsWith("/blog");
     }
 
     if (href === "/services") {

@@ -138,6 +138,9 @@ export const config = {
     "/case-studies",
     "/case-studies.md",
     "/case-studies/:path*",
+    "/blog",
+    "/blog.md",
+    "/blog/:path*",
     "/index.md",
   ],
 };

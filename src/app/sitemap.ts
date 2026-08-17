@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 
+import { blogPosts } from "@/lib/blog-posts";
 import { caseStudies } from "@/lib/case-studies";
 import { siteUrl } from "@/lib/site";
 
@@ -18,6 +19,7 @@ const staticRoutes: Array<{
   },
   { path: "/idaho-ai-consulting", changeFrequency: "weekly", priority: 0.85 },
   { path: "/case-studies", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
   { path: "/about", changeFrequency: "monthly", priority: 0.7 },
   { path: "/book", changeFrequency: "monthly", priority: 0.7 },
@@ -40,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    })),
+    ...blogPosts.map((post) => ({
+      url: `${siteUrl}/blog/${post.slug}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     })),
   ];
 }

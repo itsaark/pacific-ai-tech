@@ -50,6 +50,7 @@ export function SiteFooter() {
             <Link href="/oregon-washington-ai-consulting">Oregon &amp; Washington</Link>
             <Link href="/idaho-ai-consulting">Idaho</Link>
             <Link href="/case-studies">Case studies</Link>
+            <Link href="/blog">Blog</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/about">About</Link>
             <Link href="/privacy">Privacy</Link>

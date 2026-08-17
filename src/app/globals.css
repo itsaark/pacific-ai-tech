@@ -1096,6 +1096,33 @@ body {
   overflow-wrap: break-word;
 }
 
+.pat-blog-hero {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 72px;
+}
+
+.pat-blog-hero h1 {
+  max-width: 18ch;
+  margin-top: 20px;
+}
+
+.pat-blog-hero .pat-lede {
+  max-width: 64ch;
+  margin-top: 24px;
+}
+
+.pat-blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin-top: 28px;
+  color: var(--ink-mute);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .pat-case-facts {
   border: 1px solid var(--rule);
   background: var(--paper-deep);
@@ -3175,7 +3202,8 @@ body {
     margin-top: 34px;
   }
 
-  .pat-case-detail-hero {
+  .pat-case-detail-hero,
+  .pat-blog-hero {
     padding-bottom: 48px;
   }
 
