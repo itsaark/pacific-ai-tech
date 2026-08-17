@@ -175,9 +175,6 @@ export default function Home() {
                 We build{" "}
                 <span className="pat-underlined">AI solutions</span> for small
                 businesses.
-                <br />
-                You get your <span className="pat-serif-emphasis">evenings</span>{" "}
-                back.
               </h1>
               <p className="pat-lede pat-hero-lede">
                 AI consulting, hands-on: we study your workflows, design the
@@ -252,13 +249,6 @@ export default function Home() {
             </p>
           </div>
           <div className="col-right">
-            <p>
-              <strong>
-                We come to your shop, kitchen, office, or kitchen table.
-              </strong>{" "}
-              We install AI tools directly on your computer: no cloud
-              middleman, no $99/month SaaS to forget about.
-            </p>
             <p>
               <strong>Then we sit with you and build the workflows</strong>{" "}
               that matter most. The ones you actually do every day. The boring
