@@ -304,9 +304,9 @@ export default async function CaseStudyPage({ params }: Props) {
             <div>
               <p className="pat-case-inline-cta-label">See a similar bottleneck?</p>
               <p>
-                Bring us one repeat task from your business. In a 30-minute
-                consultation, we&apos;ll compare it with the workflow above and
-                tell you whether AI is a practical fit.
+                Bring us one repeat task from your business. In a free
+                30-minute consultation, we&apos;ll compare it with the workflow
+                above and tell you whether AI is a practical fit.
               </p>
             </div>
             <Button
@@ -371,7 +371,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
           <div className="pat-case-next">
             <div>
-              <h2>Book a 30-minute AI workflow consultation.</h2>
+              <h2>Book a free 30-minute AI workflow consultation.</h2>
               <p>
                 Talk directly with a founder about the repeat task slowing down
                 your business. See how our{" "}
