@@ -13,14 +13,14 @@ import { businessId, bookingUrl, siteUrl, websiteId } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Small Business AI Consulting Case Studies",
   description:
-    "See how small businesses use practical AI for dispatch, real estate, home services, purchase-order intake, marketing, and front-desk call coverage.",
+    "See how small businesses use practical AI for dispatch, real estate, home services, purchase-order intake, marketing, front-desk calls, and wholesale distribution.",
   alternates: {
     canonical: "/case-studies",
   },
   openGraph: {
     title: "Small Business AI Consulting Case Studies",
     description:
-      "Client stories showing how practical AI changes dispatch, customer communication, research, neighborhood marketing, purchase-order intake, and dental front-desk phones.",
+      "Client stories showing how practical AI changes dispatch, customer communication, research, neighborhood marketing, purchase-order intake, dental phones, and wholesale distribution.",
     url: "/case-studies",
     siteName: "Pacific AI Tech",
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Small Business AI Consulting Case Studies",
     description:
-      "Practical AI deployment stories with implementation details and owner-controlled outcomes, from freight and real estate to dental phone coverage and manufacturing order intake.",
+      "Practical AI deployment stories with implementation details and owner-controlled outcomes, from freight and dental phones to manufacturing order intake and wholesale distribution.",
     images: ["/pacific-ai-tech/img/case-studies/frostbox-logistics-ascii.jpg"],
   },
 };
@@ -55,7 +55,7 @@ const jsonLd = {
       about: { "@id": businessId },
       breadcrumb: { "@id": `${siteUrl}/case-studies#breadcrumb` },
       mainEntity: { "@id": `${siteUrl}/case-studies#case-study-list` },
-      dateModified: "2026-08-15",
+      dateModified: "2026-08-17",
       inLanguage: "en-US",
     },
     {

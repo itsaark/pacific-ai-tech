@@ -25,6 +25,7 @@ Pacific AI Tech is implementation-first: it maps repeat work, deploys useful wor
 - [Northbank Home Inspection AI automation case study](https://www.pacificaitech.com/case-studies/northbank-home-inspection-ai-automation): Missed-call voice intake plus report-aware text and email responses for a solo home inspector.
 - [Aspen Pest Control AI marketing automation case study](https://www.pacificaitech.com/case-studies/aspen-pest-control-ai-marketing-automation): Neighborhood pest modeling from service reports plus weekly new-homeowner campaigns from Clark County public information.
 - [Paragon International AI purchase order automation case study](https://www.pacificaitech.com/case-studies/paragon-international-ai-purchase-order-automation): Hermes agent for Gmail purchase-order intake, multi-format OCR, duplicate detection, and network printing.
+- [Tampa Bay paper distributor AI operations case study](https://www.pacificaitech.com/case-studies/tampa-bay-paper-distributor-ai-operations): Confidential family-owned paper, packaging, and janitorial distributor with two warehouses, ~720 SKUs, and seven-day next-day hospitality delivery.
 
 ## Service and fit
 

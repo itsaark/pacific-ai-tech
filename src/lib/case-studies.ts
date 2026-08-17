@@ -817,6 +817,125 @@ export const caseStudies: CaseStudy[] = [
     pullQuote:
       "The front desk did not get replaced. It got backup that answers at 8:47 p.m., books against the live schedule, and knows which calls it should never try to keep.",
   },
+  {
+    slug: "tampa-bay-paper-distributor-ai-operations",
+    title: "AI that stays inside a 7-day hospitality distributor",
+    seoTitle: "AI for Paper and Packaging Distributors",
+    metaDescription:
+      "How Pacific AI Tech works with a confidential Tampa Bay paper, packaging, and janitorial distributor to turn warehouse, delivery, and print work into systems that stay.",
+    clientLabel: "Confidential paper distributor",
+    clientSchemaType: "Organization",
+    industry: "Paper, packaging, and janitorial distribution",
+    location: "Tampa Bay, Florida",
+    servicePath: "/services",
+    serviceLinkLabel: "AI consulting and workflow implementation services",
+    services: [
+      "Owner-adjacent workflow audit",
+      "Repeat-work mapping across warehouse and delivery",
+      "Distributor operations automation",
+      "Custom print program workflow support",
+      "Hospitality account follow-through systems",
+      "Long-term AI implementation",
+    ],
+    topics: [
+      "AI for paper distributors",
+      "packaging distributor automation",
+      "janitorial supply distribution",
+      "hospitality supply next-day delivery",
+      "custom printed cups and bags",
+      "warehouse operations AI",
+      "Tampa Bay distributor",
+      "family-owned wholesale distribution",
+    ],
+    publishedDate: "2026-08-17",
+    modifiedDate: "2026-08-17",
+    heroImage: {
+      src: "/pacific-ai-tech/img/case-studies/tampa-bay-paper-distributor-ai-operations-ascii.jpg",
+      alt: "ASCII-style image of industrial production equipment on a factory floor with racks of finished goods",
+      width: 1600,
+      height: 1067,
+      caption:
+        "A family-owned Tampa Bay distributor moves paper, packaging, and janitorial supplies out of two warehouses, including a custom printing program for hospitality accounts.",
+    },
+    summary:
+      "A family-owned paper, packaging, and janitorial distributor in the Tampa Bay area runs two warehouses, about 720 SKUs, and next-day delivery seven days a week to restaurants, hotels, and other hospitality accounts. Pacific AI Tech works directly with ownership to turn the work they still do by hand into systems that stay in the operation.",
+    metrics: [
+      {
+        value: "~720 SKUs",
+        label: "moving through two warehouses",
+        detail:
+          "The catalog is large enough that restocks, substitutions, and account-specific items cannot live in one person's memory.",
+      },
+      {
+        value: "7 days",
+        label: "of next-day delivery",
+        detail:
+          "Restaurants and hotels do not pause on Sundays. The warehouse and the route list have to keep up.",
+      },
+      {
+        value: "Owner-adjacent",
+        label: "not a one-off install",
+        detail:
+          "The work sits with ownership over months, not as a short agency project that leaves a login behind and disappears.",
+      },
+    ],
+    challenge:
+      "The company already used AI tools day to day. What it did not have was someone who would learn how the operation actually runs — two warehouses, a 720-SKU catalog, seven-day next-day delivery, hospitality accounts, and an in-house custom printing program for cups, bags, and greaseproof paper — and turn the hand work around that operation into systems the small leadership team can keep.",
+    approach: [
+      "Worked directly with ownership instead of routing the engagement through layers of project management.",
+      "Mapped the repeat work across the two warehouses, the next-day route cadence, hospitality account follow-through, and the custom print program.",
+      "Separated the work that should become a system from the work that still needs a person's judgment on a live account.",
+      "Built around the way the company already buys, stocks, prints, and delivers, instead of asking it to move onto a new platform.",
+      "Kept the leadership team in control of what goes out to customers and what stays a draft.",
+      "Stayed on the account so the systems can change when the catalog, the routes, or the print jobs change.",
+    ],
+    outcomes: [
+      "Repeat warehouse, delivery, and print work starts living in systems instead of in one person's head.",
+      "Ownership can decide from a smaller set of exceptions instead of rebuilding the same lists and follow-ups by hand.",
+      "The custom printing program sits in the same operating picture as the stocked catalog, not as a side business that only exists in email.",
+      "The company did not have to hire a full-time in-house AI team or hand the work to an agency that leaves after launch.",
+      "New workflows can be added against a team that already understands the two warehouses, the 720-SKU catalog, and the seven-day delivery promise.",
+    ],
+    narrative: [
+      {
+        heading: "Tomorrow morning is already on the clock",
+        paragraphs: [
+          "A paper and packaging distributor does not get a quiet week. About 720 SKUs move through two warehouses. Restaurants, hotels, and other hospitality accounts expect the order they placed today to show up tomorrow, including on weekends.",
+          "That cadence is the business. Napkins, liners, cups, chemicals, and the one item a kitchen cannot substitute are not a catalog problem. They are a tomorrow-morning problem. Anything that still depends on someone rebuilding a list by hand is already late.",
+        ],
+      },
+      {
+        heading: "Hospitality does not wait for a restock meeting",
+        paragraphs: [
+          "A hotel that runs out of liners or a restaurant that runs out of takeout bags does not wait for Monday. Seven-day next-day delivery exists because those accounts cannot pause.",
+          "The useful AI work in that setting is not a chatbot on the website. It is the unglamorous follow-through around the route: what is short, what can ship, what has to be printed, and what the customer needs to hear before the truck leaves.",
+        ],
+      },
+      {
+        heading: "Print is a second business inside the first",
+        paragraphs: [
+          "On top of the stocked catalog, the company runs its own custom printing program: cups, bags, greaseproof paper, the branded pieces hospitality accounts use every shift.",
+          "That work has its own cycle — artwork, proofs, quantities, ship dates — and it still has to land on the same next-day promise as a case of stock napkins. Leaving print in a separate pile of email is how a small team ends up running two companies by hand.",
+        ],
+      },
+      {
+        heading: "They were already using AI. They needed a builder.",
+        paragraphs: [
+          "This was not a conversion job. The leadership team already used AI tools every day. They did not need a workshop on why the technology matters.",
+          "They needed someone who would learn the warehouses, the catalog, the routes, and the print program, then turn the work they still did by hand into systems that survive a busy Saturday. A small leadership team can decide quickly. It cannot also become its own automation department.",
+        ],
+      },
+      {
+        heading: "The useful version of this work stays",
+        paragraphs: [
+          "Pacific AI Tech works directly with ownership on that basis: not a one-off install, and not an agency that ships a stack and disappears. The first job is to learn the operation. The second is to build only what the team will actually keep.",
+          "The company still owns the accounts, the trucks, and the print jobs. What changes is that the repeat work around them no longer has to be reconstructed from memory every afternoon.",
+        ],
+      },
+    ],
+    pullQuote:
+      "The useful part is not another AI login. It is a builder who learns the two warehouses, the 720-SKU catalog, and the seven-day promise, then leaves systems the owners can keep.",
+  },
 ];
 
 export function getCaseStudy(slug: string) {
