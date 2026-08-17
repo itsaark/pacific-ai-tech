@@ -312,6 +312,7 @@ export default async function CaseStudyPage({ params }: Props) {
             <Button
               render={<Link href={bookingUrl} />}
               nativeButton={false}
+              variant="outline"
               className="pat-btn"
             >
               Discuss your workflow
@@ -371,7 +372,7 @@ export default async function CaseStudyPage({ params }: Props) {
 
           <div className="pat-case-next">
             <div>
-              <h2>Book a free 30-minute AI workflow consultation.</h2>
+              <h2>Book a free 30 min consultation</h2>
               <p>
                 Talk directly with a founder about the repeat task slowing down
                 your business. See how our{" "}
