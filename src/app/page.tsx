@@ -43,7 +43,7 @@ const jsonLd = {
       legalName: "Pacific AI Tech LLC",
       url: `${siteUrl}/`,
       description: serviceDescription,
-      image: `${siteUrl}/pacific-ai-tech/img/roses.jpeg`,
+      image: `${siteUrl}/pacific-ai-tech/img/river.jpg`,
       logo: `${siteUrl}/pacific-ai-tech/img/logo-pine-icon.png`,
       email: contactEmail,
       telephone: businessPhone,
@@ -114,7 +114,7 @@ const jsonLd = {
       about: { "@id": businessId },
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: `${siteUrl}/pacific-ai-tech/img/roses.jpeg`,
+        url: `${siteUrl}/pacific-ai-tech/img/river.jpg`,
       },
       inLanguage: "en-US",
     },
@@ -215,8 +215,8 @@ export default function Home() {
             </div>
           </div>
           <FramedImage
-            src="/pacific-ai-tech/img/roses.jpeg"
-            alt="Washington Park rose garden rendered in ASCII"
+            src="/pacific-ai-tech/img/river.jpg"
+            alt="Forest river under a blue sky rendered in ASCII"
             sizes="(max-width: 900px) 100vw, 50vw"
             preload
             className="pat-hero-image"
