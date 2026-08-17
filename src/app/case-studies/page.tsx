@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
+import { CaseStudyThumbnail } from "@/components/case-study-thumbnail";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SiteFooter } from "@/components/site-footer";
@@ -147,15 +147,7 @@ export default function CaseStudiesPage() {
                     <span>{study.industry}</span>
                   </div>
                   {study.heroImage ? (
-                    <div className="pat-case-index-thumb" aria-hidden="true">
-                      <Image
-                        src={study.heroImage.src}
-                        alt=""
-                        width={study.heroImage.width}
-                        height={study.heroImage.height}
-                        sizes="(max-width: 620px) calc(100vw - 40px), (max-width: 1080px) calc(50vw - 62px), 540px"
-                      />
-                    </div>
+                    <CaseStudyThumbnail image={study.heroImage} />
                   ) : null}
                   <h2>{study.title}</h2>
                   <p>{study.summary}</p>

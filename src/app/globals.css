@@ -978,7 +978,10 @@ body {
   transition: filter 0.2s var(--ease-out, ease-out), transform 0.2s var(--ease-out, ease-out);
 }
 
-.pat-case-index-card:hover .pat-case-index-thumb img {
+.pat-case-card:hover .pat-case-index-thumb img,
+.pat-case-card:focus-visible .pat-case-index-thumb img,
+.pat-case-index-card:hover .pat-case-index-thumb img,
+.pat-case-index-card:focus-visible .pat-case-index-thumb img {
   filter: saturate(1.06) contrast(1.02);
   transform: scale(1.025);
 }

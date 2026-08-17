@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+import { CaseStudyThumbnail } from "@/components/case-study-thumbnail";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -287,6 +288,9 @@ export default function Home() {
                 <span className="pat-case-card-meta">
                   {study.clientLabel} · {study.industry}
                 </span>
+                {study.heroImage ? (
+                  <CaseStudyThumbnail image={study.heroImage} />
+                ) : null}
                 <h3>{study.title}</h3>
                 <p>{study.summary}</p>
                 <span className="pat-case-card-foot">
