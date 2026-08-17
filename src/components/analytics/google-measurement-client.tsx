@@ -9,6 +9,7 @@ import {
   type VerifiedBooking,
 } from "@/lib/analytics/booking";
 import {
+  setEnhancedConversionUserData,
   trackAppointmentBooked,
   trackBookCallClick,
   trackEmailClick,
@@ -104,7 +105,28 @@ export function GoogleMeasurementClient() {
         Date.now() - completedAt < VERIFIED_BOOKING_TTL_MS;
 
       if (isRecentVerifiedBooking && parsed.provider === "calendly") {
-        trackAppointmentBooked({ provider: parsed.provider });
+        const provider = parsed.provider;
+        const fireConversion = () => trackAppointmentBooked({ provider });
+
+        if (parsed.inviteeUri) {
+          // Resolve the invitee email server-side so enhanced conversions can
+          // attach hashed first-party data before the conversion fires.
+          void fetch(
+            `/api/calendly-invitee?uri=${encodeURIComponent(parsed.inviteeUri)}`,
+          )
+            .then((response) => (response.ok ? response.json() : null))
+            .then((data: { email?: string | null } | null) => {
+              if (data?.email) {
+                setEnhancedConversionUserData({ email: data.email });
+              }
+            })
+            .catch(() => {
+              // The conversion is still recorded without user-provided data.
+            })
+            .finally(fireConversion);
+        } else {
+          fireConversion();
+        }
       }
     } catch {
       // Ignore malformed state rather than emitting an unverified conversion.

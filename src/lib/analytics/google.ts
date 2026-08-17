@@ -187,6 +187,26 @@ export function trackBookCallClick(parameters: BookCallClickParameters) {
   });
 }
 
+/**
+ * Supplies first-party user data for Google Ads enhanced conversions.
+ * Must run on the same page, before the conversion event fires; the Google
+ * tag hashes the values before transmission.
+ */
+export function setEnhancedConversionUserData(userData: {
+  email?: string;
+  phoneNumber?: string;
+}) {
+  const gtag = getGtag();
+  if (!gtag) return;
+
+  const payload: Record<string, string> = {};
+  if (userData.email) payload.email = userData.email;
+  if (userData.phoneNumber) payload.phone_number = userData.phoneNumber;
+  if (Object.keys(payload).length === 0) return;
+
+  gtag("set", "user_data", payload);
+}
+
 export function trackAppointmentBooked(
   parameters: AppointmentBookedParameters = {},
 ) {

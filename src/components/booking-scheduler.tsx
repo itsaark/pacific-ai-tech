@@ -29,10 +29,11 @@ function CalendlyResourceHints() {
   return null;
 }
 
-function rememberVerifiedBooking() {
+function rememberVerifiedBooking(inviteeUri?: string) {
   const booking: VerifiedBooking = {
     completedAt: new Date().toISOString(),
     provider: "calendly",
+    inviteeUri,
   };
 
   try {
@@ -78,7 +79,15 @@ export function BookingScheduler({
 
       if (calendlyEvent !== "calendly.event_scheduled") return;
 
-      rememberVerifiedBooking();
+      const payload = (
+        event.data as { payload?: { invitee?: { uri?: unknown } } }
+      ).payload;
+      const inviteeUri =
+        typeof payload?.invitee?.uri === "string"
+          ? payload.invitee.uri
+          : undefined;
+
+      rememberVerifiedBooking(inviteeUri);
       window.location.assign("/booking-confirmed");
     };
 
