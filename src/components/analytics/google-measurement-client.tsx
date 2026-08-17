@@ -152,7 +152,15 @@ export function GoogleMeasurementClient() {
     if (!pendingConversion) return;
 
     try {
-      const parsed = JSON.parse(pendingConversion) as { location?: string };
+      const parsed = JSON.parse(pendingConversion) as {
+        location?: string;
+        email?: string;
+        phone?: string;
+      };
+      setEnhancedConversionUserData({
+        email: parsed.email,
+        phoneNumber: parsed.phone,
+      });
       trackLeadFormSubmit({
         formId: "consultation-request",
         formLocation: parsed.location,

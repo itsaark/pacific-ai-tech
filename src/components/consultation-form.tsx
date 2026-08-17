@@ -74,7 +74,11 @@ export function ConsultationForm({ location }: ConsultationFormProps) {
       try {
         window.sessionStorage.setItem(
           "pacificaitech_pending_lead_conversion",
-          JSON.stringify({ location })
+          JSON.stringify({
+            location,
+            email: payload.email,
+            phone: payload.phone,
+          })
         );
       } catch {
         // The successful request still redirects when browser storage is blocked.

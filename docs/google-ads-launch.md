@@ -68,6 +68,25 @@ Do not optimize bidding around booking-button clicks. `book_call_click` measures
 interest; `appointment_booked` measures a scheduling success. Keep the former
 secondary and the latter primary after a real end-to-end test.
 
+### Enhanced conversions (user-provided data)
+
+The site passes hashed first-party data to Google Ads enhanced conversions:
+
+- The consultation form supplies the submitted email and phone number on
+  `/thank-you` before the `lead_form_submit` conversion fires.
+- The Calendly flow captures the invitee URI from `calendly.event_scheduled`
+  and resolves the invitee email through `/api/calendly-invitee` on
+  `/booking-confirmed` before the `appointment_booked` conversion fires.
+
+The Calendly lookup requires a Production environment variable:
+
+- `CALENDLY_API_TOKEN` — a Calendly personal access token
+  (Calendly → Integrations → API & webhooks → personal access token).
+
+Without the token the endpoint returns no email and conversions record exactly
+as before, just without user-provided data. Do not commit the token; enter it
+directly in Vercel.
+
 ## 5. Preserve and qualify paid leads
 
 The website stores the most recent non-direct campaign attribution for 90 days and includes available `gclid`, `gbraid`, `wbraid`, UTM values, landing page, and referrer in the consultation email.
