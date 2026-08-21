@@ -43,7 +43,10 @@ before(async () => {
       String(port),
     ],
     {
-      env: process.env,
+      env: {
+        ...process.env,
+        VERCEL_URL: "pacifica-ai-tech-protected.example.vercel.app",
+      },
       stdio: ["ignore", "ignore", "inherit"],
     },
   );
@@ -133,11 +136,14 @@ test("homepage structured data identifies the company and both founders", async 
 
 test("unknown HTML and Markdown paths return recoverable 404 responses", async () => {
   const pathname = "/agent-readiness-path-that-does-not-exist";
-  const htmlResponse = await fetch(origin + pathname);
+  const htmlResponse = await fetch(origin + pathname, {
+    headers: { "User-Agent": "curl/8.7.1" },
+  });
   const html = await htmlResponse.text();
   assert.equal(htmlResponse.status, 404);
   assert.match(html, /llms\.txt/);
   assert.match(html, /sitemap\.xml/);
+  assert.match(html, /rel="alternate" type="text\/markdown"/);
 
   const markdownResponse = await fetch(origin + pathname, {
     headers: { Accept: "text/markdown" },
@@ -171,6 +177,31 @@ test("agent instructions explain when and how to engage the company", async () =
     assert.match(body, /approval/i);
     assert.match(body, /programmatic service API/i);
   }
+});
+
+test("non-browser agents receive real site content even when VERCEL_URL points elsewhere", async () => {
+  const response = await fetch(origin + "/services", {
+    headers: { "User-Agent": "curl/8.7.1" },
+  });
+  const html = await response.text();
+
+  assert.equal(response.status, 200);
+  assert.match(html, /class="pat-site"/);
+  assert.match(html, /<h1[\s>]/i);
+  assert.doesNotMatch(html, /Log in to Vercel/i);
+  assert.doesNotMatch(html, /vercel\.com\/login/i);
+  assert.match(
+    response.headers.get("link") ?? "",
+    /rel="alternate"; type="text\/markdown"/,
+  );
+
+  const markdownResponse = await fetch(origin + "/services", {
+    headers: { Accept: "text/markdown" },
+  });
+  const markdown = await markdownResponse.text();
+  assert.equal(markdownResponse.status, 200);
+  assert.ok(markdown.length >= 500);
+  assert.doesNotMatch(markdown, /Privacy Policy\]\(https:\/\/www\.pacificaitech\.com\/legal\//);
 });
 
 test("every sitemap page and machine-readable counterpart is available", async () => {

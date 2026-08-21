@@ -48,9 +48,6 @@ function extractMainContent(html: string) {
 }
 
 function trustedSourceOrigin(requestUrl: string) {
-  const deploymentHost = process.env.VERCEL_URL?.trim();
-  if (deploymentHost) return `https://${deploymentHost}`;
-
   const incomingUrl = new URL(requestUrl);
   const localHosts = new Set(["localhost", "127.0.0.1", "[::1]"]);
   return localHosts.has(incomingUrl.hostname) ? incomingUrl.origin : siteUrl;
@@ -61,6 +58,23 @@ function absolutizeSiteLinks(markdown: string) {
     /(!?\[[^\]]*\])\(\/(?!\/)([^)]+)\)/g,
     `$1(${siteUrl}/$2)`,
   );
+}
+
+function markdownUnavailableResponse(status: number) {
+  return new Response(`# ${status} — Page temporarily unavailable
+
+The Markdown version of this page could not be generated. Retry shortly or use the HTML page.
+
+- [XML sitemap](${siteUrl}/sitemap.xml): Browse every canonical page.
+- [Agent instructions](${siteUrl}/llms.txt): When to use Pacific AI Tech and how to engage.
+`, {
+    status,
+    headers: {
+      "Cache-Control": "no-store",
+      "Content-Type": "text/markdown; charset=utf-8",
+      "X-Content-Type-Options": "nosniff",
+    },
+  });
 }
 
 function markdownResponse(markdown: string, pathname: string) {
@@ -108,19 +122,26 @@ That path does not exist on Pacific AI Tech.
   const sourceUrl = new URL(pathname, trustedSourceOrigin(request.url));
   sourceUrl.search = "";
 
-  const sourceResponse = await fetch(sourceUrl, {
-    headers: {
-      Accept: "text/html",
-      "X-Pacific-Markdown-Source": "1",
-    },
-    next: { revalidate: 3600 },
-  });
-
-  if (!sourceResponse.ok) {
-    return new Response("# Page unavailable\n", {
-      status: sourceResponse.status,
-      headers: { "Content-Type": "text/markdown; charset=utf-8" },
+  let sourceResponse: Response;
+  try {
+    sourceResponse = await fetch(sourceUrl, {
+      headers: {
+        Accept: "text/html",
+        "X-Pacific-Markdown-Source": "1",
+      },
+      redirect: "follow",
+      signal: AbortSignal.timeout(10_000),
+      next: { revalidate: 3600 },
     });
+  } catch {
+    return markdownUnavailableResponse(503);
+  }
+
+  if (
+    !sourceResponse.ok ||
+    new URL(sourceResponse.url).origin !== sourceUrl.origin
+  ) {
+    return markdownUnavailableResponse(sourceResponse.ok ? 502 : sourceResponse.status);
   }
 
   const html = await sourceResponse.text();
