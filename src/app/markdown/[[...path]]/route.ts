@@ -85,9 +85,23 @@ export async function GET(request: Request, context: RouteContext) {
   const pathname = canonicalPath(path);
 
   if (!isAgentReadablePath(pathname)) {
-    return new Response("# Not found\n", {
+    return new Response(
+      `# 404 — Page not found
+
+That path does not exist on Pacific AI Tech.
+
+- [XML sitemap](${siteUrl}/sitemap.xml): Browse every canonical page.
+- [Agent instructions](${siteUrl}/llms.txt): Find the right page and learn when to use Pacific AI Tech.
+- [Services](${siteUrl}/services): Review consulting, deployment, training, and workflow examples.
+- [Home](${siteUrl}/): Return to the main site.
+`, {
       status: 404,
-      headers: { "Content-Type": "text/markdown; charset=utf-8" },
+      headers: {
+        "Cache-Control": "no-store",
+        "Content-Type": "text/markdown; charset=utf-8",
+        "X-Content-Type-Options": "nosniff",
+        "X-Robots-Tag": "noindex",
+      },
     });
   }
 

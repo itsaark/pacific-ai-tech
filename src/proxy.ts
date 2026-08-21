@@ -3,6 +3,8 @@ import type { NextRequest } from "next/server";
 
 const siteUrl = "https://www.pacificaitech.com";
 const sourceBypassHeader = "x-pacific-markdown-source";
+const internalRewriteHeader = "x-pacific-internal-rewrite";
+const agentHtmlRequestHeader = "x-pacific-agent-html";
 const nextVaryHeaders = [
   "rsc",
   "next-router-state-tree",
@@ -62,13 +64,57 @@ function markdownRoute(pathname: string, request: NextRequest) {
   destination.pathname = pathname === "/" ? "/markdown" : `/markdown${pathname}`;
   destination.search = "";
 
-  const response = NextResponse.rewrite(destination);
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set(internalRewriteHeader, "1");
+
+  const response = NextResponse.rewrite(destination, {
+    request: { headers: requestHeaders },
+  });
   response.headers.set("Vary", "Accept");
   return response;
 }
 
+function agentHtmlRoute(pathname: string, request: NextRequest) {
+  const destination = request.nextUrl.clone();
+  destination.pathname = pathname === "/" ? "/agent-html" : `/agent-html${pathname}`;
+  destination.search = "";
+
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set(internalRewriteHeader, "1");
+  requestHeaders.set(agentHtmlRequestHeader, "1");
+
+  const response = NextResponse.rewrite(destination, {
+    request: { headers: requestHeaders },
+  });
+  response.headers.set("Vary", "Accept, User-Agent");
+  return response;
+}
+
+function isPublicFile(pathname: string) {
+  return (
+    pathname.startsWith("/_next/") ||
+    pathname.startsWith("/api/") ||
+    pathname === "/favicon.ico" ||
+    pathname === "/robots.txt" ||
+    pathname === "/sitemap.xml" ||
+    pathname === "/llms.txt" ||
+    pathname === "/llms-full.txt" ||
+    (/\.[a-z0-9]+$/i.test(pathname) && !pathname.endsWith(".md"))
+  );
+}
+
+function needsScriptlessHtml(userAgent: string | null, crawler: string | null) {
+  if (crawler) return true;
+  if (!userAgent) return true;
+
+  return !/mozilla\/5\.0|chrome\/|safari\/|firefox\/|edg\//i.test(userAgent);
+}
+
 export function proxy(request: NextRequest) {
-  if (request.headers.get(sourceBypassHeader) === "1") {
+  if (
+    request.headers.get(sourceBypassHeader) === "1" ||
+    request.headers.get(internalRewriteHeader) === "1"
+  ) {
     return NextResponse.next();
   }
 
@@ -76,7 +122,8 @@ export function proxy(request: NextRequest) {
     request.nextUrl.pathname,
   );
   const acceptsMarkdown = requestedMarkdown(request.headers.get("accept"));
-  const crawler = crawlerName(request.headers.get("user-agent"));
+  const userAgent = request.headers.get("user-agent");
+  const crawler = crawlerName(userAgent);
 
   if (crawler) {
     console.info(
@@ -102,6 +149,14 @@ export function proxy(request: NextRequest) {
   }
 
   const pathname = request.nextUrl.pathname;
+
+  if (
+    !isPublicFile(pathname) &&
+    needsScriptlessHtml(userAgent, crawler)
+  ) {
+    return agentHtmlRoute(pathname, request);
+  }
+
   const markdownUrl =
     pathname === "/" ? `${siteUrl}/index.md` : `${siteUrl}${pathname}.md`;
   const response = NextResponse.next();
@@ -115,32 +170,5 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    "/",
-    "/services",
-    "/services.md",
-    "/portland-ai-consultant",
-    "/portland-ai-consultant.md",
-    "/oregon-washington-ai-consulting",
-    "/oregon-washington-ai-consulting.md",
-    "/idaho-ai-consulting",
-    "/idaho-ai-consulting.md",
-    "/contact",
-    "/contact.md",
-    "/about",
-    "/about.md",
-    "/book",
-    "/book.md",
-    "/privacy",
-    "/privacy.md",
-    "/terms",
-    "/terms.md",
-    "/case-studies",
-    "/case-studies.md",
-    "/case-studies/:path*",
-    "/blog",
-    "/blog.md",
-    "/blog/:path*",
-    "/index.md",
-  ],
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
 };

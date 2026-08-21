@@ -41,6 +41,7 @@ const jsonLd = {
       "@type": "ProfessionalService",
       "@id": businessId,
       name: "Pacific AI Tech",
+      alternateName: "Pacific AI Tech LLC",
       legalName: "Pacific AI Tech LLC",
       url: `${siteUrl}/`,
       description: serviceDescription,
@@ -86,12 +87,22 @@ const jsonLd = {
           "@type": "Person",
           "@id": `${siteUrl}/#aark-kodur`,
           name: "Aark Kodur",
+          url: `${siteUrl}/about#founders`,
+          jobTitle: "Co-founder and AI solutions architect",
+          description:
+            "Pacific AI Tech co-founder with a software engineering background at Amazon, responsible for AI solutions architecture and deployment.",
+          worksFor: { "@id": businessId },
           sameAs: "https://www.linkedin.com/in/aarkkodur/",
         },
         {
           "@type": "Person",
           "@id": `${siteUrl}/#shayan-jalalipour`,
           name: "Shayan Jalalipour",
+          url: `${siteUrl}/about#founders`,
+          jobTitle: "Co-founder and AI/ML specialist",
+          description:
+            "Pacific AI Tech co-founder with an AI and machine-learning research background at Portland State, responsible for practical AI implementation and training.",
+          worksFor: { "@id": businessId },
           sameAs: "https://www.linkedin.com/in/shayanjalalipour/",
         },
       ],
@@ -240,11 +251,11 @@ export default function Home() {
         <section className="pat-promise" aria-labelledby="premise-title">
           <div className="col-left">
             <Badge className="pat-tag">The premise</Badge>
-            <p id="premise-title">
+            <h2 id="premise-title">
               You did not get into your business to wrangle spreadsheets,
               copy-paste listings, write follow-up emails, or chase invoices at
               11pm.
-            </p>
+            </h2>
             <p className="pat-serif-emphasis pat-moss">
               Setup first. Confidence by the end.
             </p>

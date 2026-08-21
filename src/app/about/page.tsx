@@ -66,7 +66,10 @@ const jsonLd = {
       "@type": "Person",
       "@id": `${siteUrl}/#aark-kodur`,
       name: "Aark Kodur",
-      jobTitle: "Co-founder",
+      url: `${siteUrl}/about#founders`,
+      jobTitle: "Co-founder and AI solutions architect",
+      description:
+        "Pacific AI Tech co-founder with a software engineering background at Amazon, responsible for AI solutions architecture and deployment.",
       worksFor: { "@id": businessId },
       sameAs: "https://www.linkedin.com/in/aarkkodur/",
     },
@@ -74,7 +77,10 @@ const jsonLd = {
       "@type": "Person",
       "@id": `${siteUrl}/#shayan-jalalipour`,
       name: "Shayan Jalalipour",
-      jobTitle: "Co-founder",
+      url: `${siteUrl}/about#founders`,
+      jobTitle: "Co-founder and AI/ML specialist",
+      description:
+        "Pacific AI Tech co-founder with an AI and machine-learning research background at Portland State, responsible for practical AI implementation and training.",
       worksFor: { "@id": businessId },
       sameAs: "https://www.linkedin.com/in/shayanjalalipour/",
     },
