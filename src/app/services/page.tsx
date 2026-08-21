@@ -171,16 +171,13 @@ export default function ServicesPage() {
             </h2>
           </SectionHeading>
           <div className="pat-who-grid pat-local-service-grid">
-            {offerings.map((offering, index) => (
+            {offerings.map((offering) => (
               <Card
                 className="pat-who-card"
                 id={offering.id}
                 key={offering.id}
               >
                 <CardHeader>
-                  <Badge variant="ghost" className="pat-num">
-                    / {String(index + 1).padStart(2, "0")}
-                  </Badge>
                   <CardTitle>{offering.title}</CardTitle>
                 </CardHeader>
                 <CardContent>

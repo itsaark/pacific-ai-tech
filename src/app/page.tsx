@@ -327,9 +327,6 @@ export default function Home() {
             {clients.map((client) => (
               <Card className="pat-who-card" key={client.id}>
                 <CardHeader>
-                  <Badge variant="ghost" className="pat-num">
-                    {client.id}
-                  </Badge>
                   <CardTitle>{client.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -350,9 +347,9 @@ export default function Home() {
               <span className="pat-serif-emphasis">you can steer it</span>.
             </h2>
             <p className="pat-lede">
-              Consulting, deployment, and training as one engagement. Inbox,
-              listings, invoices, reviews — the example automations are on the
-              services page.
+              Consulting, deployment, and training as one engagement. The
+              example automations for inboxes, listings, invoices, and reviews
+              are on the services page.
             </p>
             <div className="pat-flow">
               {offerings.map((item) => (

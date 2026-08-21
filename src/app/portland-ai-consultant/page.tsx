@@ -80,19 +80,16 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    number: "/ 01",
     title: "AI workflow implementation",
     description:
       "We configure the agent stack that fits your company's approved computers, accounts, data, and operating workflow.",
   },
   {
-    number: "/ 02",
     title: "Small business AI consulting",
     description:
       "We turn vague AI ideas into concrete workflows for inboxes, files, spreadsheets, listings, reviews, invoices, and reports.",
   },
   {
-    number: "/ 03",
     title: "Owner and team training",
     description:
       "Hands-on training teaches owners and teams how to prompt, approve, inspect, adjust, and stop business automations.",
@@ -152,7 +149,7 @@ const introCallSteps = [
   {
     title: "Leave with a clear next step",
     description:
-      "We will tell you whether the workflow looks suitable for an engagement. If it does, the next step is a custom scope, timeline, and quote—not a surprise subscription.",
+      "We will tell you whether the workflow looks suitable for an engagement. If it does, the next step is a custom scope, timeline, and quote, not a surprise subscription.",
   },
 ];
 
@@ -478,9 +475,6 @@ export default function PortlandAiConsultantPage() {
             {services.map((service) => (
               <Card className="pat-who-card" key={service.title}>
                 <CardHeader>
-                  <Badge variant="ghost" className="pat-num">
-                    {service.number}
-                  </Badge>
                   <CardTitle>{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -615,12 +609,9 @@ export default function PortlandAiConsultantPage() {
             </h2>
           </div>
           <div className="pat-who-grid pat-local-service-grid">
-            {introCallSteps.map((step, index) => (
+            {introCallSteps.map((step) => (
               <Card className="pat-who-card" key={step.title}>
                 <CardHeader>
-                  <Badge variant="ghost" className="pat-num">
-                    / {String(index + 1).padStart(2, "0")}
-                  </Badge>
                   <CardTitle>{step.title}</CardTitle>
                 </CardHeader>
                 <CardContent>

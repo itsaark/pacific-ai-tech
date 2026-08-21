@@ -116,7 +116,7 @@ export default function BlogPage() {
             </div>
             <p className="pat-lede">
               Write-ups on the tools, workflows, and handoffs behind real AI
-              deployments for small businesses — what gets automated, what
+              deployments for small businesses: what gets automated, what
               stays human, and what is worth building first.
             </p>
           </div>

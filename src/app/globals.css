@@ -716,21 +716,11 @@ body {
 }
 
 .pat-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ink-mute);
+  color: var(--moss);
   font-family: var(--font-mono), ui-monospace, Menlo, monospace;
   font-size: 11px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-.pat-eyebrow::before {
-  width: 18px;
-  height: 1px;
-  background: var(--moss);
-  content: "";
 }
 
 .pat-who-grid {

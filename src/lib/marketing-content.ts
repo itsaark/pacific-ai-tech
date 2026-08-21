@@ -7,22 +7,22 @@ import {
 
 export const clients = [
   {
-    id: "/ 01",
+    id: "realtors",
     title: "Real estate agents",
     text: "Listing descriptions, comp pulls, MLS-to-flyer pipelines, follow-up sequences, weekend showings rolled into a Sunday briefing.",
   },
   {
-    id: "/ 02",
+    id: "restaurants",
     title: "Restaurant owners",
     text: "Inventory reorder, menu translation, OpenTable digest, food-cost flags, reply-to-every-review-by-Tuesday automations.",
   },
   {
-    id: "/ 03",
+    id: "founders",
     title: "Founders & lean teams",
     text: "Inbox triage, lead-research before calls, weekly investor updates, a meeting-notes agent that actually files things.",
   },
   {
-    id: "/ 04",
+    id: "trades",
     title: "Trades & small shops",
     text: "Estimate drafting from job photos, invoice chasing, supplier price-watch, scheduling, voicemail-to-CRM, end-of-day rollups.",
   },
