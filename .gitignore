@@ -36,6 +36,13 @@ yarn-error.log*
 .env*
 !.env.example
 
+# local outreach campaign data (FMCSA registrant emails + send status)
+/outreach/**/*.csv
+/outreach/**/*.jsonl
+/outreach/**/source/
+/outreach/**/work/
+/outreach/**/log/
+
 # vercel
 .vercel
 
