@@ -8,6 +8,17 @@ export type BlogPost = {
   publishedDate: string;
   modifiedDate: string;
   readingTime: string;
+  citation?: {
+    quote: string;
+    speaker: string;
+    date: string;
+    href: string;
+    hrefLabel: string;
+  };
+  faqs?: {
+    question: string;
+    answer: string;
+  }[];
   heroImage?: {
     src: string;
     alt: string;
@@ -22,6 +33,97 @@ export type BlogPost = {
 };
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "close-enough-to-name-the-shop",
+    title: "Close enough to name the shop",
+    seoTitle: "Close to the Customer in the AI Age",
+    metaDescription:
+      "Paul Graham said AI leverage sits with the model or the customer. We work the customer side, starting with HVAC shops in Oregon and Washington.",
+    excerpt:
+      "On September 23, 2026, Paul Graham told a CS undergrad the effect in the AI age sits at either extreme: making the models, or standing close to the customer and using AI to give them exactly what they want. We work the second extreme. This week that meant reading the public license rolls for HVAC shops in Oregon and Washington.",
+    topics: [
+      "close to the customer",
+      "AI consulting Oregon Washington",
+      "HVAC contractor operations",
+      "small business AI implementation",
+      "local AI for contractors",
+    ],
+    publishedDate: "2026-09-24",
+    modifiedDate: "2026-09-24",
+    readingTime: "7 min read",
+    citation: {
+      quote:
+        "A CS undergrad asked me where he could have most effect in the AI age. I said probably at either extreme: either close to the technology, actually making LLMs, or close to the customer, using AI to give them exactly what they want. Or maybe both if you can stretch that far.",
+      speaker: "Paul Graham",
+      date: "September 23, 2026",
+      href: "https://x.com/paulg/status/2102688252473782422",
+      hrefLabel: "Paul Graham on X",
+    },
+    faqs: [
+      {
+        question: "What did Paul Graham say about where to work in the AI age?",
+        answer:
+          "On September 23, 2026, Paul Graham wrote that a CS undergrad would probably have the most effect at either extreme: close to the technology, actually making LLMs, or close to the customer, using AI to give them exactly what they want. He added that both is possible if you can stretch that far. The post is on X: https://x.com/paulg/status/2102688252473782422",
+      },
+      {
+        question: "Which side of that split does Pacific AI Tech work?",
+        answer:
+          "The customer side. Pacific AI Tech installs a local AI assistant on a small business's own computer, builds it around the repeat work, and leaves approval with the owner. The practice does not train foundation models. Oregon and Washington engagements are described at https://www.pacificaitech.com/oregon-washington-ai-consulting",
+      },
+      {
+        question:
+          "How many HVAC contractors are on the public rolls in Washington and Oregon?",
+        answer:
+          "On September 24, 2026, Washington L&I's public contractor file showed 1,062 active HVAC-labeled licenses with a Washington mailing address: 625 construction contractors in specialty SM (heating, ventilation, air-conditioning, and refrigeration), 401 electrical contractors in specialty 6A, 14 in restricted specialty 6B, and 22 in specialty AB for commercial and industrial refrigeration. Oregon's Building Codes Division showed 404 active LHR limited-maintenance HVAC/R licenses with an Oregon address. Oregon's Construction Contractors Board file held 56,269 active licenses and does not label HVAC as its own trade.",
+      },
+      {
+        question: "Do Oregon and Washington publish HVAC contractor emails?",
+        answer:
+          "Both states collect an email when a contractor registers. Neither publishes that email on the license roster. Washington's open file has 23 columns, including phone and specialty, and no email column, even though application F625-001-000 marks email as required. Oregon's CCB file publishes a phone on 56,253 of 56,269 active licenses and no email. The LHR file publishes a mailing address and neither phone nor email. Washington prevailing-wage intent and affidavit filings do include a filing-company email. Matched to those 1,062 active licenses, 228 shops had a usable address, which came to 354 unique emails. Many of those are a staff inbox on a public-works filing.",
+      },
+      {
+        question: "What does giving a customer exactly what they want look like in practice?",
+        answer:
+          "It starts with the owner's repeat work. A refrigerated carrier in Oregon got load research and a bid draft that waits for approval. A property manager got routine tenant replies handled so emergencies, visits, and cash stayed human. The same shape fits a contractor: draft the estimate, the reminder, and the ordinary answer, on the shop's own machine, and wait for the owner to send it.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Two extremes, and a lot of fog between them",
+        paragraphs: [
+          "On September 23, 2026, a student asked Paul Graham where a CS undergrad could have the most effect in the AI age. He answered in public.",
+          "The industry mostly occupies the space between those two clauses. Demos, wrappers, and advice that could be pasted onto any business in any city. The extremes are stricter. One is the model itself. The other is a specific owner, with a specific pile of repeat work, who can tell in an afternoon whether the tool is any good.",
+          "Pacific AI Tech is built for the second extreme. A local assistant goes on the owner's own computer. The work that actually repeats gets drafted. The send button stays in the owner's hand. That is the [Oregon and Washington practice](/oregon-washington-ai-consulting): implementation in this region, for the shop in front of us.",
+        ],
+      },
+      {
+        heading: "Close enough means you can name the shop",
+        paragraphs: [
+          "A category is not a customer. HVAC contractors is a category. A customer is a licensed shop in Yakima or Salem with a bond on file, a phone that rings, and a Tuesday already full.",
+          "This week we read the rolls those shops already file. Washington's Department of Labor & Industries publishes the contractor roster on [data.wa.gov](https://data.wa.gov/Labor/L-I-Contractor-License-Data-General/m8qx-ubtq). Oregon's Construction Contractors Board publishes active licenses on [data.oregon.gov](https://data.oregon.gov/Business/CCB-Active-Licenses/g77e-6bhs), and the Building Codes Division publishes the trade licenses [beside it](https://data.oregon.gov/Business/Building-Codes-Division-Active-Contractor-Individu/vhbr-cuaq). The columns are the fact. A brochure is a mood.",
+          "Washington registers heating and cooling as a specialty. On September 24, 2026, the live file showed 625 active construction contractors with a Washington mailing address under specialty SM, heating, ventilation, air-conditioning, and refrigeration. Another 401 active electrical contractors held specialty 6A, HVAC and refrigeration. Fourteen held the restricted 6B specialty. Twenty-two held AB, commercial and industrial refrigeration. Together that is 1,062 active HVAC-labeled licenses with a Washington address. All 625 of the specialty construction shops had a phone number on the record.",
+          "The registration form, [F625-001-000](https://lni.wa.gov/forms-publications/F625-001-000.pdf), marks the email address as required. L&I uses it for training notices and changes in contractor law. The public file has 23 columns. Email is not one of them. The companion files for principals, signers, bonds, and insurance leave it off too.",
+          "Oregon is a different record. The CCB file that day held 56,269 active licenses, with a phone on 56,253 of them, and no HVAC trade code. A furnace company and a framing company wear the same labels: residential general, residential specialty, commercial general. The HVAC-specific credential sits at the Building Codes Division. LHR, Limited Maintenance Contractor HVAC/R, had 404 active records with an Oregon address. That file publishes a name and a mailing address. It does not publish a phone or an email.",
+          "Both states collect an email at registration. The license downloads leave it off. Washington's prevailing-wage filings are the exception that proves the shape of the data. Intent and affidavit records include the filing company's email. Matched against those 1,062 active licenses, 228 shops had at least one usable address. Repeated filings collapsed to 354 unique emails. A lot of them are a staff inbox from a public-works form. The owner is a separate person, and a separate conversation.",
+        ],
+      },
+      {
+        heading: "The roll names them. The owner says what they want.",
+        paragraphs: [
+          "A license file can tell you the shop exists, which specialty it holds, and which phone is on the wall. It cannot tell you which hour of the day is being wasted. That second fact is the work in front of us. Sit with the owner. Watch the thing they redo. Build only after that.",
+          "The same sequence is already visible in other trades. A [refrigerated carrier in Oregon](/case-studies/frostbox-logistics-ai-dispatch) wanted load research and a bid draft waiting for a yes, with the load board still in the owner's hands. A [property manager](/blog/property-management-tenant-communication-automation) was spending the day as a message forwarder. The useful system answered the routine questions and left emergencies, property visits, and cash rent with the person.",
+          "HVAC shops rhyme with that day. The owner is on a roof or in a crawlspace while the phone rings. Estimates, maintenance reminders, and the same five customer questions stack up in an inbox nobody is watching. The assistant that earns a place drafts those pieces inside the shop's own files and waits. [Implementation](/services) here means that system on their machine, and the training to run it, inspect it, and stop it.",
+        ],
+      },
+      {
+        heading: "The stretch he left open",
+        paragraphs: [
+          "Graham left one door ajar: maybe both, if you can stretch that far. A small practice does not stretch into training the next model. The stretch that is actually available is narrower. Use the models that already exist. Spend the attention on the customer, until what they want is a sentence you heard from them, and the implementation is something they can point at on a Tuesday.",
+          "If you run a shop in Oregon or Washington and the repeat work is already obvious, [book a call](/book). Bring the task. We will say whether it is a fit.",
+        ],
+      },
+    ],
+  },
   {
     slug: "property-management-tenant-communication-automation",
     title: "Your property manager is a highly paid message forwarder",

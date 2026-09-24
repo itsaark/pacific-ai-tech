@@ -57,7 +57,7 @@ const jsonLd = {
       about: { "@id": businessId },
       breadcrumb: { "@id": `${siteUrl}/blog#breadcrumb` },
       mainEntity: { "@id": `${siteUrl}/blog#post-list` },
-      dateModified: "2026-08-15",
+      dateModified: "2026-09-24",
       inLanguage: "en-US",
     },
     {

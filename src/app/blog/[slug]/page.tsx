@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,8 +8,167 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { blogPosts, formatBlogDate, getBlogPost } from "@/lib/blog-posts";
+import {
+  blogPosts,
+  formatBlogDate,
+  getBlogPost,
+  type BlogPost,
+} from "@/lib/blog-posts";
 import { bookingUrl, businessId, siteUrl, websiteId } from "@/lib/site";
+
+function plainText(value: string) {
+  return value.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, "$1 ($2)");
+}
+
+function isSafeHref(href: string) {
+  return href.startsWith("/") || href.startsWith("https://");
+}
+
+function RichText({ text }: { text: string }) {
+  const nodes: ReactNode[] = [];
+  let cursor = 0;
+
+  for (const match of text.matchAll(/\[([^\]]+)\]\(([^)\s]+)\)/g)) {
+    const index = match.index ?? 0;
+    if (index > cursor) {
+      nodes.push(text.slice(cursor, index));
+    }
+    const label = match[1];
+    const href = match[2];
+    if (isSafeHref(href)) {
+      const external = href.startsWith("https://");
+      nodes.push(
+        <a
+          key={`${href}-${index}`}
+          href={href}
+          {...(external
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
+        >
+          {label}
+        </a>,
+      );
+    } else {
+      nodes.push(label);
+    }
+    cursor = index + match[0].length;
+  }
+
+  if (cursor < text.length) {
+    nodes.push(text.slice(cursor));
+  }
+
+  return nodes;
+}
+
+function articleSchema(post: BlogPost) {
+  const pageUrl = `${siteUrl}/blog/${post.slug}`;
+  const graph: Record<string, unknown>[] = [
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: post.seoTitle,
+      description: post.metaDescription,
+      isPartOf: { "@id": websiteId },
+      about: { "@id": `${pageUrl}#post` },
+      breadcrumb: {
+        "@id": `${pageUrl}#breadcrumb`,
+      },
+      datePublished: post.publishedDate,
+      dateModified: post.modifiedDate,
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": `${pageUrl}#post`,
+      headline: post.title,
+      description: post.metaDescription,
+      image: post.heroImage ? `${siteUrl}${post.heroImage.src}` : undefined,
+      datePublished: post.publishedDate,
+      dateModified: post.modifiedDate,
+      author: {
+        "@type": "Organization",
+        "@id": businessId,
+        name: "Pacific AI Tech",
+        url: siteUrl,
+      },
+      publisher: {
+        "@type": "Organization",
+        "@id": businessId,
+        name: "Pacific AI Tech",
+        url: siteUrl,
+        logo: {
+          "@type": "ImageObject",
+          url: `${siteUrl}/pacific-ai-tech/img/logo-pine-icon.png`,
+        },
+      },
+      mainEntityOfPage: {
+        "@id": `${pageUrl}#webpage`,
+      },
+      keywords: post.topics,
+      citation: post.citation
+        ? {
+            "@type": "CreativeWork",
+            text: post.citation.quote,
+            url: post.citation.href,
+            datePublished: "2026-09-23",
+            author: {
+              "@type": "Person",
+              name: post.citation.speaker,
+              url: "https://x.com/paulg",
+            },
+          }
+        : undefined,
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: `${siteUrl}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: `${siteUrl}/blog`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: post.title,
+          item: pageUrl,
+        },
+      ],
+    },
+  ];
+
+  if (post.faqs?.length) {
+    graph.push({
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      url: pageUrl,
+      mainEntity: post.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: plainText(faq.answer),
+        },
+      })),
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": graph,
+  };
+}
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -72,80 +232,7 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": `${siteUrl}/blog/${post.slug}#webpage`,
-        url: `${siteUrl}/blog/${post.slug}`,
-        name: post.seoTitle,
-        description: post.metaDescription,
-        isPartOf: { "@id": websiteId },
-        about: { "@id": `${siteUrl}/blog/${post.slug}#post` },
-        breadcrumb: {
-          "@id": `${siteUrl}/blog/${post.slug}#breadcrumb`,
-        },
-        datePublished: post.publishedDate,
-        dateModified: post.modifiedDate,
-        inLanguage: "en-US",
-      },
-      {
-        "@type": "BlogPosting",
-        "@id": `${siteUrl}/blog/${post.slug}#post`,
-        headline: post.title,
-        description: post.metaDescription,
-        image: post.heroImage ? `${siteUrl}${post.heroImage.src}` : undefined,
-        datePublished: post.publishedDate,
-        dateModified: post.modifiedDate,
-        author: {
-          "@type": "Organization",
-          "@id": businessId,
-          name: "Pacific AI Tech",
-          url: siteUrl,
-        },
-        publisher: {
-          "@type": "Organization",
-          "@id": businessId,
-          name: "Pacific AI Tech",
-          url: siteUrl,
-          logo: {
-            "@type": "ImageObject",
-            url: `${siteUrl}/pacific-ai-tech/img/logo-pine-icon.png`,
-          },
-        },
-        mainEntityOfPage: {
-          "@id": `${siteUrl}/blog/${post.slug}#webpage`,
-        },
-        keywords: post.topics,
-        inLanguage: "en-US",
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": `${siteUrl}/blog/${post.slug}#breadcrumb`,
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: `${siteUrl}/`,
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Blog",
-            item: `${siteUrl}/blog`,
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: post.title,
-            item: `${siteUrl}/blog/${post.slug}`,
-          },
-        ],
-      },
-    ],
-  };
+  const jsonLd = articleSchema(post);
 
   return (
     <main className="pat-site">
@@ -192,16 +279,54 @@ export default async function BlogPostPage({ params }: Props) {
           ) : null}
 
           <div className="pat-case-narrative">
+            {post.citation ? (
+              <section>
+                <h2>{post.citation.speaker}</h2>
+                <figure className="pat-blog-quote">
+                  <blockquote cite={post.citation.href}>
+                    <p>{post.citation.quote}</p>
+                  </blockquote>
+                  <figcaption>
+                    <a
+                      href={post.citation.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {post.citation.hrefLabel}
+                    </a>
+                    <span aria-hidden="true">·</span>
+                    <span>{post.citation.date}</span>
+                  </figcaption>
+                </figure>
+              </section>
+            ) : null}
             {post.sections.map((section) => (
               <section key={section.heading}>
                 <h2>{section.heading}</h2>
                 <div className="pat-case-narrative-copy">
                   {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
+                    <p key={paragraph}>
+                      <RichText text={paragraph} />
+                    </p>
                   ))}
                 </div>
               </section>
             ))}
+            {post.faqs?.length ? (
+              <section className="pat-blog-faq">
+                <h2>Questions the record answers</h2>
+                <div className="pat-case-narrative-copy">
+                  {post.faqs.map((faq) => (
+                    <div key={faq.question}>
+                      <h3>{faq.question}</h3>
+                      <p>
+                        <RichText text={faq.answer} />
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ) : null}
           </div>
 
           <div className="pat-case-next">
