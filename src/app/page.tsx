@@ -60,7 +60,7 @@ const jsonLd = {
       foundingDate: "2025",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "1455 SW Broadway",
+        streetAddress: "1825 SW Broadway",
         addressLocality: "Portland",
         addressRegion: "OR",
         postalCode: "97201",

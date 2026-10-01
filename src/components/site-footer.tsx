@@ -30,7 +30,7 @@ export function SiteFooter() {
         <div className="pat-foot-colophon">
           <div className="pat-foot-note">
             <h2>Address</h2>
-            <address>1455 SW Broadway, Portland, OR 97201</address>
+            <address>1825 SW Broadway, Portland, OR 97201</address>
           </div>
           <div className="pat-foot-contact">
             <h2>Contact</h2>

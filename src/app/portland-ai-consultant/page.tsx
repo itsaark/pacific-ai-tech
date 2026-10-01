@@ -238,7 +238,7 @@ const jsonLd = {
       email: contactEmail,
       address: {
         "@type": "PostalAddress",
-        streetAddress: "1455 SW Broadway",
+        streetAddress: "1825 SW Broadway",
         addressLocality: "Portland",
         addressRegion: "OR",
         postalCode: "97201",
