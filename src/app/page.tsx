@@ -82,30 +82,17 @@ const jsonLd = {
         "local-first AI",
         "AI training",
       ],
-      founder: [
-        {
-          "@type": "Person",
-          "@id": `${siteUrl}/#aark-kodur`,
-          name: "Aark Kodur",
-          url: `${siteUrl}/about#founders`,
-          jobTitle: "Co-founder and AI solutions architect",
-          description:
-            "Pacific AI Tech co-founder with a software engineering background at Amazon, responsible for AI solutions architecture and deployment.",
-          worksFor: { "@id": businessId },
-          sameAs: "https://www.linkedin.com/in/aarkkodur/",
-        },
-        {
-          "@type": "Person",
-          "@id": `${siteUrl}/#shayan-jalalipour`,
-          name: "Shayan Jalalipour",
-          url: `${siteUrl}/about#founders`,
-          jobTitle: "Co-founder and AI/ML specialist",
-          description:
-            "Pacific AI Tech co-founder with an AI and machine-learning research background at Portland State, responsible for practical AI implementation and training.",
-          worksFor: { "@id": businessId },
-          sameAs: "https://www.linkedin.com/in/shayanjalalipour/",
-        },
-      ],
+      founder: {
+        "@type": "Person",
+        "@id": `${siteUrl}/#aark-kodur`,
+        name: "Aark Kodur",
+        url: `${siteUrl}/about#founders`,
+        jobTitle: "Founder",
+        description:
+          "Pacific AI Tech founder with a software engineering background at Amazon, responsible for AI solutions architecture and deployment.",
+        worksFor: { "@id": businessId },
+        sameAs: "https://www.linkedin.com/in/aarkkodur/",
+      },
     },
     {
       "@type": "WebSite",

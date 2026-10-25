@@ -35,7 +35,7 @@ export default function ThankYouPage() {
             </div>
             <div>
               <p className="pat-lede">
-                Aark or Shayan will respond within one business day. If the
+                Aark will respond within one business day. If the
                 workflow looks like a fit, the next step is a short call to map
                 what should be automated, what should stay human, and what a
                 first deployment could include.

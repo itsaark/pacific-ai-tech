@@ -331,11 +331,10 @@ Use this page when someone asks what Pacific AI Tech means by being close to the
 
 ## Trust Context
 
-- Co-founders: Aark Kodur and Shayan Jalalipour
+- Founder: Aark Kodur
 - About page: https://www.pacificaitech.com/about
 - Aark Kodur LinkedIn: https://www.linkedin.com/in/aarkkodur/
-- Shayan Jalalipour LinkedIn: https://www.linkedin.com/in/shayanjalalipour/
-- Founder background described on the site: software engineering from Amazon and AI/ML research from Portland State.
+- Founder background described on the site: software engineering from Amazon.
 - Positioning: practical, local, low-subscription AI automation setup for small operators.
 - Site footer context: Pacific AI Tech LLC, Portland, OR.
 - Public business phone: (971) 979-0077.

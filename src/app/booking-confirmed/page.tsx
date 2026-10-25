@@ -39,7 +39,7 @@ export default function BookingConfirmedPage() {
             <h1 id="confirmation-title">Thank you. We will come prepared.</h1>
             <p className="pat-lede">
               Your scheduling provider will send the meeting details and add
-              the appointment to your calendar. Aark or Shayan will review the
+              the appointment to your calendar. Aark will review the
               context you shared before the call.
             </p>
             <div className="pat-confirmation-actions">

@@ -19,14 +19,14 @@ import {
 export const metadata: Metadata = {
   title: "About Our Portland AI Consulting Team",
   description:
-    "Meet Aark Kodur and Shayan Jalalipour, the two-person team behind Pacific AI Tech's practical AI consulting for Greater Portland businesses.",
+    "Meet Aark Kodur, the founder behind Pacific AI Tech's practical AI consulting for Greater Portland businesses.",
   alternates: {
     canonical: "/about",
   },
   openGraph: {
     title: "About Pacific AI Tech",
     description:
-      "A two-person Portland consultancy helping small businesses put practical, owner-controlled AI systems to work.",
+      "A Portland consultancy helping small businesses put practical, owner-controlled AI systems to work.",
     url: "/about",
     siteName: "Pacific AI Tech",
     type: "website",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Pacific AI Tech",
     description:
-      "Meet the two-person team helping Greater Portland small businesses use practical AI with confidence.",
+      "Meet the founder helping Greater Portland small businesses use practical AI with confidence.",
     images: ["/pacific-ai-tech/img/roses.jpeg"],
   },
 };
@@ -67,22 +67,11 @@ const jsonLd = {
       "@id": `${siteUrl}/#aark-kodur`,
       name: "Aark Kodur",
       url: `${siteUrl}/about#founders`,
-      jobTitle: "Co-founder and AI solutions architect",
+      jobTitle: "Founder",
       description:
-        "Pacific AI Tech co-founder with a software engineering background at Amazon, responsible for AI solutions architecture and deployment.",
+        "Pacific AI Tech founder with a software engineering background at Amazon, responsible for AI solutions architecture and deployment.",
       worksFor: { "@id": businessId },
       sameAs: "https://www.linkedin.com/in/aarkkodur/",
-    },
-    {
-      "@type": "Person",
-      "@id": `${siteUrl}/#shayan-jalalipour`,
-      name: "Shayan Jalalipour",
-      url: `${siteUrl}/about#founders`,
-      jobTitle: "Co-founder and AI/ML specialist",
-      description:
-        "Pacific AI Tech co-founder with an AI and machine-learning research background at Portland State, responsible for practical AI implementation and training.",
-      worksFor: { "@id": businessId },
-      sameAs: "https://www.linkedin.com/in/shayanjalalipour/",
     },
   ],
 };
@@ -124,7 +113,7 @@ export default function AboutPage() {
               </h1>
             </div>
             <p className="pat-lede">
-              Pacific AI Tech is a two-person Portland consultancy. We help
+              Pacific AI Tech is a Portland consultancy. We help
               small businesses turn repeat computer work into useful AI
               workflows, deploy those systems, and teach the people who will
               run them.
@@ -139,16 +128,15 @@ export default function AboutPage() {
             <div>
               <span className="pat-eyebrow">The people doing the work</span>
               <h2 id="founders-title">
-                Meet Aark Kodur &amp; Shayan Jalalipour.
+                Meet Aark Kodur.
               </h2>
               <p className="pat-lede">
-                Our backgrounds bring together software engineering from
-                Amazon and AI/ML research from Portland State. Clients work
-                directly with the two people responsible for architecture,
+                Our background is software engineering from Amazon. Clients
+                work directly with the founder responsible for architecture,
                 deployment, and training.
               </p>
             </div>
-            <div className="pat-founder-photos" aria-label="Co-founder profiles">
+            <div className="pat-founder-photos" aria-label="Founder profile">
               <a
                 className="pat-founder-photo"
                 href="https://www.linkedin.com/in/aarkkodur/"
@@ -165,23 +153,6 @@ export default function AboutPage() {
                   />
                 </span>
                 <span className="pat-founder-photo-name">Aark Kodur</span>
-              </a>
-              <a
-                className="pat-founder-photo pat-founder-photo-shayan"
-                href="https://www.linkedin.com/in/shayanjalalipour/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Shayan Jalalipour on LinkedIn"
-              >
-                <span className="pat-founder-photo-image">
-                  <Image
-                    src="/pacific-ai-tech/img/shayan-jalalipour.jpg"
-                    alt="Shayan Jalalipour"
-                    width={654}
-                    height={900}
-                  />
-                </span>
-                <span className="pat-founder-photo-name">Shayan Jalalipour</span>
               </a>
             </div>
           </div>

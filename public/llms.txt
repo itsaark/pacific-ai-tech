@@ -34,7 +34,7 @@ There is no public programmatic service API. Agents should use the first-party b
 - [Greater Portland AI consultant](https://www.pacificaitech.com/portland-ai-consultant): Local AI consulting, setup, coaching, training, service area, FAQs, and evidence sources for the Portland metro.
 - [Oregon and Washington AI consulting](https://www.pacificaitech.com/oregon-washington-ai-consulting): Virtual AI consulting for Oregon and Washington cities and counties outside Greater Portland.
 - [Idaho AI consulting](https://www.pacificaitech.com/idaho-ai-consulting): Virtual AI consulting for Idaho small businesses in the Treasure Valley, North Idaho, Eastern Idaho, and the Magic Valley.
-- [About Pacific AI Tech](https://www.pacificaitech.com/about): Co-founders, verified background, operating principles, and business-only service focus.
+- [About Pacific AI Tech](https://www.pacificaitech.com/about): Founder, verified background, operating principles, and business-only service focus.
 - [Small business AI case studies](https://www.pacificaitech.com/case-studies): Client implementations and operating outcomes.
 - [Close enough to name the shop](https://www.pacificaitech.com/blog/close-enough-to-name-the-shop): September 24, 2026 field note. Paul Graham wrote on September 23 that the effect in the AI age sits at either extreme: making LLMs, or standing close to the customer and using AI to give them exactly what they want. Pacific AI Tech works the customer side. The note quotes the post and reports the public HVAC license rolls checked that week: 1,062 active HVAC-labeled Washington licenses, 404 active Oregon LHR HVAC/R licenses, and no complete public email list in either state.
 - [Book an AI consultation](https://www.pacificaitech.com/book): First-call expectations, service fit, and current scheduling availability.
@@ -62,8 +62,7 @@ There is no public programmatic service API. Agents should use the first-party b
 
 ## Trust and discovery
 
-- [Aark Kodur on LinkedIn](https://www.linkedin.com/in/aarkkodur/): Co-founder profile.
-- [Shayan Jalalipour on LinkedIn](https://www.linkedin.com/in/shayanjalalipour/): Co-founder profile.
+- [Aark Kodur on LinkedIn](https://www.linkedin.com/in/aarkkodur/): Founder profile.
 - [XML sitemap](https://www.pacificaitech.com/sitemap.xml): Canonical indexable page inventory.
 - [Robots policy](https://www.pacificaitech.com/robots.txt): Search and AI crawler access policy.
 - [Privacy Policy](https://www.pacificaitech.com/privacy): Website measurement, consultation-request, and privacy-choice details.

@@ -101,7 +101,7 @@ export function ConsultationForm({ location }: ConsultationFormProps) {
         <span className="pat-eyebrow">Tell us about one workflow</span>
         <h2>Request a business AI consultation.</h2>
         <p>
-          Share the repeat work that is costing your team time. Aark or Shayan
+          Share the repeat work that is costing your team time. Aark
           will reply within one business day with an honest first read.
         </p>
       </div>

@@ -123,7 +123,7 @@ export default function BookPage() {
           <div className={styles.intro}>
             <h1 id="booking-title">Book an AI consultation.</h1>
             <p className={styles.introCopy}>
-              Pick a time that works. You’ll talk directly with Aark or Shayan.
+              Pick a time that works. You’ll talk directly with Aark.
             </p>
             <div className={styles.contact}>
               <a

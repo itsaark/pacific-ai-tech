@@ -142,9 +142,9 @@ const introCallSteps = [
       "Our booking page shows current appointment availability immediately. You choose the time that works for your business.",
   },
   {
-    title: "Meet with a co-founder",
+    title: "Meet with the founder",
     description:
-      "Aark or Shayan will ask about the repeat work, the tools involved, what must stay human-approved, and what a useful outcome looks like.",
+      "Aark will ask about the repeat work, the tools involved, what must stay human-approved, and what a useful outcome looks like.",
   },
   {
     title: "Leave with a clear next step",
@@ -443,16 +443,16 @@ export default function PortlandAiConsultantPage() {
             ))}
             <Card className="pat-who-card">
               <CardHeader>
-                <CardTitle>Work directly with the co-founders</CardTitle>
+                <CardTitle>Work directly with the founder</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription>
-                  Aark Kodur and Shayan Jalalipour combine software engineering
-                  experience from Amazon with AI and machine-learning research
-                  from Portland State University.
+                  Aark Kodur brings software engineering
+                  experience from Amazon to practical AI deployments for
+                  Pacific Northwest businesses.
                 </CardDescription>
                 <Link className="pat-source-link" href="/about#founders">
-                  Meet Aark and Shayan
+                  Meet Aark
                   <ArrowRight aria-hidden="true" />
                 </Link>
               </CardContent>
@@ -659,8 +659,8 @@ export default function PortlandAiConsultantPage() {
                 and what must remain human-approved. The booking calendar shows
                 current appointment availability immediately. If you prefer
                 phone, call <a href={businessPhoneHref}>{businessPhoneDisplay}</a>.
-                If you prefer email, include your business and workflow so a
-                co-founder can review the fit; the calendar is the clearest view
+                If you prefer email, include your business and workflow so the
+                founder can review the fit; the calendar is the clearest view
                 of current availability.
               </p>
             </div>
