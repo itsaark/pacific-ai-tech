@@ -13,14 +13,14 @@ import { businessId, bookingUrl, siteUrl, websiteId } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Small Business AI Consulting Case Studies",
   description:
-    "See how small businesses use practical AI for dispatch, real estate, home inspection, pest-control marketing, and front-desk calls.",
+    "See how small businesses use practical AI for dispatch, real estate, home inspection, and front-desk calls.",
   alternates: {
     canonical: "/case-studies",
   },
   openGraph: {
     title: "Small Business AI Consulting Case Studies",
     description:
-      "Client stories showing how practical AI changes dispatch, real estate research, home inspection follow-up, neighborhood marketing, and dental phones.",
+      "Client stories showing how practical AI changes dispatch, real estate research, home inspection follow-up, and dental phones.",
     url: "/case-studies",
     siteName: "Pacific AI Tech",
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Small Business AI Consulting Case Studies",
     description:
-      "Practical AI deployment stories with implementation details and owner-controlled outcomes, from freight and real estate to home inspection, pest control, and dental phones.",
+      "Practical AI deployment stories with implementation details and owner-controlled outcomes, from freight and real estate to home inspection and dental phones.",
     images: ["/pacific-ai-tech/img/case-studies/frostbox-logistics-ascii.jpg"],
   },
 };

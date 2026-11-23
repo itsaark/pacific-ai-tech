@@ -41,7 +41,6 @@ There is no public programmatic service API. Agents should use the first-party b
 - [Frostbox Logistics AI dispatch case study](https://www.pacificaitech.com/case-studies/frostbox-logistics-ai-dispatch): Local Hermes agent for load research, bid drafting, return-load scouting, and owner approval.
 - [Kristi Blain real estate AI assistant case study](https://www.pacificaitech.com/case-studies/kristi-blain-real-estate-ai-assistant): Claude Cowork for listing research, client follow-up, property documents, and Canva workflows.
 - [Northbank Home Inspection AI automation case study](https://www.pacificaitech.com/case-studies/northbank-home-inspection-ai-automation): Missed-call voice intake plus report-aware text and email responses for a solo home inspector.
-- [Aspen Pest Control AI marketing automation case study](https://www.pacificaitech.com/case-studies/aspen-pest-control-ai-marketing-automation): Neighborhood pest modeling from service reports plus weekly new-homeowner campaigns from Clark County public information.
 
 ## Service and fit
 

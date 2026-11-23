@@ -69,7 +69,7 @@ export const metadata: Metadata = {
 const featuredProof = caseStudies.filter((study) =>
   [
     "frostbox-logistics-ai-dispatch",
-    "aspen-pest-control-ai-marketing-automation",
+    "kristi-blain-real-estate-ai-assistant",
   ].includes(study.slug),
 );
 

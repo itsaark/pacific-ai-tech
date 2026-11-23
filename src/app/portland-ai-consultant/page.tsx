@@ -125,7 +125,7 @@ const featuredProof = caseStudies
   .filter((study) =>
     [
       "northbank-home-inspection-ai-automation",
-      "aspen-pest-control-ai-marketing-automation",
+      "dental-practice-ai-voice-receptionist",
     ].includes(study.slug),
   )
   .map((study) => ({
