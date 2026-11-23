@@ -13,14 +13,14 @@ import { businessId, bookingUrl, siteUrl, websiteId } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Small Business AI Consulting Case Studies",
   description:
-    "See how small businesses use practical AI for dispatch, real estate, home services, purchase-order intake, marketing, front-desk calls, and wholesale distribution.",
+    "See how small businesses use practical AI for dispatch, real estate, home inspection, pest-control marketing, and front-desk calls.",
   alternates: {
     canonical: "/case-studies",
   },
   openGraph: {
     title: "Small Business AI Consulting Case Studies",
     description:
-      "Client stories showing how practical AI changes dispatch, customer communication, research, neighborhood marketing, purchase-order intake, dental phones, and wholesale distribution.",
+      "Client stories showing how practical AI changes dispatch, real estate research, home inspection follow-up, neighborhood marketing, and dental phones.",
     url: "/case-studies",
     siteName: "Pacific AI Tech",
     type: "website",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Small Business AI Consulting Case Studies",
     description:
-      "Practical AI deployment stories with implementation details and owner-controlled outcomes, from freight and dental phones to manufacturing order intake and wholesale distribution.",
+      "Practical AI deployment stories with implementation details and owner-controlled outcomes, from freight and real estate to home inspection, pest control, and dental phones.",
     images: ["/pacific-ai-tech/img/case-studies/frostbox-logistics-ascii.jpg"],
   },
 };
@@ -55,7 +55,7 @@ const jsonLd = {
       about: { "@id": businessId },
       breadcrumb: { "@id": `${siteUrl}/case-studies#breadcrumb` },
       mainEntity: { "@id": `${siteUrl}/case-studies#case-study-list` },
-      dateModified: "2026-08-17",
+      dateModified: "2026-11-23",
       inLanguage: "en-US",
     },
     {
